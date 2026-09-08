@@ -1,0 +1,7 @@
+{
+  "description": "First page of three accounts matching \"bluesky\"",
+  "request": {
+    "q": "bluesky",
+    "limit": 3
+  }
+}

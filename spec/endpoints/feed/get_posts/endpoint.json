@@ -1,0 +1,59 @@
+{
+  "docs": "https://docs.bsky.app/docs/api/app-bsky-feed-get-posts",
+  "meta": {
+    "public": true
+  },
+  "spec": {
+    "kind": "rpc",
+    "transports": [
+      "http"
+    ],
+    "path": "/xrpc/app.bsky.feed.getPosts",
+    "method": "GET",
+    "description": "Get up to 25 posts by AT URI in one call.",
+    "request": {
+      "title": "GetPostsRequest",
+      "type": "object",
+      "description": "Which posts.",
+      "properties": {
+        "uris": {
+          "type": "array",
+          "description": "AT URIs of the posts, at most 25. Sent as repeated `uris` query parameters.",
+          "items": {
+            "type": "string",
+            "description": "One AT URI."
+          },
+          "maxItems": 25
+        }
+      },
+      "required": [
+        "uris"
+      ]
+    },
+    "response": {
+      "title": "Posts",
+      "type": "object",
+      "description": "The posts that exist, in the order asked for.",
+      "properties": {
+        "posts": {
+          "type": "array",
+          "description": "The posts.",
+          "items": {
+            "$ref": "PostView",
+            "description": "One post."
+          }
+        }
+      },
+      "required": [
+        "posts"
+      ]
+    }
+  },
+  "unverified": {
+    "reason": "not_captured",
+    "detail": "No recording yet: the sandbox this spec was written in cannot reach bsky.app. The `record.yml` workflow replays `examples/*.request.json` through the generated client with `truewire capture` and opens a pull request with the responses."
+  },
+  "notes": [
+    "Written from the `app.bsky`/`com.atproto` lexicons as remembered, not read: the docs host was unreachable. The schema is a subset of the lexicon; undeclared fields pass validation and are dropped from the validated value. The first recording confirms or corrects it."
+  ]
+}

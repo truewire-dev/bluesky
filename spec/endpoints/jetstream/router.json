@@ -1,0 +1,5 @@
+{
+  "description": "Jetstream: Bluesky's JSON firehose of repository commits, identity changes and account status changes, over one WebSocket per subscription.",
+  "upstream": "https://github.com/bluesky-social/jetstream",
+  "core": "streams"
+}

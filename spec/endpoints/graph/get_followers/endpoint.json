@@ -1,0 +1,88 @@
+{
+  "docs": "https://docs.bsky.app/docs/api/app-bsky-graph-get-followers",
+  "meta": {
+    "public": true
+  },
+  "spec": {
+    "kind": "rpc",
+    "transports": [
+      "http"
+    ],
+    "path": "/xrpc/app.bsky.graph.getFollowers",
+    "method": "GET",
+    "description": "Accounts following an account, paged by cursor.",
+    "request": {
+      "title": "GetFollowersRequest",
+      "type": "object",
+      "description": "Whose followers and which page.",
+      "properties": {
+        "actor": {
+          "type": "string",
+          "description": "Handle or DID of the account, such as `bsky.app` or `did:plc:z72i7hdynmk6r22z27h6tvur`."
+        },
+        "limit": {
+          "type": "integer",
+          "description": "Rows per page. Range [1, 100]; defaults to 50.",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 50
+        },
+        "cursor": {
+          "type": "string",
+          "description": "Opaque page token from the previous response; omit for the first page."
+        }
+      },
+      "required": [
+        "actor"
+      ]
+    },
+    "response": {
+      "title": "Followers",
+      "type": "object",
+      "description": "One page of followers.",
+      "properties": {
+        "subject": {
+          "$ref": "ProfileView",
+          "description": "The account whose followers these are."
+        },
+        "cursor": {
+          "type": "string",
+          "description": "Token for the next page; absent on the last one."
+        },
+        "followers": {
+          "type": "array",
+          "description": "The followers.",
+          "items": {
+            "$ref": "ProfileView",
+            "description": "One follower."
+          }
+        }
+      },
+      "required": [
+        "subject",
+        "followers"
+      ]
+    }
+  },
+  "pagination": {
+    "strategy": "token",
+    "cursor": {
+      "parameter": "cursor",
+      "from": "cursor"
+    },
+    "size": {
+      "parameter": "limit"
+    },
+    "done": {
+      "kind": "absent_cursor",
+      "rows": "followers"
+    }
+  },
+  "unverified": {
+    "reason": "not_captured",
+    "detail": "No recording yet: the sandbox this spec was written in cannot reach bsky.app. The `record.yml` workflow replays `examples/*.request.json` through the generated client with `truewire capture` and opens a pull request with the responses."
+  },
+  "notes": [
+    "Written from the `app.bsky`/`com.atproto` lexicons as remembered, not read: the docs host was unreachable. The schema is a subset of the lexicon; undeclared fields pass validation and are dropped from the validated value. The first recording confirms or corrects it."
+  ]
+}

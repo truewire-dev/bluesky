@@ -1,0 +1,9 @@
+{
+  "description": "Two official accounts, by handle",
+  "request": {
+    "actors": [
+      "bsky.app",
+      "atproto.com"
+    ]
+  }
+}

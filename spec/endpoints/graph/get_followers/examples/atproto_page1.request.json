@@ -1,0 +1,7 @@
+{
+  "description": "Three followers of the AT Protocol account",
+  "request": {
+    "actor": "atproto.com",
+    "limit": 3
+  }
+}

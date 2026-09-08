@@ -1,0 +1,95 @@
+{
+  "docs": "https://docs.bsky.app/docs/api/app-bsky-feed-get-author-feed",
+  "meta": {
+    "public": true
+  },
+  "spec": {
+    "kind": "rpc",
+    "transports": [
+      "http"
+    ],
+    "path": "/xrpc/app.bsky.feed.getAuthorFeed",
+    "method": "GET",
+    "description": "An account's posts and reposts, newest first, paged by cursor.",
+    "request": {
+      "title": "GetAuthorFeedRequest",
+      "type": "object",
+      "description": "Whose feed, which posts, which page.",
+      "properties": {
+        "actor": {
+          "type": "string",
+          "description": "Handle or DID of the account, such as `bsky.app` or `did:plc:z72i7hdynmk6r22z27h6tvur`."
+        },
+        "limit": {
+          "type": "integer",
+          "description": "Rows per page. Range [1, 100]; defaults to 50.",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 50
+        },
+        "cursor": {
+          "type": "string",
+          "description": "Opaque page token from the previous response; omit for the first page."
+        },
+        "filter": {
+          "type": "string",
+          "description": "Which posts to include.",
+          "enum": [
+            "posts_with_replies",
+            "posts_no_replies",
+            "posts_with_media",
+            "posts_and_author_threads"
+          ],
+          "default": "posts_with_replies"
+        }
+      },
+      "required": [
+        "actor"
+      ]
+    },
+    "response": {
+      "title": "AuthorFeed",
+      "type": "object",
+      "description": "One page of the feed.",
+      "properties": {
+        "cursor": {
+          "type": "string",
+          "description": "Token for the next page; absent on the last one."
+        },
+        "feed": {
+          "type": "array",
+          "description": "Feed entries, newest first.",
+          "items": {
+            "$ref": "FeedViewPost",
+            "description": "One entry."
+          }
+        }
+      },
+      "required": [
+        "feed"
+      ]
+    }
+  },
+  "pagination": {
+    "strategy": "token",
+    "cursor": {
+      "parameter": "cursor",
+      "from": "cursor"
+    },
+    "size": {
+      "parameter": "limit"
+    },
+    "done": {
+      "kind": "absent_cursor",
+      "rows": "feed"
+    }
+  },
+  "unverified": {
+    "reason": "not_captured",
+    "detail": "No recording yet: the sandbox this spec was written in cannot reach bsky.app. The `record.yml` workflow replays `examples/*.request.json` through the generated client with `truewire capture` and opens a pull request with the responses."
+  },
+  "notes": [
+    "Written from the `app.bsky`/`com.atproto` lexicons as remembered, not read: the docs host was unreachable. The schema is a subset of the lexicon; undeclared fields pass validation and are dropped from the validated value. The first recording confirms or corrects it.",
+    "`filter` lists the four values the lexicon has carried since the parameter was added; newer additions are not listed because their names were not checked against the docs."
+  ]
+}

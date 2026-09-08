@@ -1,0 +1,50 @@
+{
+  "docs": "https://docs.bsky.app/docs/api/com-atproto-identity-resolve-handle",
+  "meta": {
+    "public": true
+  },
+  "spec": {
+    "kind": "rpc",
+    "transports": [
+      "http"
+    ],
+    "path": "/xrpc/com.atproto.identity.resolveHandle",
+    "method": "GET",
+    "description": "Resolve a handle to its DID.",
+    "request": {
+      "title": "ResolveHandleRequest",
+      "type": "object",
+      "description": "Which handle.",
+      "properties": {
+        "handle": {
+          "type": "string",
+          "description": "The handle, such as `bsky.app`."
+        }
+      },
+      "required": [
+        "handle"
+      ]
+    },
+    "response": {
+      "title": "ResolvedHandle",
+      "type": "object",
+      "description": "The DID the handle currently points at.",
+      "properties": {
+        "did": {
+          "type": "string",
+          "description": "The DID."
+        }
+      },
+      "required": [
+        "did"
+      ]
+    }
+  },
+  "unverified": {
+    "reason": "not_captured",
+    "detail": "No recording yet: the sandbox this spec was written in cannot reach bsky.app. The `record.yml` workflow replays `examples/*.request.json` through the generated client with `truewire capture` and opens a pull request with the responses."
+  },
+  "notes": [
+    "Written from the `app.bsky`/`com.atproto` lexicons as remembered, not read: the docs host was unreachable. The schema is a subset of the lexicon; undeclared fields pass validation and are dropped from the validated value. The first recording confirms or corrects it."
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Handle resolution (`com.atproto.identity.*`).",
+  "upstream": "https://docs.bsky.app/docs/api/com-atproto-identity-resolve-handle",
+  "core": "default"
+}

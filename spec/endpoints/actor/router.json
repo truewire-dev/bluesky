@@ -1,0 +1,5 @@
+{
+  "description": "Profiles: one, several, or by search (`app.bsky.actor.*`).",
+  "upstream": "https://docs.bsky.app/docs/api/app-bsky-actor-get-profile",
+  "core": "default"
+}

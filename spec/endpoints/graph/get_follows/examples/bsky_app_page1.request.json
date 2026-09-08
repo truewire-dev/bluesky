@@ -1,0 +1,7 @@
+{
+  "description": "Three accounts the official account follows",
+  "request": {
+    "actor": "bsky.app",
+    "limit": 3
+  }
+}

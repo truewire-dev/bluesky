@@ -1,0 +1,86 @@
+{
+  "docs": "https://docs.bsky.app/docs/api/app-bsky-feed-get-post-thread",
+  "meta": {
+    "public": true
+  },
+  "spec": {
+    "kind": "rpc",
+    "transports": [
+      "http"
+    ],
+    "path": "/xrpc/app.bsky.feed.getPostThread",
+    "method": "GET",
+    "description": "A post with its ancestors and replies.",
+    "request": {
+      "title": "GetPostThreadRequest",
+      "type": "object",
+      "description": "Which post and how much of its thread.",
+      "properties": {
+        "uri": {
+          "type": "string",
+          "description": "AT URI of the post, such as `at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3kxyz...`."
+        },
+        "depth": {
+          "type": "integer",
+          "description": "How many levels of replies to include. Range [0, 1000]; defaults to 6.",
+          "minimum": 0,
+          "maximum": 1000,
+          "default": 6
+        },
+        "parentHeight": {
+          "type": "integer",
+          "description": "How many ancestors to include. Range [0, 1000]; defaults to 80.",
+          "minimum": 0,
+          "maximum": 1000,
+          "default": 80
+        }
+      },
+      "required": [
+        "uri"
+      ]
+    },
+    "response": {
+      "title": "PostThread",
+      "type": "object",
+      "description": "The thread around the requested post.",
+      "properties": {
+        "thread": {
+          "title": "Thread",
+          "description": "The requested post with its context, or a marker that it is gone or blocked.",
+          "anyOf": [
+            {
+              "$ref": "ThreadViewPost",
+              "description": "The post and its thread."
+            },
+            {
+              "$ref": "NotFoundPost",
+              "description": "Deleted or missing."
+            },
+            {
+              "$ref": "BlockedPost",
+              "description": "Hidden by a block."
+            }
+          ]
+        },
+        "threadgate": {
+          "type": "object",
+          "description": "The thread's reply gate, when the root has one (`app.bsky.feed.defs#threadgateView`). Kept as a map.",
+          "additionalProperties": {
+            "description": "A field of the threadgate view."
+          }
+        }
+      },
+      "required": [
+        "thread"
+      ]
+    }
+  },
+  "unverified": {
+    "reason": "not_captured",
+    "detail": "No recording yet: the sandbox this spec was written in cannot reach bsky.app. The `record.yml` workflow replays `examples/*.request.json` through the generated client with `truewire capture` and opens a pull request with the responses."
+  },
+  "notes": [
+    "Written from the `app.bsky`/`com.atproto` lexicons as remembered, not read: the docs host was unreachable. The schema is a subset of the lexicon; undeclared fields pass validation and are dropped from the validated value. The first recording confirms or corrects it.",
+    "The thread is recursive on the wire (`parent` and `replies` hold the same shape as `thread`). The schema types the root and one level around it; a validated result drops `parent`/`replies` below that level. `validate=False` returns the whole tree."
+  ]
+}

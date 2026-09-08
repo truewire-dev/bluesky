@@ -1,0 +1,9 @@
+{
+  "description": "The three latest posts by the official account mentioning \"atproto\"",
+  "request": {
+    "q": "atproto",
+    "author": "bsky.app",
+    "sort": "latest",
+    "limit": 3
+  }
+}

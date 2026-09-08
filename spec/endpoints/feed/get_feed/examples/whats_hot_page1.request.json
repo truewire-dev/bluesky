@@ -1,0 +1,7 @@
+{
+  "description": "Three entries of the Discover feed",
+  "request": {
+    "feed": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.generator/whats-hot",
+    "limit": 3
+  }
+}

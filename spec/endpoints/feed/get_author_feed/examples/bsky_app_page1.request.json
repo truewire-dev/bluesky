@@ -1,0 +1,8 @@
+{
+  "description": "Three of the official account's own posts, replies left out",
+  "request": {
+    "actor": "bsky.app",
+    "limit": 3,
+    "filter": "posts_no_replies"
+  }
+}

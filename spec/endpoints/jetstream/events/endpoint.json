@@ -1,0 +1,189 @@
+{
+  "docs": "https://github.com/bluesky-social/jetstream#consuming-jetstream",
+  "meta": {},
+  "spec": {
+    "kind": "stream",
+    "channel": "subscribe",
+    "description": "Subscribe to Jetstream: every repository commit, identity change and account status change on the network as JSON, filtered by collection and by account, from now or from a past cursor. One WebSocket connection per subscription; the parameters travel in the connection URL and the server starts pushing as soon as it is open.",
+    "parameters": {
+      "title": "SubscribeParameters",
+      "type": "object",
+      "description": "The filter and the starting point, sent as the connection URL's query string.",
+      "properties": {
+        "wantedCollections": {
+          "type": "array",
+          "description": "Collection NSIDs to include, such as `app.bsky.feed.post`; a trailing `.*` matches a prefix (`app.bsky.graph.*`). At most 100. Omit for every collection. Sent as repeated `wantedCollections` query parameters.",
+          "items": {
+            "type": "string",
+            "description": "One NSID or prefix pattern."
+          },
+          "maxItems": 100
+        },
+        "wantedDids": {
+          "type": "array",
+          "description": "DIDs to include, at most 10000. Omit for every account. Sent as repeated `wantedDids` query parameters.",
+          "items": {
+            "type": "string",
+            "description": "One DID."
+          },
+          "maxItems": 10000
+        },
+        "cursor": {
+          "type": "integer",
+          "format": "epoch-micros",
+          "description": "Replay from this instant, as Unix microseconds on the wire; omit to start from now. Jetstream keeps a bounded backlog, and a cursor before it starts from the oldest event kept."
+        }
+      }
+    },
+    "payload": {
+      "title": "JetstreamEvent",
+      "type": "object",
+      "description": "One event. `kind` says which of `commit`, `identity` and `account` is present.",
+      "properties": {
+        "did": {
+          "type": "string",
+          "description": "DID of the repository the event is about."
+        },
+        "time_us": {
+          "type": "integer",
+          "format": "epoch-micros",
+          "description": "When the event was emitted, as Unix microseconds on the wire. Also the cursor to resume from."
+        },
+        "kind": {
+          "type": "string",
+          "description": "Event kind: a repository commit, an identity (handle or DID document) change, or an account status change.",
+          "enum": [
+            "commit",
+            "identity",
+            "account"
+          ]
+        },
+        "commit": {
+          "title": "Commit",
+          "type": "object",
+          "description": "One record operation in the repository; present when `kind` is `commit`.",
+          "properties": {
+            "rev": {
+              "type": "string",
+              "description": "Repository revision after this commit."
+            },
+            "operation": {
+              "type": "string",
+              "description": "What happened to the record.",
+              "enum": [
+                "create",
+                "update",
+                "delete"
+              ]
+            },
+            "collection": {
+              "type": "string",
+              "description": "Collection NSID of the record, such as `app.bsky.feed.post`."
+            },
+            "rkey": {
+              "type": "string",
+              "description": "Record key within the collection."
+            },
+            "record": {
+              "type": "object",
+              "description": "The record, for `create` and `update`; absent on `delete`. Any collection's record, so kept as a map: `$type` names the lexicon.",
+              "additionalProperties": {
+                "description": "A field of the record."
+              }
+            },
+            "cid": {
+              "type": "string",
+              "description": "CID of the record, for `create` and `update`; absent on `delete`."
+            }
+          },
+          "required": [
+            "rev",
+            "operation",
+            "collection",
+            "rkey"
+          ]
+        },
+        "identity": {
+          "title": "Identity",
+          "type": "object",
+          "description": "An identity change; present when `kind` is `identity`.",
+          "properties": {
+            "did": {
+              "type": "string",
+              "description": "The DID whose identity changed."
+            },
+            "handle": {
+              "type": "string",
+              "description": "The current handle, when it resolved."
+            },
+            "seq": {
+              "type": "integer",
+              "description": "Sequence number on the upstream firehose."
+            },
+            "time": {
+              "type": "string",
+              "format": "date-time",
+              "description": "When the change happened."
+            }
+          },
+          "required": [
+            "did",
+            "seq",
+            "time"
+          ]
+        },
+        "account": {
+          "title": "AccountStatus",
+          "type": "object",
+          "description": "An account status change; present when `kind` is `account`.",
+          "properties": {
+            "active": {
+              "type": "boolean",
+              "description": "Whether the account is active on its host."
+            },
+            "did": {
+              "type": "string",
+              "description": "The account's DID."
+            },
+            "seq": {
+              "type": "integer",
+              "description": "Sequence number on the upstream firehose."
+            },
+            "time": {
+              "type": "string",
+              "format": "date-time",
+              "description": "When the change happened."
+            },
+            "status": {
+              "type": "string",
+              "description": "Why the account is inactive, when it is: `takendown`, `suspended`, `deleted` or `deactivated`."
+            }
+          },
+          "required": [
+            "active",
+            "did",
+            "seq",
+            "time"
+          ]
+        }
+      },
+      "required": [
+        "did",
+        "time_us",
+        "kind"
+      ]
+    }
+  },
+  "push": {
+    "trigger": "connect"
+  },
+  "unverified": {
+    "reason": "not_captured",
+    "detail": "No recording yet: the sandbox this spec was written in cannot reach bsky.network. The `record.yml` workflow reads Jetstream for ten seconds through the generated client (`test/record_jetstream.py`) and writes the messages beside `examples/*.parameters.json`."
+  },
+  "notes": [
+    "Written from the Jetstream README as remembered, not read: the docs host was unreachable. The first recording confirms or corrects it. `compress`, `requireHello` and `maxMessageSizeBytes` are not declared.",
+    "There is no subscribe frame: the parameters are the connection URL's query string and the server pushes from the moment the socket opens, which is what `push: connect` declares. No `envelope.verb` is declared because no frame states a verb; the `ws-verb` warning from `truewire check` is expected, and the mock serves the endpoint through `push` instead.",
+    "`status` on an account event is a bare string: the lexicon lists its values as known values, not a closed set, so no enum is declared."
+  ]
+}

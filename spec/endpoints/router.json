@@ -1,0 +1,5 @@
+{
+  "description": "Bluesky: profiles, feeds, threads, the social graph and handle resolution from the public AppView, plus the Jetstream firehose of repository events. No credentials needed.",
+  "upstream": "https://docs.bsky.app/docs/get-started",
+  "core": "root"
+}

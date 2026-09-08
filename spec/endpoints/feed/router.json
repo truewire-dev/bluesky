@@ -1,0 +1,5 @@
+{
+  "description": "Posts, threads and feeds (`app.bsky.feed.*`).",
+  "upstream": "https://docs.bsky.app/docs/api/app-bsky-feed-get-author-feed",
+  "core": "default"
+}

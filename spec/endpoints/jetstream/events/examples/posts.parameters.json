@@ -1,0 +1,8 @@
+{
+  "description": "New posts only, from now",
+  "parameters": {
+    "wantedCollections": [
+      "app.bsky.feed.post"
+    ]
+  }
+}

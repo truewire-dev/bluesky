@@ -1,0 +1,83 @@
+{
+  "docs": "https://docs.bsky.app/docs/api/app-bsky-feed-get-feed",
+  "meta": {
+    "public": true
+  },
+  "spec": {
+    "kind": "rpc",
+    "transports": [
+      "http"
+    ],
+    "path": "/xrpc/app.bsky.feed.getFeed",
+    "method": "GET",
+    "description": "A custom feed, served through its feed generator, paged by cursor.",
+    "request": {
+      "title": "GetFeedRequest",
+      "type": "object",
+      "description": "Which feed and which page.",
+      "properties": {
+        "feed": {
+          "type": "string",
+          "description": "AT URI of the feed generator record (`app.bsky.feed.generator`)."
+        },
+        "limit": {
+          "type": "integer",
+          "description": "Rows per page. Range [1, 100]; defaults to 50.",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 50
+        },
+        "cursor": {
+          "type": "string",
+          "description": "Opaque page token from the previous response; omit for the first page."
+        }
+      },
+      "required": [
+        "feed"
+      ]
+    },
+    "response": {
+      "title": "Feed",
+      "type": "object",
+      "description": "One page of the feed.",
+      "properties": {
+        "cursor": {
+          "type": "string",
+          "description": "Token for the next page; absent on the last one."
+        },
+        "feed": {
+          "type": "array",
+          "description": "Feed entries, in the generator's order.",
+          "items": {
+            "$ref": "FeedViewPost",
+            "description": "One entry."
+          }
+        }
+      },
+      "required": [
+        "feed"
+      ]
+    }
+  },
+  "pagination": {
+    "strategy": "token",
+    "cursor": {
+      "parameter": "cursor",
+      "from": "cursor"
+    },
+    "size": {
+      "parameter": "limit"
+    },
+    "done": {
+      "kind": "absent_cursor",
+      "rows": "feed"
+    }
+  },
+  "unverified": {
+    "reason": "not_captured",
+    "detail": "No recording yet: the sandbox this spec was written in cannot reach bsky.app. The `record.yml` workflow replays `examples/*.request.json` through the generated client with `truewire capture` and opens a pull request with the responses."
+  },
+  "notes": [
+    "Written from the `app.bsky`/`com.atproto` lexicons as remembered, not read: the docs host was unreachable. The schema is a subset of the lexicon; undeclared fields pass validation and are dropped from the validated value. The first recording confirms or corrects it."
+  ]
+}

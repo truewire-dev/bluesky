@@ -1,0 +1,1033 @@
+{
+  "StrongRef": {
+    "title": "StrongRef",
+    "type": "object",
+    "description": "A reference to a specific version of a record: its AT URI and the CID of that version (`com.atproto.repo.strongRef`).",
+    "properties": {
+      "uri": {
+        "type": "string",
+        "description": "AT URI of the record (`at://<did>/<collection>/<rkey>`)."
+      },
+      "cid": {
+        "type": "string",
+        "description": "CID of the referenced record version."
+      }
+    },
+    "required": [
+      "uri",
+      "cid"
+    ]
+  },
+  "Label": {
+    "title": "Label",
+    "type": "object",
+    "description": "A moderation label applied to an account or a record (`com.atproto.label.defs#label`). Only the fields every label carries are declared.",
+    "properties": {
+      "ver": {
+        "type": "integer",
+        "description": "Label schema version."
+      },
+      "src": {
+        "type": "string",
+        "description": "DID of the labeler that applied the label."
+      },
+      "uri": {
+        "type": "string",
+        "description": "AT URI of the labeled record, or the DID of the labeled account."
+      },
+      "cid": {
+        "type": "string",
+        "description": "CID of the labeled record version, when the label is version-specific."
+      },
+      "val": {
+        "type": "string",
+        "description": "The label value, such as `porn` or `!hide`."
+      },
+      "neg": {
+        "type": "boolean",
+        "description": "Whether this label negates an earlier label with the same `src`, `uri` and `val`."
+      },
+      "cts": {
+        "type": "string",
+        "format": "date-time",
+        "description": "When the label was created."
+      },
+      "exp": {
+        "type": "string",
+        "format": "date-time",
+        "description": "When the label expires, if it does."
+      }
+    },
+    "required": [
+      "src",
+      "uri",
+      "val",
+      "cts"
+    ]
+  },
+  "ViewerState": {
+    "title": "ViewerState",
+    "type": "object",
+    "description": "The relationship between the authenticated viewer and this account (`app.bsky.actor.defs#viewerState`). Without credentials the public AppView sends an empty or absent object.",
+    "properties": {
+      "muted": {
+        "type": "boolean",
+        "description": "Whether the viewer has muted this account."
+      },
+      "mutedByList": {
+        "type": "object",
+        "description": "The list through which the account is muted, when it is (`app.bsky.graph.defs#listViewBasic`). Kept as a map.",
+        "additionalProperties": {
+          "description": "A field of the list view."
+        }
+      },
+      "blockedBy": {
+        "type": "boolean",
+        "description": "Whether this account blocks the viewer."
+      },
+      "blocking": {
+        "type": "string",
+        "description": "AT URI of the viewer's block record against this account, when there is one."
+      },
+      "blockingByList": {
+        "type": "object",
+        "description": "The list through which the account is blocked, when it is (`app.bsky.graph.defs#listViewBasic`). Kept as a map.",
+        "additionalProperties": {
+          "description": "A field of the list view."
+        }
+      },
+      "following": {
+        "type": "string",
+        "description": "AT URI of the viewer's follow record for this account, when there is one."
+      },
+      "followedBy": {
+        "type": "string",
+        "description": "AT URI of this account's follow record for the viewer, when there is one."
+      },
+      "knownFollowers": {
+        "type": "object",
+        "description": "Followers of this account the viewer also follows (`app.bsky.actor.defs#knownFollowers`). Kept as a map.",
+        "additionalProperties": {
+          "description": "A field of the known-followers view."
+        }
+      }
+    }
+  },
+  "ProfileViewBasic": {
+    "title": "ProfileViewBasic",
+    "type": "object",
+    "description": "The smallest profile view, embedded as an author in posts (`app.bsky.actor.defs#profileViewBasic`).",
+    "properties": {
+      "did": {
+        "type": "string",
+        "description": "The account's DID, its permanent identifier."
+      },
+      "handle": {
+        "type": "string",
+        "description": "The account's current handle, such as `bsky.app`; `handle.invalid` when it does not resolve."
+      },
+      "displayName": {
+        "type": "string",
+        "description": "Display name, when set."
+      },
+      "avatar": {
+        "type": "string",
+        "description": "URL of the avatar image, when set."
+      },
+      "associated": {
+        "type": "object",
+        "description": "Counts and flags for associated objects: lists, feed generators, starter packs, labeler and chat settings (`app.bsky.actor.defs#profileAssociated`). Kept as a map.",
+        "additionalProperties": {
+          "description": "A field of the associated block."
+        }
+      },
+      "viewer": {
+        "$ref": "ViewerState",
+        "description": "The viewer's relationship with this account."
+      },
+      "labels": {
+        "type": "array",
+        "description": "Moderation labels on the account.",
+        "items": {
+          "$ref": "Label",
+          "description": "One label."
+        }
+      },
+      "createdAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "When the account was created."
+      }
+    },
+    "required": [
+      "did",
+      "handle"
+    ]
+  },
+  "ProfileView": {
+    "title": "ProfileView",
+    "type": "object",
+    "description": "A profile as listed in search results and follow graphs (`app.bsky.actor.defs#profileView`).",
+    "properties": {
+      "did": {
+        "type": "string",
+        "description": "The account's DID, its permanent identifier."
+      },
+      "handle": {
+        "type": "string",
+        "description": "The account's current handle, such as `bsky.app`; `handle.invalid` when it does not resolve."
+      },
+      "displayName": {
+        "type": "string",
+        "description": "Display name, when set."
+      },
+      "avatar": {
+        "type": "string",
+        "description": "URL of the avatar image, when set."
+      },
+      "associated": {
+        "type": "object",
+        "description": "Counts and flags for associated objects: lists, feed generators, starter packs, labeler and chat settings (`app.bsky.actor.defs#profileAssociated`). Kept as a map.",
+        "additionalProperties": {
+          "description": "A field of the associated block."
+        }
+      },
+      "viewer": {
+        "$ref": "ViewerState",
+        "description": "The viewer's relationship with this account."
+      },
+      "labels": {
+        "type": "array",
+        "description": "Moderation labels on the account.",
+        "items": {
+          "$ref": "Label",
+          "description": "One label."
+        }
+      },
+      "createdAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "When the account was created."
+      },
+      "description": {
+        "type": "string",
+        "description": "Profile bio, when set."
+      },
+      "indexedAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "When the AppView last indexed the profile record."
+      }
+    },
+    "required": [
+      "did",
+      "handle"
+    ]
+  },
+  "ProfileViewDetailed": {
+    "title": "ProfileViewDetailed",
+    "type": "object",
+    "description": "A full profile with counts (`app.bsky.actor.defs#profileViewDetailed`).",
+    "properties": {
+      "did": {
+        "type": "string",
+        "description": "The account's DID, its permanent identifier."
+      },
+      "handle": {
+        "type": "string",
+        "description": "The account's current handle, such as `bsky.app`; `handle.invalid` when it does not resolve."
+      },
+      "displayName": {
+        "type": "string",
+        "description": "Display name, when set."
+      },
+      "avatar": {
+        "type": "string",
+        "description": "URL of the avatar image, when set."
+      },
+      "associated": {
+        "type": "object",
+        "description": "Counts and flags for associated objects: lists, feed generators, starter packs, labeler and chat settings (`app.bsky.actor.defs#profileAssociated`). Kept as a map.",
+        "additionalProperties": {
+          "description": "A field of the associated block."
+        }
+      },
+      "viewer": {
+        "$ref": "ViewerState",
+        "description": "The viewer's relationship with this account."
+      },
+      "labels": {
+        "type": "array",
+        "description": "Moderation labels on the account.",
+        "items": {
+          "$ref": "Label",
+          "description": "One label."
+        }
+      },
+      "createdAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "When the account was created."
+      },
+      "description": {
+        "type": "string",
+        "description": "Profile bio, when set."
+      },
+      "banner": {
+        "type": "string",
+        "description": "URL of the banner image, when set."
+      },
+      "followersCount": {
+        "type": "integer",
+        "description": "Number of accounts following this one."
+      },
+      "followsCount": {
+        "type": "integer",
+        "description": "Number of accounts this one follows."
+      },
+      "postsCount": {
+        "type": "integer",
+        "description": "Number of posts by this account."
+      },
+      "indexedAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "When the AppView last indexed the profile record."
+      },
+      "pinnedPost": {
+        "$ref": "StrongRef",
+        "description": "The post pinned to the top of the profile, when there is one."
+      }
+    },
+    "required": [
+      "did",
+      "handle"
+    ]
+  },
+  "Facet": {
+    "title": "Facet",
+    "type": "object",
+    "description": "A rich-text annotation over a byte range of `text` (`app.bsky.richtext.facet`): a mention, a link or a hashtag.",
+    "properties": {
+      "index": {
+        "title": "ByteSlice",
+        "type": "object",
+        "description": "The annotated byte range of `text`, UTF-8, end exclusive.",
+        "properties": {
+          "byteStart": {
+            "type": "integer",
+            "description": "First byte of the range."
+          },
+          "byteEnd": {
+            "type": "integer",
+            "description": "Byte after the last byte of the range."
+          }
+        },
+        "required": [
+          "byteStart",
+          "byteEnd"
+        ]
+      },
+      "features": {
+        "type": "array",
+        "description": "What the range is: one of `#mention` (`did`), `#link` (`uri`) or `#tag` (`tag`), each tagged by `$type`.",
+        "items": {
+          "title": "FacetFeature",
+          "type": "object",
+          "description": "One feature, tagged by `$type`. The other fields depend on the tag and are kept as they came.",
+          "properties": {
+            "$type": {
+              "type": "string",
+              "description": "Feature type: `app.bsky.richtext.facet#mention`, `#link` or `#tag`."
+            }
+          },
+          "required": [
+            "$type"
+          ],
+          "additionalProperties": true
+        }
+      }
+    },
+    "required": [
+      "index",
+      "features"
+    ]
+  },
+  "PostRecord": {
+    "title": "PostRecord",
+    "type": "object",
+    "description": "The post record as its author wrote it (`app.bsky.feed.post`). An open object: the fields declared here are the ones every post carries plus the common optional ones; a client may put more in.",
+    "properties": {
+      "$type": {
+        "type": "string",
+        "enum": [
+          "app.bsky.feed.post"
+        ],
+        "description": "Lexicon type tag of this object."
+      },
+      "text": {
+        "type": "string",
+        "description": "The post text, at most 300 graphemes."
+      },
+      "createdAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "When the author's client says the post was written. Client-supplied, unlike `indexedAt` on the view."
+      },
+      "langs": {
+        "type": "array",
+        "description": "BCP 47 language tags of the text, when the client set them.",
+        "items": {
+          "type": "string",
+          "description": "One language tag."
+        }
+      },
+      "reply": {
+        "title": "ReplyRef",
+        "type": "object",
+        "description": "Which thread the post replies into, when it is a reply.",
+        "properties": {
+          "root": {
+            "$ref": "StrongRef",
+            "description": "The thread's root post."
+          },
+          "parent": {
+            "$ref": "StrongRef",
+            "description": "The post replied to."
+          }
+        },
+        "required": [
+          "root",
+          "parent"
+        ]
+      },
+      "facets": {
+        "type": "array",
+        "description": "Rich-text annotations over `text`.",
+        "items": {
+          "$ref": "Facet",
+          "description": "One annotation."
+        }
+      },
+      "embed": {
+        "title": "RecordEmbed",
+        "type": "object",
+        "description": "The embed as written in the record (images, external link, quoted record, video), tagged by `$type`. Kept as it came; the hydrated `embed` on the post view is the typed one.",
+        "properties": {
+          "$type": {
+            "type": "string",
+            "description": "Embed type, such as `app.bsky.embed.images`."
+          }
+        },
+        "required": [
+          "$type"
+        ],
+        "additionalProperties": true
+      },
+      "tags": {
+        "type": "array",
+        "description": "Additional hashtags, outside the text.",
+        "items": {
+          "type": "string",
+          "description": "One tag."
+        }
+      }
+    },
+    "required": [
+      "$type",
+      "text",
+      "createdAt"
+    ],
+    "additionalProperties": true
+  },
+  "AspectRatio": {
+    "title": "AspectRatio",
+    "type": "object",
+    "description": "Width and height of a media item, as a ratio.",
+    "properties": {
+      "width": {
+        "type": "integer",
+        "description": "Width."
+      },
+      "height": {
+        "type": "integer",
+        "description": "Height."
+      }
+    },
+    "required": [
+      "width",
+      "height"
+    ]
+  },
+  "ImagesView": {
+    "title": "ImagesView",
+    "type": "object",
+    "description": "Hydrated image embed (`app.bsky.embed.images#view`).",
+    "properties": {
+      "$type": {
+        "type": "string",
+        "enum": [
+          "app.bsky.embed.images#view"
+        ],
+        "description": "Lexicon type tag of this object."
+      },
+      "images": {
+        "type": "array",
+        "description": "The images, in order.",
+        "items": {
+          "title": "ImageView",
+          "type": "object",
+          "description": "One image with its CDN URLs.",
+          "properties": {
+            "thumb": {
+              "type": "string",
+              "description": "URL of the thumbnail."
+            },
+            "fullsize": {
+              "type": "string",
+              "description": "URL of the full-size image."
+            },
+            "alt": {
+              "type": "string",
+              "description": "Alt text; empty when none was given."
+            },
+            "aspectRatio": {
+              "$ref": "AspectRatio",
+              "description": "Aspect ratio, when the client recorded one."
+            }
+          },
+          "required": [
+            "thumb",
+            "fullsize",
+            "alt"
+          ]
+        }
+      }
+    },
+    "required": [
+      "$type",
+      "images"
+    ]
+  },
+  "ExternalView": {
+    "title": "ExternalView",
+    "type": "object",
+    "description": "Hydrated external-link card (`app.bsky.embed.external#view`).",
+    "properties": {
+      "$type": {
+        "type": "string",
+        "enum": [
+          "app.bsky.embed.external#view"
+        ],
+        "description": "Lexicon type tag of this object."
+      },
+      "external": {
+        "title": "ExternalLink",
+        "type": "object",
+        "description": "The link card.",
+        "properties": {
+          "uri": {
+            "type": "string",
+            "description": "The linked URL."
+          },
+          "title": {
+            "type": "string",
+            "description": "Card title."
+          },
+          "description": {
+            "type": "string",
+            "description": "Card description."
+          },
+          "thumb": {
+            "type": "string",
+            "description": "URL of the card image, when there is one."
+          }
+        },
+        "required": [
+          "uri",
+          "title",
+          "description"
+        ]
+      }
+    },
+    "required": [
+      "$type",
+      "external"
+    ]
+  },
+  "VideoView": {
+    "title": "VideoView",
+    "type": "object",
+    "description": "Hydrated video embed (`app.bsky.embed.video#view`).",
+    "properties": {
+      "$type": {
+        "type": "string",
+        "enum": [
+          "app.bsky.embed.video#view"
+        ],
+        "description": "Lexicon type tag of this object."
+      },
+      "cid": {
+        "type": "string",
+        "description": "CID of the video blob."
+      },
+      "playlist": {
+        "type": "string",
+        "description": "URL of the HLS playlist."
+      },
+      "thumbnail": {
+        "type": "string",
+        "description": "URL of the poster image, when there is one."
+      },
+      "alt": {
+        "type": "string",
+        "description": "Alt text, when given."
+      },
+      "aspectRatio": {
+        "$ref": "AspectRatio",
+        "description": "Aspect ratio, when the client recorded one."
+      }
+    },
+    "required": [
+      "$type",
+      "cid",
+      "playlist"
+    ]
+  },
+  "RecordView": {
+    "title": "RecordView",
+    "type": "object",
+    "description": "Hydrated quote of another record (`app.bsky.embed.record#view`).",
+    "properties": {
+      "$type": {
+        "type": "string",
+        "enum": [
+          "app.bsky.embed.record#view"
+        ],
+        "description": "Lexicon type tag of this object."
+      },
+      "record": {
+        "type": "object",
+        "description": "The quoted record's view, tagged by `$type`: a post (`#viewRecord`), a not-found, blocked or detached marker, or a feed generator, list, labeler or starter pack view. Kept as a map.",
+        "additionalProperties": {
+          "description": "A field of the quoted view."
+        }
+      }
+    },
+    "required": [
+      "$type",
+      "record"
+    ]
+  },
+  "RecordWithMediaView": {
+    "title": "RecordWithMediaView",
+    "type": "object",
+    "description": "A quote with media attached (`app.bsky.embed.recordWithMedia#view`).",
+    "properties": {
+      "$type": {
+        "type": "string",
+        "enum": [
+          "app.bsky.embed.recordWithMedia#view"
+        ],
+        "description": "Lexicon type tag of this object."
+      },
+      "record": {
+        "$ref": "RecordView",
+        "description": "The quoted record."
+      },
+      "media": {
+        "title": "MediaView",
+        "description": "The attached media, tagged by `$type`.",
+        "anyOf": [
+          {
+            "$ref": "ImagesView",
+            "description": "Images."
+          },
+          {
+            "$ref": "ExternalView",
+            "description": "A link card."
+          },
+          {
+            "$ref": "VideoView",
+            "description": "A video."
+          }
+        ]
+      }
+    },
+    "required": [
+      "$type",
+      "record",
+      "media"
+    ]
+  },
+  "EmbedView": {
+    "title": "EmbedView",
+    "description": "The hydrated embed of a post, tagged by `$type` (`app.bsky.embed.*#view`).",
+    "anyOf": [
+      {
+        "$ref": "ImagesView",
+        "description": "Images."
+      },
+      {
+        "$ref": "ExternalView",
+        "description": "A link card."
+      },
+      {
+        "$ref": "VideoView",
+        "description": "A video."
+      },
+      {
+        "$ref": "RecordView",
+        "description": "A quoted record."
+      },
+      {
+        "$ref": "RecordWithMediaView",
+        "description": "A quote with media."
+      }
+    ]
+  },
+  "PostView": {
+    "title": "PostView",
+    "type": "object",
+    "description": "A post as the AppView serves it: the record plus its author, counts and hydrated embed (`app.bsky.feed.defs#postView`).",
+    "properties": {
+      "uri": {
+        "type": "string",
+        "description": "AT URI of the post."
+      },
+      "cid": {
+        "type": "string",
+        "description": "CID of the post record version."
+      },
+      "author": {
+        "$ref": "ProfileViewBasic",
+        "description": "Who wrote it."
+      },
+      "record": {
+        "$ref": "PostRecord",
+        "description": "The post record as written."
+      },
+      "embed": {
+        "$ref": "EmbedView",
+        "description": "The hydrated embed, when the post has one."
+      },
+      "replyCount": {
+        "type": "integer",
+        "description": "Number of replies."
+      },
+      "repostCount": {
+        "type": "integer",
+        "description": "Number of reposts."
+      },
+      "likeCount": {
+        "type": "integer",
+        "description": "Number of likes."
+      },
+      "quoteCount": {
+        "type": "integer",
+        "description": "Number of quote posts."
+      },
+      "indexedAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "When the AppView indexed this version of the post."
+      },
+      "viewer": {
+        "type": "object",
+        "description": "The viewer's own like, repost and mute state on the post (`app.bsky.feed.defs#viewerState`). Kept as a map; empty without credentials.",
+        "additionalProperties": {
+          "description": "A field of the viewer state."
+        }
+      },
+      "labels": {
+        "type": "array",
+        "description": "Moderation labels on the post.",
+        "items": {
+          "$ref": "Label",
+          "description": "One label."
+        }
+      },
+      "threadgate": {
+        "type": "object",
+        "description": "The thread's reply gate, when the root post has one (`app.bsky.feed.defs#threadgateView`). Kept as a map.",
+        "additionalProperties": {
+          "description": "A field of the threadgate view."
+        }
+      }
+    },
+    "required": [
+      "uri",
+      "cid",
+      "author",
+      "record",
+      "indexedAt"
+    ]
+  },
+  "NotFoundPost": {
+    "title": "NotFoundPost",
+    "type": "object",
+    "description": "A post that does not exist or was deleted (`app.bsky.feed.defs#notFoundPost`).",
+    "properties": {
+      "$type": {
+        "type": "string",
+        "enum": [
+          "app.bsky.feed.defs#notFoundPost"
+        ],
+        "description": "Lexicon type tag of this object."
+      },
+      "uri": {
+        "type": "string",
+        "description": "AT URI that was asked for."
+      },
+      "notFound": {
+        "type": "boolean",
+        "enum": [
+          true
+        ],
+        "description": "Always `true`."
+      }
+    },
+    "required": [
+      "$type",
+      "uri",
+      "notFound"
+    ]
+  },
+  "BlockedPost": {
+    "title": "BlockedPost",
+    "type": "object",
+    "description": "A post hidden by a block between the viewer and its author (`app.bsky.feed.defs#blockedPost`).",
+    "properties": {
+      "$type": {
+        "type": "string",
+        "enum": [
+          "app.bsky.feed.defs#blockedPost"
+        ],
+        "description": "Lexicon type tag of this object."
+      },
+      "uri": {
+        "type": "string",
+        "description": "AT URI of the hidden post."
+      },
+      "blocked": {
+        "type": "boolean",
+        "enum": [
+          true
+        ],
+        "description": "Always `true`."
+      },
+      "author": {
+        "title": "BlockedAuthor",
+        "type": "object",
+        "description": "The hidden post's author, reduced to its DID.",
+        "properties": {
+          "did": {
+            "type": "string",
+            "description": "The author's DID."
+          },
+          "viewer": {
+            "$ref": "ViewerState",
+            "description": "The viewer's relationship with the author."
+          }
+        },
+        "required": [
+          "did"
+        ]
+      }
+    },
+    "required": [
+      "$type",
+      "uri",
+      "blocked",
+      "author"
+    ]
+  },
+  "ReplyRefPost": {
+    "title": "ReplyRefPost",
+    "description": "A post referenced from a reply chain: the post view, or a marker that it is gone or blocked.",
+    "anyOf": [
+      {
+        "$ref": "PostView",
+        "description": "The post."
+      },
+      {
+        "$ref": "NotFoundPost",
+        "description": "Deleted or missing."
+      },
+      {
+        "$ref": "BlockedPost",
+        "description": "Hidden by a block."
+      }
+    ]
+  },
+  "FeedViewPost": {
+    "title": "FeedViewPost",
+    "type": "object",
+    "description": "One feed entry: a post, plus why it is in the feed (`app.bsky.feed.defs#feedViewPost`).",
+    "properties": {
+      "post": {
+        "$ref": "PostView",
+        "description": "The post."
+      },
+      "reply": {
+        "title": "FeedReplyRef",
+        "type": "object",
+        "description": "The thread context of a reply (`app.bsky.feed.defs#replyRef`).",
+        "properties": {
+          "root": {
+            "$ref": "ReplyRefPost",
+            "description": "The thread's root post."
+          },
+          "parent": {
+            "$ref": "ReplyRefPost",
+            "description": "The post replied to."
+          },
+          "grandparentAuthor": {
+            "$ref": "ProfileViewBasic",
+            "description": "Author of the parent's parent, when the parent is itself a reply."
+          }
+        },
+        "required": [
+          "root",
+          "parent"
+        ]
+      },
+      "reason": {
+        "title": "FeedReason",
+        "description": "Why the post is in the feed when it is not the author's own: a repost, or a pin.",
+        "anyOf": [
+          {
+            "title": "ReasonRepost",
+            "type": "object",
+            "description": "The post was reposted by `by` (`app.bsky.feed.defs#reasonRepost`).",
+            "properties": {
+              "$type": {
+                "type": "string",
+                "enum": [
+                  "app.bsky.feed.defs#reasonRepost"
+                ],
+                "description": "Lexicon type tag of this object."
+              },
+              "by": {
+                "$ref": "ProfileViewBasic",
+                "description": "Who reposted it."
+              },
+              "indexedAt": {
+                "type": "string",
+                "format": "date-time",
+                "description": "When the repost was indexed."
+              }
+            },
+            "required": [
+              "$type",
+              "by",
+              "indexedAt"
+            ]
+          },
+          {
+            "title": "ReasonPin",
+            "type": "object",
+            "description": "The post is pinned to the profile (`app.bsky.feed.defs#reasonPin`).",
+            "properties": {
+              "$type": {
+                "type": "string",
+                "enum": [
+                  "app.bsky.feed.defs#reasonPin"
+                ],
+                "description": "Lexicon type tag of this object."
+              }
+            },
+            "required": [
+              "$type"
+            ]
+          }
+        ]
+      },
+      "feedContext": {
+        "type": "string",
+        "description": "Opaque context from the feed generator, to echo back in interaction reports."
+      }
+    },
+    "required": [
+      "post"
+    ]
+  },
+  "ThreadNode": {
+    "title": "ThreadNode",
+    "description": "A parent or reply in a thread: the post, or a marker that it is gone or blocked. Its own `parent` and `replies` are not typed here, so a validated thread keeps one level around the root; `validate=False` returns the whole tree.",
+    "anyOf": [
+      {
+        "title": "ThreadPost",
+        "type": "object",
+        "description": "A post one level from the root (`app.bsky.feed.defs#threadViewPost`, without its own `parent`/`replies`).",
+        "properties": {
+          "$type": {
+            "type": "string",
+            "enum": [
+              "app.bsky.feed.defs#threadViewPost"
+            ],
+            "description": "Lexicon type tag of this object."
+          },
+          "post": {
+            "$ref": "PostView",
+            "description": "The post."
+          }
+        },
+        "required": [
+          "$type",
+          "post"
+        ],
+        "additionalProperties": true
+      },
+      {
+        "$ref": "NotFoundPost",
+        "description": "Deleted or missing."
+      },
+      {
+        "$ref": "BlockedPost",
+        "description": "Hidden by a block."
+      }
+    ]
+  },
+  "ThreadViewPost": {
+    "title": "ThreadViewPost",
+    "type": "object",
+    "description": "The requested post with its ancestors and replies (`app.bsky.feed.defs#threadViewPost`).",
+    "properties": {
+      "$type": {
+        "type": "string",
+        "enum": [
+          "app.bsky.feed.defs#threadViewPost"
+        ],
+        "description": "Lexicon type tag of this object."
+      },
+      "post": {
+        "$ref": "PostView",
+        "description": "The post."
+      },
+      "parent": {
+        "$ref": "ThreadNode",
+        "description": "The post replied to, when this is a reply and `parentHeight` allowed it."
+      },
+      "replies": {
+        "type": "array",
+        "description": "Direct replies, when `depth` allowed them.",
+        "items": {
+          "$ref": "ThreadNode",
+          "description": "One reply."
+        }
+      },
+      "threadgate": {
+        "type": "object",
+        "description": "The thread's reply gate, when the root has one (`app.bsky.feed.defs#threadgateView`). Kept as a map.",
+        "additionalProperties": {
+          "description": "A field of the threadgate view."
+        }
+      }
+    },
+    "required": [
+      "$type",
+      "post"
+    ]
+  }
+}

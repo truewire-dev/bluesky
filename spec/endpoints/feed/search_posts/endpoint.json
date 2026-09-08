@@ -1,0 +1,104 @@
+{
+  "docs": "https://docs.bsky.app/docs/api/app-bsky-feed-search-posts",
+  "meta": {
+    "public": true
+  },
+  "spec": {
+    "kind": "rpc",
+    "transports": [
+      "http"
+    ],
+    "path": "/xrpc/app.bsky.feed.searchPosts",
+    "method": "GET",
+    "description": "Full-text post search, paged by cursor.",
+    "request": {
+      "title": "SearchPostsRequest",
+      "type": "object",
+      "description": "The query, the order and the page.",
+      "properties": {
+        "q": {
+          "type": "string",
+          "description": "Search string. Lucene-style syntax is accepted."
+        },
+        "sort": {
+          "type": "string",
+          "description": "Result order.",
+          "enum": [
+            "top",
+            "latest"
+          ],
+          "default": "latest"
+        },
+        "author": {
+          "type": "string",
+          "description": "Only posts by this account, as a handle or DID."
+        },
+        "lang": {
+          "type": "string",
+          "description": "Only posts in this language, as a BCP 47 tag."
+        },
+        "limit": {
+          "type": "integer",
+          "description": "Rows per page. Range [1, 100]; defaults to 25.",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 25
+        },
+        "cursor": {
+          "type": "string",
+          "description": "Opaque page token from the previous response; omit for the first page."
+        }
+      },
+      "required": [
+        "q"
+      ]
+    },
+    "response": {
+      "title": "PostSearchResults",
+      "type": "object",
+      "description": "One page of matching posts.",
+      "properties": {
+        "cursor": {
+          "type": "string",
+          "description": "Token for the next page; absent on the last one."
+        },
+        "hitsTotal": {
+          "type": "integer",
+          "description": "Approximate total number of matches, when the search backend reports one."
+        },
+        "posts": {
+          "type": "array",
+          "description": "Matching posts.",
+          "items": {
+            "$ref": "PostView",
+            "description": "One post."
+          }
+        }
+      },
+      "required": [
+        "posts"
+      ]
+    }
+  },
+  "pagination": {
+    "strategy": "token",
+    "cursor": {
+      "parameter": "cursor",
+      "from": "cursor"
+    },
+    "size": {
+      "parameter": "limit"
+    },
+    "done": {
+      "kind": "absent_cursor",
+      "rows": "posts"
+    }
+  },
+  "unverified": {
+    "reason": "not_captured",
+    "detail": "No recording yet: the sandbox this spec was written in cannot reach bsky.app. The `record.yml` workflow replays `examples/*.request.json` through the generated client with `truewire capture` and opens a pull request with the responses."
+  },
+  "notes": [
+    "Written from the `app.bsky`/`com.atproto` lexicons as remembered, not read: the docs host was unreachable. The schema is a subset of the lexicon; undeclared fields pass validation and are dropped from the validated value. The first recording confirms or corrects it."
+  ]
+}

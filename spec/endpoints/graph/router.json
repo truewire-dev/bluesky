@@ -1,0 +1,5 @@
+{
+  "description": "The social graph: who follows whom (`app.bsky.graph.*`).",
+  "upstream": "https://docs.bsky.app/docs/api/app-bsky-graph-get-followers",
+  "core": "default"
+}

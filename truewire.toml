@@ -1,0 +1,38 @@
+[project]
+name = "bluesky"
+
+[spec]
+dir = "spec"
+
+[secrets]
+# An access JWT from `com.atproto.server.createSession`. Never needed for the public
+# AppView, never read by the core: the caller passes it to `Bluesky.new(access_jwt=...)`,
+# and `truewire standards` uses the name to flag a recording that leaked one.
+required = ["BLUESKY_ACCESS_JWT"]
+
+[cores.default]
+# Every endpoint here is served by the public AppView without credentials, so `public` is
+# the whole of what an endpoint tells the HTTP core (authoring rule 9).
+meta = { type = "object", properties = { public = { type = "boolean" } }, additionalProperties = false }
+
+[cores.streams]
+# Jetstream reads nothing per call: the subscription's parameters travel in the connection
+# URL, and the socket is one connection per subscription.
+
+[python]
+package = "bluesky"
+src = "src"
+name = "Bluesky"
+ruff = "ruff.toml"
+
+[python.cores.root]
+base = "bluesky.core:ClientBase"
+# The `jetstream` group is built on the root's `socket` field; every other group gets
+# `client`, the HTTP transport for `public.api.bsky.app`.
+children = { jetstream = "socket" }
+
+[python.cores.default]
+base = "bluesky.core:Endpoint"
+
+[python.cores.streams]
+base = "bluesky.core:StreamEndpoint"

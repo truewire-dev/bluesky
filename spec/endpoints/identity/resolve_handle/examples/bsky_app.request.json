@@ -1,0 +1,6 @@
+{
+  "description": "The official account's handle",
+  "request": {
+    "handle": "bsky.app"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "docs": "https://docs.bsky.app/docs/api/app-bsky-actor-get-profile",
+  "meta": {
+    "public": true
+  },
+  "spec": {
+    "kind": "rpc",
+    "transports": [
+      "http"
+    ],
+    "path": "/xrpc/app.bsky.actor.getProfile",
+    "method": "GET",
+    "description": "Get one account's full profile with follower, follow and post counts.",
+    "request": {
+      "title": "GetProfileRequest",
+      "type": "object",
+      "description": "Which account.",
+      "properties": {
+        "actor": {
+          "type": "string",
+          "description": "Handle or DID of the account, such as `bsky.app` or `did:plc:z72i7hdynmk6r22z27h6tvur`."
+        }
+      },
+      "required": [
+        "actor"
+      ]
+    },
+    "response": {
+      "$ref": "ProfileViewDetailed",
+      "description": "The profile."
+    }
+  },
+  "unverified": {
+    "reason": "not_captured",
+    "detail": "No recording yet: the sandbox this spec was written in cannot reach bsky.app. The `record.yml` workflow replays `examples/*.request.json` through the generated client with `truewire capture` and opens a pull request with the responses."
+  },
+  "notes": [
+    "Written from the `app.bsky`/`com.atproto` lexicons as remembered, not read: the docs host was unreachable. The schema is a subset of the lexicon; undeclared fields pass validation and are dropped from the validated value. The first recording confirms or corrects it."
+  ]
+}

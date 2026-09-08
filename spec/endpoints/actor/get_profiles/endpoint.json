@@ -1,0 +1,59 @@
+{
+  "docs": "https://docs.bsky.app/docs/api/app-bsky-actor-get-profiles",
+  "meta": {
+    "public": true
+  },
+  "spec": {
+    "kind": "rpc",
+    "transports": [
+      "http"
+    ],
+    "path": "/xrpc/app.bsky.actor.getProfiles",
+    "method": "GET",
+    "description": "Get up to 25 full profiles in one call.",
+    "request": {
+      "title": "GetProfilesRequest",
+      "type": "object",
+      "description": "Which accounts.",
+      "properties": {
+        "actors": {
+          "type": "array",
+          "description": "Handles or DIDs, at most 25. Sent as repeated `actors` query parameters.",
+          "items": {
+            "type": "string",
+            "description": "One handle or DID."
+          },
+          "maxItems": 25
+        }
+      },
+      "required": [
+        "actors"
+      ]
+    },
+    "response": {
+      "title": "Profiles",
+      "type": "object",
+      "description": "The profiles, in the order asked for; an unresolvable actor is left out.",
+      "properties": {
+        "profiles": {
+          "type": "array",
+          "description": "The profiles.",
+          "items": {
+            "$ref": "ProfileViewDetailed",
+            "description": "One profile."
+          }
+        }
+      },
+      "required": [
+        "profiles"
+      ]
+    }
+  },
+  "unverified": {
+    "reason": "not_captured",
+    "detail": "No recording yet: the sandbox this spec was written in cannot reach bsky.app. The `record.yml` workflow replays `examples/*.request.json` through the generated client with `truewire capture` and opens a pull request with the responses."
+  },
+  "notes": [
+    "Written from the `app.bsky`/`com.atproto` lexicons as remembered, not read: the docs host was unreachable. The schema is a subset of the lexicon; undeclared fields pass validation and are dropped from the validated value. The first recording confirms or corrects it."
+  ]
+}

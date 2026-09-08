@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "files": [
+    "actor/__init__.py",
+    "actor/get_profile.py",
+    "actor/get_profiles.py",
+    "actor/search_actors.py",
+    "feed/__init__.py",
+    "feed/get_author_feed.py",
+    "feed/get_feed.py",
+    "feed/get_post_thread.py",
+    "feed/get_posts.py",
+    "feed/search_posts.py",
+    "graph/__init__.py",
+    "graph/get_followers.py",
+    "graph/get_follows.py",
+    "identity/__init__.py",
+    "identity/resolve_handle.py",
+    "jetstream/__init__.py",
+    "jetstream/events.py",
+    "main.py",
+    "meta.py",
+    "schemas.py"
+  ]
+}

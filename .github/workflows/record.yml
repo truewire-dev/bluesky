@@ -1,0 +1,72 @@
+name: Record
+
+# Re-record every example from the live Bluesky APIs and open a pull request with the
+# result. Manual: Actions > Record > Run workflow. The runner has network access the
+# machine this client was written on did not. Needs "Allow GitHub Actions to create and
+# approve pull requests" enabled under Settings > Actions > General.
+on:
+  workflow_dispatch:
+    inputs:
+      jetstream_seconds:
+        description: How long to read the Jetstream firehose, in seconds.
+        default: '10'
+      jetstream_limit:
+        description: How many Jetstream events to keep per subscription.
+        default: '20'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - name: Install
+        run: |
+          uv venv --python 3.12 .venv
+          uv pip install --python .venv/bin/python -e '.[dev]'
+      - name: Record through the generated client
+        # No credentials: the public AppView answers every XRPC call here without one, and
+        # Jetstream is open. `truewire capture` records the eleven request/reply pairs; it
+        # refuses a stream endpoint, so the firehose is read for a bounded window through
+        # the same generated client and the events it pushed are written beside the
+        # subscription's parameters.
+        env:
+          PYTHON: .venv/bin/python
+          JETSTREAM_SECONDS: ${{ inputs.jetstream_seconds }}
+          JETSTREAM_LIMIT: ${{ inputs.jetstream_limit }}
+        run: PATH="$PWD/.venv/bin:$PATH" sh test/recapture.sh
+      - name: Gates on the recordings
+        run: |
+          .venv/bin/truewire check
+          .venv/bin/truewire examples --require-verified --verbose | tee coverage.txt
+          .venv/bin/python -m pytest -q -rs
+      - name: Open a pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- spec; then
+            echo "Recordings unchanged; nothing to open."
+            exit 0
+          fi
+          branch="record/${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add spec
+          git commit -m "Record examples from the live Bluesky APIs" \
+            -m "Recorded by the Record workflow, run ${{ github.run_id }}, through the generated client."
+          git push origin "$branch"
+          {
+            echo "Recorded by the [Record workflow](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) through the generated client: \`truewire capture\` for the XRPC calls, a ${{ inputs.jetstream_seconds }}s subscription for Jetstream."
+            echo
+            echo "Every changed endpoint keeps its request half and gains the response the API sent. Endpoints that gained a recording no longer declare why they had none."
+            echo
+            echo '```'
+            cat coverage.txt
+            echo '```'
+          } > body.md
+          gh pr create --title "Record examples from the live Bluesky APIs" --body-file body.md --base main --head "$branch"

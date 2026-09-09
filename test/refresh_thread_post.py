@@ -14,6 +14,7 @@ does run, the new URI is committed alongside the response it recorded, which is 
 keeps the pair reproducible: the request half is still the source of truth, it has just
 been repaired.
 """
+
 from __future__ import annotations
 
 import asyncio
@@ -52,7 +53,7 @@ def main() -> None:
     return
   was = example['request']['uri']
   example['request']['uri'] = uri
-  example['description'] = f"A post by {ACTOR} with replies, two levels deep"
+  example['description'] = f'A post by {ACTOR} with replies, two levels deep'
   EXAMPLE.write_text(json.dumps(example, indent=2) + '\n')
   print(f'{EXAMPLE.name}: {was}\n  is gone; now {uri} ({replies} replies)', file=sys.stderr)
 

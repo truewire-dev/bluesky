@@ -74,6 +74,31 @@ jobs:
       - name: Replay the recordings through the generated client
         working-directory: packages/typescript
         run: yarn run test
+      - name: The published package builds, and ships what it promises
+        # `tsconfig.json` sets `noEmit`, so nothing above compiles the tarball's contents.
+        # Without this, an `exports` entry pointing at a path the build does not produce
+        # stays green until the release job -- or, worse, until a consumer installs it.
+        working-directory: packages/typescript
+        run: |
+          yarn run build
+          node --input-type=module - <<'EOF'
+          import { existsSync } from 'node:fs'
+          import { readFile } from 'node:fs/promises'
+          import { execFileSync } from 'node:child_process'
+          const pkg = JSON.parse(await readFile('package.json', 'utf8'))
+          const targets = new Set([pkg.main, pkg.types].filter(Boolean))
+          const walk = (v) => typeof v === 'string' ? targets.add(v) : Object.values(v).forEach(walk)
+          walk(pkg.exports)
+          const packed = JSON.parse(execFileSync('npm', ['pack', '--dry-run', '--json', '--ignore-scripts'], { encoding: 'utf8' }))
+          const shipped = new Set(packed[0].files.map((f) => f.path))
+          const missing = [...targets].filter((t) => !existsSync(t))
+          const unshipped = [...targets].filter((t) => !shipped.has(t.replace(/^\.\//, '')))
+          if (missing.length || unshipped.length) {
+            console.error('not built:', missing, '\nnot in the tarball:', unshipped)
+            process.exit(1)
+          }
+          console.log(`${shipped.size} files in the tarball; every entry point is present`)
+          EOF
 
   rust:
     name: Rust client

@@ -95,10 +95,11 @@
     }
   },
   "unverified": {
-    "reason": "not_captured",
-    "detail": "No recording yet: the sandbox this spec was written in cannot reach bsky.app. The `record.yml` workflow replays `examples/*.request.json` through the generated client with `truewire capture` and opens a pull request with the responses."
+    "reason": "missing_credentials",
+    "detail": "The public AppView answers `app.bsky.feed.searchPosts` with HTTP 403 to an unauthenticated caller, unlike every other endpoint here. Recording it needs a session against a PDS (an app password), which this client does not carry; the schema is therefore still written from the lexicon and unconfirmed."
   },
   "notes": [
-    "Written from the `app.bsky`/`com.atproto` lexicons as remembered, not read: the docs host was unreachable. The schema is a subset of the lexicon; undeclared fields pass validation and are dropped from the validated value. The first recording confirms or corrects it."
+    "Written from the `app.bsky`/`com.atproto` lexicons as remembered, not read: the docs host was unreachable. The schema is a subset of the lexicon; undeclared fields pass validation and are dropped from the validated value. The first recording confirms or corrects it.",
+    "Search is the one endpoint of the twelve the public AppView will not serve without a session. The first Record run got `HTTP 403` and an HTML block page from `public.api.bsky.app`, deterministically, while the other ten answered; so this is not a bad day for the endpoint, it is the AppView's policy, and the endpoint stays `unverified` until the project has a credential to record with."
   ]
 }

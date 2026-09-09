@@ -2,7 +2,8 @@
 
 One test per example request. An example whose response has not been recorded yet skips
 with the reason, so the suite is green before the first run of `test/recapture.sh` and
-turns into real coverage the moment the recordings land. The assertions are structural
+turns into real coverage the moment the recordings land. `feed.search_posts` skips for
+good: the public AppView will not answer it without a session, and the endpoint says so. The assertions are structural
 (row counts, identifiers, ordering): the counts and the text move with every
 re-recording, the shape does not.
 """
@@ -20,7 +21,16 @@ PROJECT = Path(__file__).resolve().parents[1]
 
 BSKY_APP = 'bsky.app'
 ATPROTO = 'atproto.com'
-HELLO = 'at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3juzlwllznd24'
+
+PINNED_POST: str = json.loads(
+  (PROJECT / 'spec/endpoints/feed/get_posts/examples/bsky_app_hello.request.json').read_text()
+)['request']['uris'][0]
+"""The post `feed.get_posts` and `feed.get_post_thread` both name.
+
+Read from the example rather than written here: a post can be deleted, and
+`test/refresh_post_examples.py` then repoints both examples at one that still exists. A
+constant would turn that repair into a test failure.
+"""
 
 
 def is_profile(profile: Any) -> None:
@@ -72,14 +82,15 @@ def custom_feed(feed: Any) -> None:
 def post_thread(thread: Any) -> None:
   root = thread['thread']
   assert root['$type'] == 'app.bsky.feed.defs#threadViewPost'
-  assert root['post']['uri'] == HELLO
+  assert root['post']['uri'] == PINNED_POST
+  assert root['post']['replyCount'] > 0, 'depth=2 records nothing on a post with no replies'
   assert 'parent' not in root, 'parentHeight=0 asks for no ancestors'
   is_post(root['post'])
 
 
 def posts(result: Any) -> None:
-  assert len(result['posts']) == 1
-  assert result['posts'][0]['uri'] == HELLO
+  assert len(result['posts']) == 1, 'a post that is gone comes back as an empty array, not a 404'
+  assert result['posts'][0]['uri'] == PINNED_POST
   is_post(result['posts'][0])
 
 
@@ -150,6 +161,9 @@ async def test_recording(client, record, request_file, request):
     request_file.name.replace('.request.json', '.response.json')
   )
   if not response_file.exists():
+    unverified = record.endpoint.unverified
+    if unverified and unverified.reason == 'missing_credentials':
+      pytest.skip(f'{request.node.callspec.id}: {unverified.detail}')
     pytest.skip(f'{request.node.callspec.id}: no response recorded yet; run test/recapture.sh')
   assert json.loads(response_file.read_text())['status'] == 200
   async with client:

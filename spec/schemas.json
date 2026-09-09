@@ -660,9 +660,24 @@
       "media"
     ]
   },
+  "UnknownEmbedView": {
+    "title": "UnknownEmbedView",
+    "type": "object",
+    "description": "An embed whose `$type` this spec does not model, kept so one unknown embed does not fail the page it arrived on (`app.bsky.embed.gallery#view` appeared in a feed while this client was being written). Only the tag survives validation; the payload is dropped, and `validate=False` returns it whole.",
+    "properties": {
+      "$type": {
+        "type": "string",
+        "description": "Embed type, such as `app.bsky.embed.gallery#view`."
+      }
+    },
+    "required": [
+      "$type"
+    ],
+    "additionalProperties": true
+  },
   "EmbedView": {
     "title": "EmbedView",
-    "description": "The hydrated embed of a post, tagged by `$type` (`app.bsky.embed.*#view`).",
+    "description": "The hydrated embed of a post, tagged by `$type` (`app.bsky.embed.*#view`). The union is open: a tag none of the modelled members carries validates as `UnknownEmbedView` rather than failing the post.",
     "anyOf": [
       {
         "$ref": "ImagesView",
@@ -683,6 +698,10 @@
       {
         "$ref": "RecordWithMediaView",
         "description": "A quote with media."
+      },
+      {
+        "$ref": "UnknownEmbedView",
+        "description": "Anything else the AppView tags an embed with."
       }
     ]
   },

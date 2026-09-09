@@ -111,3 +111,18 @@ A project that lints with `I` needs per-file ignores for the generated modules, 
 ## 11. The WebSocket runtime assumes a frame-based subscribe protocol
 
 `truewire_core.ws.Streams` is built for a socket that multiplexes: one connection carries many subscriptions, `request_subscription`/`request_unsubscription` send a frame naming a channel, and `parse_msg` routes each incoming frame back to the channel it belongs to. Jetstream is the other shape — one subscription per connection, its filter in the URL, nothing ever sent — so the core here implements the base class by declining it: both request methods return `None`, `parse_msg` routes every frame to the single channel the connection carries, and `SocketClient` opens a fresh `Connection` per subscription and closes it on unsubscribe (`src/bluesky/core/ws.py`). That works and is small, but it is a subclass whose contract is "none of the above". A `Streams` variant for URL-parameterised, single-subscription sockets would let a core this shape declare what it is instead of overriding three methods to do nothing.
+
+## 12. A union is closed by construction, and nothing says it could be open
+
+The AppView hydrates a post's embed as one of five `$type`-tagged shapes, so `EmbedView` was written as an `anyOf` of the five. On 9 September a recording run walked fifty posts from `bsky.app` and the twenty-ninth carried `app.bsky.embed.gallery#view`, a sixth shape that was not there when the spec was written. Every declared member is tried, each fails on the `$type` `Literal`, and the whole page is rejected:
+
+```text
+truewire_core.exceptions.ValidationError: 12 validation errors for AuthorFeed
+feed.28.post.embed.ImagesView.$type
+  Input should be 'app.bsky.embed.images#view' [type=literal_error, input_value='app.bsky.embed.gallery#view', input_type=str]
+  ...
+```
+
+One post the client could not name cost the other forty-nine, which is the wrong trade for a feed. There is no way to say *this union is open*, so the spec adds the escape hatch by hand: a last member `UnknownEmbedView`, `{"$type": string}` with `additionalProperties: true`. Pydantic's smart union still prefers a member whose `$type` `Literal` matches, so a modelled embed keeps its whole payload and only an unmodelled one falls through, keeping its tag and losing its body. That is the behaviour wanted; the cost is that it is invisible in the schema, and that a *malformed* member of the five now lands in the catch-all instead of raising.
+
+`truewire check` has a warning for the mirror image of this — rule 2, a bare string that may be a closed set, worded as "a guessed `enum` becomes a `Literal` that rejects values the API later sends" — and none for a union closed by construction, which is the same hazard with the same cause. A declared `"open": true` on an `anyOf` (rendering the fallback member, and saying so in the generated docstring) would express it once, and `check` could warn on a union of `$type`-tagged members that has no fallback, the way it warns on a bare string.

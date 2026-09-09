@@ -3,9 +3,11 @@
 # capture` and, for Jetstream, `test/record_jetstream.py`. Run from anywhere; needs
 # `truewire` and the package on the path (`pip install -e '.[dev]'`).
 #
-# No credentials: every endpoint here is answered by the public AppView at
-# public.api.bsky.app, and Jetstream is open to anyone. An access JWT would only add the
-# viewer's own state to a profile or a post, which is not what these examples record.
+# Almost no credentials: the public AppView at public.api.bsky.app answers every endpoint
+# here but search, and Jetstream is open to anyone. An access JWT would otherwise only add
+# the viewer's own state to a profile or a post, which is not what these examples record.
+# An endpoint that declares `unverified.reason: "missing_credentials"` is skipped rather
+# than attempted, so a documented gap does not read as a failure every run.
 #
 # The request half of each example (`examples/<id>.request.json`) and the parameters of
 # each subscription (`examples/<id>.parameters.json`) are the source of truth: this
@@ -23,10 +25,23 @@ cd "$(dirname "$0")/.." || exit 1
 PYTHON=${PYTHON:-python3}
 JETSTREAM_SECONDS=${JETSTREAM_SECONDS:-10}
 JETSTREAM_LIMIT=${JETSTREAM_LIMIT:-20}
-THREAD_EXAMPLE='spec/endpoints/feed/get_post_thread/examples/bsky_app_hello.request.json'
 
 failed=''
 recorded=0
+
+# Two examples pin one post by AT URI, and a post can be deleted. That is repaired before
+# anything is captured rather than after a capture failed, because only one of the two
+# fails: `getPosts` answers 200 with an empty array for a post that is gone, and an empty
+# array records as happily as a full one.
+if ! "$PYTHON" test/refresh_post_examples.py; then
+  failed="$failed test/refresh_post_examples.py"
+fi
+
+needs_credentials() {
+  "$PYTHON" -c 'import json, sys
+doc = json.load(open(sys.argv[1]))
+sys.exit(0 if doc.get("unverified", {}).get("reason") == "missing_credentials" else 1)' "$1"
+}
 
 capture_example() {
   request=$1
@@ -37,18 +52,16 @@ capture_example() {
   truewire capture "$function" --id "$id" -d "$description" --request "$parameters"
 }
 
+skipped=''
 for request in spec/endpoints/*/*/examples/*.request.json; do
+  endpoint=$(dirname "$(dirname "$request")")/endpoint.json
+  if needs_credentials "$endpoint"; then
+    skipped="$skipped $request"
+    continue
+  fi
   if capture_example "$request"; then
     recorded=$((recorded + 1))
     continue
-  fi
-  # A thread example names one post, and a post can be deleted. Repair the request half
-  # from a post that still exists, then try once more; anything else is a real failure.
-  if [ "$request" = "$THREAD_EXAMPLE" ] && "$PYTHON" test/refresh_thread_post.py; then
-    if capture_example "$request"; then
-      recorded=$((recorded + 1))
-      continue
-    fi
   fi
   failed="$failed $request"
 done
@@ -66,6 +79,10 @@ fi
 
 echo
 echo "recorded $recorded example(s)"
+if [ -n "$skipped" ]; then
+  echo 'these need a credential this project does not carry, and say so in their endpoint:'
+  for request in $skipped; do echo "  $request"; done
+fi
 if [ -n "$failed" ]; then
   echo 'these did not record, and their endpoints keep saying why they have none:'
   for request in $failed; do echo "  $request"; done

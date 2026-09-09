@@ -33,11 +33,12 @@ jobs:
           uv venv --python 3.12 .venv
           uv pip install --python .venv/bin/python -e '.[dev]'
       - name: Record through the generated client
-        # No credentials: the public AppView answers every XRPC call here without one, and
-        # Jetstream is open. `truewire capture` records the eleven request/reply pairs; it
-        # refuses a stream endpoint, so the firehose is read for a bounded window through
-        # the same generated client and the events it pushed are written beside the
-        # subscription's parameters.
+        # Almost no credentials: the public AppView answers every XRPC call here but search
+        # without one, and Jetstream is open. `truewire capture` records the ten request/reply
+        # pairs it can; it refuses a stream endpoint, so the firehose is read for a bounded
+        # window through the same generated client and the events it pushed are written beside
+        # the subscription's parameters. `feed.search_posts` declares that it needs a
+        # credential and is skipped rather than attempted.
         env:
           PYTHON: .venv/bin/python
           JETSTREAM_SECONDS: ${{ inputs.jetstream_seconds }}

@@ -130,6 +130,16 @@ class StrongRef(TypedDict):
   """CID of the referenced record version."""
 
 
+UnknownEmbedViewKeywords = TypedDict('UnknownEmbedViewKeywords', {'$type': str})
+"""
+- `$type`: Embed type, such as `app.bsky.embed.gallery#view`.
+"""
+
+
+class UnknownEmbedView(UnknownEmbedViewKeywords):
+  """An embed whose `$type` this spec does not model, kept so one unknown embed does not fail the page it arrived on (`app.bsky.embed.gallery#view` appeared in a feed while this client was being written). Only the tag survives validation; the payload is dropped, and `validate=False` returns it whole."""
+
+
 class ViewerState(TypedDict):
   """The relationship between the authenticated viewer and this account (`app.bsky.actor.defs#viewerState`). Without credentials the public AppView sends an empty or absent object."""
 
@@ -385,7 +395,9 @@ class RecordWithMediaView(RecordWithMediaViewKeywords):
   """The attached media, tagged by `$type`."""
 
 
-EmbedView = ImagesView | ExternalView | VideoView | RecordView | RecordWithMediaView
+EmbedView = (
+  ImagesView | ExternalView | VideoView | RecordView | RecordWithMediaView | UnknownEmbedView
+)
 
 
 class PostView(TypedDict):
@@ -397,8 +409,10 @@ class PostView(TypedDict):
   """CID of the post record version."""
   author: ProfileViewBasic
   record: PostRecord
-  embed: NotRequired[ImagesView | ExternalView | VideoView | RecordView | RecordWithMediaView]
-  """The hydrated embed of a post, tagged by `$type` (`app.bsky.embed.*#view`)."""
+  embed: NotRequired[
+    ImagesView | ExternalView | VideoView | RecordView | RecordWithMediaView | UnknownEmbedView
+  ]
+  """The hydrated embed of a post, tagged by `$type` (`app.bsky.embed.*#view`). The union is open: a tag none of the modelled members carries validates as `UnknownEmbedView` rather than failing the post."""
   replyCount: NotRequired[int]
   """Number of replies."""
   repostCount: NotRequired[int]

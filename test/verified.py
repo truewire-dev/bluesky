@@ -7,6 +7,12 @@ endpoints still without one and fails when there are any: CI's strict gate.
 
 An endpoint's pair is a request beside a response for an HTTP endpoint, and the
 subscription's parameters beside the events it pushed for the Jetstream stream.
+
+One reason to have no pair survives the strict gate: an endpoint that declares
+`unverified.reason: "missing_credentials"` is one the project cannot record at all, not
+one nobody has got round to recording. `feed.search_posts` is the only such endpoint here
+— the public AppView answers it 403 without a session — and the gate would otherwise be a
+line CI can never reach.
 """
 
 import json
@@ -17,6 +23,14 @@ PROJECT = Path(__file__).resolve().parents[1]
 
 PAIRS = (('.request.json', '.response.json'), ('.parameters.json', '.messages.json'))
 """The two file conventions a recorded pair takes: an HTTP call, and a subscription."""
+
+EXEMPT = 'missing_credentials'
+"""The one `unverified.reason` the strict gate accepts in place of a recording."""
+
+
+def exempt(doc: dict) -> bool:
+  """Whether this endpoint is one the project has no way of recording."""
+  return doc.get('unverified', {}).get('reason') == EXEMPT
 
 
 def recorded(endpoint: Path) -> bool:
@@ -42,14 +56,17 @@ def drop_stale() -> int:
 
 
 def check() -> int:
-  missing = [
-    endpoint.parent.relative_to(PROJECT / 'spec' / 'endpoints')
-    for endpoint in sorted((PROJECT / 'spec' / 'endpoints').rglob('endpoint.json'))
-    if not recorded(endpoint)
-  ]
+  missing, excused = [], []
+  for endpoint in sorted((PROJECT / 'spec' / 'endpoints').rglob('endpoint.json')):
+    if recorded(endpoint):
+      continue
+    path = endpoint.parent.relative_to(PROJECT / 'spec' / 'endpoints')
+    (excused if exempt(json.loads(endpoint.read_text())) else missing).append(path)
+  for path in excused:
+    print(f'{path}: no recording, and declares it needs a credential to get one')
   for path in missing:
     print(f'{path}: no recording; run test/recapture.sh')
-  print(f'{len(missing)} endpoint(s) without a recording')
+  print(f'{len(missing)} endpoint(s) without a recording, {len(excused)} excused')
   return 1 if missing else 0
 
 

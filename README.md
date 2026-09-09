@@ -3,6 +3,7 @@
   <tr>
     <td align="center"><b>🐍 Python</b></td>
     <td align="center"><a href="./packages/typescript/README.md">🟦 TypeScript</a></td>
+    <td align="center"><a href="./packages/rust/README.md">🦀 Rust</a></td>
     <td align="center"><a href="https://github.com/truewire-dev/bluesky/tree/main/spec">📐 The spec</a></td>
     <td align="center"><a href="./NOTES.md">🧩 Toolchain gaps</a></td>
   </tr>

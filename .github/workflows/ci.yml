@@ -30,6 +30,8 @@ jobs:
           .venv/bin/truewire generate python
           .venv/bin/truewire generate typescript --check
           .venv/bin/truewire generate typescript
+          .venv/bin/truewire generate rust --check
+          .venv/bin/truewire generate rust
           git diff --exit-code -- packages .truewire
       - name: Tests against the mock server
         run: .venv/bin/python -m pytest packages/python/test -q -rs
@@ -62,6 +64,28 @@ jobs:
       - name: Replay the recordings through the generated client
         working-directory: packages/typescript
         run: yarn run test
+
+  rust:
+    name: Rust client
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Install
+        # `truewire mock` serves the recordings the tests replay, so the Python toolchain
+        # is needed here too.
+        run: |
+          uv venv --python 3.12 .venv
+          uv pip install --python .venv/bin/python -e 'packages/python[dev]'
+      - name: Build without warnings
+        working-directory: packages/rust
+        env:
+          RUSTFLAGS: -D warnings
+        run: cargo build
+      - name: Replay the recordings through the generated client
+        working-directory: packages/rust
+        run: cargo test
 
   recordings:
     name: Every endpoint has a recording

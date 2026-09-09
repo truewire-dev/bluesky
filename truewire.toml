@@ -24,6 +24,11 @@ package = "bluesky"
 src = "packages/typescript/src"
 name = "Bluesky"
 
+[rust]
+package = "bluesky"
+src = "packages/rust/src"
+name = "Bluesky"
+
 [python]
 package = "bluesky"
 src = "packages/python/src"

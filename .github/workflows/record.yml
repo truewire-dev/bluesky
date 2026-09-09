@@ -2,12 +2,15 @@ name: Record
 
 # Re-record every example from the live Bluesky APIs and open a pull request with the
 # result. Manual: Actions > Record > Run workflow. The runner has network access the
-# machine this client was written on did not. Needs "Allow GitHub Actions to create and
-# approve pull requests" enabled under Settings > Actions > General.
+# machine this client was written on did not. Opening the pull request needs "Allow GitHub
+# Actions to create and approve pull requests" under Settings > Actions > General; without
+# it the branch is still pushed and the job summary links to it.
 #
 # An endpoint that fails to record does not stop the others: the pull request carries
 # whatever the API did answer, the endpoints that failed keep declaring why they have no
-# recording, and the job still ends red so the failure is not lost.
+# recording, and the job still ends red so the failure is not lost. An endpoint that
+# declares `unverified.reason: "missing_credentials"` is skipped rather than attempted,
+# and is not a failure.
 on:
   workflow_dispatch:
     inputs:
@@ -78,7 +81,17 @@ jobs:
             cat coverage.txt
             echo '```'
           } > body.md
-          gh pr create --title "Record examples from the live Bluesky APIs" --body-file body.md --base main --head "$branch"
+          # A repository with "Allow GitHub Actions to create and approve pull requests"
+          # off (Settings > Actions > General) pushes the branch and then cannot open
+          # anything for it. The recordings are safe on the branch either way, so say
+          # where they are rather than losing the run over a setting.
+          if ! gh pr create --title "Record examples from the live Bluesky APIs" \
+            --body-file body.md --base main --head "$branch"; then
+            url="${{ github.server_url }}/${{ github.repository }}/compare/main...$branch?expand=1"
+            echo "::warning::could not open a pull request; the recordings are on $branch, open it at $url"
+            { echo "### Recordings are on \`$branch\`"; echo; echo "[Open the pull request]($url)"; } \
+              >> "$GITHUB_STEP_SUMMARY"
+          fi
       - name: Some examples did not record
         if: steps.record.outcome == 'failure'
         run: |

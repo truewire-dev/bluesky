@@ -28,7 +28,9 @@ jobs:
         run: |
           .venv/bin/truewire generate python --check
           .venv/bin/truewire generate python
-          git diff --exit-code -- src .truewire
+          .venv/bin/truewire generate typescript --check
+          .venv/bin/truewire generate typescript
+          git diff --exit-code -- src ts .truewire
       - name: Tests against the mock server
         run: .venv/bin/python -m pytest -q -rs
       - name: Type usage

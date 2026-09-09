@@ -1,14 +1,20 @@
-# The same client in three languages
+# The same client in two languages
 
-One spec, three backends. This branch generates `spec/` into Python, TypeScript and Rust
-so the three can be read side by side: the same twelve endpoints, the same recorded
-examples, the same docstrings, three sets of idioms.
+One spec, two backends. This branch generates `spec/` into Python and TypeScript so the
+two can be read side by side: the same twelve endpoints, the same recorded examples, the
+same docstrings, two sets of idioms.
+
+Rust is not here. The backend renders only a simple root, and this client's root is
+composite -- HTTP for ten endpoints, a WebSocket for Jetstream -- so it produces types and
+no client at all; no published release carries the backend either, so declaring `[rust]`
+in `truewire.toml` only broke CI. It comes back when it can render this client, not
+before. The gap is on `docs/plan.md` in the toolchain repository.
 
 It exists to be reviewed by a person. Every gate we have proves the generated code is
-*correct*; nothing we have proves it is *good*, and for TypeScript and Rust nobody with
-taste has read a line of it.
+*correct*; nothing we have proves it is *good*, and nobody with taste has read a line of the
+TypeScript.
 
-Regenerate any of them with `truewire generate <python|typescript|rust>`.
+Regenerate either with `truewire generate <python|typescript>`.
 
 ## What came out
 
@@ -16,7 +22,6 @@ Regenerate any of them with `truewire generate <python|typescript|rust>`.
 | --- | --- | --- | --- | --- |
 | Python (`src/bluesky`) | 24 | yes | 11 | yes |
 | TypeScript (`ts/src/bluesky`) | 21 | yes | 11 | yes |
-| Rust (`rust/src/bluesky`) | 3 | **no** | **0** | no |
 
 ## Where to look
 
@@ -38,17 +43,6 @@ and new enough to change. Read in this order:
 Questions I cannot answer for myself: is a request *object* right where Python takes
 flat keyword arguments? Is declaring `interface Request` and `const Request: Codec<Request>`
 under one name clever or confusing? Do the overloads read well at a call site?
-
-**Rust** is three files and no client, which is the honest state of it. The backend renders
-only a simple root; Bluesky's root is composite (HTTP for ten endpoints, a WebSocket for
-Jetstream), so the root router is skipped and the reachability filter then drops the eleven
-endpoints that had already rendered. `truewire generate rust` says so now — it did not
-before this branch. `rust/src/bluesky/types/mod.rs` is real and worth a look; there is
-nothing else to review yet.
-
-A composite root is not exotic: it is what any client speaking both HTTP and WebSocket
-needs, which is the combination Truewire exists for. It is on `docs/plan.md` as the gap
-that decides whether Rust is a supported backend or a demo.
 
 ## Not done here
 

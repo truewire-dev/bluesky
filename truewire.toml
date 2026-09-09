@@ -24,11 +24,6 @@ package = "bluesky"
 src = "ts/src"
 name = "Bluesky"
 
-[rust]
-package = "bluesky"
-src = "rust/src"
-name = "Bluesky"
-
 [python]
 package = "bluesky"
 src = "src"

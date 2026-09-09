@@ -1,8 +1,0 @@
-{
-  "version": 1,
-  "files": [
-    "lib.rs",
-    "meta.rs",
-    "types/mod.rs"
-  ]
-}

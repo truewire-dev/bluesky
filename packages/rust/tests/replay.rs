@@ -54,9 +54,10 @@ fn start_mock() -> Mock {
         .spawn()
         .unwrap_or_else(|e| panic!("could not start {}: {e}", bin.display()));
     let stdout = child.stdout.take().expect("piped");
+    let mut lines = BufReader::new(stdout).lines();
     let mut http = None;
     let mut ws = None;
-    for line in BufReader::new(stdout).lines() {
+    for line in lines.by_ref() {
         let line = line.expect("mock stdout");
         let mut parts = line.split_whitespace();
         match (parts.next(), parts.next()) {
@@ -68,6 +69,13 @@ fn start_mock() -> Mock {
             break;
         }
     }
+    // Keep draining after the URLs. The mock writes to stdout for the life of the process,
+    // and a pipe nobody reads fills up: it then blocks on the write, or takes EPIPE if the
+    // reader has gone, and dies mid-response. Two tests here never filled the buffer, so
+    // this was latent; the weather.gov showcase runs eight and hit it immediately, as
+    // `IncompleteBody` and `ConnectionReset` on three of them -- a bug in the harness
+    // reading as flakiness in the client.
+    std::thread::spawn(move || lines.for_each(drop));
     Mock {
         child,
         http: http.expect("the mock printed an HTTP url"),

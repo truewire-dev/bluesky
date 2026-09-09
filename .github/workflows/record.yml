@@ -12,6 +12,11 @@ name: Record
 # declares `unverified.reason: "missing_credentials"` is skipped rather than attempted,
 # and is not a failure.
 on:
+  # Recordings go stale on their own: a live API changes underneath them, and nothing in
+  # this repository notices until someone re-records. So the runner re-records weekly by
+  # itself and opens the pull request; a human or an agent only has to judge the diff.
+  schedule:
+    - cron: '0 6 * * 1'
   workflow_dispatch:
     inputs:
       jetstream_seconds:
@@ -44,8 +49,8 @@ jobs:
         # credential and is skipped rather than attempted.
         env:
           PYTHON: .venv/bin/python
-          JETSTREAM_SECONDS: ${{ inputs.jetstream_seconds }}
-          JETSTREAM_LIMIT: ${{ inputs.jetstream_limit }}
+          JETSTREAM_SECONDS: ${{ inputs.jetstream_seconds || '10' }}
+          JETSTREAM_LIMIT: ${{ inputs.jetstream_limit || '20' }}
         # Failures are reported by the script and re-raised at the end of the job, so the
         # recordings that did succeed still reach a pull request.
         continue-on-error: true
@@ -73,7 +78,7 @@ jobs:
             -m "Recorded by the Record workflow, run ${{ github.run_id }}, through the generated client."
           git push origin "$branch"
           {
-            echo "Recorded by the [Record workflow](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) through the generated client: \`truewire capture\` for the XRPC calls, a ${{ inputs.jetstream_seconds }}s subscription for Jetstream."
+            echo "Recorded by the [Record workflow](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) through the generated client: \`truewire capture\` for the XRPC calls, a ${{ inputs.jetstream_seconds || '10' }}s subscription for Jetstream."
             echo
             echo "Every changed endpoint keeps its request half and gains the response the API sent. Endpoints that gained a recording no longer declare why they had none."
             echo

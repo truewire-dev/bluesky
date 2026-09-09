@@ -13,7 +13,7 @@ from truewire.mock import running_mock_servers
 
 from bluesky import Bluesky
 
-PROJECT = Path(__file__).resolve().parents[1]
+PROJECT = Path(__file__).resolve().parents[3]
 
 NO_WS_SERVER = 'ws://127.0.0.1:1/subscribe'
 """Stand-in for the mock's WebSocket address while no Jetstream events are recorded."""

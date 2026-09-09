@@ -11,7 +11,7 @@ jetstream.events is not an HTTP rpc endpoint; capture records HTTP request/reply
   truewire/cli/capture.py:73
 ```
 
-There is no other subcommand that records a subscription: `mock` replays one, `check` validates one, nothing captures one. So the project records the firehose itself, in `test/record_jetstream.py`: it resolves the endpoint's generated method the same way `capture` does (`truewire.examples.resolve_endpoint_function`), binds the recorded `examples/<id>.parameters.json` with `coerce_ws_example_call`, subscribes for a bounded window through the same generated client, and writes what arrived to `examples/<id>.messages.json` — the file `truewire check` validates and `truewire mock` replays. It builds the client with `validate=False`, because a recording has to be the wire body: validated, `time_us` is already a `datetime` and no longer what Jetstream sent.
+There is no other subcommand that records a subscription: `mock` replays one, `check` validates one, nothing captures one. So the project records the firehose itself, in `packages/python/test/record_jetstream.py`: it resolves the endpoint's generated method the same way `capture` does (`truewire.examples.resolve_endpoint_function`), binds the recorded `examples/<id>.parameters.json` with `coerce_ws_example_call`, subscribes for a bounded window through the same generated client, and writes what arrived to `examples/<id>.messages.json` — the file `truewire check` validates and `truewire mock` replays. It builds the client with `validate=False`, because a recording has to be the wire body: validated, `time_us` is already a `datetime` and no longer what Jetstream sent.
 
 A `capture` that accepted a stream endpoint with `--seconds`/`--limit` would replace that file exactly. The pieces it would need are all already public.
 
@@ -47,7 +47,7 @@ client.jetstream.events(wanted_collections=['app.bsky.feed.post'], validate=Fals
 # StreamManager[JetstreamEvent, Any, Any]
 ```
 
-At runtime that subscription yields raw frames — `time_us` an `int`, not the `datetime` `JetstreamEvent` declares — so the type is wrong in exactly the case the flag exists for. `test/typing_usage.py` asserts what the generator actually produces, with this note beside it, rather than asserting what it should produce. `test/record_jetstream.py` is the one place the project relies on the unvalidated events, and it treats them as `Any`. The same pair of overloads the rpc path already emits would close it.
+At runtime that subscription yields raw frames — `time_us` an `int`, not the `datetime` `JetstreamEvent` declares — so the type is wrong in exactly the case the flag exists for. `packages/python/test/typing_usage.py` asserts what the generator actually produces, with this note beside it, rather than asserting what it should produce. `packages/python/test/record_jetstream.py` is the one place the project relies on the unvalidated events, and it treats them as `Any`. The same pair of overloads the rpc path already emits would close it.
 
 ## 5. `jetstream.events` declares no `envelope.verb`, and cannot
 
@@ -70,7 +70,7 @@ The warning stands, unsilenced. The rule could exempt an endpoint that declares 
 2 endpoint(s) declare `unverified` despite having paired examples; remove the stale declaration (rerun with --verbose to list them)
 ```
 
-The recording script (`test/recapture.sh`) ends with `test/verified.py`, which drops the block of every endpoint that has a pair — a request beside a response for the eleven XRPC endpoints, parameters beside messages for the stream; `--check` is the strict CI gate that lists endpoints still without one. `capture` could drop the block itself, since it knows the pair it just wrote, or `examples` could offer `--fix`.
+The recording script (`packages/python/test/recapture.sh`) ends with `packages/python/test/verified.py`, which drops the block of every endpoint that has a pair — a request beside a response for the eleven XRPC endpoints, parameters beside messages for the stream; `--check` is the strict CI gate that lists endpoints still without one. `capture` could drop the block itself, since it knows the pair it just wrote, or `examples` could offer `--fix`.
 
 ## 7. `truewire check` reads a bare string as a probable closed set
 

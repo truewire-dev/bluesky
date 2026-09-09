@@ -9,7 +9,7 @@ from pathlib import Path
 
 from truewire.testing import build_http_replay_test, build_ws_replay_test
 
-PROJECT = Path(__file__).resolve().parents[1]
+PROJECT = Path(__file__).resolve().parents[3]
 
 test_examples_replay = build_http_replay_test(PROJECT)
 test_stream_examples_replay = build_ws_replay_test(PROJECT)

@@ -34,7 +34,7 @@ from typing_extensions import Any
 
 from bluesky import Bluesky
 
-PROJECT = Path(__file__).resolve().parents[1]
+PROJECT = Path(__file__).resolve().parents[3]
 SPEC = PROJECT / 'spec'
 
 

@@ -39,7 +39,7 @@ jobs:
       - name: Install
         run: |
           uv venv --python 3.12 .venv
-          uv pip install --python .venv/bin/python -e '.[dev]'
+          uv pip install --python .venv/bin/python -e 'packages/python[dev]'
       - name: Record through the generated client
         # Almost no credentials: the public AppView answers every XRPC call here but search
         # without one, and Jetstream is open. `truewire capture` records the ten request/reply
@@ -55,12 +55,12 @@ jobs:
         # recordings that did succeed still reach a pull request.
         continue-on-error: true
         id: record
-        run: PATH="$PWD/.venv/bin:$PATH" sh test/recapture.sh
+        run: PATH="$PWD/.venv/bin:$PATH" sh packages/python/test/recapture.sh
       - name: Gates on the recordings
         run: |
           .venv/bin/truewire check
           .venv/bin/truewire examples --require-verified --verbose | tee coverage.txt
-          .venv/bin/python -m pytest -q -rs
+          .venv/bin/python -m pytest packages/python/test -q -rs
       - name: Open a pull request
         env:
           GH_TOKEN: ${{ github.token }}

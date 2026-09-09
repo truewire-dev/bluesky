@@ -22,7 +22,7 @@ from truewire.examples import (
 from truewire.spec.repo import endpoint_records, load_ws_parameters_example
 from typing_extensions import Any
 
-PROJECT = Path(__file__).resolve().parents[1]
+PROJECT = Path(__file__).resolve().parents[3]
 SPEC = PROJECT / 'spec'
 
 KINDS = {'commit', 'identity', 'account'}

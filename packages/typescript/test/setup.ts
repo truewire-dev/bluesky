@@ -3,7 +3,7 @@
  * HTTP base URL and WebSocket URL to every test through `inject(...)`.
  *
  * The mock serves the recordings in `spec/`, which live at the repository root beside
- * `truewire.toml`, so it is that directory the mock is pointed at, not `ts/`. The binary
+ * `truewire.toml`, so it is that directory the mock is pointed at, not this package. The binary
  * is the repository's own `.venv/bin/truewire` unless `TRUEWIRE_BIN` names another.
  */
 import { spawn } from 'node:child_process'
@@ -20,7 +20,7 @@ declare module 'vitest' {
 }
 
 export const tsRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-export const projectRoot = path.resolve(tsRoot, '..')
+export const projectRoot = path.resolve(tsRoot, '../..')
 
 export default async function setup(project: TestProject): Promise<() => void> {
   const bin = process.env.TRUEWIRE_BIN ?? path.resolve(projectRoot, '.venv/bin/truewire')

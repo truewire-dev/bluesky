@@ -25,7 +25,7 @@ from pathlib import Path
 
 from bluesky import Bluesky
 
-PROJECT = Path(__file__).resolve().parent.parent
+PROJECT = Path(__file__).resolve().parents[3]
 EXAMPLES = (
   (
     PROJECT / 'spec/endpoints/feed/get_posts/examples/bsky_app_hello.request.json',

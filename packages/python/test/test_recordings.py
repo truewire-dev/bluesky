@@ -17,7 +17,7 @@ from truewire.examples import run_example_request
 from truewire.spec.repo import endpoint_records, load_request_example
 from typing_extensions import Any
 
-PROJECT = Path(__file__).resolve().parents[1]
+PROJECT = Path(__file__).resolve().parents[3]
 
 BSKY_APP = 'bsky.app'
 ATPROTO = 'atproto.com'

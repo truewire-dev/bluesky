@@ -17,7 +17,7 @@ jobs:
       - name: Install
         run: |
           uv venv --python ${{ matrix.python }} .venv
-          uv pip install --python .venv/bin/python -e '.[dev]'
+          uv pip install --python .venv/bin/python -e 'packages/python[dev]'
       - name: Spec checks
         run: .venv/bin/truewire check
       - name: Standards
@@ -30,15 +30,15 @@ jobs:
           .venv/bin/truewire generate python
           .venv/bin/truewire generate typescript --check
           .venv/bin/truewire generate typescript
-          git diff --exit-code -- src ts .truewire
+          git diff --exit-code -- packages .truewire
       - name: Tests against the mock server
-        run: .venv/bin/python -m pytest -q -rs
+        run: .venv/bin/python -m pytest packages/python/test -q -rs
       - name: Type usage
-        run: .venv/bin/pyright
+        run: .venv/bin/pyright --project packages/python/pyrightconfig.json
       - name: Lint and format
         run: |
-          .venv/bin/ruff check src test
-          .venv/bin/ruff format --check src test
+          .venv/bin/ruff check --config packages/python/ruff.toml packages/python/src packages/python/test
+          .venv/bin/ruff format --check --config packages/python/ruff.toml packages/python/src packages/python/test
 
   typescript:
     name: TypeScript client
@@ -54,13 +54,13 @@ jobs:
         # is needed here too.
         run: |
           uv venv --python 3.12 .venv
-          uv pip install --python .venv/bin/python -e '.[dev]'
-          cd ts && yarn install --frozen-lockfile
+          uv pip install --python .venv/bin/python -e 'packages/python[dev]'
+          cd packages/typescript && yarn install --frozen-lockfile
       - name: Type check
-        working-directory: ts
+        working-directory: packages/typescript
         run: yarn run typecheck
       - name: Replay the recordings through the generated client
-        working-directory: ts
+        working-directory: packages/typescript
         run: yarn run test
 
   recordings:
@@ -68,7 +68,7 @@ jobs:
     runs-on: ubuntu-latest
     # Required since the first recordings landed (#1). Eleven of the twelve endpoints carry
     # a recorded pair; `feed.search_posts` carries a declaration that it needs a credential
-    # to get one, which is the only reason `test/verified.py --check` accepts in place of a
+    # to get one, which is the only reason `packages/python/test/verified.py --check` accepts in place of a
     # recording. So an endpoint added without either now fails the pull request.
     steps:
       - uses: actions/checkout@v4
@@ -76,8 +76,8 @@ jobs:
       - name: Install
         run: |
           uv venv --python 3.12 .venv
-          uv pip install --python .venv/bin/python -e '.[dev]'
+          uv pip install --python .venv/bin/python -e 'packages/python[dev]'
       - name: Recorded, or declared why not
         run: .venv/bin/truewire examples --require-verified --verbose
       - name: Recorded, every one
-        run: .venv/bin/python test/verified.py --check
+        run: .venv/bin/python packages/python/test/verified.py --check

@@ -19,7 +19,7 @@ import json
 import sys
 from pathlib import Path
 
-PROJECT = Path(__file__).resolve().parents[1]
+PROJECT = Path(__file__).resolve().parents[3]
 
 PAIRS = (('.request.json', '.response.json'), ('.parameters.json', '.messages.json'))
 """The two file conventions a recorded pair takes: an HTTP call, and a subscription."""

@@ -21,7 +21,7 @@
 # because a live API will always have one endpoint having a bad day. Failures are listed
 # at the end and the exit code is non-zero, so a workflow can open the pull request for
 # what did record and still show red.
-cd "$(dirname "$0")/.." || exit 1
+cd "$(dirname "$0")/../../.." || exit 1
 PYTHON=${PYTHON:-python3}
 JETSTREAM_SECONDS=${JETSTREAM_SECONDS:-10}
 JETSTREAM_LIMIT=${JETSTREAM_LIMIT:-20}
@@ -33,8 +33,8 @@ recorded=0
 # anything is captured rather than after a capture failed, because only one of the two
 # fails: `getPosts` answers 200 with an empty array for a post that is gone, and an empty
 # array records as happily as a full one.
-if ! "$PYTHON" test/refresh_post_examples.py; then
-  failed="$failed test/refresh_post_examples.py"
+if ! "$PYTHON" packages/python/test/refresh_post_examples.py; then
+  failed="$failed packages/python/test/refresh_post_examples.py"
 fi
 
 needs_credentials() {
@@ -69,13 +69,13 @@ done
 # `truewire capture` refuses a stream endpoint, so the firehose is read directly through
 # the generated client for a short window and the events it pushed are written beside the
 # subscription's parameters.
-if "$PYTHON" test/record_jetstream.py --seconds "$JETSTREAM_SECONDS" --limit "$JETSTREAM_LIMIT"; then
+if "$PYTHON" packages/python/test/record_jetstream.py --seconds "$JETSTREAM_SECONDS" --limit "$JETSTREAM_LIMIT"; then
   recorded=$((recorded + 1))
 else
   failed="$failed jetstream"
 fi
 
-"$PYTHON" test/verified.py
+"$PYTHON" packages/python/test/verified.py
 
 echo
 echo "recorded $recorded example(s)"

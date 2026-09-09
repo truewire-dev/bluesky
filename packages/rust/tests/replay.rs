@@ -156,6 +156,9 @@ async fn every_recorded_example_replays_through_the_client() {
     let handles: Vec<&str> = profiles.profiles.iter().map(|p| p.handle.as_str()).collect();
     assert_eq!(handles, vec!["bsky.app", "atproto.com"]);
     for view in &profiles.profiles {
+        // `get_profiles` answers with `ProfileViewDetailed`, a wider record than the
+        // `ProfileView` the graph endpoints return, so this asserts the shared fields
+        // rather than reusing `is_profile`.
         assert!(view.did.starts_with("did:"), "{}", view.did);
         assert!(!view.handle.is_empty());
     }
@@ -195,7 +198,11 @@ async fn every_recorded_example_replays_through_the_client() {
         .await
         .expect("graph.get_followers");
     assert_eq!(followers.subject.handle, "atproto.com");
+    is_profile(&followers.subject);
     assert!(!followers.followers.is_empty());
+    for follower in &followers.followers {
+        is_profile(follower);
+    }
 }
 
 #[tokio::test]

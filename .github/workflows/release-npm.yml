@@ -4,18 +4,24 @@ name: Release the TypeScript client (npm)
 # packages/typescript/package.json is not on npm yet, this builds, publishes, tags
 # `typescript-v<version>` and creates the GitHub release.
 #
-# Authentication takes whichever of the two is available, in that order:
+# Also runnable by hand, for when the version bump reached `main` some other way. The
+# version in package.json is the single source either way, and an already-published version
+# is a no-op, so a manual run can only ever publish what a merge would have.
 #
-# 1. `NPM_TOKEN` on the `npm` environment. Needed for a package's *first* publish: npm's
-#    trusted publishing is configured on an existing package's settings page, so -- as on
-#    crates.io, and unlike PyPI, which has pending publishers -- it cannot create one.
-# 2. Trusted Publishing (OIDC), once the package exists and a publisher is configured:
-#    owner `truewire-dev`, repository `bluesky`, workflow `release-npm.yml`, environment
-#    `npm`. npm then mints its own short-lived credential from this job's OIDC token and
-#    attests provenance, so there is nothing here to leak or rotate.
+# Authentication tries Trusted Publishing (OIDC) first and falls back to the `NPM_TOKEN`
+# secret on the `npm` environment. That order matters more here than anywhere: npm *prefers
+# a token* whenever `NODE_AUTH_TOKEN` is set, so a leftover secret does not merely sit
+# unused, it silently wins -- and the release looks exactly the same either way. The token
+# step therefore only runs when the tokenless publish has already failed.
 #
-# So the token can be removed the moment this package has been published once.
+# The token is still what a package's *first* publish needs: npm's trusted publisher is
+# configured on an existing package's settings page, so -- as on crates.io, and unlike
+# PyPI with its pending publishers -- it cannot create one.
+#
+# Trusted publisher settings: owner `truewire-dev`, repository `bluesky`, workflow
+# `release-npm.yml`, environment `npm`.
 on:
+  workflow_dispatch:
   pull_request:
     types: [closed]
     branches: [main]
@@ -27,7 +33,7 @@ permissions:
 
 jobs:
   check:
-    if: github.event.pull_request.merged == true && github.head_ref == 'release/typescript'
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.merged == true && github.head_ref == 'release/typescript')
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.version.outputs.version }}
@@ -117,32 +123,28 @@ jobs:
           }
           console.log(`${shipped.size} files in the tarball; every entry point is present`)
           EOF
-      - name: Is an npm token configured?
-        id: token
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: echo "present=$([ -n "$NPM_TOKEN" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - name: Upgrade npm
+        # Trusted publishing needs npm 11.5.1 or newer, which the version bundled with
+        # Node 22 is not.
+        run: |
+          npm install -g npm@latest
+          npm --version
+      - name: Publish through trusted publishing
+        # Tried first, and allowed to fail: this is the path that needs no credential at
+        # all, and the only way to be sure it is the one taken is to take it before a token
+        # is anywhere in the environment. npm mints a short-lived credential from this
+        # job's OIDC token (`id-token: write`, above) and attests provenance by itself, so
+        # `--provenance` is not passed and no `NODE_AUTH_TOKEN` is set.
+        id: oidc
+        continue-on-error: true
+        run: npm publish --access public
       - name: Publish with a token
-        if: steps.token.outputs.present == 'true'
-        # `--provenance` is explicit here: a token publish attests nothing by itself.
+        # The package's first publish, before a trusted publisher can exist. `--provenance`
+        # is explicit here: a token publish attests nothing by itself.
+        if: steps.oidc.outcome == 'failure'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          npm install -g npm@latest
-          npm --version
-          npm publish --access public --provenance
-      - name: Publish through trusted publishing
-        if: steps.token.outputs.present == 'false'
-        # npm mints a short-lived credential from this job's OIDC token (`id-token: write`,
-        # above). It requires npm 11.5.1 or newer, which the version bundled with Node 22 is
-        # not, and it publishes provenance by itself, so `--provenance` is not passed.
-        #
-        # This step deliberately sets no `NODE_AUTH_TOKEN`: npm prefers a token when one is
-        # set, so a leftover secret would silently take precedence over OIDC.
-        run: |
-          npm install -g npm@latest
-          npm --version
-          npm publish --access public
+        run: npm publish --access public --provenance
       - id: previous_tag
         run: |
           previous=$(git tag -l 'typescript-v*' | sort -V | tail -1)

@@ -4,17 +4,25 @@ name: Release the Rust client (crates.io)
 # packages/rust/Cargo.toml is not on crates.io yet, this builds, tests, publishes, tags
 # `rust-v<version>` and creates the GitHub release.
 #
-# Authentication takes whichever of the two is available, in that order:
+# Also runnable by hand, for when the version bump reached `main` some other way. The
+# version in Cargo.toml is the single source either way, and an already-published version
+# is a no-op, so a manual run can only ever publish what a merge would have.
 #
-# 1. `CARGO_REGISTRY_TOKEN` on the `crates-io` environment. Needed for the crate's *first*
-#    publish, because crates.io Trusted Publishing can only publish a crate that already
-#    exists -- unlike PyPI, it has no pending-publisher concept.
-# 2. Trusted Publishing (OIDC), once the crate exists and a publisher is configured: owner
-#    `truewire-dev`, repository `bluesky`, workflow `release-crate.yml`, environment
-#    `crates-io`.
+# Authentication tries Trusted Publishing (OIDC) first and falls back to the
+# `CARGO_REGISTRY_TOKEN` secret on the `crates-io` environment. That order, and not the
+# other one, because a stale or narrowly scoped token must not be able to shadow a working
+# publisher: `truewire-core` 0.1.1 failed upstream with `403 this token does not have the
+# required permissions` while a perfectly good publisher sat unused behind it.
 #
-# So the token can be removed the moment this crate has been published once.
+# The token is still what a crate's *first* publish needs -- crates.io Trusted Publishing
+# can only publish a crate that already exists, having no pending-publisher concept as PyPI
+# does -- so the auth step is `continue-on-error`: no publisher yet means no token minted,
+# and the secret takes over.
+#
+# Trusted publisher settings: owner `truewire-dev`, repository `bluesky`, workflow
+# `release-crate.yml`, environment `crates-io`.
 on:
+  workflow_dispatch:
   pull_request:
     types: [closed]
     branches: [main]
@@ -26,7 +34,7 @@ permissions:
 
 jobs:
   check:
-    if: github.event.pull_request.merged == true && github.head_ref == 'release/rust'
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.merged == true && github.head_ref == 'release/rust')
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.version.outputs.version }}
@@ -87,20 +95,19 @@ jobs:
         # git dependency, or a file the manifest forgot to include, actually shows up.
         working-directory: packages/rust
         run: cargo package
-      - name: Is a registry token configured?
-        id: token
-        env:
-          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
-        run: echo "present=$([ -n "$CARGO_REGISTRY_TOKEN" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
       - name: Trusted Publishing token
-        if: steps.token.outputs.present == 'false'
+        # Allowed to fail: the action errors when the crate has no trusted publisher
+        # configured, which is its first publish and exactly when the token takes over.
         id: auth
+        continue-on-error: true
         uses: rust-lang/crates-io-auth-action@v1
       - name: Publish
         working-directory: packages/rust
         env:
-          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN || steps.auth.outputs.token }}
-        run: cargo publish
+          CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token || secrets.CARGO_REGISTRY_TOKEN }}
+        run: |
+          echo "publishing with ${{ steps.auth.outputs.token && 'trusted publishing' || 'the CARGO_REGISTRY_TOKEN secret' }}"
+          cargo publish
       - id: previous_tag
         run: |
           previous=$(git tag -l 'rust-v*' | sort -V | tail -1)

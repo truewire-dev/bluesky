@@ -12,7 +12,7 @@
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import { beforeAll, afterAll, describe, expect, inject, it } from 'vitest'
-import { newBluesky, type Client } from '../src/bluesky/core/index.js'
+import { Bluesky } from '../src/bluesky/core/index.js'
 import type { PostView, ProfileView, ProfileViewBasic } from '../src/bluesky/types/index.js'
 import { projectRoot } from './setup.js'
 
@@ -47,10 +47,10 @@ function isPost(post: PostView): void {
   expect(typeof post.record.text).toBe('string')
 }
 
-let client: Client
+let client: Bluesky
 
 beforeAll(() => {
-  client = newBluesky({ baseUrl: inject('httpBaseUrl'), wsUrl: inject('wsUrl') })
+  client = Bluesky.new({ baseUrl: inject('httpBaseUrl'), wsUrl: inject('wsUrl') })
 })
 
 afterAll(async () => {
@@ -59,7 +59,7 @@ afterAll(async () => {
 
 describe('recorded HTTP examples replay through the generated client', () => {
   it('actor.getProfile', async () => {
-    const view = await client.bluesky.actor.getProfile({ actor: BSKY_APP })
+    const view = await client.actor.getProfile({ actor: BSKY_APP })
     expect(view.handle).toBe(BSKY_APP)
     expect(view.did.startsWith('did:')).toBe(true)
     expect(view.followersCount!).toBeGreaterThan(0)
@@ -67,20 +67,20 @@ describe('recorded HTTP examples replay through the generated client', () => {
   })
 
   it('actor.getProfiles', async () => {
-    const views = await client.bluesky.actor.getProfiles({ actors: [BSKY_APP, ATPROTO] })
+    const views = await client.actor.getProfiles({ actors: [BSKY_APP, ATPROTO] })
     expect(views.profiles.map(view => view.handle)).toEqual([BSKY_APP, ATPROTO])
     for (const view of views.profiles) isProfile(view)
   })
 
   it('actor.searchActors', async () => {
-    const results = await client.bluesky.actor.searchActors({ q: 'bluesky', limit: 3 })
+    const results = await client.actor.searchActors({ q: 'bluesky', limit: 3 })
     expect(results.actors.length).toBeGreaterThan(0)
     expect(results.actors.length).toBeLessThanOrEqual(3)
     for (const view of results.actors) isProfile(view)
   })
 
   it('feed.getAuthorFeed', async () => {
-    const feed = await client.bluesky.feed.getAuthorFeed({
+    const feed = await client.feed.getAuthorFeed({
       actor: BSKY_APP, limit: 3, filter: 'posts_no_replies',
     })
     expect(feed.feed.length).toBeGreaterThan(0)
@@ -92,7 +92,7 @@ describe('recorded HTTP examples replay through the generated client', () => {
   })
 
   it('feed.getFeed', async () => {
-    const feed = await client.bluesky.feed.getFeed({
+    const feed = await client.feed.getFeed({
       feed: 'at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.generator/whats-hot', limit: 3,
     })
     expect(feed.feed.length).toBeGreaterThan(0)
@@ -100,7 +100,7 @@ describe('recorded HTTP examples replay through the generated client', () => {
   })
 
   it('feed.getPostThread', async () => {
-    const thread = await client.bluesky.feed.getPostThread({
+    const thread = await client.feed.getPostThread({
       uri: PINNED_POST, depth: 2, parentHeight: 0,
     })
     // The thread node is a union of three shapes, and TypeScript will not let the post be
@@ -114,28 +114,28 @@ describe('recorded HTTP examples replay through the generated client', () => {
   })
 
   it('feed.getPosts', async () => {
-    const result = await client.bluesky.feed.getPosts({ uris: [PINNED_POST] })
+    const result = await client.feed.getPosts({ uris: [PINNED_POST] })
     expect(result.posts).toHaveLength(1)
     expect(result.posts[0]!.uri).toBe(PINNED_POST)
     isPost(result.posts[0]!)
   })
 
   it('graph.getFollowers', async () => {
-    const page = await client.bluesky.graph.getFollowers({ actor: ATPROTO, limit: 3 })
+    const page = await client.graph.getFollowers({ actor: ATPROTO, limit: 3 })
     expect(page.subject.handle).toBe(ATPROTO)
     expect(page.followers.length).toBeGreaterThan(0)
     for (const view of page.followers) isProfile(view)
   })
 
   it('graph.getFollows', async () => {
-    const page = await client.bluesky.graph.getFollows({ actor: BSKY_APP, limit: 3 })
+    const page = await client.graph.getFollows({ actor: BSKY_APP, limit: 3 })
     expect(page.subject.handle).toBe(BSKY_APP)
     expect(page.follows.length).toBeGreaterThan(0)
     for (const view of page.follows) isProfile(view)
   })
 
   it('identity.resolveHandle', async () => {
-    const resolved = await client.bluesky.identity.resolveHandle({ handle: BSKY_APP })
+    const resolved = await client.identity.resolveHandle({ handle: BSKY_APP })
     expect(resolved.did.startsWith('did:')).toBe(true)
   })
 })
@@ -143,7 +143,7 @@ describe('recorded HTTP examples replay through the generated client', () => {
 describe('the recorded Jetstream capture replays over a real WebSocket', () => {
   it('pushes typed events, and time_us arrives as a Date', async () => {
     const events: unknown[] = []
-    const subscription = client.bluesky.jetstream.events({
+    const subscription = client.jetstream.events({
       wantedCollections: ['app.bsky.feed.post'],
     })
     const stream = await subscription.open()

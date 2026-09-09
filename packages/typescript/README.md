@@ -28,24 +28,24 @@ cd packages/typescript && yarn install
 
 ## The client
 
-`newBluesky()` builds the two transports and the generated client over them. Nothing
-connects until you call something.
+`Bluesky.new()` builds the two transports and the client over them. Nothing connects
+until you call something.
 
 ```ts
-import { newBluesky } from '@truewire/bluesky/core'
+import { Bluesky } from '@truewire/bluesky'
 
-const { bluesky } = newBluesky()
+const client = Bluesky.new()
 
-const profile = await bluesky.actor.getProfile({ actor: 'bsky.app' })
+const profile = await client.actor.getProfile({ actor: 'bsky.app' })
 console.log(profile.handle, profile.followersCount)
 ```
 
 Every option has a default that works, so the common case takes none:
 
 ```ts
-import { newBluesky } from '@truewire/bluesky/core'
+import { Bluesky } from '@truewire/bluesky'
 
-const client = newBluesky({
+const client = Bluesky.new({
   // The XRPC host. Defaults to the public AppView, or to bsky.social when `accessJwt` is
   // given. Point it at `truewire mock` in tests.
   baseUrl: 'https://public.api.bsky.app',
@@ -71,11 +71,11 @@ returns the validated response. Optional parameters are optional; required ones 
 and leaving one out is a compile error.
 
 ```ts
-import { newBluesky } from '@truewire/bluesky/core'
+import { Bluesky } from '@truewire/bluesky'
 
-const { bluesky } = newBluesky()
+const client = Bluesky.new()
 
-const feed = await bluesky.feed.getAuthorFeed({
+const feed = await client.feed.getAuthorFeed({
   actor: 'bsky.app',
   limit: 3,
   filter: 'posts_no_replies', // a Literal of the four values the lexicon lists
@@ -96,15 +96,15 @@ Six endpoints are cursor-paged, and each has a `*Paged` twin. It is both awaitab
 async-iterable: `await` it to flatten every page, iterate it to take one page at a time.
 
 ```ts
-import { newBluesky } from '@truewire/bluesky/core'
+import { Bluesky } from '@truewire/bluesky'
 
-const { bluesky } = newBluesky()
+const client = Bluesky.new()
 
 // Every follower, as one array. The walk stops when the API stops sending a cursor.
-const everyone = await bluesky.graph.getFollowersPaged({ actor: 'atproto.com' })
+const everyone = await client.graph.getFollowersPaged({ actor: 'atproto.com' })
 
 // Or a page at a time, which is what you want for a large account.
-for await (const page of bluesky.graph.getFollowersPaged({ actor: 'atproto.com' })) {
+for await (const page of client.graph.getFollowersPaged({ actor: 'atproto.com' })) {
   console.log(page.length, 'followers in this page')
   break
 }
@@ -120,11 +120,11 @@ you reach a field the spec does not name — a new embed type, an undeclared ext
 without waiting for the spec to catch up.
 
 ```ts
-import { newBluesky } from '@truewire/bluesky/core'
+import { Bluesky } from '@truewire/bluesky'
 
-const { bluesky } = newBluesky()
+const client = Bluesky.new()
 
-const raw: unknown = await bluesky.feed.getPosts(
+const raw: unknown = await client.feed.getPosts(
   { uris: ['at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3juzlwllznd24'] },
   { validate: false },
 )
@@ -137,12 +137,12 @@ change on the network. `events()` returns a `Subscription`, and nothing connects
 open or iterate it.
 
 ```ts
-import { newBluesky } from '@truewire/bluesky/core'
+import { Bluesky } from '@truewire/bluesky'
 
-const { bluesky } = newBluesky()
+const client = Bluesky.new()
 
 // `await using` closes the socket when the block ends, however it ends.
-await using events = bluesky.jetstream.events({
+await using events = client.jetstream.events({
   wantedCollections: ['app.bsky.feed.post'],
 })
 
@@ -161,12 +161,12 @@ different query strings, so they cannot share one connection.
 To resume where a previous run stopped, pass the last `time_us` you saw as the cursor:
 
 ```ts
-import { newBluesky } from '@truewire/bluesky/core'
+import { Bluesky } from '@truewire/bluesky'
 
-const { bluesky } = newBluesky()
+const client = Bluesky.new()
 
 const since = new Date(Date.now() - 60_000)
-await using events = bluesky.jetstream.events({
+await using events = client.jetstream.events({
   wantedCollections: ['app.bsky.feed.post'],
   cursor: since, // declared as Unix microseconds; a Date is rendered to them
 })
@@ -184,31 +184,46 @@ There are two things to own, and they behave differently.
 **HTTP owns nothing.** The transport is `fetch`; there is no pool to open or close, so a
 client you only make calls with never needs disposing.
 
-**A subscription owns a socket.** Three ways to close it, in order of preference:
+**A subscription owns a socket.** The client is `AsyncDisposable`, so the shortest correct
+thing is to declare it with `await using` and stop thinking about it:
 
 ```ts
-import { newBluesky } from '@truewire/bluesky/core'
+import { Bluesky } from '@truewire/bluesky'
 
-const { bluesky } = newBluesky()
+await using client = Bluesky.new()
 
-// 1. `await using`: closed at the end of the block, on an exception or an early return.
+for await (const event of client.jetstream.events({ wantedCollections: ['app.bsky.feed.post'] })) {
+  console.log(event.did)
+  break
+}
+```
+
+When the client outlives a block — a long-running process, a server — close the
+subscription rather than the client:
+
+```ts
+import { Bluesky } from '@truewire/bluesky'
+
+const client = Bluesky.new()
+
+// Scope one subscription: closed at the end of the block, on an exception or an early
+// return.
 {
-  await using events = bluesky.jetstream.events({ wantedCollections: ['app.bsky.feed.post'] })
+  await using events = client.jetstream.events({ wantedCollections: ['app.bsky.feed.post'] })
   for await (const event of events) { void event; break }
 }
 
-// 2. Open it yourself and unsubscribe when done.
-const subscription = bluesky.jetstream.events({ wantedCollections: ['app.bsky.feed.post'] })
+// Or open it yourself and unsubscribe when done.
+const subscription = client.jetstream.events({ wantedCollections: ['app.bsky.feed.post'] })
 const stream = await subscription.open()
 await stream.unsubscribe()
 
-// 3. Close every socket the client still holds, whatever opened them.
-const client = newBluesky()
+// Disposing the client closes every socket it still holds, whatever opened them.
 await client[Symbol.asyncDispose]()
 ```
 
-Breaking out of a `for await` closes the socket too: the generator's `finally` runs on an
-early exit, so the loop above leaks nothing even without `await using`.
+Breaking out of a `for await` closes that socket too: the generator's `finally` runs on an
+early exit, so neither loop above leaks even without `await using`.
 
 ## Errors
 
@@ -218,12 +233,12 @@ an `ApiError`; a response that does not match its declared shape is a `Validatio
 
 ```ts
 import { isTruewireError, RateLimited } from '@truewire/core'
-import { newBluesky } from '@truewire/bluesky/core'
+import { Bluesky } from '@truewire/bluesky'
 
-const { bluesky } = newBluesky()
+const client = Bluesky.new()
 
 try {
-  await bluesky.identity.resolveHandle({ handle: 'nobody.invalid' })
+  await client.identity.resolveHandle({ handle: 'nobody.invalid' })
 } catch (e) {
   if (e instanceof RateLimited) console.error('backing off')
   else if (isTruewireError(e)) console.error(e.message)
@@ -256,5 +271,7 @@ It never writes the transport, which is the part that knows the API's habits:
   call.
 - [`src/bluesky/core/jetstream.ts`](src/bluesky/core/jetstream.ts) — one socket per
   subscription, and nothing sent on it.
-- [`src/bluesky/core/index.ts`](src/bluesky/core/index.ts) — `newBluesky()`, the only place
-  the generated client and the hand-written transports meet.
+- [`src/bluesky/core/client.ts`](src/bluesky/core/client.ts) — `Bluesky.new()` and
+  disposal, on a subclass of the generated client. Python's generated client extends a
+  hand-written base and inherits both; the TypeScript backend has no equivalent, so the
+  same two things arrive by subclassing in the other direction ([`NOTES.md`](../../NOTES.md) #13).

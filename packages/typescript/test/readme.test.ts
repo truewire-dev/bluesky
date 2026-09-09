@@ -43,8 +43,8 @@ it('every TypeScript example in the README compiles against the package', () => 
       lib: ['ES2023', 'ESNext.Disposable'], types: ['node'],
       baseUrl: '../..',
       paths: {
-        '@truewire/bluesky': ['src/bluesky/index.ts'],
-        '@truewire/bluesky/core': ['src/bluesky/core/index.ts'],
+        '@truewire/bluesky': ['src/bluesky/core/index.ts'],
+        '@truewire/bluesky/generated': ['src/bluesky/index.ts'],
       },
     },
     files: files.map(file => path.relative(dir, file)),

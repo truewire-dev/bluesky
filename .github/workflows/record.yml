@@ -60,7 +60,10 @@ jobs:
           # The write half's credentials. Absent, the eleven public endpoints still record
           # and the four authenticated ones fail, which the job reports without losing the
           # rest.
-          BLUESKY_IDENTIFIER: ${{ vars.BLUESKY_IDENTIFIER }}
+          # A handle is public, so it belongs in a variable -- but it costs nothing to
+          # accept it as a secret too, and that removes a way for the weekly run to fail
+          # silently on a Monday because it was set in the other place.
+          BLUESKY_IDENTIFIER: ${{ vars.BLUESKY_IDENTIFIER || secrets.BLUESKY_IDENTIFIER }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
         # Failures are reported by the script and re-raised at the end of the job, so the
         # recordings that did succeed still reach a pull request.

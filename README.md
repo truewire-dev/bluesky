@@ -166,6 +166,36 @@ print(asyncio.run(post('Hello from a generated client.')))
 Use an **app password** (bsky.app, Settings, App Passwords), never the account password: an
 app password is individually revocable and cannot change the account's password or email.
 
+### Links need facets
+
+Bluesky does not auto-link anything. A URL in a post's text renders as plain text unless the
+record also carries `facets` — byte ranges saying which part of the text is a link. The
+offsets are **UTF-8 byte positions, not character positions**, so an em dash or an emoji
+earlier in the post shifts them, and getting that wrong is not an error: the facet is
+accepted and the link lands a few bytes off.
+
+[`bluesky.core.richtext`](packages/python/src/bluesky/core/richtext.py) does it correctly:
+
+```python
+from datetime import datetime, timezone
+
+from bluesky import Bluesky
+from bluesky.core.richtext import post as post_record
+
+
+async def post_with_a_link(client: Bluesky, did: str) -> None:
+  record = post_record(
+    'One spec, three languages — github.com/truewire-dev/bluesky',
+    created_at=datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+    langs=['en'],
+  )
+  await client.repo.create_record(repo=did, collection='app.bsky.feed.post', record=record)
+```
+
+This is hand-written rather than generated, and deliberately so: facets are a property of
+the *record*, whose shape belongs to its lexicon, not to the endpoint. The generated method
+takes any record; this builds a correct one.
+
 Three things the client does that are worth knowing about:
 
 - **The credential is never a request parameter.** `create_session`'s request schema is

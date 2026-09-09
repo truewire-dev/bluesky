@@ -47,14 +47,23 @@ export const ExternalLink: Codec<ExternalLink> = t.object({
   thumb: t.optional(t.string),
 })
 
-/** One feature, tagged by `$type`. The other fields depend on the tag and are kept as they came. */
+/** One feature, tagged by `$type`. The three shapes share this schema rather than being an `anyOf`, because the tag and the payload field are one-to-one: `#mention` carries `did`, `#link` carries `uri`, `#tag` carries `tag`, and exactly one of the three is present. */
 export interface FacetFeature {
   /** Feature type: `app.bsky.richtext.facet#mention`, `#link` or `#tag`. */
   $type: string
+  /** Where a `#link` points. Absolute, and not necessarily the text it covers: `truewire.dev` in the post can point at `https://truewire.dev`. */
+  uri?: string
+  /** Who a `#mention` refers to. A DID, not a handle -- a handle can be reassigned, so the mention is resolved when the post is written and stays pointing at the same account. */
+  did?: string
+  /** The hashtag a `#tag` carries, without the leading `#`. */
+  tag?: string
 }
 
 export const FacetFeature: Codec<FacetFeature> = t.object({
   $type: t.string,
+  uri: t.optional(t.string),
+  did: t.optional(t.string),
+  tag: t.optional(t.string),
 })
 
 /** A moderation label applied to an account or a record (`com.atproto.label.defs#label`). Only the fields every label carries are declared. */
@@ -231,7 +240,7 @@ export const ExternalView: Codec<ExternalView> = t.object({
 /** A rich-text annotation over a byte range of `text` (`app.bsky.richtext.facet`): a mention, a link or a hashtag. */
 export interface Facet {
   index: ByteSlice
-  /** What the range is: one of `#mention` (`did`), `#link` (`uri`) or `#tag` (`tag`), each tagged by `$type`. */
+  /** What the range is. A list because one range can carry more than one feature, though in practice it carries exactly one. */
   features: FacetFeature[]
 }
 

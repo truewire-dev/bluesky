@@ -50,12 +50,21 @@ pub struct ExternalLink {
     pub extra: serde_json::Map<String, serde_json::Value>,
 }
 
-/// One feature, tagged by `$type`. The other fields depend on the tag and are kept as they came.
+/// One feature, tagged by `$type`. The three shapes share this schema rather than being an `anyOf`, because the tag and the payload field are one-to-one: `#mention` carries `did`, `#link` carries `uri`, `#tag` carries `tag`, and exactly one of the three is present.
 #[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 pub struct FacetFeature {
     /// Feature type: `app.bsky.richtext.facet#mention`, `#link` or `#tag`.
     #[serde(rename = "$type")]
     pub type_: String,
+    /// Where a `#link` points. Absolute, and not necessarily the text it covers: `truewire.dev` in the post can point at `https://truewire.dev`.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub uri: Option<String>,
+    /// Who a `#mention` refers to. A DID, not a handle -- a handle can be reassigned, so the mention is resolved when the post is written and stays pointing at the same account.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub did: Option<String>,
+    /// The hashtag a `#tag` carries, without the leading `#`.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub tag: Option<String>,
     /// Keys the spec does not document, kept as they came.
     #[serde(flatten)]
     pub extra: serde_json::Map<String, serde_json::Value>,
@@ -275,7 +284,7 @@ pub struct ExternalView {
 #[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 pub struct Facet {
     pub index: ByteSlice,
-    /// What the range is: one of `#mention` (`did`), `#link` (`uri`) or `#tag` (`tag`), each tagged by `$type`.
+    /// What the range is. A list because one range can carry more than one feature, though in practice it carries exactly one.
     pub features: Vec<FacetFeature>,
     /// Keys the spec does not document, kept as they came.
     #[serde(flatten)]

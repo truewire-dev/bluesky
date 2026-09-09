@@ -208,3 +208,21 @@ The related thing that *is* worth fixing upstream: `truewire/standards/secrets.p
 its own docstring that a request-side credential is one "which `redacted`/ADR 0007 actively
 strips". It does not — `redacted` is read only by the mock, `capture` never looks at it, and
 nothing strips anything. Misleading in precisely the place someone would rely on it.
+
+## 16. `additionalProperties: true` beside `properties` does not keep the extra fields
+
+`Facet.features[]` was declared with `$type` plus `additionalProperties: true`, meaning
+"the rest depends on the tag, keep it as it came". It does not keep it. Validation is
+tolerant in the sense of not *rejecting* an undeclared field, and it drops it from the
+validated value either way — so `{"$type": "…#link", "uri": "…"}` validated to
+`{"$type": "…#link"}`, and the client's own posts came back with no link in them.
+
+Found by posting a link from this client and reading it back through this client, which is
+the sort of thing only using a client finds.
+
+The fix here was to declare the three fields (`uri`, `did`, `tag`) rather than to gesture at
+them, which is better anyway: they are typed now, and the set really is closed. But a spec
+author who writes `additionalProperties: true` is asking for something the generator
+silently does not do, and that is worth either rendering (a record with a `dict[str, Any]`
+tail) or refusing at check time. It is on the toolchain's own deferred list as the
+`properties` + `additionalProperties` rendering.

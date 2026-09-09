@@ -7,18 +7,12 @@
 
 #![allow(dead_code, unused_variables)]
 
-use std::sync::Arc;
-
-use bluesky::core::{Core, CoreOptions, JetstreamCore, JetstreamOptions};
 use bluesky::Bluesky;
 use futures::StreamExt;
 use truewire_core::{CallOptions, Result};
 
 async fn the_client() -> Result<()> {
-    let client = Bluesky::new(
-        Arc::new(Core::new(CoreOptions::default())),
-        Arc::new(JetstreamCore::new(JetstreamOptions::default())),
-    );
+    let client = Bluesky::new();
 
     let profile = client
         .actor

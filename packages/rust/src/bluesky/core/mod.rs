@@ -179,3 +179,31 @@ fn map_error(method: &str, path: &str, response: &Response) -> Error {
     };
     error.with_status(response.status).with_body(body)
 }
+
+impl crate::Bluesky {
+    /// A client for the public AppView and the public Jetstream.
+    ///
+    /// Reads need nothing -- no account, no key -- which is why this takes no arguments.
+    /// Writes need a credential; pass one through [`Bluesky::with_options`].
+    ///
+    /// `truewire generate rust` names the generated constructor `from_cores` and leaves
+    /// `new` for a core to define; this is that.
+    ///
+    /// [`Bluesky::with_options`]: crate::Bluesky::with_options
+    pub fn new() -> Self {
+        Self::with_options(CoreOptions::default(), JetstreamOptions::default())
+    }
+
+    /// A client with both transports configured -- another XRPC host (the account's own
+    /// PDS for writes, or a `truewire mock` address in tests), an access token, another
+    /// Jetstream instance, an HTTP client to share.
+    pub fn with_options(http: CoreOptions, jetstream: JetstreamOptions) -> Self {
+        Self::from_cores(Core::new(http), JetstreamCore::new(jetstream))
+    }
+}
+
+impl Default for crate::Bluesky {
+    fn default() -> Self {
+        Self::new()
+    }
+}

@@ -20,7 +20,7 @@ and the Jetstream firehose. Same spec as the [Python](../../README.md) and
 
 ```toml
 [dependencies]
-bluesky = { package = "truewire-bluesky", version = "0.1" }
+bluesky = { package = "truewire-bluesky", version = "0.2" }
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 ```
 
@@ -30,20 +30,16 @@ placeholder -- and the library it exposes is `bluesky`. The `package` key names 
 
 ## The client
 
-`Bluesky::new` takes the two transports it is built from — the AppView's HTTP core and the
-Jetstream socket — because the root composes them. Nothing connects until you call
-something.
+`Bluesky::new()` takes nothing: reads need no account and no key, and nothing connects
+until you call something. It builds the two transports the root composes — the AppView's
+HTTP core and the Jetstream socket — and `Bluesky::with_options` is the same constructor
+with both of them configured.
 
 ```rust
-use std::sync::Arc;
-use bluesky::core::{Core, CoreOptions, JetstreamCore, JetstreamOptions};
 use bluesky::Bluesky;
 use truewire_core::CallOptions;
 
-let client = Bluesky::new(
-    Arc::new(Core::new(CoreOptions::default())),
-    Arc::new(JetstreamCore::new(JetstreamOptions::default())),
-);
+let client = Bluesky::new();
 
 let profile = client
     .actor

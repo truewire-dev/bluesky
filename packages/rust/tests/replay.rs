@@ -10,9 +10,8 @@
 use std::io::{BufRead, BufReader};
 use std::path::{Path, PathBuf};
 use std::process::{Child, Command, Stdio};
-use std::sync::Arc;
 
-use bluesky::core::{Core, CoreOptions, JetstreamCore, JetstreamOptions};
+use bluesky::core::{CoreOptions, JetstreamOptions};
 use bluesky::types::{PostView, ProfileView, ProfileViewBasic};
 use bluesky::Bluesky;
 use futures::StreamExt;
@@ -84,14 +83,15 @@ fn start_mock() -> Mock {
 }
 
 fn client(mock: &Mock) -> Bluesky {
-    let http = Core::new(CoreOptions {
-        base_url: Some(mock.http.clone()),
-        ..Default::default()
-    });
-    let socket = JetstreamCore::new(JetstreamOptions {
-        url: Some(mock.ws.clone()),
-    });
-    Bluesky::new(Arc::new(http), Arc::new(socket))
+    Bluesky::with_options(
+        CoreOptions {
+            base_url: Some(mock.http.clone()),
+            ..Default::default()
+        },
+        JetstreamOptions {
+            url: Some(mock.ws.clone()),
+        },
+    )
 }
 
 /// The post `feed.get_posts` and `feed.get_post_thread` both name, read from the example

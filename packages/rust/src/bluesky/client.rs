@@ -35,7 +35,9 @@ pub struct Bluesky {
 }
 
 impl Bluesky {
-    pub fn new(client: Arc<dyn HttpEndpoint<DefaultMeta>>, socket: Arc<dyn StreamEndpoint>) -> Self {
+    pub fn from_cores(client: impl HttpEndpoint<DefaultMeta> + 'static, socket: impl StreamEndpoint + 'static) -> Self {
+        let client: Arc<dyn HttpEndpoint<DefaultMeta>> = Arc::new(client);
+        let socket: Arc<dyn StreamEndpoint> = Arc::new(socket);
         Self {
             actor: Actor::new(client.clone()),
             feed: Feed::new(client.clone()),

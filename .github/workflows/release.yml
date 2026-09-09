@@ -1,0 +1,101 @@
+name: Release
+
+# Merge a pull request from branch `release/python` into main. If the version in
+# packages/python/pyproject.toml is not on PyPI yet, this builds, publishes (PyPI Trusted
+# Publishing; the pending publisher names this workflow file), tags `python-v<version>` and
+# creates the GitHub release.
+#
+# No token anywhere. Trusted publishing exchanges the job's OIDC identity for a short-lived
+# upload credential, so there is nothing in this repository to leak or rotate.
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+    paths: ['packages/python/**', 'spec/**']
+
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+  check:
+    if: github.event.pull_request.merged == true && github.head_ref == 'release/python'
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      published: ${{ steps.check.outputs.published }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - id: version
+        run: |
+          version=$(grep -m1 '^version = ' packages/python/pyproject.toml | sed -E 's/version = "(.*)"/\1/')
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+      - id: check
+        # Re-running a merged release must not fail the job, so an already-published
+        # version is a no-op rather than an error.
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" "https://pypi.org/pypi/truewire-bluesky/${{ steps.version.outputs.version }}/json")
+          if [ "$code" = "200" ]; then
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "published=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  release:
+    needs: check
+    if: needs.check.outputs.published == 'false'
+    runs-on: ubuntu-latest
+    environment: pypi
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          fetch-tags: true
+      - uses: astral-sh/setup-uv@v4
+      - name: Install
+        run: |
+          uv venv --python 3.12 .venv
+          uv pip install --python .venv/bin/python --refresh-package truewire -e 'packages/python[dev]'
+      - name: Gates
+        # The same gates the pull request already passed, re-run against `main` as merged.
+        # A release is the one place where "it passed on the branch" is not good enough.
+        run: |
+          .venv/bin/truewire check
+          .venv/bin/truewire standards
+          .venv/bin/python -m pytest packages/python/test -q
+          .venv/bin/ruff check --config packages/python/ruff.toml packages/python/src packages/python/test
+      - name: Build
+        run: uv build packages/python --out-dir dist
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist
+      - id: previous_tag
+        run: |
+          previous=$(git tag -l 'python-v*' | sort -V | tail -1)
+          echo "previous=$previous" >> "$GITHUB_OUTPUT"
+      - run: git tag python-v${{ needs.check.outputs.version }}
+      - run: git push origin python-v${{ needs.check.outputs.version }}
+      - if: steps.previous_tag.outputs.previous != ''
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: python-v${{ needs.check.outputs.version }}
+          name: truewire-bluesky ${{ needs.check.outputs.version }}
+          previous_tag: ${{ steps.previous_tag.outputs.previous }}
+          generate_release_notes: true
+          body: |
+            Published to [PyPI](https://pypi.org/project/truewire-bluesky/${{ needs.check.outputs.version }}/) as `truewire-bluesky==${{ needs.check.outputs.version }}`.
+
+            ${{ github.event.pull_request.body }}
+      - if: steps.previous_tag.outputs.previous == ''
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: python-v${{ needs.check.outputs.version }}
+          name: truewire-bluesky ${{ needs.check.outputs.version }}
+          generate_release_notes: true
+          body: |
+            Published to [PyPI](https://pypi.org/project/truewire-bluesky/${{ needs.check.outputs.version }}/) as `truewire-bluesky==${{ needs.check.outputs.version }}`.
+
+            ${{ github.event.pull_request.body }}

@@ -18,13 +18,17 @@ No account and no key. Every call goes to the public AppView at `public.api.bsky
 
 ## Install
 
-Not on PyPI yet; install from the repository:
-
 ```sh
-pip install git+https://github.com/truewire-dev/bluesky
+pip install truewire-bluesky
 ```
 
-The import name is `bluesky`, and the distribution is `truewire-bluesky`. Python 3.11 or newer.
+The import name is `bluesky`, and the distribution is `truewire-bluesky`. Python 3.11 or
+newer.
+
+One thing worth knowing before you install: PyPI already has an unrelated `bluesky`
+package (NSLS-II's experiment orchestration framework), which also imports as `bluesky`.
+The two cannot share an environment. Install this one in a virtualenv that does not need
+the other.
 
 ## Use
 

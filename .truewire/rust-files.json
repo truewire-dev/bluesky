@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "files": [
+    "actor/get_profile.rs",
+    "actor/get_profiles.rs",
+    "actor/mod.rs",
+    "actor/search_actors.rs",
+    "client.rs",
+    "feed/get_author_feed.rs",
+    "feed/get_feed.rs",
+    "feed/get_post_thread.rs",
+    "feed/get_posts.rs",
+    "feed/mod.rs",
+    "feed/search_posts.rs",
+    "graph/get_followers.rs",
+    "graph/get_follows.rs",
+    "graph/mod.rs",
+    "identity/mod.rs",
+    "identity/resolve_handle.rs",
+    "jetstream/events.rs",
+    "jetstream/mod.rs",
+    "lib.rs",
+    "meta.rs",
+    "types/mod.rs"
+  ]
+}

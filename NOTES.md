@@ -1,3 +1,15 @@
+<!-- nav:start -->
+<table>
+  <tr>
+    <td align="center"><a href="./README.md">🐍 Python</a></td>
+    <td align="center"><a href="./packages/typescript/README.md">🟦 TypeScript</a></td>
+    <td align="center"><a href="./packages/rust/README.md">🦀 Rust</a></td>
+    <td align="center"><a href="https://github.com/truewire-dev/bluesky/tree/main/spec">📐 The spec</a></td>
+    <td align="center"><b>🧩 Toolchain gaps</b></td>
+  </tr>
+</table>
+<!-- nav:end -->
+
 # Notes for the Truewire toolchain
 
 Things Truewire 0.6.0 (`truewire-core` 0.2.1) could not express or do while this client was written, each with the exact error or warning where there was one and what the project does instead. Nothing here was worked around by bending the spec.
@@ -11,7 +23,7 @@ jetstream.events is not an HTTP rpc endpoint; capture records HTTP request/reply
   truewire/cli/capture.py:73
 ```
 
-There is no other subcommand that records a subscription: `mock` replays one, `check` validates one, nothing captures one. So the project records the firehose itself, in `test/record_jetstream.py`: it resolves the endpoint's generated method the same way `capture` does (`truewire.examples.resolve_endpoint_function`), binds the recorded `examples/<id>.parameters.json` with `coerce_ws_example_call`, subscribes for a bounded window through the same generated client, and writes what arrived to `examples/<id>.messages.json` — the file `truewire check` validates and `truewire mock` replays. It builds the client with `validate=False`, because a recording has to be the wire body: validated, `time_us` is already a `datetime` and no longer what Jetstream sent.
+There is no other subcommand that records a subscription: `mock` replays one, `check` validates one, nothing captures one. So the project records the firehose itself, in `packages/python/test/record_jetstream.py`: it resolves the endpoint's generated method the same way `capture` does (`truewire.examples.resolve_endpoint_function`), binds the recorded `examples/<id>.parameters.json` with `coerce_ws_example_call`, subscribes for a bounded window through the same generated client, and writes what arrived to `examples/<id>.messages.json` — the file `truewire check` validates and `truewire mock` replays. It builds the client with `validate=False`, because a recording has to be the wire body: validated, `time_us` is already a `datetime` and no longer what Jetstream sent.
 
 A `capture` that accepted a stream endpoint with `--seconds`/`--limit` would replace that file exactly. The pieces it would need are all already public.
 
@@ -47,7 +59,7 @@ client.jetstream.events(wanted_collections=['app.bsky.feed.post'], validate=Fals
 # StreamManager[JetstreamEvent, Any, Any]
 ```
 
-At runtime that subscription yields raw frames — `time_us` an `int`, not the `datetime` `JetstreamEvent` declares — so the type is wrong in exactly the case the flag exists for. `test/typing_usage.py` asserts what the generator actually produces, with this note beside it, rather than asserting what it should produce. `test/record_jetstream.py` is the one place the project relies on the unvalidated events, and it treats them as `Any`. The same pair of overloads the rpc path already emits would close it.
+At runtime that subscription yields raw frames — `time_us` an `int`, not the `datetime` `JetstreamEvent` declares — so the type is wrong in exactly the case the flag exists for. `packages/python/test/typing_usage.py` asserts what the generator actually produces, with this note beside it, rather than asserting what it should produce. `packages/python/test/record_jetstream.py` is the one place the project relies on the unvalidated events, and it treats them as `Any`. The same pair of overloads the rpc path already emits would close it.
 
 ## 5. `jetstream.events` declares no `envelope.verb`, and cannot
 
@@ -70,7 +82,7 @@ The warning stands, unsilenced. The rule could exempt an endpoint that declares 
 2 endpoint(s) declare `unverified` despite having paired examples; remove the stale declaration (rerun with --verbose to list them)
 ```
 
-The recording script (`test/recapture.sh`) ends with `test/verified.py`, which drops the block of every endpoint that has a pair — a request beside a response for the eleven XRPC endpoints, parameters beside messages for the stream; `--check` is the strict CI gate that lists endpoints still without one. `capture` could drop the block itself, since it knows the pair it just wrote, or `examples` could offer `--fix`.
+The recording script (`packages/python/test/recapture.sh`) ends with `packages/python/test/verified.py`, which drops the block of every endpoint that has a pair — a request beside a response for the eleven XRPC endpoints, parameters beside messages for the stream; `--check` is the strict CI gate that lists endpoints still without one. `capture` could drop the block itself, since it knows the pair it just wrote, or `examples` could offer `--fix`.
 
 ## 7. `truewire check` reads a bare string as a probable closed set
 
@@ -110,7 +122,7 @@ A project that lints with `I` needs per-file ignores for the generated modules, 
 
 ## 11. The WebSocket runtime assumes a frame-based subscribe protocol
 
-`truewire_core.ws.Streams` is built for a socket that multiplexes: one connection carries many subscriptions, `request_subscription`/`request_unsubscription` send a frame naming a channel, and `parse_msg` routes each incoming frame back to the channel it belongs to. Jetstream is the other shape — one subscription per connection, its filter in the URL, nothing ever sent — so the core here implements the base class by declining it: both request methods return `None`, `parse_msg` routes every frame to the single channel the connection carries, and `SocketClient` opens a fresh `Connection` per subscription and closes it on unsubscribe (`src/bluesky/core/ws.py`). That works and is small, but it is a subclass whose contract is "none of the above". A `Streams` variant for URL-parameterised, single-subscription sockets would let a core this shape declare what it is instead of overriding three methods to do nothing.
+`truewire_core.ws.Streams` is built for a socket that multiplexes: one connection carries many subscriptions, `request_subscription`/`request_unsubscription` send a frame naming a channel, and `parse_msg` routes each incoming frame back to the channel it belongs to. Jetstream is the other shape — one subscription per connection, its filter in the URL, nothing ever sent — so the core here implements the base class by declining it: both request methods return `None`, `parse_msg` routes every frame to the single channel the connection carries, and `SocketClient` opens a fresh `Connection` per subscription and closes it on unsubscribe (`packages/python/src/bluesky/core/ws.py`). That works and is small, but it is a subclass whose contract is "none of the above". A `Streams` variant for URL-parameterised, single-subscription sockets would let a core this shape declare what it is instead of overriding three methods to do nothing.
 
 ## 12. A union is closed by construction, and nothing says it could be open
 
@@ -126,3 +138,29 @@ feed.28.post.embed.ImagesView.$type
 One post the client could not name cost the other forty-nine, which is the wrong trade for a feed. There is no way to say *this union is open*, so the spec adds the escape hatch by hand: a last member `UnknownEmbedView`, `{"$type": string}` with `additionalProperties: true`. Pydantic's smart union still prefers a member whose `$type` `Literal` matches, so a modelled embed keeps its whole payload and only an unmodelled one falls through, keeping its tag and losing its body. That is the behaviour wanted; the cost is that it is invisible in the schema, and that a *malformed* member of the five now lands in the catch-all instead of raising.
 
 `truewire check` has a warning for the mirror image of this — rule 2, a bare string that may be a closed set, worded as "a guessed `enum` becomes a `Literal` that rejects values the API later sends" — and none for a union closed by construction, which is the same hazard with the same cause. A declared `"open": true` on an `anyOf` (rendering the fallback member, and saying so in the generated docstring) would express it once, and `check` could warn on a union of `$type`-tagged members that has no fallback, the way it warns on a bare string.
+
+## 13. A generated TypeScript client is extended by subclassing it, not by declaring a base
+
+Python's generated client extends a hand-written base named in `truewire.toml`:
+
+```toml
+[python.cores.root]
+base = "bluesky.core:ClientBase"
+```
+
+so `Bluesky.new(...)` and `async with Bluesky.new() as client` are the base class's and the generated client inherits them.
+
+TypeScript has no `base`, and this project first read that as a gap: a free function returning a bag (`const { bluesky } = newBluesky()`), then a subclass, and a note here arguing the two languages should not reach the same shape by opposite routes.
+
+That was wrong, and it is written down because the reasoning is worth keeping. The TypeScript and Rust backends take their core *structurally*, and `@truewire/core`'s own `contract.ts` states the rule they are built on: the generated code "never imports the project's own `core/` module". A `[typescript] base` rendering `export class Bluesky extends ClientBase` would put that import back -- generated code depending on the project's hand-written half -- to buy something a subclass already gives:
+
+```ts
+export class Bluesky extends Generated {
+  static new(options: BlueskyOptions = {}): Bluesky { ... }
+  async [Symbol.asyncDispose](): Promise<void> { ... }
+}
+```
+
+`core/client.ts` is that, the package's `exports` map points `.` at it, and a caller writes `Bluesky.new()` exactly as they would in Python. The declared base is also the *narrower* mechanism: the generated constructor must call `super()`, so a base could take no constructor arguments of its own, while a subclass takes whatever it likes.
+
+The asymmetry that remains is in how a project wires it up, not in what a caller sees, and it costs a name shadow visible only to someone reading the package's internals. What would genuinely help is scaffolding rather than codegen: `truewire init` emitting this subclass so every generated TypeScript project starts with a factory and a lifecycle already in place.

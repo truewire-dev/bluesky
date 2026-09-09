@@ -1,0 +1,32 @@
+# The generated files are formatted by Truewire's own ruff settings (two-space indents,
+# single quotes); the hand-written code follows the same so the package reads as one.
+line-length = 100
+indent-width = 2
+target-version = "py311"
+
+[format]
+quote-style = "single"
+indent-style = "space"
+skip-magic-trailing-comma = false
+docstring-code-format = true
+
+[lint]
+select = ["E", "F", "I", "W", "TID251"]
+ignore = ["E501"]
+
+[lint.isort]
+known-first-party = ["bluesky"]
+
+[lint.flake8-tidy-imports.banned-api]
+"typing" = { msg = "Import from typing_extensions, as the generated code does." }
+
+[lint.per-file-ignores]
+# Generated modules keep the import order the generator writes; regenerating would undo a sort.
+# The globs are `**/`-anchored because ruff is run from the repository root, two levels
+# above this package, and matches these against the path it was given.
+"**/src/bluesky/main.py" = ["I001"]
+"**/src/bluesky/schemas.py" = ["I001"]
+"**/src/bluesky/meta.py" = ["I001"]
+"**/src/bluesky/*/__init__.py" = ["I001"]
+"**/src/bluesky/*/*.py" = ["I001"]
+"**/src/bluesky/core/*.py" = []

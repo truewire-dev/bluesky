@@ -1,0 +1,12 @@
+{
+  "status": 200,
+  "payload": {
+    "uri": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/dev.truewire.example/recorded-example",
+    "cid": "bafyreig4ufau4mhkfadbeybsqsch3ssmyb4b76w35ahipvb3kprem6xgyu",
+    "commit": {
+      "cid": "bafyreigcqfpixoqa4ygqskcen64fwp7semebt2hyg2xdr7jjxulpzvm4zi",
+      "rev": "3mv3xea6epl2i"
+    },
+    "validationStatus": "unknown"
+  }
+}

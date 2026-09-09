@@ -9,6 +9,13 @@
 # An endpoint that declares `unverified.reason: "missing_credentials"` is skipped rather
 # than attempted, so a documented gap does not read as a failure every run.
 #
+# `repo.create_record` and `repo.delete_record` are a self-cleaning pair, and the order
+# matters: `create` sorts before `delete`, so one run writes `dev.truewire.example/
+# recorded-example` and then removes it, leaving the key free for the next run. Recreating
+# an existing record key answers HTTP 500 (not 409), so a run that skipped the delete would
+# break every run after it. Nothing is published either way: no client renders that
+# collection.
+#
 # The request half of each example (`examples/<id>.request.json`) and the parameters of
 # each subscription (`examples/<id>.parameters.json`) are the source of truth: this
 # script replays exactly those, so re-recording keeps the same ids and descriptions and
@@ -43,13 +50,30 @@ doc = json.load(open(sys.argv[1]))
 sys.exit(0 if doc.get("unverified", {}).get("reason") == "missing_credentials" else 1)' "$1"
 }
 
+# The write half authenticates. `BLUESKY_IDENTIFIER` and `BLUESKY_APP_PASSWORD` reach the
+# client through `--new`, which sets constructor arguments -- never request parameters, so
+# nothing here can put a credential into a request half. The session frames are scrubbed on
+# the way out: two live tokens and an email address, none of which belong in a repository.
+#
+# Without credentials the four write endpoints fail and the eleven public ones still
+# record, which is the right behaviour for a contributor who has none.
+CREDENTIALS=""
+if [ -n "$BLUESKY_IDENTIFIER" ] && [ -n "$BLUESKY_APP_PASSWORD" ]; then
+  CREDENTIALS="--new identifier=$BLUESKY_IDENTIFIER --new app_password=$BLUESKY_APP_PASSWORD"
+else
+  echo 'no BLUESKY_IDENTIFIER / BLUESKY_APP_PASSWORD: the write half will not record'
+fi
+
+SCRUB="--scrub accessJwt --scrub refreshJwt --scrub email"
+
 capture_example() {
   request=$1
   function=$(echo "$request" | awk -F/ '{print $3 "." $4}')
   id=$(basename "$request" .request.json)
   description=$("$PYTHON" -c 'import json, sys; print(json.load(open(sys.argv[1])).get("description", ""))' "$request")
   parameters=$("$PYTHON" -c 'import json, sys; print(json.dumps(json.load(open(sys.argv[1]))["request"]))' "$request")
-  truewire capture "$function" --id "$id" -d "$description" --request "$parameters"
+  # shellcheck disable=SC2086  # CREDENTIALS and SCRUB are argument lists, deliberately split
+  truewire capture "$function" --id "$id" -d "$description" --request "$parameters" $CREDENTIALS $SCRUB
 }
 
 skipped=''

@@ -1,0 +1,5 @@
+{
+  "description": "Records in the account's own repository (`com.atproto.repo.*`): creating one and deleting it. A post is a record in the `app.bsky.feed.post` collection.",
+  "upstream": "https://docs.bsky.app/docs/api/com-atproto-repo-create-record",
+  "core": "default"
+}

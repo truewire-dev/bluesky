@@ -8,9 +8,9 @@
         "displayName": "Bluesky",
         "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
         "associated": {
-          "lists": 17,
+          "lists": 18,
           "feedgens": 7,
-          "starterPacks": 14,
+          "starterPacks": 15,
           "labeler": false,
           "chat": {
             "allowIncoming": "none"
@@ -18,6 +18,13 @@
           "activitySubscription": {
             "allowSubscriptions": "followers"
           }
+        },
+        "viewer": {
+          "muted": false,
+          "mutedOnlyReposts": false,
+          "mutedOnlyQuoteposts": false,
+          "blockedBy": false,
+          "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
         },
         "labels": [],
         "createdAt": "2023-04-12T04:53:57.057Z",
@@ -29,9 +36,9 @@
         "description": "official Bluesky account (check username\ud83d\udc46)\n\nBugs, feature requests, feedback: support@bsky.app",
         "indexedAt": "2025-10-27T21:05:26.152Z",
         "banner": "https://cdn.bsky.app/img/banner/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreichzyovokfzmymz36p5jibbjrhsur6n7hjnzxrpbt5jaydp2szvna",
-        "followersCount": 34836052,
+        "followersCount": 34840653,
         "followsCount": 14,
-        "postsCount": 827,
+        "postsCount": 829,
         "pinnedPost": {
           "cid": "bafyreicnt42y6vo6pfpvyro234ac4o6ijug6adwwrh7awflgrqlt4zibxq",
           "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3l6oveex3ii2l"
@@ -54,6 +61,45 @@
             "allowSubscriptions": "followers"
           }
         },
+        "viewer": {
+          "muted": false,
+          "mutedOnlyReposts": false,
+          "mutedOnlyQuoteposts": false,
+          "blockedBy": false,
+          "knownFollowers": {
+            "count": 1,
+            "followers": [
+              {
+                "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
+                "handle": "bsky.app",
+                "displayName": "Bluesky",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
+                "associated": {
+                  "chat": {
+                    "allowIncoming": "none"
+                  },
+                  "activitySubscription": {
+                    "allowSubscriptions": "followers"
+                  }
+                },
+                "viewer": {
+                  "muted": false,
+                  "mutedOnlyReposts": false,
+                  "mutedOnlyQuoteposts": false,
+                  "blockedBy": false,
+                  "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
+                },
+                "labels": [],
+                "createdAt": "2023-04-12T04:53:57.057Z",
+                "verification": {
+                  "verifications": [],
+                  "verifiedStatus": "none",
+                  "trustedVerifierStatus": "valid"
+                }
+              }
+            ]
+          }
+        },
         "labels": [],
         "createdAt": "2023-04-26T06:19:25.508Z",
         "verification": {
@@ -73,7 +119,7 @@
         "description": "Social networking technology created by Bluesky. \n\nDeveloper-focused account. Follow @bsky.app for general announcements!\n\nBluesky API docs: docs.bsky.app\nAT Protocol specs: atproto.com",
         "indexedAt": "2026-03-03T20:08:17.348Z",
         "banner": "https://cdn.bsky.app/img/banner/plain/did:plc:ewvi7nxzyoun6zhxrhs64oiz/bafkreidhox3lr7tld2oj2uy7swefvhsgcmeufurclzllwloceyhwjg6rg4",
-        "followersCount": 120844,
+        "followersCount": 120854,
         "followsCount": 21,
         "postsCount": 255
       }

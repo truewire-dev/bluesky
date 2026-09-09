@@ -133,6 +133,64 @@ async def everyone_following(actor: str) -> None:
 
 These twelve are what the public AppView answers without credentials. The authenticated half of the API — writing posts, following accounts, reading notifications, everything on `bsky.social` that needs a session — is a different client and not wrapped here. `Bluesky.new(access_jwt=...)` takes a token you already hold and sends every call to `bsky.social` instead, which fills in the viewer's own state on a profile or a post; it does not add any endpoint.
 
+## Posting
+
+Everything above is read-only and needs no account. Writing needs one, and the client
+handles the session for you:
+
+```python
+import asyncio
+from datetime import datetime, timezone
+
+from bluesky import Bluesky
+
+
+async def post(text: str) -> str:
+  async with Bluesky.new(identifier='you.bsky.social', app_password='xxxx-xxxx-xxxx-xxxx') as client:
+    session = await client.server.create_session()
+    created = await client.repo.create_record(
+      repo=session['did'],
+      collection='app.bsky.feed.post',
+      record={
+        '$type': 'app.bsky.feed.post',
+        'text': text,
+        'createdAt': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+      },
+    )
+    return created['uri']
+
+
+print(asyncio.run(post('Hello from a generated client.')))
+```
+
+Use an **app password** (bsky.app, Settings, App Passwords), never the account password: an
+app password is individually revocable and cannot change the account's password or email.
+
+Three things the client does that are worth knowing about:
+
+- **The credential is never a request parameter.** `create_session`'s request schema is
+  empty; the transport injects the identifier and the app password at send time, because
+  they belong to the client rather than to the call. That is what makes the recorded
+  examples of an authenticated endpoint safe to commit — there is no field for a credential
+  to sit in. The response is scrubbed on capture, and
+  [`packages/python/test/test_no_leaked_secrets.py`](packages/python/test/test_no_leaked_secrets.py)
+  fails the build if anything JWT-shaped ever reaches `spec/`.
+- **Sessions are created and refreshed for you.** An access token lasts minutes, so a
+  client that has been idle finds a stale one on its next call. Bluesky answers that with
+  HTTP 400 and an `ExpiredToken` code rather than a 401; the client maps it to an auth
+  failure by the code, refreshes, and re-sends once.
+- **Credentials pick the host.** Reads work on the public AppView; writes only work against
+  the account's own PDS. Passing a credential switches the base URL, so a caller never has
+  to know that.
+
+`repo.create_record` writes any record, not just posts: the collection is an NSID and the
+record is whatever its lexicon says. That is also how this repository records those two
+endpoints without publishing anything — the examples write to `dev.truewire.example`, a
+collection no client renders, and delete it again in the same run.
+
+The Rust client does not do any of this yet, and refuses with a message saying so rather
+than sending a request that would fail confusingly. See [`NOTES.md`](NOTES.md) #14.
+
 ## Recordings
 
 Every endpoint carries the request half of at least one example, the exact parameters the tests and the recording script replay. The response halves are recorded from the live API through this same generated client, so a recording is the wire body the client saw and the response types are proven against it, never written by hand. The machine this client was written on could not reach `bsky.app` or `bsky.network`, so the recordings are made on a runner.

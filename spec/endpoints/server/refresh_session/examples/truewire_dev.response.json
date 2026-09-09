@@ -1,0 +1,39 @@
+{
+  "status": 200,
+  "payload": {
+    "did": "did:plc:wvyqir3vnepwss2z3m4s6hgp",
+    "didDoc": {
+      "@context": [
+        "https://www.w3.org/ns/did/v1",
+        "https://w3id.org/security/multikey/v1",
+        "https://w3id.org/security/suites/secp256k1-2019/v1"
+      ],
+      "id": "did:plc:wvyqir3vnepwss2z3m4s6hgp",
+      "alsoKnownAs": [
+        "at://truewire.dev"
+      ],
+      "verificationMethod": [
+        {
+          "id": "did:plc:wvyqir3vnepwss2z3m4s6hgp#atproto",
+          "type": "Multikey",
+          "controller": "did:plc:wvyqir3vnepwss2z3m4s6hgp",
+          "publicKeyMultibase": "zQ3shtyx3jzfg1JDYHUBXqZkoX3soMZGWHdkHfxaYNjr4srYF"
+        }
+      ],
+      "service": [
+        {
+          "id": "#atproto_pds",
+          "type": "AtprotoPersonalDataServer",
+          "serviceEndpoint": "https://chalciporus.us-west.host.bsky.network"
+        }
+      ]
+    },
+    "handle": "truewire.dev",
+    "email": "REDACTED_EMAIL",
+    "emailConfirmed": true,
+    "emailAuthFactor": false,
+    "accessJwt": "REDACTED_ACCESSJWT",
+    "refreshJwt": "REDACTED_REFRESHJWT",
+    "active": true
+  }
+}

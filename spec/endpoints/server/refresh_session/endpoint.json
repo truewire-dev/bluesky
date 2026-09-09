@@ -1,0 +1,64 @@
+{
+  "docs": "https://docs.bsky.app/docs/api/com-atproto-server-refresh-session",
+  "meta": {
+    "public": true,
+    "inject": "refresh"
+  },
+  "spec": {
+    "kind": "rpc",
+    "transports": [
+      "http"
+    ],
+    "path": "/xrpc/com.atproto.server.refreshSession",
+    "method": "POST",
+    "description": "Trade a refresh token for a fresh session. The core does this on its own when an access token expires mid-call, retries the call once, and only then gives up.",
+    "request": {
+      "title": "RefreshSessionRequest",
+      "type": "object",
+      "description": "Takes nothing. The refresh token travels as the bearer, in place of the access token -- which is the whole reason this endpoint declares `inject: refresh` rather than being an ordinary authenticated call.",
+      "properties": {},
+      "required": []
+    },
+    "response": {
+      "title": "Session",
+      "type": "object",
+      "description": "A session: two tokens and who they belong to.",
+      "properties": {
+        "accessJwt": {
+          "type": "string",
+          "description": "Bearer token for authenticated calls. Short-lived -- minutes, not days -- so a long-running client refreshes rather than reusing it."
+        },
+        "refreshJwt": {
+          "type": "string",
+          "description": "Token that buys a new `accessJwt` from `server.refresh_session`. Longer-lived, and the more dangerous of the two to leak."
+        },
+        "handle": {
+          "type": "string",
+          "description": "Handle the session belongs to, such as `truewire.dev`."
+        },
+        "did": {
+          "type": "string",
+          "description": "DID the session belongs to."
+        },
+        "active": {
+          "type": "boolean",
+          "description": "Whether the account is active. A deactivated or taken-down account still authenticates and answers `false` here."
+        },
+        "email": {
+          "type": "string",
+          "description": "Account email. Present on `createSession` and absent from `refreshSession`; it is personal data, so recorded examples scrub it."
+        },
+        "emailConfirmed": {
+          "type": "boolean",
+          "description": "Whether that address has been confirmed."
+        }
+      },
+      "required": [
+        "accessJwt",
+        "refreshJwt",
+        "handle",
+        "did"
+      ]
+    }
+  }
+}

@@ -121,6 +121,15 @@ class RecordView(RecordViewKeywords):
   """The quoted record's view, tagged by `$type`: a post (`#viewRecord`), a not-found, blocked or detached marker, or a feed generator, list, labeler or starter pack view. Kept as a map."""
 
 
+class RepoCommit(TypedDict):
+  """One commit to a repository: every write returns the commit that carried it, which is how a caller orders its own writes against the firehose."""
+
+  cid: str
+  """CID of the commit."""
+  rev: str
+  """Revision of the repository after it."""
+
+
 class StrongRef(TypedDict):
   """A reference to a specific version of a record: its AT URI and the CID of that version (`com.atproto.repo.strongRef`)."""
 

@@ -21,6 +21,12 @@
     "jetstream/mod.rs",
     "lib.rs",
     "meta.rs",
+    "repo/create_record.rs",
+    "repo/delete_record.rs",
+    "repo/mod.rs",
+    "server/create_session.rs",
+    "server/mod.rs",
+    "server/refresh_session.rs",
     "types/mod.rs"
   ]
 }

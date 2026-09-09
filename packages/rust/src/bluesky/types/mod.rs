@@ -158,6 +158,18 @@ pub struct RecordView {
     pub extra: serde_json::Map<String, serde_json::Value>,
 }
 
+/// One commit to a repository: every write returns the commit that carried it, which is how a caller orders its own writes against the firehose.
+#[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
+pub struct RepoCommit {
+    /// CID of the commit.
+    pub cid: String,
+    /// Revision of the repository after it.
+    pub rev: String,
+    /// Keys the spec does not document, kept as they came.
+    #[serde(flatten)]
+    pub extra: serde_json::Map<String, serde_json::Value>,
+}
+
 /// A reference to a specific version of a record: its AT URI and the CID of that version (`com.atproto.repo.strongRef`).
 #[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 pub struct StrongRef {

@@ -1048,5 +1048,24 @@
       "$type",
       "post"
     ]
+  },
+  "RepoCommit": {
+    "title": "RepoCommit",
+    "type": "object",
+    "description": "One commit to a repository: every write returns the commit that carried it, which is how a caller orders its own writes against the firehose.",
+    "properties": {
+      "cid": {
+        "type": "string",
+        "description": "CID of the commit."
+      },
+      "rev": {
+        "type": "string",
+        "description": "Revision of the repository after it."
+      }
+    },
+    "required": [
+      "cid",
+      "rev"
+    ]
   }
 }

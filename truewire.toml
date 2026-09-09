@@ -5,15 +5,33 @@ name = "bluesky"
 dir = "spec"
 
 [secrets]
-# An access JWT from `com.atproto.server.createSession`. Never needed for the public
-# AppView, never read by the core: the caller passes it to `Bluesky.new(access_jwt=...)`,
-# and `truewire standards` uses the name to flag a recording that leaked one.
-required = ["BLUESKY_ACCESS_JWT"]
+# `BLUESKY_ACCESS_JWT`: a session token a caller may pass to `Bluesky.new(access_jwt=...)`
+# instead of letting the core create its own.
+# `BLUESKY_APP_PASSWORD`: an app password (bsky.app > Settings > App Passwords), which the
+# core exchanges for a session. Never the account password, and individually revocable.
+#
+# Neither is ever a request parameter: both are injected by the transport at send time, so
+# `truewire capture` -- which writes the request half from the parameters it was given,
+# never from the wire body -- has nothing secret to write. `truewire standards` uses these
+# names to flag a recording that leaked one anyway, and `test/test_no_leaked_secrets.py`
+# fails the build on it.
+required = ["BLUESKY_ACCESS_JWT", "BLUESKY_APP_PASSWORD"]
 
 [cores.default]
-# Every endpoint here is served by the public AppView without credentials, so `public` is
-# the whole of what an endpoint tells the HTTP core (authoring rule 9).
-meta = { type = "object", properties = { public = { type = "boolean" } }, additionalProperties = false }
+# Two things an endpoint tells the HTTP core (authoring rule 9):
+#
+# `public`  -- the AppView answers it without credentials. The read half of this client is
+#              all `public: true`; the write half is not, and the core creates a session
+#              before sending one.
+# `inject`  -- what the transport puts in the body that the caller never passes. This is
+#              ADR 0007's case: `createSession` takes an identifier and an app password
+#              that belong to the client, not to the call, so the endpoint's request schema
+#              does not name them and the core fills them in. That is what keeps a real
+#              credential out of every recorded example, structurally rather than by
+#              scrubbing it afterwards.
+#              `password`: identifier + app password. `refresh`: the refresh token, as the
+#              bearer, in place of the access token.
+meta = { type = "object", properties = { public = { type = "boolean" }, inject = { type = "string", enum = ["password", "refresh"] } }, additionalProperties = false }
 
 [cores.streams]
 # Jetstream reads nothing per call: the subscription's parameters travel in the connection

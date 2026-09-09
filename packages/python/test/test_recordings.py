@@ -119,7 +119,49 @@ def resolved(handle: Any) -> None:
   assert handle['did'].startswith('did:')
 
 
+def session(result: Any) -> None:
+  """A session frame, with the values that matter scrubbed and the shape intact.
+
+  This is the recording that had to be handled carefully: `createSession` answers with two
+  live tokens and the account's email. What is asserted is that the fields are *there* --
+  a recording that dropped them would prove nothing about the endpoint -- and that their
+  values are placeholders rather than credentials.
+  """
+  assert result['handle'] == 'truewire.dev'
+  assert result['did'].startswith('did:plc:')
+  assert result['active'] is True
+  for field in ('accessJwt', 'refreshJwt'):
+    assert 'REDACTED' in result[field].upper(), f'{field} was captured for real'
+  assert 'REDACTED' in result['email'].upper()
+
+
+def created_record(result: Any) -> None:
+  """A write landed, and named where.
+
+  The collection is `dev.truewire.example`, which no client renders: this proves
+  `createRecord` against the real PDS without publishing anything. `validationStatus` is
+  `unknown` precisely because that collection has no lexicon for the server to check
+  against, which is the honest answer and worth pinning.
+  """
+  assert result['uri'].startswith('at://did:plc:')
+  assert '/dev.truewire.example/' in result['uri']
+  assert result['uri'].endswith('/recorded-example')
+  assert isinstance(result['cid'], str) and result['cid']
+  assert result['commit']['rev']
+  assert result.get('validationStatus') == 'unknown'
+
+
+def deleted_record(result: Any) -> None:
+  """A delete returns the commit that carried it, and nothing else."""
+  assert result['commit']['cid']
+  assert result['commit']['rev']
+
+
 PROVES: dict[str, Callable[[Any], None]] = {
+  'server.create_session[truewire_dev]': session,
+  'server.refresh_session[truewire_dev]': session,
+  'repo.create_record[example]': created_record,
+  'repo.delete_record[example]': deleted_record,
   'actor.get_profile[bsky_app]': profile,
   'actor.get_profiles[bsky_and_atproto]': profiles,
   'actor.search_actors[bluesky_page1]': actor_search,

@@ -1,0 +1,8 @@
+{
+  "description": "Delete the record the create example wrote",
+  "request": {
+    "repo": "did:plc:wvyqir3vnepwss2z3m4s6hgp",
+    "collection": "dev.truewire.example",
+    "rkey": "recorded-example"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "docs": "https://docs.bsky.app/docs/api/com-atproto-repo-delete-record",
+  "meta": {
+    "public": false
+  },
+  "spec": {
+    "kind": "rpc",
+    "transports": [
+      "http"
+    ],
+    "path": "/xrpc/com.atproto.repo.deleteRecord",
+    "method": "POST",
+    "description": "Delete one record from a collection. Deleting a record that is already gone succeeds rather than failing, so this is safe to retry.",
+    "request": {
+      "title": "DeleteRecordRequest",
+      "type": "object",
+      "description": "Which record to delete.",
+      "properties": {
+        "repo": {
+          "type": "string",
+          "description": "The repository to write in: a DID or a handle. The session's own `did` in every ordinary use."
+        },
+        "collection": {
+          "type": "string",
+          "description": "NSID of the collection, such as `app.bsky.feed.post` for a post. Any NSID is accepted -- a PDS stores records in collections nothing renders, which is how this client's examples are recorded without publishing anything."
+        },
+        "rkey": {
+          "type": "string",
+          "description": "Record key, the last segment of the record's AT URI."
+        }
+      },
+      "required": [
+        "repo",
+        "collection",
+        "rkey"
+      ]
+    },
+    "response": {
+      "title": "DeletedRecord",
+      "type": "object",
+      "description": "The commit that removed it.",
+      "properties": {
+        "commit": {
+          "$ref": "RepoCommit",
+          "description": "The commit that wrote the deletion."
+        }
+      }
+    }
+  }
+}

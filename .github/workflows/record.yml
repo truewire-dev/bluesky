@@ -4,6 +4,10 @@ name: Record
 # result. Manual: Actions > Record > Run workflow. The runner has network access the
 # machine this client was written on did not. Needs "Allow GitHub Actions to create and
 # approve pull requests" enabled under Settings > Actions > General.
+#
+# An endpoint that fails to record does not stop the others: the pull request carries
+# whatever the API did answer, the endpoints that failed keep declaring why they have no
+# recording, and the job still ends red so the failure is not lost.
 on:
   workflow_dispatch:
     inputs:
@@ -38,6 +42,10 @@ jobs:
           PYTHON: .venv/bin/python
           JETSTREAM_SECONDS: ${{ inputs.jetstream_seconds }}
           JETSTREAM_LIMIT: ${{ inputs.jetstream_limit }}
+        # Failures are reported by the script and re-raised at the end of the job, so the
+        # recordings that did succeed still reach a pull request.
+        continue-on-error: true
+        id: record
         run: PATH="$PWD/.venv/bin:$PATH" sh test/recapture.sh
       - name: Gates on the recordings
         run: |
@@ -70,3 +78,8 @@ jobs:
             echo '```'
           } > body.md
           gh pr create --title "Record examples from the live Bluesky APIs" --body-file body.md --base main --head "$branch"
+      - name: Some examples did not record
+        if: steps.record.outcome == 'failure'
+        run: |
+          echo "::error::at least one example did not record; the pull request carries the rest, and their endpoints still declare why they have none"
+          exit 1

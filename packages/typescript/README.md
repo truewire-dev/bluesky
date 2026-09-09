@@ -21,11 +21,12 @@ someone remembered.
 
 ## Install
 
-Not published yet. From a checkout:
-
 ```bash
-cd packages/typescript && yarn install
+npm install @truewire/bluesky
 ```
+
+The transport is `fetch` and nothing else, so Node 22 or newer, Deno, Bun and the browser
+all work unchanged.
 
 ## The client
 

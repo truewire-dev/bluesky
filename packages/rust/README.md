@@ -16,25 +16,17 @@ A typed, validated async client for [Bluesky](https://bsky.app)'s public AT Prot
 and the Jetstream firehose. Same spec as the [Python](../../README.md) and
 [TypeScript](../typescript/README.md) clients, same recordings, same twelve endpoints.
 
-## Build
-
-Not on crates.io yet. The package is `truewire-bluesky` -- `bluesky` there is squatted by
-an unrelated placeholder -- and the library it exposes is `bluesky`, so a git dependency
-has to name both:
+## Install
 
 ```toml
 [dependencies]
-bluesky = { package = "truewire-bluesky", git = "https://github.com/truewire-dev/bluesky" }
+bluesky = { package = "truewire-bluesky", version = "0.1" }
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 ```
 
-Or from a checkout:
-
-```bash
-cd packages/rust && cargo build
-```
-
-`truewire-core`, the runtime under it, comes from crates.io.
+The package is `truewire-bluesky` -- `bluesky` on crates.io is squatted by an unrelated
+placeholder -- and the library it exposes is `bluesky`. The `package` key names both, so
+`use bluesky::...` works as it reads.
 
 ## The client
 

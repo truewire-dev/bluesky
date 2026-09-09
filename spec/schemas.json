@@ -330,21 +330,32 @@
       },
       "features": {
         "type": "array",
-        "description": "What the range is: one of `#mention` (`did`), `#link` (`uri`) or `#tag` (`tag`), each tagged by `$type`.",
+        "description": "What the range is. A list because one range can carry more than one feature, though in practice it carries exactly one.",
         "items": {
           "title": "FacetFeature",
           "type": "object",
-          "description": "One feature, tagged by `$type`. The other fields depend on the tag and are kept as they came.",
+          "description": "One feature, tagged by `$type`. The three shapes share this schema rather than being an `anyOf`, because the tag and the payload field are one-to-one: `#mention` carries `did`, `#link` carries `uri`, `#tag` carries `tag`, and exactly one of the three is present.",
           "properties": {
             "$type": {
               "type": "string",
               "description": "Feature type: `app.bsky.richtext.facet#mention`, `#link` or `#tag`."
+            },
+            "uri": {
+              "type": "string",
+              "description": "Where a `#link` points. Absolute, and not necessarily the text it covers: `truewire.dev` in the post can point at `https://truewire.dev`."
+            },
+            "did": {
+              "type": "string",
+              "description": "Who a `#mention` refers to. A DID, not a handle -- a handle can be reassigned, so the mention is resolved when the post is written and stays pointing at the same account."
+            },
+            "tag": {
+              "type": "string",
+              "description": "The hashtag a `#tag` carries, without the leading `#`."
             }
           },
           "required": [
             "$type"
-          ],
-          "additionalProperties": true
+          ]
         }
       }
     },

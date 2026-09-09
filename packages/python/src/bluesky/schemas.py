@@ -43,7 +43,14 @@ FacetFeatureKeywords = TypedDict('FacetFeatureKeywords', {'$type': str})
 
 
 class FacetFeature(FacetFeatureKeywords):
-  """One feature, tagged by `$type`. The other fields depend on the tag and are kept as they came."""
+  """One feature, tagged by `$type`. The three shapes share this schema rather than being an `anyOf`, because the tag and the payload field are one-to-one: `#mention` carries `did`, `#link` carries `uri`, `#tag` carries `tag`, and exactly one of the three is present."""
+
+  uri: NotRequired[str]
+  """Where a `#link` points. Absolute, and not necessarily the text it covers: `truewire.dev` in the post can point at `https://truewire.dev`."""
+  did: NotRequired[str]
+  """Who a `#mention` refers to. A DID, not a handle -- a handle can be reassigned, so the mention is resolved when the post is written and stays pointing at the same account."""
+  tag: NotRequired[str]
+  """The hashtag a `#tag` carries, without the leading `#`."""
 
 
 class Label(TypedDict):
@@ -197,7 +204,7 @@ class Facet(TypedDict):
 
   index: ByteSlice
   features: list[FacetFeature]
-  """What the range is: one of `#mention` (`did`), `#link` (`uri`) or `#tag` (`tag`), each tagged by `$type`."""
+  """What the range is. A list because one range can carry more than one feature, though in practice it carries exactly one."""
 
 
 class ImageView(TypedDict):

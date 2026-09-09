@@ -1,3 +1,14 @@
+<!-- nav:start -->
+<table>
+  <tr>
+    <td align="center"><a href="./README.md">🐍 Python</a></td>
+    <td align="center"><a href="./packages/typescript/README.md">🟦 TypeScript</a></td>
+    <td align="center"><a href="https://github.com/truewire-dev/bluesky/tree/main/spec">📐 The spec</a></td>
+    <td align="center"><b>🧩 Toolchain gaps</b></td>
+  </tr>
+</table>
+<!-- nav:end -->
+
 # Notes for the Truewire toolchain
 
 Things Truewire 0.6.0 (`truewire-core` 0.2.1) could not express or do while this client was written, each with the exact error or warning where there was one and what the project does instead. Nothing here was worked around by bending the spec.
@@ -110,7 +121,7 @@ A project that lints with `I` needs per-file ignores for the generated modules, 
 
 ## 11. The WebSocket runtime assumes a frame-based subscribe protocol
 
-`truewire_core.ws.Streams` is built for a socket that multiplexes: one connection carries many subscriptions, `request_subscription`/`request_unsubscription` send a frame naming a channel, and `parse_msg` routes each incoming frame back to the channel it belongs to. Jetstream is the other shape — one subscription per connection, its filter in the URL, nothing ever sent — so the core here implements the base class by declining it: both request methods return `None`, `parse_msg` routes every frame to the single channel the connection carries, and `SocketClient` opens a fresh `Connection` per subscription and closes it on unsubscribe (`src/bluesky/core/ws.py`). That works and is small, but it is a subclass whose contract is "none of the above". A `Streams` variant for URL-parameterised, single-subscription sockets would let a core this shape declare what it is instead of overriding three methods to do nothing.
+`truewire_core.ws.Streams` is built for a socket that multiplexes: one connection carries many subscriptions, `request_subscription`/`request_unsubscription` send a frame naming a channel, and `parse_msg` routes each incoming frame back to the channel it belongs to. Jetstream is the other shape — one subscription per connection, its filter in the URL, nothing ever sent — so the core here implements the base class by declining it: both request methods return `None`, `parse_msg` routes every frame to the single channel the connection carries, and `SocketClient` opens a fresh `Connection` per subscription and closes it on unsubscribe (`packages/python/src/bluesky/core/ws.py`). That works and is small, but it is a subclass whose contract is "none of the above". A `Streams` variant for URL-parameterised, single-subscription sockets would let a core this shape declare what it is instead of overriding three methods to do nothing.
 
 ## 12. A union is closed by construction, and nothing says it could be open
 

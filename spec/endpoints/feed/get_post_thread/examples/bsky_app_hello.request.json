@@ -1,7 +1,7 @@
 {
-  "description": "The official account's first post, with two levels of replies",
+  "description": "A post by bsky.app with replies, two levels deep",
   "request": {
-    "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3juzlwllznd24",
+    "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mk4lzkrnk22d",
     "depth": 2,
     "parentHeight": 0
   }

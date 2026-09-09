@@ -1,8 +1,8 @@
 {
-  "description": "The official account's first post",
+  "description": "A post by bsky.app with replies, fetched by URI",
   "request": {
     "uris": [
-      "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3juzlwllznd24"
+      "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mk4lzkrnk22d"
     ]
   }
 }

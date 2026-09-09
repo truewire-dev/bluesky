@@ -177,10 +177,6 @@
   "push": {
     "trigger": "connect"
   },
-  "unverified": {
-    "reason": "not_captured",
-    "detail": "No recording yet: the sandbox this spec was written in cannot reach bsky.network. The `record.yml` workflow reads Jetstream for ten seconds through the generated client (`test/record_jetstream.py`) and writes the messages beside `examples/*.parameters.json`."
-  },
   "notes": [
     "Written from the Jetstream README as remembered, not read: the docs host was unreachable. The first recording confirms or corrects it. `compress`, `requireHello` and `maxMessageSizeBytes` are not declared.",
     "There is no subscribe frame: the parameters are the connection URL's query string and the server pushes from the moment the socket opens, which is what `push: connect` declares. No `envelope.verb` is declared because no frame states a verb; the `ws-verb` warning from `truewire check` is expected, and the mock serves the endpoint through `push` instead.",

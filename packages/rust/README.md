@@ -18,14 +18,23 @@ and the Jetstream firehose. Same spec as the [Python](../../README.md) and
 
 ## Build
 
-Not published yet. From a checkout:
+Not on crates.io yet. The package is `truewire-bluesky` -- `bluesky` there is squatted by
+an unrelated placeholder -- and the library it exposes is `bluesky`, so a git dependency
+has to name both:
+
+```toml
+[dependencies]
+bluesky = { package = "truewire-bluesky", git = "https://github.com/truewire-dev/bluesky" }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+```
+
+Or from a checkout:
 
 ```bash
 cd packages/rust && cargo build
 ```
 
-`truewire-core` comes from the toolchain repository by git: the crate name is reserved on
-crates.io but nothing real is published there yet.
+`truewire-core`, the runtime under it, comes from crates.io.
 
 ## The client
 

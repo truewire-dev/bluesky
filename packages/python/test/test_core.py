@@ -32,10 +32,68 @@ def test_a_base_url_wins_over_both():
   assert client.client.base_url == 'http://127.0.0.1:1'
 
 
-def test_a_non_public_endpoint_without_a_jwt_is_refused_before_the_request():
+def test_a_non_public_endpoint_with_no_credential_is_refused_before_the_request():
+  """A client built for the public AppView cannot reach the write half, and says so
+  naming both ways to fix it rather than only the one it used to know about."""
   client = Bluesky.new()
-  with pytest.raises(AuthError, match='needs an access JWT'):
+  with pytest.raises(AuthError, match='needs a session'):
     client.client.headers(public=False)
+
+
+def test_an_app_password_satisfies_a_non_public_endpoint():
+  """The transport can authenticate once it holds credentials, before any session exists:
+  `can_authenticate` is what the refusal above is really testing."""
+  client = Bluesky.new(identifier='example.invalid', app_password='not-a-real-app-password')
+  assert client.client.can_authenticate
+
+
+def test_an_app_password_sends_writes_to_the_pds_not_the_appview():
+  """A write against `public.api.bsky.app` would 401 forever. The host follows from the
+  credential, so a caller who passes one never has to know that."""
+  assert Bluesky.new().client.base_url == PUBLIC_APPVIEW
+  assert (
+    Bluesky.new(
+      identifier='example.invalid', app_password='not-a-real-app-password'
+    ).client.base_url
+    == BSKY_SOCIAL
+  )
+
+
+def test_creating_a_session_needs_the_credentials_it_injects():
+  """`inject: password` with nothing to inject fails at the transport, not on the wire."""
+  client = Bluesky.new()
+  with pytest.raises(AuthError, match='identifier='):
+    client.client.injected('password')
+
+
+def test_refreshing_needs_a_session_to_refresh():
+  client = Bluesky.new(identifier='example.invalid', app_password='not-a-real-app-password')
+  with pytest.raises(AuthError, match='no session to refresh'):
+    client.client.injected('refresh')
+
+
+def test_an_expired_token_is_an_auth_failure_even_though_it_arrives_as_a_400():
+  """Bluesky answers an expired token with HTTP 400 and an `ExpiredToken` code, not a 401.
+  Mapping by status alone would call it a bad request, and the transport's
+  refresh-and-retry -- which is keyed on `AuthError` -- would never fire."""
+  with pytest.raises(AuthError, match='ExpiredToken'):
+    raise_for_status(
+      'POST',
+      '/xrpc/com.atproto.repo.createRecord',
+      400,
+      '{"error": "ExpiredToken", "message": "Token has expired"}',
+    )
+
+
+def test_an_ordinary_400_is_still_a_bad_request():
+  """A guard on the guard above: the code is consulted, not ignored."""
+  with pytest.raises(BadRequest):
+    raise_for_status(
+      'GET',
+      '/xrpc/app.bsky.actor.getProfile',
+      400,
+      '{"error": "InvalidRequest", "message": "Error: actor must be a valid did or handle"}',
+    )
 
 
 def capturing(client: Bluesky, seen: list[httpx.Request]) -> None:

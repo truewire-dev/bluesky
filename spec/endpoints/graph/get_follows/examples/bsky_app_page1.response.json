@@ -12,6 +12,12 @@
             "allowSubscriptions": "followers"
           }
         },
+        "viewer": {
+          "muted": false,
+          "mutedOnlyReposts": false,
+          "mutedOnlyQuoteposts": false,
+          "blockedBy": false
+        },
         "labels": [],
         "createdAt": "2024-11-21T21:11:36.371Z",
         "verification": {
@@ -43,6 +49,12 @@
           "activitySubscription": {
             "allowSubscriptions": "followers"
           }
+        },
+        "viewer": {
+          "muted": false,
+          "mutedOnlyReposts": false,
+          "mutedOnlyQuoteposts": false,
+          "blockedBy": false
         },
         "labels": [],
         "createdAt": "2022-11-17T00:35:16.391Z",
@@ -76,6 +88,12 @@
             "allowSubscriptions": "followers"
           }
         },
+        "viewer": {
+          "muted": false,
+          "mutedOnlyReposts": false,
+          "mutedOnlyQuoteposts": false,
+          "blockedBy": false
+        },
         "labels": [],
         "createdAt": "2024-02-07T14:03:04.704Z",
         "verification": {
@@ -108,6 +126,13 @@
         "activitySubscription": {
           "allowSubscriptions": "followers"
         }
+      },
+      "viewer": {
+        "muted": false,
+        "mutedOnlyReposts": false,
+        "mutedOnlyQuoteposts": false,
+        "blockedBy": false,
+        "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
       },
       "labels": [],
       "createdAt": "2023-04-12T04:53:57.057Z",

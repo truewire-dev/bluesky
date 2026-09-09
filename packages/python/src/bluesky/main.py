@@ -5,6 +5,8 @@ from .feed import Feed
 from .graph import Graph
 from .identity import Identity
 from .jetstream import Jetstream
+from .repo import Repo
+from .server import Server
 from bluesky.core import ClientBase
 
 
@@ -59,3 +61,21 @@ class Bluesky(ClientBase):
       - [Upstream docs](https://github.com/bluesky-social/jetstream)
     """
     return Jetstream(client=self.socket)
+
+  @cached_property
+  def repo(self) -> Repo:
+    """Records in the account's own repository (`com.atproto.repo.*`): creating one and deleting it. A post is a record in the `app.bsky.feed.post` collection.
+
+    References:
+      - [Upstream docs](https://docs.bsky.app/docs/api/com-atproto-repo-create-record)
+    """
+    return Repo(client=self.client)
+
+  @cached_property
+  def server(self) -> Server:
+    """Sessions (`com.atproto.server.*`): exchanging an app password for a session, and refreshing it. Everything else in this client is read-only and needs none of it.
+
+    References:
+      - [Upstream docs](https://docs.bsky.app/docs/api/com-atproto-server-create-session)
+    """
+    return Server(client=self.client)

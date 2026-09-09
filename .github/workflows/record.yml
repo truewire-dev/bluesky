@@ -33,6 +33,12 @@ permissions:
 jobs:
   record:
     runs-on: ubuntu-latest
+    # The app password lives on this environment rather than loose in the repository's
+    # secrets, and the environment allows only `main`. A repository secret is readable by
+    # any workflow on any branch, which for a credential that can post publicly as the
+    # account is more surface than this job needs. No required reviewers: they would block
+    # the weekly schedule forever, which is the whole point of it being weekly.
+    environment: bluesky
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v4
@@ -51,6 +57,14 @@ jobs:
           PYTHON: .venv/bin/python
           JETSTREAM_SECONDS: ${{ inputs.jetstream_seconds || '10' }}
           JETSTREAM_LIMIT: ${{ inputs.jetstream_limit || '20' }}
+          # The write half's credentials. Absent, the eleven public endpoints still record
+          # and the four authenticated ones fail, which the job reports without losing the
+          # rest.
+          # A handle is public, so it belongs in a variable -- but it costs nothing to
+          # accept it as a secret too, and that removes a way for the weekly run to fail
+          # silently on a Monday because it was set in the other place.
+          BLUESKY_IDENTIFIER: ${{ vars.BLUESKY_IDENTIFIER || secrets.BLUESKY_IDENTIFIER }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
         # Failures are reported by the script and re-raised at the end of the job, so the
         # recordings that did succeed still reach a pull request.
         continue-on-error: true

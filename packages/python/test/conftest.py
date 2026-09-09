@@ -16,6 +16,11 @@ from bluesky import Bluesky
 PROJECT = Path(__file__).resolve().parents[3]
 
 NO_WS_SERVER = 'ws://127.0.0.1:1/subscribe'
+
+PLACEHOLDER_IDENTIFIER = 'example.invalid'
+"""A handle in a reserved TLD that can never resolve (RFC 2606)."""
+
+PLACEHOLDER_APP_PASSWORD = 'not-a-real-app-password'
 """Stand-in for the mock's WebSocket address while no Jetstream events are recorded."""
 
 
@@ -29,4 +34,15 @@ def mock_servers():
 def client(mock_servers):
   """The generated client, built exactly as a user would, against the mock's addresses."""
   ws_url = mock_servers.ws_server.url if mock_servers.ws_server is not None else NO_WS_SERVER
-  return Bluesky.new(base_url=mock_servers.http_base_url, ws_url=ws_url, validate=True)
+  return Bluesky.new(
+    base_url=mock_servers.http_base_url,
+    ws_url=ws_url,
+    validate=True,
+    # Obvious placeholders, and deliberately so. The write half needs *a* credential to
+    # inject, because injection is what it does; it must never need a real one. The mock
+    # ignores both when matching, since `server.create_session` declares them `redacted`
+    # (ADR 0007), so these values reach the wire and are then thrown away -- which is
+    # exactly the property that keeps a real credential out of the recordings too.
+    identifier=PLACEHOLDER_IDENTIFIER,
+    app_password=PLACEHOLDER_APP_PASSWORD,
+  )

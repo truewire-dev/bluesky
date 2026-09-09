@@ -12,6 +12,8 @@ pub mod graph;
 pub mod identity;
 pub mod jetstream;
 pub mod meta;
+pub mod repo;
+pub mod server;
 pub mod types;
 
 pub use client::Bluesky;

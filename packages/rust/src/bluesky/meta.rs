@@ -6,4 +6,5 @@
 #[derive(Debug, Clone, PartialEq)]
 pub struct DefaultMeta {
     pub public: Option<bool>,
+    pub inject: Option<String>,
 }

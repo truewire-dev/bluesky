@@ -50,7 +50,16 @@ function isPost(post: PostView): void {
 let client: Bluesky
 
 beforeAll(() => {
-  client = Bluesky.new({ baseUrl: inject('httpBaseUrl'), wsUrl: inject('wsUrl') })
+  client = Bluesky.new({
+    baseUrl: inject('httpBaseUrl'),
+    wsUrl: inject('wsUrl'),
+    // Obvious placeholders. The write half needs *a* credential to inject, because
+    // injection is what it does; it must never need a real one. `server.createSession`
+    // declares both `redacted`, so the mock ignores them when matching -- the same
+    // property that keeps a real credential out of the recordings.
+    identifier: 'example.invalid',
+    appPassword: 'not-a-real-app-password',
+  })
 })
 
 afterAll(async () => {
@@ -156,5 +165,50 @@ describe('the recorded Jetstream capture replays over a real WebSocket', () => {
     }
     expect(events.length).toBe(5)
     await stream.unsubscribe()
+  })
+})
+
+describe('the write half replays too', () => {
+  it('server.createSession returns a session with the values scrubbed', async () => {
+    const session = await client.server.createSession({})
+    expect(session.handle).toBe('truewire.dev')
+    expect(session.did.startsWith('did:plc:')).toBe(true)
+    // The shape is recorded; the credentials are not. Both assertions matter: a recording
+    // that dropped the fields would prove nothing about the endpoint.
+    expect(session.accessJwt.toUpperCase()).toContain('REDACTED')
+    expect(session.refreshJwt.toUpperCase()).toContain('REDACTED')
+  })
+
+  it('server.refreshSession has the same shape', async () => {
+    const session = await client.server.refreshSession({})
+    expect(session.handle).toBe('truewire.dev')
+    expect(session.refreshJwt.toUpperCase()).toContain('REDACTED')
+  })
+
+  it('repo.createRecord writes into a collection nothing renders', async () => {
+    const created = await client.repo.createRecord({
+      repo: 'did:plc:wvyqir3vnepwss2z3m4s6hgp',
+      collection: 'dev.truewire.example',
+      rkey: 'recorded-example',
+      record: {
+        $type: 'dev.truewire.example',
+        note: 'A record written by the Record workflow to prove this endpoint, in a collection nothing renders.',
+        createdAt: '2026-09-09T16:00:00.000Z',
+      },
+    })
+    expect(created.uri).toContain('/dev.truewire.example/')
+    expect(created.uri.endsWith('/recorded-example')).toBe(true)
+    // `unknown` because that collection has no lexicon for the server to check against,
+    // which is the honest answer and worth pinning.
+    expect(created.validationStatus).toBe('unknown')
+  })
+
+  it('repo.deleteRecord returns the commit that carried it', async () => {
+    const deleted = await client.repo.deleteRecord({
+      repo: 'did:plc:wvyqir3vnepwss2z3m4s6hgp',
+      collection: 'dev.truewire.example',
+      rkey: 'recorded-example',
+    })
+    expect(deleted.commit!.rev).toBeTruthy()
   })
 })

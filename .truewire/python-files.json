@@ -20,6 +20,12 @@
     "jetstream/events.py",
     "main.py",
     "meta.py",
-    "schemas.py"
+    "repo/__init__.py",
+    "repo/create_record.py",
+    "repo/delete_record.py",
+    "schemas.py",
+    "server/__init__.py",
+    "server/create_session.py",
+    "server/refresh_session.py"
   ]
 }

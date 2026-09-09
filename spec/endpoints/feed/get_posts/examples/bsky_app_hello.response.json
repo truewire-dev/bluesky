@@ -18,6 +18,13 @@
               "allowSubscriptions": "followers"
             }
           },
+          "viewer": {
+            "muted": false,
+            "mutedOnlyReposts": false,
+            "mutedOnlyQuoteposts": false,
+            "blockedBy": false,
+            "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
+          },
           "labels": [],
           "createdAt": "2023-04-12T04:53:57.057Z",
           "verification": {
@@ -67,6 +74,11 @@
         "likeCount": 7214,
         "quoteCount": 2083,
         "indexedAt": "2026-04-22T23:00:22.348Z",
+        "viewer": {
+          "bookmarked": false,
+          "threadMuted": false,
+          "embeddingDisabled": false
+        },
         "labels": []
       }
     ]

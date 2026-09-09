@@ -4,10 +4,11 @@ that declares a `meta` schema. A hand-written core annotates its `meta` paramete
 its core's class; generated calls pass a matching dict literal.
 """
 
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Literal, NotRequired, TypedDict
 
 
 class DefaultMeta(TypedDict):
   """`meta` for every endpoint whose nearest `router.json` resolves to the `default` core."""
 
   public: NotRequired[bool]
+  inject: NotRequired[Literal['password', 'refresh']]

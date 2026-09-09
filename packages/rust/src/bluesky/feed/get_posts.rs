@@ -53,7 +53,10 @@ impl GetPosts {
         request: Request,
         options: CallOptions,
     ) -> Result<serde_json::Value> {
-        let meta = DefaultMeta { public: Some(true) };
+        let meta = DefaultMeta {
+            public: Some(true),
+            inject: None,
+        };
         let call = HttpCall {
             method: Some("GET"),
             path: "/xrpc/app.bsky.feed.getPosts",

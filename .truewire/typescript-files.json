@@ -21,6 +21,12 @@
     "jetstream/index.ts",
     "main.ts",
     "meta.ts",
+    "repo/create_record.ts",
+    "repo/delete_record.ts",
+    "repo/index.ts",
+    "server/create_session.ts",
+    "server/index.ts",
+    "server/refresh_session.ts",
     "types/index.ts"
   ]
 }

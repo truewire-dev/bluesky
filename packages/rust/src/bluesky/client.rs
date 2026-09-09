@@ -10,6 +10,8 @@ use crate::graph::Graph;
 use crate::identity::Identity;
 use crate::jetstream::Jetstream;
 use crate::meta::DefaultMeta;
+use crate::repo::Repo;
+use crate::server::Server;
 
 /// Bluesky: profiles, feeds, threads, the social graph and handle resolution from the public AppView, plus the Jetstream firehose of repository events. No credentials needed.
 ///
@@ -26,6 +28,10 @@ pub struct Bluesky {
     pub identity: Identity,
     /// Jetstream: Bluesky's JSON firehose of repository commits, identity changes and account status changes, over one WebSocket per subscription.
     pub jetstream: Jetstream,
+    /// Records in the account's own repository (`com.atproto.repo.*`): creating one and deleting it. A post is a record in the `app.bsky.feed.post` collection.
+    pub repo: Repo,
+    /// Sessions (`com.atproto.server.*`): exchanging an app password for a session, and refreshing it. Everything else in this client is read-only and needs none of it.
+    pub server: Server,
 }
 
 impl Bluesky {
@@ -34,8 +40,10 @@ impl Bluesky {
             actor: Actor::new(client.clone()),
             feed: Feed::new(client.clone()),
             graph: Graph::new(client.clone()),
-            identity: Identity::new(client),
+            identity: Identity::new(client.clone()),
             jetstream: Jetstream::new(socket),
+            repo: Repo::new(client.clone()),
+            server: Server::new(client),
         }
     }
 }

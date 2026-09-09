@@ -1,0 +1,13 @@
+{
+  "description": "Write a record into a collection nothing renders",
+  "request": {
+    "repo": "did:plc:wvyqir3vnepwss2z3m4s6hgp",
+    "collection": "dev.truewire.example",
+    "rkey": "recorded-example",
+    "record": {
+      "$type": "dev.truewire.example",
+      "note": "A record written by the Record workflow to prove this endpoint, in a collection nothing renders.",
+      "createdAt": "2026-09-09T16:00:00.000Z"
+    }
+  }
+}

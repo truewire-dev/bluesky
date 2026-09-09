@@ -1,0 +1,5 @@
+{
+  "description": "Sessions (`com.atproto.server.*`): exchanging an app password for a session, and refreshing it. Everything else in this client is read-only and needs none of it.",
+  "upstream": "https://docs.bsky.app/docs/api/com-atproto-server-create-session",
+  "core": "default"
+}

@@ -6,6 +6,8 @@ import { Graph } from './graph/index.js'
 import { Identity } from './identity/index.js'
 import { Jetstream } from './jetstream/index.js'
 import type { DefaultMeta } from './meta.js'
+import { Repo } from './repo/index.js'
+import { Server } from './server/index.js'
 
 /** The transports `Bluesky` is built from, one per field the composite's `truewire.toml` declarations name; the hand-written core satisfies it by shape. */
 export interface BlueskyCore {
@@ -29,6 +31,10 @@ export class Bluesky {
   readonly identity: Identity
   /** Jetstream: Bluesky's JSON firehose of repository commits, identity changes and account status changes, over one WebSocket per subscription. */
   readonly jetstream: Jetstream
+  /** Records in the account's own repository (`com.atproto.repo.*`): creating one and deleting it. A post is a record in the `app.bsky.feed.post` collection. */
+  readonly repo: Repo
+  /** Sessions (`com.atproto.server.*`): exchanging an app password for a session, and refreshing it. Everything else in this client is read-only and needs none of it. */
+  readonly server: Server
 
   constructor(readonly core: BlueskyCore) {
     this.actor = new Actor(core.client)
@@ -36,5 +42,7 @@ export class Bluesky {
     this.graph = new Graph(core.client)
     this.identity = new Identity(core.client)
     this.jetstream = new Jetstream(core.socket)
+    this.repo = new Repo(core.client)
+    this.server = new Server(core.client)
   }
 }

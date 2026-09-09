@@ -137,6 +137,19 @@ export const RecordView: Codec<RecordView> = t.object({
   record: t.record(t.unknown),
 })
 
+/** One commit to a repository: every write returns the commit that carried it, which is how a caller orders its own writes against the firehose. */
+export interface RepoCommit {
+  /** CID of the commit. */
+  cid: string
+  /** Revision of the repository after it. */
+  rev: string
+}
+
+export const RepoCommit: Codec<RepoCommit> = t.object({
+  cid: t.string,
+  rev: t.string,
+})
+
 /** A reference to a specific version of a record: its AT URI and the CID of that version (`com.atproto.repo.strongRef`). */
 export interface StrongRef {
   /** AT URI of the record (`at://<did>/<collection>/<rkey>`). */

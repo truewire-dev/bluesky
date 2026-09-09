@@ -81,6 +81,35 @@ impl HttpEndpoint<DefaultMeta> for Core {
     ///
     /// Every endpoint here is a `GET` whose parameters travel in the query string.
     async fn request(&self, call: HttpCall<'_, DefaultMeta>) -> Result<Value> {
+        // The write half is not implemented here, and this refuses rather than sending a
+        // request that would fail confusingly on the wire.
+        //
+        // `meta.inject` names credentials the transport is supposed to put in the body at
+        // send time -- an app password for `createSession`, a refresh token as the bearer
+        // for `refreshSession`. The Python and TypeScript cores do that and hold the
+        // resulting session; this one does not yet, because a session is mutable state
+        // behind an `Arc<dyn HttpEndpoint>` whose `request` takes `&self`, so it needs an
+        // async-aware lock and a real `tokio` dependency rather than a dev-dependency.
+        //
+        // Stated loudly and early for the same reason the generator prints a skipped
+        // walker instead of emitting one without its guard: a client that is missing
+        // something should say so where the caller meets it.
+        if let Some(inject) = &call.meta.inject {
+            return Err(Error::auth(format!(
+                "the Rust core does not implement session handling yet, so it cannot serve \
+                 an endpoint declaring `inject: {inject}`. The read half of this client \
+                 needs no credentials and works; for the write half use the Python or \
+                 TypeScript client. Tracked in NOTES.md."
+            )));
+        }
+        if call.meta.public != Some(true) && self.access_jwt.is_none() {
+            return Err(Error::auth(
+                "this endpoint needs a session. The Rust core accepts an `access_jwt` you \
+                 already hold, but cannot create one from an app password yet -- see \
+                 NOTES.md."
+                    .to_string(),
+            ));
+        }
         let mut path = call.path.to_string();
         let mut query: Vec<(String, Option<String>)> = Vec::new();
         if let Some(Value::Object(fields)) = call.request {

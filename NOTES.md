@@ -164,3 +164,47 @@ export class Bluesky extends Generated {
 `core/client.ts` is that, the package's `exports` map points `.` at it, and a caller writes `Bluesky.new()` exactly as they would in Python. The declared base is also the *narrower* mechanism: the generated constructor must call `super()`, so a base could take no constructor arguments of its own, while a subclass takes whatever it likes.
 
 The asymmetry that remains is in how a project wires it up, not in what a caller sees, and it costs a name shadow visible only to someone reading the package's internals. What would genuinely help is scaffolding rather than codegen: `truewire init` emitting this subclass so every generated TypeScript project starts with a factory and a lifecycle already in place.
+
+## 14. The Rust core has no session handling, so the write half is Python and TypeScript only
+
+The four authenticated endpoints generate in all three languages, and only two of them
+work. The Rust core refuses them:
+
+```
+the Rust core does not implement session handling yet, so it cannot serve an endpoint
+declaring `inject: createSession`. The read half of this client needs no credentials and
+works; for the write half use the Python or TypeScript client.
+```
+
+Not a generator gap this time — a hand-written-core gap, and a specific one. A session is
+mutable state, and every generated struct holds its core as an `Arc<dyn HttpEndpoint>`
+whose `request` takes `&self`, so storing one needs an async-aware lock and therefore a
+real `tokio` dependency where the crate currently has a dev-dependency. That is a
+reasonable amount of work and it is not done.
+
+Refusing loudly is the same discipline the generator applies when it skips a paginated
+walker it cannot render: a client missing something should say so where the caller meets
+it, not fail on the wire three frames later.
+
+## 15. `meta` carries what the transport injects, because nothing else can
+
+Two of the four write endpoints need something in the request that the *caller* never
+supplies: `createSession` wants an identifier and an app password, and `refreshSession`
+authenticates with the refresh token instead of the access token. Both belong to the
+client, not to the call.
+
+ADR 0007 describes exactly this case and gives `redacted` for the mock's half of it — so
+the mock ignores those keys when matching a recorded example. It does not give a way to say
+*put them there in the first place*, which is the transport's half.
+
+So the endpoints declare `meta.inject`, and the core reads it. That is what authoring rule
+9 is for, and it is the same mechanism the weather.gov showcase uses for `meta.payload`.
+Worth writing down because it is load-bearing for something better than convenience: a
+credential that is never a request parameter cannot reach a recorded example, whatever
+anyone later gets wrong about scrubbing. `truewire capture` writes the request half from
+the parameters it was given, so an endpoint that declares none records none.
+
+The related thing that *is* worth fixing upstream: `truewire/standards/secrets.py` says in
+its own docstring that a request-side credential is one "which `redacted`/ADR 0007 actively
+strips". It does not — `redacted` is read only by the mock, `capture` never looks at it, and
+nothing strips anything. Misleading in precisely the place someone would rely on it.

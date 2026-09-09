@@ -198,6 +198,26 @@ for await (const event of client.jetstream.events({ wantedCollections: ['app.bsk
 }
 ```
 
+`await using` is TC39 explicit resource management. TypeScript 5.2 and later compile it
+down to a `try`/`finally` against `Symbol.asyncDispose`, which Node has had since 20.4, so
+a TypeScript caller needs nothing but a recent compiler. Written in **plain JavaScript** it
+is a syntax error until Node 24, which is the first release whose V8 implements it
+natively. If that is you, the explicit form does the same thing everywhere:
+
+```ts
+import { Bluesky } from '@truewire/bluesky'
+
+const client = Bluesky.new()
+try {
+  for await (const event of client.jetstream.events({ wantedCollections: ['app.bsky.feed.post'] })) {
+    console.log(event.did)
+    break
+  }
+} finally {
+  await client[Symbol.asyncDispose]()
+}
+```
+
 When the client outlives a block — a long-running process, a server — close the
 subscription rather than the client:
 

@@ -293,6 +293,6 @@ It never writes the transport, which is the part that knows the API's habits:
 - [`src/bluesky/core/jetstream.ts`](src/bluesky/core/jetstream.ts) — one socket per
   subscription, and nothing sent on it.
 - [`src/bluesky/core/client.ts`](src/bluesky/core/client.ts) — `Bluesky.new()` and
-  disposal, on a subclass of the generated client. Python's generated client extends a
-  hand-written base and inherits both; the TypeScript backend has no equivalent, so the
-  same two things arrive by subclassing in the other direction ([`NOTES.md`](../../NOTES.md) #13).
+  disposal, on a subclass of the generated client. Generated TypeScript imports nothing
+  from this package, so the two things a generated class cannot carry — a factory and a
+  lifecycle — arrive by subclassing it here ([`NOTES.md`](../../NOTES.md) #13).

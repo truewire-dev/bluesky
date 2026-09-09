@@ -3,12 +3,11 @@
  * generated class cannot carry -- a factory that knows the default hosts, and disposal
  * that closes the sockets.
  *
- * Python's generated client *extends* a hand-written base (`[python.cores.root] base =`),
- * so `Bluesky.new(...)` and `async with` are the base class's and the generated client
- * inherits them. The TypeScript backend takes its core by shape instead and has no `base`,
- * so the same two things have to arrive by subclassing in the other direction. See
- * `NOTES.md` #13: the two clients should not have to reach the same shape by opposite
- * routes.
+ * Generated TypeScript imports nothing from this package -- it names the contract
+ * interfaces and receives an object -- so the two things a generated class cannot carry
+ * arrive by subclassing it here rather than by it extending something of ours. Python
+ * declares a base in `truewire.toml` instead and has its generated client inherit both;
+ * either way a caller writes `Bluesky.new()`. See `NOTES.md` #13.
  */
 import { Bluesky as Generated, type BlueskyCore } from '../main.js'
 import { Transport, type TransportOptions } from './http.js'

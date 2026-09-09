@@ -1,0 +1,172 @@
+name: Release the TypeScript client (npm)
+
+# Merge a pull request from branch `release/typescript` into main. If the version in
+# packages/typescript/package.json is not on npm yet, this builds, publishes, tags
+# `typescript-v<version>` and creates the GitHub release.
+#
+# Authentication takes whichever of the two is available, in that order:
+#
+# 1. `NPM_TOKEN` on the `npm` environment. Needed for a package's *first* publish: npm's
+#    trusted publishing is configured on an existing package's settings page, so -- as on
+#    crates.io, and unlike PyPI, which has pending publishers -- it cannot create one.
+# 2. Trusted Publishing (OIDC), once the package exists and a publisher is configured:
+#    owner `truewire-dev`, repository `bluesky`, workflow `release-npm.yml`, environment
+#    `npm`. npm then mints its own short-lived credential from this job's OIDC token and
+#    attests provenance, so there is nothing here to leak or rotate.
+#
+# So the token can be removed the moment this package has been published once.
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+    paths: ['packages/typescript/**']
+
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+  check:
+    if: github.event.pull_request.merged == true && github.head_ref == 'release/typescript'
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      published: ${{ steps.check.outputs.published }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - id: version
+        run: |
+          version=$(node -p "require('./packages/typescript/package.json').version")
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+      - id: check
+        # Re-running a merged release must not fail the job, so an already-published
+        # version is a no-op rather than an error. `npm view` prints the version when it
+        # exists; it prints nothing (or fails with 404 while the package has never been
+        # published at all) when it does not.
+        run: |
+          if found=$(npm view "@truewire/bluesky@${{ steps.version.outputs.version }}" version 2>/dev/null) && [ -n "$found" ]; then
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "published=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  release:
+    needs: check
+    if: needs.check.outputs.published == 'false'
+    runs-on: ubuntu-latest
+    # A token, while one is still needed, lives on this environment rather than loose in
+    # the repository's secrets, so it is reachable from this one job and can be gated on
+    # top of that.
+    environment: npm
+    defaults:
+      run:
+        working-directory: packages/typescript
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          fetch-tags: true
+      - uses: astral-sh/setup-uv@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+          cache: yarn
+          cache-dependency-path: packages/typescript/yarn.lock
+      - name: Install
+        # `truewire mock` serves the recordings the tests replay, so the Python toolchain
+        # is needed here too.
+        run: |
+          uv venv --python 3.12 ../../.venv
+          uv pip install --python ../../.venv/bin/python --refresh-package truewire -e '../../packages/python[dev]'
+          yarn install --frozen-lockfile
+      - name: Gates
+        # The same gates the pull request already passed, re-run against `main` as merged.
+        # A release is the one place where "it passed on the branch" is not good enough.
+        # The test harness starts `truewire mock` from the repository's own `.venv`.
+        run: |
+          yarn typecheck
+          yarn test
+      - name: Build
+        run: yarn build
+      - name: Package contents match package.json
+        # Every file `exports`, `main` and `types` point at must exist in dist/ and be
+        # inside the `files` list, so a consumer resolves what the manifest promises.
+        run: |
+          node --input-type=module - <<'EOF'
+          import { existsSync } from 'node:fs'
+          import { readFile } from 'node:fs/promises'
+          import { execFileSync } from 'node:child_process'
+          const pkg = JSON.parse(await readFile('package.json', 'utf8'))
+          const targets = new Set([pkg.main, pkg.types].filter(Boolean))
+          const walk = (v) => typeof v === 'string' ? targets.add(v) : Object.values(v).forEach(walk)
+          walk(pkg.exports)
+          const packed = JSON.parse(execFileSync('npm', ['pack', '--dry-run', '--json', '--ignore-scripts'], { encoding: 'utf8' }))
+          const shipped = new Set(packed[0].files.map((f) => f.path))
+          const missing = [...targets].filter((t) => !existsSync(t))
+          const unshipped = [...targets].filter((t) => !shipped.has(t.replace(/^\.\//, '')))
+          if (missing.length || unshipped.length) {
+            console.error('not built:', missing, '\nnot in the tarball:', unshipped)
+            process.exit(1)
+          }
+          console.log(`${shipped.size} files in the tarball; every entry point is present`)
+          EOF
+      - name: Is an npm token configured?
+        id: token
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: echo "present=$([ -n "$NPM_TOKEN" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - name: Publish with a token
+        if: steps.token.outputs.present == 'true'
+        # `--provenance` is explicit here: a token publish attests nothing by itself.
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm install -g npm@latest
+          npm --version
+          npm publish --access public --provenance
+      - name: Publish through trusted publishing
+        if: steps.token.outputs.present == 'false'
+        # npm mints a short-lived credential from this job's OIDC token (`id-token: write`,
+        # above). It requires npm 11.5.1 or newer, which the version bundled with Node 22 is
+        # not, and it publishes provenance by itself, so `--provenance` is not passed.
+        #
+        # This step deliberately sets no `NODE_AUTH_TOKEN`: npm prefers a token when one is
+        # set, so a leftover secret would silently take precedence over OIDC.
+        run: |
+          npm install -g npm@latest
+          npm --version
+          npm publish --access public
+      - id: previous_tag
+        run: |
+          previous=$(git tag -l 'typescript-v*' | sort -V | tail -1)
+          echo "previous=$previous" >> "$GITHUB_OUTPUT"
+      - run: git tag typescript-v${{ needs.check.outputs.version }}
+      - run: git push origin typescript-v${{ needs.check.outputs.version }}
+      - if: steps.previous_tag.outputs.previous != ''
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: typescript-v${{ needs.check.outputs.version }}
+          name: "@truewire/bluesky ${{ needs.check.outputs.version }}"
+          previous_tag: ${{ steps.previous_tag.outputs.previous }}
+          generate_release_notes: true
+          body: |
+            Published to [npm](https://www.npmjs.com/package/@truewire/bluesky/v/${{ needs.check.outputs.version }}) as `@truewire/bluesky@${{ needs.check.outputs.version }}`.
+
+            ${{ github.event.pull_request.body }}
+      - if: steps.previous_tag.outputs.previous == ''
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: typescript-v${{ needs.check.outputs.version }}
+          name: "@truewire/bluesky ${{ needs.check.outputs.version }}"
+          generate_release_notes: true
+          body: |
+            Published to [npm](https://www.npmjs.com/package/@truewire/bluesky/v/${{ needs.check.outputs.version }}) as `@truewire/bluesky@${{ needs.check.outputs.version }}`.
+
+            ${{ github.event.pull_request.body }}

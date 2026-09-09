@@ -97,10 +97,10 @@
   resolved "https://registry.yarnpkg.com/@standard-schema/spec/-/spec-1.1.0.tgz#a79b55dbaf8604812f52d140b2c9ab41bc150bb8"
   integrity sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==
 
-"@truewire/core@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@truewire/core/-/core-0.1.0.tgz#0ed52ada8d52efacf956d339c06196f9138b270e"
-  integrity sha512-Gv67hHo33fDBUHcnKyu8O1BYsEerOO3BlHnvmS34h52ohpjMOmv4dUl/fqS2p5rAdg+6scatpce+znVgfiVHkQ==
+"@truewire/core@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@truewire/core/-/core-0.1.1.tgz#fb5c29cbb9d6d48e603cbc17918ba7d722814b15"
+  integrity sha512-6iDwQ1E4XQpvVgaa34ULcF5cY7/fJsOxwhhYy+pf3s+hZKrrjvOzGoOkHERQZJzvhbEv1aFAsiDtTVTM1FVijw==
 
 "@types/chai@^5.2.2":
   version "5.2.3"

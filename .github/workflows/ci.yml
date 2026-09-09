@@ -41,9 +41,10 @@ jobs:
   recordings:
     name: Every endpoint has a recording
     runs-on: ubuntu-latest
-    # Advisory until the first recording pull request lands. Set the repository variable
-    # REQUIRE_RECORDINGS to `true` to make it a required check.
-    continue-on-error: ${{ vars.REQUIRE_RECORDINGS != 'true' }}
+    # Required since the first recordings landed (#1). Eleven of the twelve endpoints carry
+    # a recorded pair; `feed.search_posts` carries a declaration that it needs a credential
+    # to get one, which is the only reason `test/verified.py --check` accepts in place of a
+    # recording. So an endpoint added without either now fails the pull request.
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v4

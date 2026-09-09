@@ -44,9 +44,23 @@ Questions I cannot answer for myself: is a request *object* right where Python t
 flat keyword arguments? Is declaring `interface Request` and `const Request: Codec<Request>`
 under one name clever or confusing? Do the overloads read well at a call site?
 
-## Not done here
+## It runs
 
-The TypeScript client has no hand-written core yet, so it type-checks and reads but does
-not run. Writing it — an `HttpEndpoint` for `public.api.bsky.app` and a `StreamEndpoint`
-for Jetstream — is the next step, and would let the TypeScript client replay the same
-recordings against `truewire mock` that the Python one does.
+`cd ts && yarn install && yarn test` replays all eleven recorded examples through the
+generated TypeScript client against `truewire mock`, which serves the same recordings over
+real HTTP and a real WebSocket. Eleven tests, and CI runs them.
+
+The hand-written core is `ts/src/bluesky/core/`, and it is the other half worth your eye,
+because none of it is generated:
+
+- `http.ts` — the AppView transport and the XRPC error mapping. Repeated query keys for a
+  list-valued parameter (`uris`, `actors`) are the one wire detail that is easy to get
+  wrong and invisible until a real call.
+- `jetstream.ts` — one WebSocket per subscription, and nothing sent on it. Jetstream has no
+  subscribe frame: the parameters are the connection URL's query string, and closing the
+  socket is what unsubscribes.
+- `index.ts` — `newBluesky()`, the only place the generated client and the hand-written
+  transports meet.
+
+`ts/test/replay.test.ts` asserts the same things about the same responses that
+`test/test_recordings.py` does, so the two clients cannot quietly diverge.

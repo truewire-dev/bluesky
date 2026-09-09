@@ -40,6 +40,29 @@ jobs:
           .venv/bin/ruff check src test
           .venv/bin/ruff format --check src test
 
+  typescript:
+    name: TypeScript client
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install
+        # `truewire mock` serves the recordings the tests replay, so the Python toolchain
+        # is needed here too.
+        run: |
+          uv venv --python 3.12 .venv
+          uv pip install --python .venv/bin/python -e '.[dev]'
+          cd ts && yarn install --frozen-lockfile
+      - name: Type check
+        working-directory: ts
+        run: yarn run typecheck
+      - name: Replay the recordings through the generated client
+        working-directory: ts
+        run: yarn run test
+
   recordings:
     name: Every endpoint has a recording
     runs-on: ubuntu-latest

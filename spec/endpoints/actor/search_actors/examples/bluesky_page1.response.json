@@ -1,0 +1,96 @@
+{
+  "status": 200,
+  "payload": {
+    "actors": [
+      {
+        "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
+        "handle": "bsky.app",
+        "displayName": "Bluesky",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
+        "associated": {
+          "chat": {
+            "allowIncoming": "none"
+          },
+          "activitySubscription": {
+            "allowSubscriptions": "followers"
+          }
+        },
+        "labels": [],
+        "createdAt": "2023-04-12T04:53:57.057Z",
+        "verification": {
+          "verifications": [],
+          "verifiedStatus": "none",
+          "trustedVerifierStatus": "valid"
+        },
+        "description": "official Bluesky account (check username\ud83d\udc46)\n\nBugs, feature requests, feedback: support@bsky.app",
+        "indexedAt": "2025-10-27T21:05:26.152Z"
+      },
+      {
+        "did": "did:plc:eon2iu7v3x2ukgxkqaf7e5np",
+        "handle": "safety.bsky.app",
+        "displayName": "Bluesky Safety",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:eon2iu7v3x2ukgxkqaf7e5np/bafkreih7mgyv6dugcguewqnuev64i7jsljhtrr6olfadmxq2dasfb7woam",
+        "associated": {
+          "chat": {
+            "allowIncoming": "none"
+          },
+          "activitySubscription": {
+            "allowSubscriptions": "followers"
+          }
+        },
+        "labels": [],
+        "createdAt": "2023-07-17T21:54:28.741Z",
+        "verification": {
+          "verifications": [
+            {
+              "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+              "issuerDisplayName": "Bluesky",
+              "issuerHandle": "bsky.app",
+              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lndpv5ev7a2f",
+              "isValid": true,
+              "createdAt": "2025-04-21T10:47:28.774Z"
+            }
+          ],
+          "verifiedStatus": "valid",
+          "trustedVerifierStatus": "none"
+        },
+        "description": "Sharing updates about trust and safety on Bluesky.\n\nThis account\u2019s mentions are not actively monitored. To report a post or account, use the in-app reporting feature.\n\nCommunity Guidelines: https://bsky.social/about/support/community-guidelines",
+        "indexedAt": "2024-02-08T00:51:47.063Z"
+      },
+      {
+        "did": "did:plc:ry3hbexak5ytsum7aazhpkbv",
+        "handle": "jp.bsky.app",
+        "displayName": "Bluesky\u65e5\u672c\u8a9e\uff08\u516c\u5f0f\uff09",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ry3hbexak5ytsum7aazhpkbv/bafkreienc27b7pfsjflwvh645zh7ywb3ruwgshwqziv3ilo5mqsksjnl3i",
+        "associated": {
+          "chat": {
+            "allowIncoming": "all",
+            "allowGroupInvites": "none"
+          },
+          "activitySubscription": {
+            "allowSubscriptions": "followers"
+          }
+        },
+        "labels": [],
+        "createdAt": "2026-03-31T23:39:06.356Z",
+        "verification": {
+          "verifications": [
+            {
+              "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+              "issuerDisplayName": "Bluesky",
+              "issuerHandle": "bsky.app",
+              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mikg6mqywn2r",
+              "isValid": true,
+              "createdAt": "2026-04-03T00:02:41.492Z"
+            }
+          ],
+          "verifiedStatus": "valid",
+          "trustedVerifierStatus": "none"
+        },
+        "description": "Bluesky\u65e5\u672c\u8a9e\u516c\u5f0f\u30a2\u30ab\u30a6\u30f3\u30c8\u3067\u3059\uff08\u30e6\u30fc\u30b6\u30fc\u540d\u3092\u30c1\u30a7\u30c3\u30af\ud83d\udc46\uff09\u3002\n\n\u30d0\u30b0\u306e\u3054\u5831\u544a\u3001\u6a5f\u80fd\u30ea\u30af\u30a8\u30b9\u30c8\u3001\u30d5\u30a3\u30fc\u30c9\u30d0\u30c3\u30af\u306f\u3053\u3061\u3089\u3078 \u2192  support@bsky.app",
+        "indexedAt": "2026-04-03T00:35:19.149Z"
+      }
+    ],
+    "cursor": "eyJzIjpbMTAwMCwwLjAwMDA0MDgwODcwMywiZGlkOnBsYzpyeTNoYmV4YWs1eXRzdW03YWF6aHBrYnYiXX0"
+  }
+}

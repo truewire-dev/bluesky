@@ -103,6 +103,11 @@ jobs:
   rust:
     name: Rust client
     runs-on: ubuntu-latest
+    # On the job rather than the build step: `cargo build` never compiles the test
+    # targets, so a warning in `tests/` was invisible here and first showed up in the
+    # release job, which is the wrong place to find one.
+    env:
+      RUSTFLAGS: -D warnings
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v4
@@ -120,8 +125,6 @@ jobs:
           uv pip install --python .venv/bin/python --refresh-package truewire -e 'packages/python[dev]'
       - name: Build without warnings
         working-directory: packages/rust
-        env:
-          RUSTFLAGS: -D warnings
         run: cargo build
       - name: Replay the recordings through the generated client
         working-directory: packages/rust

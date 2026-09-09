@@ -19,6 +19,16 @@ meta = { type = "object", properties = { public = { type = "boolean" } }, additi
 # Jetstream reads nothing per call: the subscription's parameters travel in the connection
 # URL, and the socket is one connection per subscription.
 
+[typescript]
+package = "bluesky"
+src = "ts/src"
+name = "Bluesky"
+
+[rust]
+package = "bluesky"
+src = "rust/src"
+name = "Bluesky"
+
 [python]
 package = "bluesky"
 src = "src"

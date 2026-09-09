@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "files": [
+    "actor/get_profile.ts",
+    "actor/get_profiles.ts",
+    "actor/index.ts",
+    "actor/search_actors.ts",
+    "feed/get_author_feed.ts",
+    "feed/get_feed.ts",
+    "feed/get_post_thread.ts",
+    "feed/get_posts.ts",
+    "feed/index.ts",
+    "feed/search_posts.ts",
+    "graph/get_followers.ts",
+    "graph/get_follows.ts",
+    "graph/index.ts",
+    "identity/index.ts",
+    "identity/resolve_handle.ts",
+    "index.ts",
+    "jetstream/events.ts",
+    "jetstream/index.ts",
+    "main.ts",
+    "meta.ts",
+    "types/index.ts"
+  ]
+}

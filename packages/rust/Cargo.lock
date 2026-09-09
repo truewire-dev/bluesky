@@ -62,17 +62,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "bluesky"
-version = "0.1.0"
-dependencies = [
- "async-trait",
- "futures",
- "serde",
- "tokio",
- "truewire-core",
-]
-
-[[package]]
 name = "borsh"
 version = "1.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1372,9 +1361,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "truewire-bluesky"
+version = "0.1.0"
+dependencies = [
+ "async-trait",
+ "futures",
+ "serde",
+ "tokio",
+ "truewire-core",
+]
+
+[[package]]
 name = "truewire-core"
 version = "0.1.0"
-source = "git+https://github.com/truewire-dev/truewire?branch=main#f41c4a9f305619889d0608a74a877a56f76d96e0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ff8fa46e3b1a5530ed3d63d57e1fbce6d191b52c797e9d5d959120a5258c87f8"
 dependencies = [
  "async-trait",
  "bytes",

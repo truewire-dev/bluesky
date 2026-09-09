@@ -1,0 +1,130 @@
+name: Release the Rust client (crates.io)
+
+# Merge a pull request from branch `release/rust` into main. If the version in
+# packages/rust/Cargo.toml is not on crates.io yet, this builds, tests, publishes, tags
+# `rust-v<version>` and creates the GitHub release.
+#
+# Authentication takes whichever of the two is available, in that order:
+#
+# 1. `CARGO_REGISTRY_TOKEN` on the `crates-io` environment. Needed for the crate's *first*
+#    publish, because crates.io Trusted Publishing can only publish a crate that already
+#    exists -- unlike PyPI, it has no pending-publisher concept.
+# 2. Trusted Publishing (OIDC), once the crate exists and a publisher is configured: owner
+#    `truewire-dev`, repository `bluesky`, workflow `release-crate.yml`, environment
+#    `crates-io`.
+#
+# So the token can be removed the moment this crate has been published once.
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+    paths: ['packages/rust/**']
+
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+  check:
+    if: github.event.pull_request.merged == true && github.head_ref == 'release/rust'
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      published: ${{ steps.check.outputs.published }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - id: version
+        run: |
+          version=$(grep -m1 '^version = ' packages/rust/Cargo.toml | sed -E 's/version = "(.*)"/\1/')
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+      - id: check
+        # Re-running a merged release must not fail the job, so an already-published
+        # version is a no-op rather than an error.
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" "https://crates.io/api/v1/crates/truewire-bluesky/${{ steps.version.outputs.version }}")
+          if [ "$code" = "200" ]; then
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "published=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  release:
+    needs: check
+    if: needs.check.outputs.published == 'false'
+    runs-on: ubuntu-latest
+    # A token, while one is still needed, lives on this environment rather than loose in
+    # the repository's secrets, so it is reachable from this one job and can be gated on
+    # top of that.
+    environment: crates-io
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          fetch-tags: true
+      - uses: astral-sh/setup-uv@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Install
+        # `truewire mock` serves the recordings the tests replay, so the Python toolchain
+        # is needed here too.
+        run: |
+          uv venv --python 3.12 .venv
+          uv pip install --python .venv/bin/python --refresh-package truewire -e 'packages/python[dev]'
+      - name: Gates
+        # The same gates the pull request already passed, re-run against `main` as merged.
+        # A crate cannot be unpublished, only yanked, so "it passed on the branch" is not
+        # good enough here.
+        working-directory: packages/rust
+        env:
+          RUSTFLAGS: -D warnings
+        run: |
+          cargo build
+          cargo test
+      - name: The crate packages cleanly
+        # `cargo package` also builds the extracted tarball, which is where a stray path or
+        # git dependency, or a file the manifest forgot to include, actually shows up.
+        working-directory: packages/rust
+        run: cargo package
+      - name: Is a registry token configured?
+        id: token
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        run: echo "present=$([ -n "$CARGO_REGISTRY_TOKEN" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - name: Trusted Publishing token
+        if: steps.token.outputs.present == 'false'
+        id: auth
+        uses: rust-lang/crates-io-auth-action@v1
+      - name: Publish
+        working-directory: packages/rust
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN || steps.auth.outputs.token }}
+        run: cargo publish
+      - id: previous_tag
+        run: |
+          previous=$(git tag -l 'rust-v*' | sort -V | tail -1)
+          echo "previous=$previous" >> "$GITHUB_OUTPUT"
+      - run: git tag rust-v${{ needs.check.outputs.version }}
+      - run: git push origin rust-v${{ needs.check.outputs.version }}
+      - if: steps.previous_tag.outputs.previous != ''
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: rust-v${{ needs.check.outputs.version }}
+          name: truewire-bluesky ${{ needs.check.outputs.version }}
+          previous_tag: ${{ steps.previous_tag.outputs.previous }}
+          generate_release_notes: true
+          body: |
+            Published to [crates.io](https://crates.io/crates/truewire-bluesky/${{ needs.check.outputs.version }}) as `truewire-bluesky = "${{ needs.check.outputs.version }}"`.
+
+            ${{ github.event.pull_request.body }}
+      - if: steps.previous_tag.outputs.previous == ''
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: rust-v${{ needs.check.outputs.version }}
+          name: truewire-bluesky ${{ needs.check.outputs.version }}
+          generate_release_notes: true
+          body: |
+            Published to [crates.io](https://crates.io/crates/truewire-bluesky/${{ needs.check.outputs.version }}) as `truewire-bluesky = "${{ needs.check.outputs.version }}"`.
+
+            ${{ github.event.pull_request.body }}

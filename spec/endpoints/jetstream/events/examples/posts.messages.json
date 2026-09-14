@@ -1,638 +1,772 @@
 [
   {
-    "did": "did:plc:v2hj3xiqip5c6dzes6vyq6pu",
-    "time_us": 1788971264793600,
+    "did": "did:plc:iq7vsvswplrkqnsryocqltrz",
+    "time_us": 1789385576885549,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xeetru42x",
+      "rev": "3mvhz7ua4bv2w",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xkxli7k2s",
+      "rkey": "3mvhz7rvpis2k",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:31:24.495Z",
+        "createdAt": "2026-09-14T11:32:53.781Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 1321,
+                "width": 947
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreicvypzhr2wgo6bjsb2wewusqrhzq6gfiukn7m6m2mdsrocokeuorq"
+                },
+                "mimeType": "image/jpeg",
+                "size": 438496
+              }
+            }
+          ]
+        },
+        "langs": [
+          "es"
+        ],
+        "text": "EXACTAMENTE!!"
+      },
+      "cid": "bafyreierqeevheul7qhgmcs4q4wi5mbtw3k4wt4xmdxwuwv3y2gh6eqlyu"
+    }
+  },
+  {
+    "did": "did:plc:6adxpi5tmlzyiendcas53koy",
+    "time_us": 1789385576891682,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7ttgjq2v",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz7kdjis2j",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:45.791Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 4000,
+                "width": 3000
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreibjterfpezfbhtpkolt3ytbxzms6ktwim67l2zpacxvq6nd5nykea"
+                },
+                "mimeType": "image/jpeg",
+                "size": 1946992
+              }
+            }
+          ]
+        },
+        "langs": [
+          "en"
+        ],
+        "text": "my brother drew sonic in some cool pose, so i decided to redraw it"
+      },
+      "cid": "bafyreieg7f2k6vscecyowuw52zxc7c6o6mjl3edopmpni7f4rqdilesoqy"
+    }
+  },
+  {
+    "did": "did:plc:kn2zjj7ndknmd4iqslzj775z",
+    "time_us": 1789385576898385,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7ujzps2b",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz7ufp322p",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:56.404Z",
+        "facets": [
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "Auspol"
+              }
+            ],
+            "index": {
+              "byteEnd": 71,
+              "byteStart": 64
+            }
+          },
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "NationalForum"
+              }
+            ],
+            "index": {
+              "byteEnd": 86,
+              "byteStart": 72
+            }
+          }
+        ],
+        "langs": [
+          "en"
+        ],
+        "text": "Australia’s Anglo-Saxon identity is itself a migrant culture. #Auspol #NationalForum"
+      },
+      "cid": "bafyreifyvtla655atemwl37ifdk4jtm3cxgdndxrelza67lrjgccwh5dei"
+    }
+  },
+  {
+    "did": "did:plc:qhipr2yrwmbkp7qajxmx6urd",
+    "time_us": 1789385577001483,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7ut7cv2k",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz7u4i5k2x",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:56.103Z",
         "langs": [
           "en"
         ],
         "reply": {
           "parent": {
-            "cid": "bafyreidewdyetiiw2sqrlxogr7phqfvhc4ysefzgfvobacu2hddg4m46ti",
-            "uri": "at://did:plc:daixvyhfhkw3hwaepdcf5745/app.bsky.feed.post/3mv3wx5h4qk2f"
+            "cid": "bafyreiaisuibxgz2gyiar46xitznnm4nco4fqdghssifsiaxnxcfgibkky",
+            "uri": "at://did:plc:y75zktj5jaaaexsqz7atnrcy/app.bsky.feed.post/3mvhz3fdoy22b"
           },
           "root": {
-            "cid": "bafyreihlp6uw7exg46ps2sduxbdho6fqd25ql6lc7nvefw3jpcbl5ayekq",
-            "uri": "at://did:plc:omwy5o45srwqlgj65adjoooz/app.bsky.feed.post/3mv3wi7cmjs2n"
+            "cid": "bafyreib5j6nszhowf6hpm5lfrcwwquqnnf227hppeuqnvderksmivhxj7i",
+            "uri": "at://did:plc:qhipr2yrwmbkp7qajxmx6urd/app.bsky.feed.post/3mvhyvucqns2x"
           }
         },
-        "text": "\"mir der scheinheiligkeit von jack the ripper\"\n\n\"Asyltourismus\"\n\n\"Bis zur letzten Patrone\""
+        "text": "🏈🏈"
       },
-      "cid": "bafyreiawhwe3ijsgsxg4a7gbxyiphbwyjhiryjw2eorii3zed4ikeoq5le"
+      "cid": "bafyreich5igeftcacmfcrx7i4u2dpbtdo3owvqb4ugdbqbhcgneyyjnfki"
     }
   },
   {
-    "did": "did:plc:u7gnh2exqxgfem5rcq27p3bp",
-    "time_us": 1788971264805772,
+    "did": "did:plc:256m6rrsvasltfgs2wbujhfp",
+    "time_us": 1789385577008294,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xefulxd2t",
+      "rev": "3mvhz7um7kh2a",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeflqxk2l",
+      "rkey": "3mvhz7tgmwk2l",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.302Z",
-        "langs": [
-          "de"
-        ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreia3lszhie6pmh3ewddqp2mwnzb4i4laiq63qyw3icpsa5hwfpjb4y",
-            "uri": "at://did:plc:34yzvxvcluoeegw2tde5jubz/app.bsky.feed.post/3mv3pfzy44k2g"
-          },
-          "root": {
-            "cid": "bafyreia3lszhie6pmh3ewddqp2mwnzb4i4laiq63qyw3icpsa5hwfpjb4y",
-            "uri": "at://did:plc:34yzvxvcluoeegw2tde5jubz/app.bsky.feed.post/3mv3pfzy44k2g"
-          }
-        },
-        "text": "Kühlschrank"
-      },
-      "cid": "bafyreih5l5g4i3mwmdcw6wqapp7cofxanreigh4jttoeducg2elhhm7iwe"
-    }
-  },
-  {
-    "did": "did:plc:7bhy3yf5z2of3c4qblu4icps",
-    "time_us": 1788971264809338,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xefuazs2t",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeeexqs2e",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.031Z",
+        "createdAt": "2026-09-14T11:32:55.386Z",
         "langs": [
           "ja"
         ],
-        "text": "Eu tava pensando em levar minha irmã para o judô para ela emagrecer"
+        "reply": {
+          "parent": {
+            "cid": "bafyreiefa27ltsdwgxlsddeuvycx5etgvncspie4o6g5uqpsfjatldo774",
+            "uri": "at://did:plc:ite3znnp7nf6ohuykrqsjwnr/app.bsky.feed.post/3mvhuivwaz22d"
+          },
+          "root": {
+            "cid": "bafyreib6cawtdhpvygckgz6vxt3662tcueldjh27xvd6c73maj6eqntgyu",
+            "uri": "at://did:plc:ite3znnp7nf6ohuykrqsjwnr/app.bsky.feed.post/3mvhst2mosk2l"
+          }
+        },
+        "text": "あらぁぁ！倍率凄そうだ・・・ｗ振り込みは結局しない方が良いっぽいかなこの感じだと🤔"
       },
-      "cid": "bafyreiatwf3odhnkgjvditd36alr2hrkqok6yxytd5bgauvjwhegnjyuya"
+      "cid": "bafyreib25yxwlcp2u5pqfawaod5vsig6fwln3wwj2divy52uw5cj3wnpiy"
     }
   },
   {
-    "did": "did:plc:i4vghehjfnj46354zswfally",
-    "time_us": 1788971264823546,
+    "did": "did:plc:m7drwl2qyectt3yoj2zdpm2w",
+    "time_us": 1789385577126502,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xefq2qe25",
+      "rev": "3mvhz7uf6gx2h",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefcpvk2n",
+      "rkey": "3mvhz7tzhhs2f",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.007Z",
+        "createdAt": "2026-09-14T11:32:55.999Z",
+        "embed": {
+          "$type": "app.bsky.embed.record",
+          "record": {
+            "cid": "bafyreihf7lxexxjv3xcb7yzybfm6fftp6jxy6xied6ulel3geo4ehgnixq",
+            "uri": "at://did:plc:paryquvoaigmmrqzmw5c2tli/app.bsky.feed.post/3mvhxfuojuw2w"
+          }
+        },
         "langs": [
-          "it"
+          "en"
+        ],
+        "text": "it’s a fucking good one 😂"
+      },
+      "cid": "bafyreiett3u5qnwr6puuzgjwjux6ogaicn3wif52r3x4nrlqs4xix77shy"
+    }
+  },
+  {
+    "did": "did:plc:xj65kpupo6k2zgdopotwueu7",
+    "time_us": 1789385577143215,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7so5232c",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz7rihoc2y",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:53.271Z",
+        "embed": {
+          "$type": "app.bsky.embed.video",
+          "aspectRatio": {
+            "height": 1180,
+            "width": 2096
+          },
+          "presentation": "default",
+          "video": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreicboqfclkcpovd5mbm2clgpvjs6sz3cuzt77ucfhenj2l3k7flsp4"
+            },
+            "mimeType": "video/mp4",
+            "size": 3396842
+          }
+        },
+        "langs": [
+          "pt"
+        ],
+        "text": "🫣"
+      },
+      "cid": "bafyreihcch7xnvhi6toce775g6cwsboasw7vauzhisezxyh2qqihk5olxm"
+    }
+  },
+  {
+    "did": "did:plc:kkpqal6auu5riorg57dka74j",
+    "time_us": 1789385577198649,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7ujt2j2u",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz7thzu22e",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:55.432Z",
+        "langs": [
+          "ja"
+        ],
+        "text": "ものを買うのが下手だが、1度ものを買うと堰を切ったようにすべてのものを買いはじめる悪癖があります　服も1枚買うまでが長い、1枚買うと3枚買う…"
+      },
+      "cid": "bafyreifztsvm3jmq7or3gvfp2podr5sovnwhttltxxcygtf6ecro4ffccu"
+    }
+  },
+  {
+    "did": "did:plc:kzkl2onyewbs7pehh2ellzcb",
+    "time_us": 1789385577204454,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7ukq2a2x",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz7uk2kq2x",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:53.618033Z",
+        "embed": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "description": "Trio perdeu controle da direção do barco, que girou sozinho e os arremessou na água. Dois homens foram resgatados por outro barco, mas Matheus Gustavo Schuh (22 anos) desapareceu.",
+            "thumb": {
+              "$type": "blob",
+              "ref": {
+                "$link": "bafkreibrfnv4trmysokf2s6tq2eyzjcxfz6ix33ikfu5dsnsqr3y64acdu"
+              },
+              "mimeType": "image/jpeg",
+              "size": 79887
+            },
+            "title": "Buscas por jovem que desapareceu em represa após barco dar pane durante campeonato de pesca no Paraná entram no 3º dia | G1",
+            "uri": "https://g1.globo.com/pr/campos-gerais-sul/noticia/2026/09/14/buscas-jovem-desapareceu-em-represa-apos-barco-dar-pane-durante-campeonato-de-pesca-no-parana.ghtml"
+          }
+        },
+        "langs": [
+          "pt"
+        ],
+        "text": "Buscas por jovem que desapareceu em represa após barco dar pane durante campeonato de pesca no Paraná entram no 3º dia"
+      },
+      "cid": "bafyreidqlmgsjgvjzdfzxwwryzwoooej466niesx5vtiabtimrg7ywhkiy"
+    }
+  },
+  {
+    "did": "did:plc:22sc6xwauv5h6qf5rcilx6ag",
+    "time_us": 1789385577236021,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7uxutq27",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz7venck2a",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:57.419Z",
+        "langs": [
+          "nl"
         ],
         "reply": {
           "parent": {
-            "cid": "bafyreigjhkrzruvnigdbv6igxcumbi7anbl4quk2li7gpxfjtyo6qnkokm",
-            "uri": "at://did:plc:zr5krruo7ypqn5ygnjsg6ugm/app.bsky.feed.post/3mq2k2rfj4s2n"
+            "cid": "bafyreiejlapslofpng44bjmis3oxbvf75wbyqljn447kxefn4rdbgici7q",
+            "uri": "at://did:plc:vl5aqxif26i3ep2emtdoutfx/app.bsky.feed.post/3mvhyeqgy2k2v"
           },
           "root": {
-            "cid": "bafyreigjhkrzruvnigdbv6igxcumbi7anbl4quk2li7gpxfjtyo6qnkokm",
-            "uri": "at://did:plc:zr5krruo7ypqn5ygnjsg6ugm/app.bsky.feed.post/3mq2k2rfj4s2n"
+            "cid": "bafyreibrvj73roj5cxciq655gat4vyhyctdof7n32vqsbw4hor4gdan5xm",
+            "uri": "at://did:plc:r74rn6trtpqwfn62qid7e7nl/app.bsky.feed.post/3mvhvirdsrt2b"
           }
         },
-        "text": "Da ciucciarle per ore"
+        "text": "waar zou je die info over bedrijven kunnen vinden?"
       },
-      "cid": "bafyreiedytdss4lc3uxd3s6rx3z3mdffeghofzrhczv7b5lbrnvgmlg2g4"
+      "cid": "bafyreigaev3epch3i3eq7d2ueyzmxghw25ryjdthjyp5aynxy7o77glvqq"
     }
   },
   {
-    "did": "did:plc:hqsglb3tfognjouamxja3fzf",
-    "time_us": 1788971264834393,
+    "did": "did:plc:kz2nbndnsghfbffvhyxoci2h",
+    "time_us": 1789385577244036,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xefwh6h2r",
+      "rev": "3mvhz7uc2ep2x",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xedy3nc2l",
+      "rkey": "3mvhz7skhku2l",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:42.610Z",
+        "createdAt": "2026-09-14T11:32:54.463Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 915,
+                "width": 1402
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreifei4ijav4jpqcrm4qegdegrraoyj45orazke5lprwbcch2favywe"
+                },
+                "mimeType": "image/jpeg",
+                "size": 353958
+              }
+            }
+          ]
+        },
         "langs": [
           "de"
         ],
         "reply": {
           "parent": {
-            "cid": "bafyreialqejp64rlmv5ccyw3whgmm4e5tdnp3dce7bqxpno4s7bgbdjb7i",
-            "uri": "at://did:plc:2y4fpd7ppnz2lkmg76i2lse5/app.bsky.feed.post/3mv3vkhyzoc2n"
+            "cid": "bafyreiea5vihofpfi4zaiqsc6ywc2ak36cljn73fz7l4423yhh3zb2rmx4",
+            "uri": "at://did:plc:rfpwfx34v2egjpk2c5gadizd/app.bsky.feed.post/3mvhyu2s67s2a"
           },
           "root": {
-            "cid": "bafyreialqejp64rlmv5ccyw3whgmm4e5tdnp3dce7bqxpno4s7bgbdjb7i",
-            "uri": "at://did:plc:2y4fpd7ppnz2lkmg76i2lse5/app.bsky.feed.post/3mv3vkhyzoc2n"
+            "cid": "bafyreiea5vihofpfi4zaiqsc6ywc2ak36cljn73fz7l4423yhh3zb2rmx4",
+            "uri": "at://did:plc:rfpwfx34v2egjpk2c5gadizd/app.bsky.feed.post/3mvhyu2s67s2a"
           }
         },
-        "text": "Sehr ehrlose Damen und Herren, ..."
+        "text": "Auch wenn es knapp nicht Sachsen-Anhalt ist: In Bad Frankenhausen kennt man sich mit der Niederschlagung landesverräterischer Bestrebungen ja aus. So zwischen Hinrichtungsplatz, Bauernschlachtdenkmal und Stinkschiefer wäre doch ein schönes Plätzchen..."
       },
-      "cid": "bafyreidn2z3a2iybkryeavxw5ckbfkgsy4dblgtqk3r4w4ggia4guzqpja"
+      "cid": "bafyreihnfxosnmv5idgfnlqypux64k25ru7drnj4vkwiwyp7bshoqr4i4u"
     }
   },
   {
-    "did": "did:plc:hk5kx3doddx2i257vt6cnwoq",
-    "time_us": 1788971264844973,
-    "kind": "account",
-    "account": {
-      "active": false,
-      "did": "did:plc:hk5kx3doddx2i257vt6cnwoq",
-      "seq": 33472073575,
-      "status": "takendown",
-      "time": "2026-09-09T16:27:44.292Z"
-    }
-  },
-  {
-    "did": "did:plc:4nt6nwx353a3xxo5mzjiy4ha",
-    "time_us": 1788971264865916,
+    "did": "did:plc:gjrkxbivumh3764jy2lys3cv",
+    "time_us": 1789385577295073,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xeexrvt2v",
+      "rev": "3mvhz7trmwy2z",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeexmzl2v",
+      "rkey": "3mvhz7slwgs24",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.627Z",
+        "createdAt": "2026-09-14T11:32:54.509Z",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "parent": {
+            "cid": "bafyreih7pmxkzoq3n5cbjc3wf2pqqyxk3zl6vhkvo4esbe3qlq3fxibqzy",
+            "uri": "at://did:plc:dvgizr7ajs4x6dw5enqihflb/app.bsky.feed.post/3mvhyu6qn3s2q"
+          },
+          "root": {
+            "cid": "bafyreifxd6o3bitjjpg3c57fptz3zw4rvm4ks6dnl54uxdf35akwnh7hfa",
+            "uri": "at://did:plc:dvgizr7ajs4x6dw5enqihflb/app.bsky.feed.post/3mvhxcowyls2q"
+          }
+        },
+        "text": "なんだこいつら！？"
+      },
+      "cid": "bafyreidfzabqoe6xti6hxa3lv4jzu2vk3kpf7zjxkvy2y47kix6qpdvwnm"
+    }
+  },
+  {
+    "did": "did:plc:digciwqb7rhgaxvi5oxpjfoa",
+    "time_us": 1789385577321598,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7v47s22l",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz7v43v22l",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:56.815311Z",
+        "facets": [],
+        "langs": [
+          "en"
+        ],
+        "text": "Tip run done helping dad. I’m more knackered than he is. "
+      },
+      "cid": "bafyreib5rgcqtvu4clhzuy3ccw2mcqmau5hrle27v35tza4ci7z7ikwgvy"
+    }
+  },
+  {
+    "did": "did:plc:y2t6gyn5cnppqwxs46lca4n3",
+    "time_us": 1789385577329974,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7uzlba2z",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz7usztc2q",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:56.841Z",
+        "langs": [
+          "en"
+        ],
+        "text": "right. today's plan\n\nshower\ngo laundrette with bedding\nlisten to some book\nback home\nplay game/listen to book\nstart new gout meds\n???\nsleep"
+      },
+      "cid": "bafyreialtiqzwckyorgbocbmh2errh25m6d4v7mwtsndbyrp3vbspe6wyq"
+    }
+  },
+  {
+    "did": "did:plc:hovacvrsp3c46c7yi7tqsg4n",
+    "time_us": 1789385577332792,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7uh45x2n",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz7u64v22k",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:56.156Z",
+        "langs": [
+          "ja"
+        ],
+        "text": "この技の名前は絶対に自縄自縛ですよね？って動きが出てくるからブレイキング（ダンス）は面白い"
+      },
+      "cid": "bafyreiaok2pvdga7vix3tsjkrch6gjlarjjuqvpoyrrnf3rh3i4qo3gjrq"
+    }
+  },
+  {
+    "did": "did:plc:cl2as54pbcu3nksugeqz5nf7",
+    "time_us": 1789385577339844,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7v3he62t",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz7v37k62t",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:51.66672800Z",
+        "text": "Liam Henderson from Sydney, Australia is eating a taco. While doing so, Emma Carter also gets sauce on their nose without noticing as a waiter raises an eyebrow but keeps walking. Then, a stranger sits down and shares their fries without asking."
+      },
+      "cid": "bafyreidz4zm5rktcu64vfylng5nyxtkhtiax6wpdp6bhulu3liohl5m3se"
+    }
+  },
+  {
+    "did": "did:plc:5vj4uqfyxtaaykojag7a76kn",
+    "time_us": 1789385577344699,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7v4cj62u",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz7ujvtk2d",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:56.537Z",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "parent": {
+            "cid": "bafyreibsbgosiv64euu5ayoaa7kdv5g3t7uw25bc3m2tdoljzi5rsynx34",
+            "uri": "at://did:plc:vsddip55ctlrngxlr2uvmsji/app.bsky.feed.post/3mvgsag5k422s"
+          },
+          "root": {
+            "cid": "bafyreiha6qvxbzvkutevyjvryqf6i5e63yriyui5cwbgnezvhktz6xxbv4",
+            "uri": "at://did:plc:vsddip55ctlrngxlr2uvmsji/app.bsky.feed.post/3mvgqx74llc2s"
+          }
+        },
+        "text": "Then that one gets knocked down and the next admin builds a new one to get the stank out. \nNot like money means anything anymore."
+      },
+      "cid": "bafyreidzezk2jawatfkmkcmsytmnhujjsxrmficgiaszjlpn6xiw6mxuwe"
+    }
+  },
+  {
+    "did": "did:plc:jalx62qg7jp7du2q7tiljh4z",
+    "time_us": 1789385577348442,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7ubg4h24",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz7pvdwk2f",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:51.667Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 952,
+                "width": 1080
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreiemvpy356cgiif6hon6wgxwatuo76akf4kuxefgrlo5gdzdv37ili"
+                },
+                "mimeType": "image/jpeg",
+                "size": 448724
+              }
+            }
+          ]
+        },
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "parent": {
+            "cid": "bafyreihurueomsu423ue6ncnyym4qqbk2c6tqyd54wunp2aomiprljoeim",
+            "uri": "at://did:plc:f2nw3qgxkz7xeyvjvj7hsikg/app.bsky.feed.post/3mvhu35icns26"
+          },
+          "root": {
+            "cid": "bafyreihurueomsu423ue6ncnyym4qqbk2c6tqyd54wunp2aomiprljoeim",
+            "uri": "at://did:plc:f2nw3qgxkz7xeyvjvj7hsikg/app.bsky.feed.post/3mvhu35icns26"
+          }
+        },
+        "text": "Rarity 2\nDicks 5\nBJ 1"
+      },
+      "cid": "bafyreiekz2bn37am6epmsliukvnmz2uwbbfbvhplzwcyowshurxmppihyi"
+    }
+  },
+  {
+    "did": "did:plc:jqnqparu742cc4bi5se6wrpb",
+    "time_us": 1789385577395743,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7uctyv2t",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz7uw2j22r",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:56.941Z",
+        "embed": {
+          "$type": "app.bsky.embed.video",
+          "aspectRatio": {
+            "height": 480,
+            "width": 632
+          },
+          "presentation": "gif",
+          "video": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreic2riwybwj2f37de4bzo2fj72e6q3hpduw67qtyzgbjp3vx7h2yem"
+            },
+            "mimeType": "video/mp4",
+            "size": 442822
+          }
+        },
         "facets": [
           {
             "features": [
               {
                 "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://bsky.app/profile/caoyaosan.bsky.social/post/3mv3xe65iws2t"
+                "uri": "https://www.etsy.com/listing/1481465735/fluidity-acrylic-painting-on-canvas?ref=shop_home_active_1&logging_key=4d1030f0c0e21b63f1e06050978da770ca263a48%3A1481465735"
               }
             ],
             "index": {
-              "byteEnd": 106,
-              "byteStart": 84
+              "byteEnd": 28,
+              "byteStart": 0
+            }
+          }
+        ],
+        "langs": [
+          "en"
+        ],
+        "text": "www.etsy.com/listing/1481..."
+      },
+      "cid": "bafyreidhtttawifqptt3xxuawiy2mn2kskuydmlo3vpgarpxkc3utg4qpm"
+    }
+  },
+  {
+    "did": "did:plc:xu47l3fk2xqsp5k7hv4azmc5",
+    "time_us": 1789385577401854,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mvhz7ulqho2b",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mvhz77wq3k2b",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-14T11:32:34.941Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 1512,
+                "width": 2016
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreiazezcbaakqqlpkqlwe3elyifawlz2ldnqul7esqswowfc4xu2hny"
+                },
+                "mimeType": "image/jpeg",
+                "size": 1939577
+              }
+            },
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 2142,
+                "width": 2856
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreig5yxpaxrpekau6nogxmi2ptnmiov2w6w2v33o4q7uxzb5e3qcxbi"
+                },
+                "mimeType": "image/jpeg",
+                "size": 1992410
+              }
+            },
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 1512,
+                "width": 2016
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreih3ofxrepqv6n7uq7qmgbuosy2hstqs42bk3333vvzhi7utpxqvha"
+                },
+                "mimeType": "image/jpeg",
+                "size": 1622611
+              }
+            },
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 1200,
+                "width": 1600
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreif5hxhuqbzk4zyymlljihoxhfvt2k2eiesogzrvc33yxzio2iraru"
+                },
+                "mimeType": "image/jpeg",
+                "size": 1120646
+              }
+            }
+          ]
+        },
+        "facets": [
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#link",
+                "uri": "https://www.rainhavip.pt/imovel/casa-antiga-adega-arrecadacoes-e-terreno-alcobertas-rio-maior/25402395"
+              }
+            ],
+            "index": {
+              "byteEnd": 252,
+              "byteStart": 220
             }
           },
           {
             "features": [
               {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/1"
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "RioMaior"
               }
             ],
             "index": {
-              "byteEnd": 157,
-              "byteStart": 126
+              "byteEnd": 263,
+              "byteStart": 254
             }
           },
           {
             "features": [
               {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/2"
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "Alcobertas"
               }
             ],
             "index": {
-              "byteEnd": 203,
-              "byteStart": 163
+              "byteEnd": 275,
+              "byteStart": 264
             }
           },
           {
             "features": [
               {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/3"
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "SalinasRioMaior"
               }
             ],
             "index": {
-              "byteEnd": 231,
-              "byteStart": 209
+              "byteEnd": 292,
+              "byteStart": 276
             }
           },
           {
             "features": [
               {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/4"
-              }
-            ],
-            "index": {
-              "byteEnd": 293,
-              "byteStart": 237
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/0"
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "SerradosCandeeiros"
               }
             ],
             "index": {
               "byteEnd": 312,
-              "byteStart": 295
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#question"
-              }
-            ],
-            "index": {
-              "byteEnd": 74,
-              "byteStart": 0
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#option",
-                "number": 1
-              }
-            ],
-            "index": {
-              "byteEnd": 157,
-              "byteStart": 126
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#option",
-                "number": 2
-              }
-            ],
-            "index": {
-              "byteEnd": 203,
-              "byteStart": 163
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#option",
-                "number": 3
-              }
-            ],
-            "index": {
-              "byteEnd": 231,
-              "byteStart": 209
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#option",
-                "number": 4
-              }
-            ],
-            "index": {
-              "byteEnd": 293,
-              "byteStart": 237
-            }
-          }
-        ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreicrag7om3sn2z2dzy22mycvwzvlcs2uwf6ialq2qrjzgl2b542bh4",
-            "uri": "at://did:plc:gf5nkh7cw4tumkrhmo3hye6t/app.bsky.feed.post/3mv3xe65iws2t"
-          },
-          "root": {
-            "cid": "bafyreicrag7om3sn2z2dzy22mycvwzvlcs2uwf6ialq2qrjzgl2b542bh4",
-            "uri": "at://did:plc:gf5nkh7cw4tumkrhmo3hye6t/app.bsky.feed.post/3mv3xe65iws2t"
-          }
-        },
-        "text": "\"李晟さんの上陸ドラマで一番お気に入りのキャラは？\" asked by @caoyaosan.bsky.social. Vote below!\n\n🅰 恋心は玉の如き 秦姨娘\n🅱 メモリーズ・オブ・ラブ 辛迪\n🅲 ハンシュク 鄧綏\n🅳 上記以外(よければリプで教えてください)\n\n📊 Show results"
-      },
-      "cid": "bafyreib2tqzmzyv2ifeflfaj3sethlykklthpfioc3biun4x5fuq2hfboe"
-    }
-  },
-  {
-    "did": "did:plc:sfa3vnvpxpygwqv3gyn5l3bg",
-    "time_us": 1788971264884498,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xefjogq2h",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xedamo22a",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:41.840Z",
-        "langs": [
-          "ja"
-        ],
-        "text": "フロイドはエビを踊り食いしない……？じゃねーよどういうことなの。"
-      },
-      "cid": "bafyreibt4jxhtx6cia6s6xsh7mabzd3dimlv6uy66dojvex7p3h75mvcd4"
-    }
-  },
-  {
-    "did": "did:plc:zvzrhrq3fhuuq6podxhi5tyz",
-    "time_us": 1788971264895420,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xef62gu2l",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefli6c2g",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.292Z",
-        "langs": [
-          "en"
-        ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreifjsydzoqcrcbobwnzhijwdvzflch726w7vdf73wxv3gnbdtcq53m",
-            "uri": "at://did:plc:6hit5rjdbmlnscmuk4bbtmuc/app.bsky.feed.post/3mv3x3um3x22c"
-          },
-          "root": {
-            "cid": "bafyreifjsydzoqcrcbobwnzhijwdvzflch726w7vdf73wxv3gnbdtcq53m",
-            "uri": "at://did:plc:6hit5rjdbmlnscmuk4bbtmuc/app.bsky.feed.post/3mv3x3um3x22c"
-          }
-        },
-        "text": "Doing my yearly insider threat training right now and yeah what's the point?"
-      },
-      "cid": "bafyreiaz43hvkkmi4en2cktljtwt3cgkrrndfmhzayq7ph65ynp4keh3tm"
-    }
-  },
-  {
-    "did": "did:plc:u4wrevnt3lps7sn5zfrulhso",
-    "time_us": 1788971264937179,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xefjkvi2k",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeghbt227",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:45.202Z",
-        "langs": [
-          "en"
-        ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreib2i2j7txp37ag5ewvm6t6m54ahw3ouljwk2gl2g2rh4s2u2wegka",
-            "uri": "at://did:plc:wba3smotebrgouszvj5innh4/app.bsky.feed.post/3mv3udoeeec2r"
-          },
-          "root": {
-            "cid": "bafyreidysx5q5mnyo77kelhcj7puegr5qxfwgpxes5af6maw77yj3n2voe",
-            "uri": "at://did:plc:wba3smotebrgouszvj5innh4/app.bsky.feed.post/3mv3ub5v27c2r"
-          }
-        },
-        "text": "I mean the 51st is the alternative model, but it's fairly narrow in what it can do. \n\nBig journalism has always been a business, but the old model is broken because people no longer want to pay. Thus we are subjected to the whims of those who will pay."
-      },
-      "cid": "bafyreifs54v7a6dzwvqm3ewwqav4z5e2ymehuidmnbcy6dlxy5ti5ivyom"
-    }
-  },
-  {
-    "did": "did:plc:zljtwykya7uopxvhizwdn52o",
-    "time_us": 1788971264987856,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xefhb2v2p",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefh37f2p",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44Z",
-        "facets": [
-          {
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://whale-alert.io/transaction/bitcoin/7b776a1a368a49b5de3773eea8ac886f87617c9ca35b9547a5bf9cd8697329a7"
-              }
-            ],
-            "index": {
-              "byteEnd": 215,
-              "byteStart": 108
-            }
-          }
-        ],
-        "text": "🚨 🚨 🚨 🚨  1,167 $BTC (91,678,273 USD) transferred from unknown wallet to Coinbase Institutional\n\nhttps://whale-alert.io/transaction/bitcoin/7b776a1a368a49b5de3773eea8ac886f87617c9ca35b9547a5bf9cd8697329a7"
-      },
-      "cid": "bafyreiayoxs4obiwpcbwmhwn5uwkhlhjidch5g4zbdpf4qzxyt37oel4ry"
-    }
-  },
-  {
-    "did": "did:plc:lyr2nmjy7wmxadcfqdewmh7j",
-    "time_us": 1788971265005254,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xefzqwo2c",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xef4hpc2d",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.802Z",
-        "facets": [
-          {
-            "$type": "app.bsky.richtext.facet",
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#mention",
-                "did": "did:plc:x7dbyx3g63gf57iofycl6n5u"
-              }
-            ],
-            "index": {
-              "byteEnd": 22,
-              "byteStart": 0
+              "byteStart": 293
             }
           }
         ],
         "langs": [
-          "en"
+          "pt"
         ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreihdaaikrsv4qkmfq6iis5hemw4jd64ponb7nlqpgjjijsq7sigswi",
-            "uri": "at://did:plc:lyr2nmjy7wmxadcfqdewmh7j/app.bsky.feed.post/3muwvbldlks26"
-          },
-          "root": {
-            "cid": "bafyreihdaaikrsv4qkmfq6iis5hemw4jd64ponb7nlqpgjjijsq7sigswi",
-            "uri": "at://did:plc:lyr2nmjy7wmxadcfqdewmh7j/app.bsky.feed.post/3muwvbldlks26"
-          }
-        },
-        "text": "@chicmojo.blacksky.app In a perfect world, we'd be cool neighbors and I'd gift you mad weed while we wax about our Carribean heritages over good food. I hope all your goals get met this week."
+        "text": "⭐OPORTUNIDADE! Casa antiga, adega, arrecadações e terreno ⇝ 83.500EUR\n2 Quartos * 1 Casa de banho * Área total: 496,50m2 * Área bruta: 353,28m2\n- Alcobertas, Rio Maior\nClasse energética: Isento\n\n👉 mais info: www.rainhavip.pt/imovel/casa-...\n\n#RioMaior #Alcobertas #SalinasRioMaior #SerradosCandeeiros"
       },
-      "cid": "bafyreidzs5sxfkxiiheaseqp2qze4tu75jsgweu2neu3uv6aidochklu2u"
-    }
-  },
-  {
-    "did": "did:plc:z7aastbi2fnbhh4ahcublmdo",
-    "time_us": 1788971265011026,
-    "kind": "identity",
-    "identity": {
-      "did": "did:plc:z7aastbi2fnbhh4ahcublmdo",
-      "seq": 33472073652,
-      "time": "2026-09-09T16:27:44.652Z"
-    }
-  },
-  {
-    "did": "did:plc:z7aastbi2fnbhh4ahcublmdo",
-    "time_us": 1788971265015132,
-    "kind": "account",
-    "account": {
-      "active": true,
-      "did": "did:plc:z7aastbi2fnbhh4ahcublmdo",
-      "seq": 33472073653,
-      "time": "2026-09-09T16:27:44.652Z"
-    }
-  },
-  {
-    "did": "did:plc:jv4kkqscl3ze3co4tguivexy",
-    "time_us": 1788971265035721,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeg2heu2f",
-      "operation": "delete",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3muudjbbaan2y"
-    }
-  },
-  {
-    "did": "did:plc:akbqqhei3mpbsgh5k7xz7zcf",
-    "time_us": 1788971265058436,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeg2h4o2c",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xef7kdk2i",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.903Z",
-        "langs": [
-          "en"
-        ],
-        "text": "Honestly, pissing off Samus sounds like a surefire way to waltz into a horribly painful death.\n\nThese guys just don't learn."
-      },
-      "cid": "bafyreicntxsmishuzbhryggbud3dn2dhoozat5kebqv5bbui42gfyphoii"
-    }
-  },
-  {
-    "did": "did:plc:uzq5k6tx6sdtdu2dmt5xx563",
-    "time_us": 1788971265102238,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeg5fa62m",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeg3rns2j",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.827Z",
-        "facets": [
-          {
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#tag",
-                "tag": "haikuhorrorprompt"
-              }
-            ],
-            "index": {
-              "byteEnd": 114,
-              "byteStart": 96
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#tag",
-                "tag": "juice"
-              }
-            ],
-            "index": {
-              "byteEnd": 121,
-              "byteStart": 115
-            }
-          }
-        ],
-        "langs": [
-          "en"
-        ],
-        "text": "A new juice bar opened\neveryone wanted to try their drinks, but\nonly they knew what was inside.\n#haikuhorrorprompt\n#juice"
-      },
-      "cid": "bafyreiej5o76fbbtxyvdrlerznlx2b3fc6ll436mkhijyhufabspy3qkfu"
-    }
-  },
-  {
-    "did": "did:plc:5adp5teay5dvbmut4xlsuvbf",
-    "time_us": 1788971265110520,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeg5pmc2i",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefyl4k2i",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.722Z",
-        "langs": [
-          "en"
-        ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreicwpiznbaf7usjepw6kq63d4bek3i6nfgvifprw3emojef6qidxc4",
-            "uri": "at://did:plc:iiofy6mupgapoiz2b3lgfyr7/app.bsky.feed.post/3mv3utylj722o"
-          },
-          "root": {
-            "cid": "bafyreihz4r7i2j24z5a7ujnylj55a3rastm46xiusbaojxmj4hd3wi4axu",
-            "uri": "at://did:plc:iiofy6mupgapoiz2b3lgfyr7/app.bsky.feed.post/3mv3sitxtys2o"
-          }
-        },
-        "text": "I would watch this movie"
-      },
-      "cid": "bafyreicmgke54u6wbfg5t66iq2tajr4sf7byzoifyd52lbw2klfzvscrwm"
-    }
-  },
-  {
-    "did": "did:plc:airyg6rpamdhuzup5atwpvgt",
-    "time_us": 1788971265122543,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeftwq222",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeeziy22f",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.705Z",
-        "langs": [
-          "en"
-        ],
-        "text": "Oh age of calamity gets a new version"
-      },
-      "cid": "bafyreiaecchq326ujyzqhjupazrof4fyv5qfbmt5iki7ocxd673kpfqfvy"
-    }
-  },
-  {
-    "did": "did:plc:vhfyufn46mxactly4jg4lo3e",
-    "time_us": 1788971265126226,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeg2agx2i",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefqidc2c",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.458Z",
-        "langs": [
-          "ja"
-        ],
-        "text": "🐱：博士，您明明知道我的感情\n🐰：“卢西恩，你该不会是想告诉我……喜欢我吧？”\n🐱：“嗯。”（喝茶）\n🐰内心（开始错乱）:内心：我怎么问出来了？ 他怎么还承认了？ 等等，我现在是不是必须回答？ 喜欢究竟应该如何界定？亲密关系是否必须—— 糟糕糟糕糟糕糟糕 异常信息需要处理 卢西恩这家伙是不是好久没体检了 脑子是不是坏了 医疗部都在做什么啊啊啊啊 不对不对 说不定是...? 对 一定是因为酒神权能改变了他 一定是这个\n🐰：......或许是我们相处太久了，长期共同作战共同办公产生了依赖心理，所以你这个一定是可以治疗的问题，需要医疗部的人来疏导！我们找个心理医生"
-      },
-      "cid": "bafyreihm5nizzizkexn6y7nrrawbtdgkdcajvfmkid6oxmwp5c2j2lh24a"
+      "cid": "bafyreidfhh7lmgykvxgutydjc4dgcgmrlg7ywmopdidsn6qbmuvengle3q"
     }
   }
 ]

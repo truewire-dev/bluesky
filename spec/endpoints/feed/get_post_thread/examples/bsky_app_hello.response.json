@@ -71,8 +71,8 @@
         "bookmarkCount": 260,
         "replyCount": 2111,
         "repostCount": 1080,
-        "likeCount": 7214,
-        "quoteCount": 2083,
+        "likeCount": 7213,
+        "quoteCount": 2079,
         "indexedAt": "2026-04-22T23:00:22.348Z",
         "viewer": {
           "bookmarked": false,
@@ -133,9 +133,9 @@
               "text": "We hear and appreciate your feedback on the photo carousel. We're going to put it back in the oven for now. We'll consider bringing it back for posts with more than four photos (or videos) when we add support for that."
             },
             "bookmarkCount": 59,
-            "replyCount": 426,
+            "replyCount": 425,
             "repostCount": 499,
-            "likeCount": 4165,
+            "likeCount": 4164,
             "quoteCount": 574,
             "indexedAt": "2026-04-23T17:06:33.457Z",
             "viewer": {
@@ -154,7 +154,7 @@
                   "did": "did:plc:zyeqwhgquxetpstwlen6yzmm",
                   "handle": "bloops.uk",
                   "displayName": "Bloops",
-                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:zyeqwhgquxetpstwlen6yzmm/bafkreieii3h33akat2oyudlw7u47fqo3qoqhzs5qx65kqiyg2ldfazk2da",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:zyeqwhgquxetpstwlen6yzmm/bafkreifehkc6ebyqim54cxbte6rxjzmwa74mxlkzamx26f5cuki67o7v6e",
                   "associated": {
                     "chat": {
                       "allowIncoming": "none",
@@ -1080,7 +1080,7 @@
                 "author": {
                   "did": "did:plc:yty45hcirfc64fvrngw7qfez",
                   "handle": "manlyestrogen.bsky.social",
-                  "displayName": "TAIYO\ud83d\udd1e",
+                  "displayName": "limp-dicked poindexter\ud83d\udd1e",
                   "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:yty45hcirfc64fvrngw7qfez/bafkreiazyyvl7pj4ejezbvzfpnp5nao67o44sl7fujzifbxuv46cqzslta",
                   "associated": {
                     "activitySubscription": {
@@ -3012,7 +3012,7 @@
                   "did": "did:plc:xbxlcma3w5py7g4qvj3vnhfl",
                   "handle": "gruffalotrace.bsky.social",
                   "displayName": "Gruffalo Trace",
-                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:xbxlcma3w5py7g4qvj3vnhfl/bafkreia5ogsz7avyxb26dzkqak2pt54rbhahqu5bpi54h7lvhqxgjy5gju",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:xbxlcma3w5py7g4qvj3vnhfl/bafkreidj3zb5xgq6qfg7sbaawrs7pkl4e76wxdqkmcfvb2clznmqjei5se",
                   "associated": {
                     "chat": {
                       "allowIncoming": "following"
@@ -3031,7 +3031,7 @@
                     {
                       "src": "did:plc:xbxlcma3w5py7g4qvj3vnhfl",
                       "uri": "at://did:plc:xbxlcma3w5py7g4qvj3vnhfl/app.bsky.actor.profile/self",
-                      "cid": "bafyreiglgvohsklalxisp72a563pus5pizssphsqvawnwb3k2x2aq4zcty",
+                      "cid": "bafyreig5hucryrsvwilfldoc6cdeqfhrvm4pujbaxfogth5eonr5ihbp24",
                       "val": "!no-unauthenticated",
                       "cts": "1970-01-01T00:00:00.000Z"
                     }
@@ -3079,7 +3079,7 @@
                 "author": {
                   "did": "did:plc:xaveiq67ngrvzhrdz5rilnnb",
                   "handle": "peaceonstix.bsky.social",
-                  "displayName": "Alana, Hxvoc-brained \ud83d\udc1f",
+                  "displayName": "Alana, Hxvoc-brained \ud83d\udc1f\ud83c\udfb8\u26d3\ufe0f\u200d\ud83d\udca5",
                   "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:xaveiq67ngrvzhrdz5rilnnb/bafkreiglew7n7miandhpp4ycbvyvcyk6ms232nmwwmmozy5gvgbxyfwboi",
                   "associated": {
                     "chat": {
@@ -3510,7 +3510,7 @@
                 "author": {
                   "did": "did:plc:x2bxwt7gwwfigapl573nm7sn",
                   "handle": "garaktailor.com",
-                  "displayName": "\"Employed Yapist\" Ella Tailor",
+                  "displayName": "\"Street wise She/Hercules\" Ella Tailor",
                   "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:x2bxwt7gwwfigapl573nm7sn/bafkreidt6c77wdlzypbuibq3zykdtgdo3vgyqwcs3733gpdexhhhipf274",
                   "associated": {
                     "chat": {
@@ -3531,7 +3531,7 @@
                     {
                       "src": "did:plc:x2bxwt7gwwfigapl573nm7sn",
                       "uri": "at://did:plc:x2bxwt7gwwfigapl573nm7sn/app.bsky.actor.profile/self",
-                      "cid": "bafyreie2hwthv67zyq7au2l5yn4xtyqrv4nm2ktxb37okeqnjsonjxwcji",
+                      "cid": "bafyreigmmifpfgxdugyird5grzmqffvtfi47qyt2zhqelotmzcneg42fqy",
                       "val": "!no-unauthenticated",
                       "cts": "1970-01-01T00:00:00.000Z"
                     }
@@ -3747,7 +3747,7 @@
                     {
                       "src": "did:plc:wpeyhux5b7c43nyva4jayoap",
                       "uri": "at://did:plc:wpeyhux5b7c43nyva4jayoap/app.bsky.actor.profile/self",
-                      "cid": "bafyreiea7m3ml5ojaz3zqjourh4i4qhrrbzbvees7hvogxm5ac6hiuc73y",
+                      "cid": "bafyreih2jjprrmblba55wudmj7txe2evft4lppo5qrmnv7pdbb2sr2wno4",
                       "val": "!no-unauthenticated",
                       "cts": "1970-01-01T00:00:00.000Z"
                     }
@@ -5395,8 +5395,8 @@
                             "text": "We hear and appreciate your feedback on the photo carousel. We're going to put it back in the oven for now. We'll consider bringing it back for posts with more than four photos (or videos) when we add support for that."
                           },
                           "labels": [],
-                          "likeCount": 4165,
-                          "replyCount": 426,
+                          "likeCount": 4164,
+                          "replyCount": 425,
                           "repostCount": 499,
                           "quoteCount": 574,
                           "indexedAt": "2026-04-23T17:06:33.457Z",
@@ -6142,7 +6142,7 @@
                 "author": {
                   "did": "did:plc:ufmkf3iye463ivdgjzva5brn",
                   "handle": "ishgardtimes.bsky.social",
-                  "displayName": "IshgardTimes @ Tracon",
+                  "displayName": "IshgardTimes",
                   "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ufmkf3iye463ivdgjzva5brn/bafkreigurgbp4umy6wno2nmahqp3jmmd74xe53f5hrcsq2xinhrtit4f4q",
                   "associated": {
                     "chat": {
@@ -6347,16 +6347,16 @@
                   "createdAt": "2024-11-18T17:24:25.546Z",
                   "status": {
                     "uri": "at://did:plc:ubepiqlmhafnbsun6ug5nj47/app.bsky.actor.status/self",
-                    "cid": "bafyreidvpomy5pnac6s6ppph3d5izrh373vtzyipqlnqcjm3qncizrvoai",
+                    "cid": "bafyreifyxrjrp22wyb3zethp3345is4v2musw3fo44pj5exjluvhaj4qza",
                     "record": {
                       "$type": "app.bsky.actor.status",
-                      "createdAt": "2026-09-06T23:56:01.097Z",
+                      "createdAt": "2026-09-13T23:55:18.649Z",
                       "durationMinutes": 180,
                       "embed": {
                         "$type": "app.bsky.embed.external",
                         "external": {
                           "$type": "app.bsky.embed.external#external",
-                          "description": "Corporations Are a Virus",
+                          "description": "Touch Some Pavement | Streaming cyberpunk 2077.",
                           "thumb": {
                             "$type": "blob",
                             "ref": {
@@ -6376,13 +6376,13 @@
                       "external": {
                         "uri": "https://www.twitch.tv/xecryo",
                         "title": "Xecryo - Live on Twitch",
-                        "description": "Corporations Are a Virus",
+                        "description": "Touch Some Pavement | Streaming cyberpunk 2077.",
                         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ubepiqlmhafnbsun6ug5nj47/bafkreid3flpq2tfgm2c6seb6e5qot2jcp6q3toasph6wjjbdaapzigwlle"
                       },
                       "$type": "app.bsky.embed.external#view"
                     },
                     "labels": [],
-                    "expiresAt": "2026-09-07T02:56:01.097Z",
+                    "expiresAt": "2026-09-14T02:55:18.649Z",
                     "isActive": false
                   }
                 },
@@ -6596,7 +6596,47 @@
                     "blockedBy": false
                   },
                   "labels": [],
-                  "createdAt": "2023-12-13T08:24:14.372Z"
+                  "createdAt": "2023-12-13T08:24:14.372Z",
+                  "status": {
+                    "uri": "at://did:plc:u4idfmgus7chwanshvxjemsc/app.bsky.actor.status/self",
+                    "cid": "bafyreic4brloeel2p2vt5kzpsepmnvwix42ixsjzm6fnu3n735ciu4gtyi",
+                    "record": {
+                      "$type": "app.bsky.actor.status",
+                      "createdAt": "2026-09-10T23:21:57.001Z",
+                      "durationMinutes": 240,
+                      "embed": {
+                        "$type": "app.bsky.embed.external",
+                        "external": {
+                          "$type": "app.bsky.embed.external#external",
+                          "description": "YouTube video by SWORD",
+                          "thumb": {
+                            "$type": "blob",
+                            "ref": {
+                              "$link": "bafkreig4f6fprmkqxp43nq2lqxblq4ej57uxkint4522gpkoplcn6mpfly"
+                            },
+                            "mimeType": "image/jpeg",
+                            "size": 71255
+                          },
+                          "title": "\ud83d\udd8c\ufe0f Zara Commission Stream! Pt. 3",
+                          "uri": "https://youtube.com/live/GPUYt08FbnI?feature=share"
+                        }
+                      },
+                      "status": "app.bsky.actor.status#live"
+                    },
+                    "status": "app.bsky.actor.status#live",
+                    "embed": {
+                      "external": {
+                        "uri": "https://youtube.com/live/GPUYt08FbnI?feature=share",
+                        "title": "\ud83d\udd8c\ufe0f Zara Commission Stream! Pt. 3",
+                        "description": "YouTube video by SWORD",
+                        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:u4idfmgus7chwanshvxjemsc/bafkreig4f6fprmkqxp43nq2lqxblq4ej57uxkint4522gpkoplcn6mpfly"
+                      },
+                      "$type": "app.bsky.embed.external#view"
+                    },
+                    "labels": [],
+                    "expiresAt": "2026-09-11T03:21:57.001Z",
+                    "isActive": false
+                  }
                 },
                 "record": {
                   "$type": "app.bsky.feed.post",
@@ -7086,7 +7126,7 @@
                     {
                       "src": "did:plc:tad4tjfitccduvah65m7nrg5",
                       "uri": "at://did:plc:tad4tjfitccduvah65m7nrg5/app.bsky.actor.profile/self",
-                      "cid": "bafyreihxewx2eyjsrpqgyp6ijosokwt7eizude2c76cha3kiqlq52chlli",
+                      "cid": "bafyreiclopymhdhaoznoko2nxl5i5mchfqij2uyznwjibxzrkkbig2xueu",
                       "val": "!no-unauthenticated",
                       "cts": "1970-01-01T00:00:00.000Z"
                     }
@@ -7572,16 +7612,16 @@
                   "createdAt": "2023-08-13T22:33:39.755Z",
                   "status": {
                     "uri": "at://did:plc:sv3mq4q5kpboiszuerosc756/app.bsky.actor.status/self",
-                    "cid": "bafyreibdebexyvhs2pnjsmg2q3qkrceugapbwlu7feirqz6lqe4u3dehgm",
+                    "cid": "bafyreidkwmn4xves7jiz3gaknpfhwdfx4sjzrym4mn4e7giixynvpry3gi",
                     "record": {
                       "$type": "app.bsky.actor.status",
-                      "createdAt": "2026-09-08T20:32:54.056Z",
-                      "durationMinutes": 180,
+                      "createdAt": "2026-09-10T20:01:46.098Z",
+                      "durationMinutes": 210,
                       "embed": {
                         "$type": "app.bsky.embed.external",
                         "external": {
                           "$type": "app.bsky.embed.external#external",
-                          "description": "\ud83c\udfeeHalloween assets stream!! ROAD to 2K!\ud83c\udfee| !KOFI | !THRONE | !PLAYLIST | !SOCIALS | !SONG | Streaming art.",
+                          "description": "Oni Vtuber and storyboard artist/weeb working in the animation industry! Previously at Titmouse Inc, Warner Bros, and Dreamworks! Come and watch me board, paint, sketch, and talk nerdy! \u2014 BotsandMagic...",
                           "thumb": {
                             "$type": "blob",
                             "ref": {
@@ -7590,7 +7630,7 @@
                             "mimeType": "image/jpeg",
                             "size": 107194
                           },
-                          "title": "BotsandMagic - Live on Twitch",
+                          "title": "BotsandMagic - Twitch",
                           "uri": "https://twitch.tv/botsandmagic"
                         }
                       },
@@ -7600,14 +7640,14 @@
                     "embed": {
                       "external": {
                         "uri": "https://twitch.tv/botsandmagic",
-                        "title": "BotsandMagic - Live on Twitch",
-                        "description": "\ud83c\udfeeHalloween assets stream!! ROAD to 2K!\ud83c\udfee| !KOFI | !THRONE | !PLAYLIST | !SOCIALS | !SONG | Streaming art.",
+                        "title": "BotsandMagic - Twitch",
+                        "description": "Oni Vtuber and storyboard artist/weeb working in the animation industry! Previously at Titmouse Inc, Warner Bros, and Dreamworks! Come and watch me board, paint, sketch, and talk nerdy! \u2014 BotsandMagic...",
                         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:sv3mq4q5kpboiszuerosc756/bafkreiffofwnhmn5c22fm47lzxxcv25pebrihuifo2pylxnxsvxeljlx7u"
                       },
                       "$type": "app.bsky.embed.external#view"
                     },
                     "labels": [],
-                    "expiresAt": "2026-09-08T23:32:53.061Z",
+                    "expiresAt": "2026-09-10T23:31:39.471Z",
                     "isActive": false
                   }
                 },
@@ -7697,16 +7737,16 @@
                   "createdAt": "2023-08-13T22:33:39.755Z",
                   "status": {
                     "uri": "at://did:plc:sv3mq4q5kpboiszuerosc756/app.bsky.actor.status/self",
-                    "cid": "bafyreibdebexyvhs2pnjsmg2q3qkrceugapbwlu7feirqz6lqe4u3dehgm",
+                    "cid": "bafyreidkwmn4xves7jiz3gaknpfhwdfx4sjzrym4mn4e7giixynvpry3gi",
                     "record": {
                       "$type": "app.bsky.actor.status",
-                      "createdAt": "2026-09-08T20:32:54.056Z",
-                      "durationMinutes": 180,
+                      "createdAt": "2026-09-10T20:01:46.098Z",
+                      "durationMinutes": 210,
                       "embed": {
                         "$type": "app.bsky.embed.external",
                         "external": {
                           "$type": "app.bsky.embed.external#external",
-                          "description": "\ud83c\udfeeHalloween assets stream!! ROAD to 2K!\ud83c\udfee| !KOFI | !THRONE | !PLAYLIST | !SOCIALS | !SONG | Streaming art.",
+                          "description": "Oni Vtuber and storyboard artist/weeb working in the animation industry! Previously at Titmouse Inc, Warner Bros, and Dreamworks! Come and watch me board, paint, sketch, and talk nerdy! \u2014 BotsandMagic...",
                           "thumb": {
                             "$type": "blob",
                             "ref": {
@@ -7715,7 +7755,7 @@
                             "mimeType": "image/jpeg",
                             "size": 107194
                           },
-                          "title": "BotsandMagic - Live on Twitch",
+                          "title": "BotsandMagic - Twitch",
                           "uri": "https://twitch.tv/botsandmagic"
                         }
                       },
@@ -7725,14 +7765,14 @@
                     "embed": {
                       "external": {
                         "uri": "https://twitch.tv/botsandmagic",
-                        "title": "BotsandMagic - Live on Twitch",
-                        "description": "\ud83c\udfeeHalloween assets stream!! ROAD to 2K!\ud83c\udfee| !KOFI | !THRONE | !PLAYLIST | !SOCIALS | !SONG | Streaming art.",
+                        "title": "BotsandMagic - Twitch",
+                        "description": "Oni Vtuber and storyboard artist/weeb working in the animation industry! Previously at Titmouse Inc, Warner Bros, and Dreamworks! Come and watch me board, paint, sketch, and talk nerdy! \u2014 BotsandMagic...",
                         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:sv3mq4q5kpboiszuerosc756/bafkreiffofwnhmn5c22fm47lzxxcv25pebrihuifo2pylxnxsvxeljlx7u"
                       },
                       "$type": "app.bsky.embed.external#view"
                     },
                     "labels": [],
-                    "expiresAt": "2026-09-08T23:32:53.061Z",
+                    "expiresAt": "2026-09-10T23:31:39.471Z",
                     "isActive": false
                   }
                 },
@@ -8218,7 +8258,7 @@
                     {
                       "src": "did:plc:sayeevaewowlo5wcdinp2mqy",
                       "uri": "at://did:plc:sayeevaewowlo5wcdinp2mqy/app.bsky.actor.profile/self",
-                      "cid": "bafyreibkjdkwp76jfwtwxdkoc5dkpdtg3ykg5syqchvpwlylnkr3gg752e",
+                      "cid": "bafyreiejt3me3bxuia7omqabryr5yk7uapxjiupr3vxpfbhacl5jpphroi",
                       "val": "!no-unauthenticated",
                       "cts": "1970-01-01T00:00:00.000Z"
                     }
@@ -8604,7 +8644,7 @@
                     {
                       "src": "did:plc:ryfa4df6qhrwz5szz5iweo6l",
                       "uri": "at://did:plc:ryfa4df6qhrwz5szz5iweo6l/app.bsky.actor.profile/self",
-                      "cid": "bafyreifdi2j5tz2gclljffgrl22wnno42m6xrhvah3d2deyeg3bl6umifq",
+                      "cid": "bafyreidcqo55ibxwm5au3qbmrlrtnpho5wvr5jygjm36f3fjtstmdthqpi",
                       "val": "!no-unauthenticated",
                       "cts": "2024-02-21T12:13:27.329Z"
                     }
@@ -8612,16 +8652,16 @@
                   "createdAt": "2024-02-21T12:13:26.096Z",
                   "status": {
                     "uri": "at://did:plc:ryfa4df6qhrwz5szz5iweo6l/app.bsky.actor.status/self",
-                    "cid": "bafyreidzvt3zdkgvpktd3xpfyb3vu44iqxduougorvn6acfx3wm47pntp4",
+                    "cid": "bafyreicj2lgphdrxov4vdxgggvzhq3xxr24xbdoum346qejqh5c6v3zmxy",
                     "record": {
                       "$type": "app.bsky.actor.status",
-                      "createdAt": "2026-09-07T22:59:36.538Z",
-                      "durationMinutes": 180,
+                      "createdAt": "2026-09-13T15:59:24.683Z",
+                      "durationMinutes": 120,
                       "embed": {
                         "$type": "app.bsky.embed.external",
                         "external": {
                           "$type": "app.bsky.embed.external#external",
-                          "description": "Carmilla: Crimson Moon!  Night Shift: 1999!  It's the Fall In Love Festival w/ @kaliranya and Scalpel! | Streaming games + demos.",
+                          "description": "Calmly chaotic capybara vtuber streaming mostly retro and indie games and overly complicated projects. Come vibe with some shufflers and RPGs and platformers and collabs and stuff! She/they\"Distressin...",
                           "thumb": {
                             "$type": "blob",
                             "ref": {
@@ -8630,7 +8670,7 @@
                             "mimeType": "image/jpeg",
                             "size": 63090
                           },
-                          "title": "YuzuAdagioCh - Live on Twitch",
+                          "title": "YuzuAdagioCh - Twitch",
                           "uri": "https://www.twitch.tv/yuzuadagioch"
                         }
                       },
@@ -8640,14 +8680,14 @@
                     "embed": {
                       "external": {
                         "uri": "https://www.twitch.tv/yuzuadagioch",
-                        "title": "YuzuAdagioCh - Live on Twitch",
-                        "description": "Carmilla: Crimson Moon!  Night Shift: 1999!  It's the Fall In Love Festival w/ @kaliranya and Scalpel! | Streaming games + demos.",
+                        "title": "YuzuAdagioCh - Twitch",
+                        "description": "Calmly chaotic capybara vtuber streaming mostly retro and indie games and overly complicated projects. Come vibe with some shufflers and RPGs and platformers and collabs and stuff! She/they\"Distressin...",
                         "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ryfa4df6qhrwz5szz5iweo6l/bafkreifnedmleho3mr7u66kb3lbgtv62b4az7bqvk5nhoplppdfiz7bdx4"
                       },
                       "$type": "app.bsky.embed.external#view"
                     },
                     "labels": [],
-                    "expiresAt": "2026-09-08T01:58:07.059Z",
+                    "expiresAt": "2026-09-13T17:57:49.868Z",
                     "isActive": false
                   }
                 },
@@ -12549,7 +12589,47 @@
                     "blockedBy": false
                   },
                   "labels": [],
-                  "createdAt": "2023-07-01T05:38:57.583Z"
+                  "createdAt": "2023-07-01T05:38:57.583Z",
+                  "status": {
+                    "uri": "at://did:plc:n2w2urep7fobsuidrd43pryw/app.bsky.actor.status/self",
+                    "cid": "bafyreihpummzfpqmn7c32fv67xoeaa67ltsm3f4ebokf34keyfcxx3aai4",
+                    "record": {
+                      "$type": "app.bsky.actor.status",
+                      "createdAt": "2026-09-10T00:21:04.591Z",
+                      "durationMinutes": 60,
+                      "embed": {
+                        "$type": "app.bsky.embed.external",
+                        "external": {
+                          "$type": "app.bsky.embed.external#external",
+                          "description": "I draw, come and see! | Streaming art.",
+                          "thumb": {
+                            "$type": "blob",
+                            "ref": {
+                              "$link": "bafkreifessegfq6qhtqdxfznhdp6rll7g24qovlteojcuztuliiy5wv5qy"
+                            },
+                            "mimeType": "image/jpeg",
+                            "size": 108915
+                          },
+                          "title": "dogdoujin - Live on Twitch",
+                          "uri": "https://www.twitch.tv/dogdoujin"
+                        }
+                      },
+                      "status": "app.bsky.actor.status#live"
+                    },
+                    "status": "app.bsky.actor.status#live",
+                    "embed": {
+                      "external": {
+                        "uri": "https://www.twitch.tv/dogdoujin",
+                        "title": "dogdoujin - Live on Twitch",
+                        "description": "I draw, come and see! | Streaming art.",
+                        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:n2w2urep7fobsuidrd43pryw/bafkreifessegfq6qhtqdxfznhdp6rll7g24qovlteojcuztuliiy5wv5qy"
+                      },
+                      "$type": "app.bsky.embed.external#view"
+                    },
+                    "labels": [],
+                    "expiresAt": "2026-09-10T01:21:04.365Z",
+                    "isActive": false
+                  }
                 },
                 "record": {
                   "$type": "app.bsky.feed.post",
@@ -12742,47 +12822,7 @@
                       "cts": "1970-01-01T00:00:00.000Z"
                     }
                   ],
-                  "createdAt": "2023-07-28T17:21:26.219Z",
-                  "status": {
-                    "uri": "at://did:plc:mvnu6woaaigp2sskvlo5sxov/app.bsky.actor.status/self",
-                    "cid": "bafyreiaiovrd4ee4l755mb6ms4utu226jglnrgzvxvbajzhn2yvwza43fa",
-                    "record": {
-                      "$type": "app.bsky.actor.status",
-                      "createdAt": "2026-09-07T22:54:43.106Z",
-                      "durationMinutes": 240,
-                      "embed": {
-                        "$type": "app.bsky.embed.external",
-                        "external": {
-                          "$type": "app.bsky.embed.external#external",
-                          "description": "MUSIC MONDAY - Back in the saddle... - (+18) | Streaming music.",
-                          "thumb": {
-                            "$type": "blob",
-                            "ref": {
-                              "$link": "bafkreifv3bamwjtvsh4fhggeriwrkykpdhcqzumvivj4ul3aum3rcuo4fi"
-                            },
-                            "mimeType": "image/jpeg",
-                            "size": 65411
-                          },
-                          "title": "EndTrinity - Live on Twitch",
-                          "uri": "https://twitch.tv/endtrinity"
-                        }
-                      },
-                      "status": "app.bsky.actor.status#live"
-                    },
-                    "status": "app.bsky.actor.status#live",
-                    "embed": {
-                      "external": {
-                        "uri": "https://twitch.tv/endtrinity",
-                        "title": "EndTrinity - Live on Twitch",
-                        "description": "MUSIC MONDAY - Back in the saddle... - (+18) | Streaming music.",
-                        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:mvnu6woaaigp2sskvlo5sxov/bafkreifv3bamwjtvsh4fhggeriwrkykpdhcqzumvivj4ul3aum3rcuo4fi"
-                      },
-                      "$type": "app.bsky.embed.external#view"
-                    },
-                    "labels": [],
-                    "expiresAt": "2026-09-08T02:54:18.864Z",
-                    "isActive": false
-                  }
+                  "createdAt": "2023-07-28T17:21:26.219Z"
                 },
                 "record": {
                   "$type": "app.bsky.feed.post",
@@ -13521,8 +13561,8 @@
             "cid": "bafyreiaycq5jj3qgohruaytivfgwo3xpg3s7v6hwm2e4xaexgessihjmya",
             "author": {
               "did": "did:plc:zzi77ndph7eicgpl5pubjz7h",
-              "handle": "bauscheusse.bsky.social",
-              "displayName": "Baus ~ 12.1 WoW & 7.4 FFXIV",
+              "handle": "ramblescheusse.bsky.social",
+              "displayName": "Baus ~ 12.2 WoW & 7.4 FFXIV",
               "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:zzi77ndph7eicgpl5pubjz7h/bafkreickzgsl5gqxutpklb2jwbvwztzdbebhsa3cuiq77h5vf64bj2ox3e",
               "associated": {
                 "chat": {
@@ -14434,7 +14474,7 @@
                 {
                   "src": "did:plc:zuxd3mcsgxz5vsforrtv6mz5",
                   "uri": "at://did:plc:zuxd3mcsgxz5vsforrtv6mz5/app.bsky.actor.profile/self",
-                  "cid": "bafyreiaawu256mpxytfthslljiq77myav5vcjmukxa2reoyeselgja6cgy",
+                  "cid": "bafyreig3nrl4afqjxjhrnlarwoxbbxzkoc6o3mvo26ethclq5kpwteeerm",
                   "val": "!no-unauthenticated",
                   "cts": "2024-11-10T04:23:58.792Z"
                 }
@@ -14643,7 +14683,7 @@
             "bookmarkCount": 5,
             "replyCount": 13,
             "repostCount": 43,
-            "likeCount": 2009,
+            "likeCount": 2008,
             "quoteCount": 2,
             "indexedAt": "2026-04-22T23:29:30.454Z",
             "viewer": {
@@ -15248,7 +15288,7 @@
                     {
                       "src": "did:plc:dvv5pnoi4mljvedqhgix5e6m",
                       "uri": "at://did:plc:dvv5pnoi4mljvedqhgix5e6m/app.bsky.actor.profile/self",
-                      "cid": "bafyreidnzjigez7mrpcpmuqeocaqln3awhcmaecqc2iwmkq3fcbjycwnlm",
+                      "cid": "bafyreiblakx4alkd2ijcksa2sr6slbcm2qmz6nm5pi7houhw7fc2l5geiu",
                       "val": "!no-unauthenticated",
                       "cts": "1970-01-01T00:00:00.000Z"
                     }
@@ -16620,7 +16660,7 @@
                 "author": {
                   "did": "did:plc:ut67tdxisulkzco74cpxuisv",
                   "handle": "lmc55g95.bsky.social",
-                  "displayName": "L'Ood \ud83c\udfdc\ufe0f",
+                  "displayName": "La Ood \ud83c\udfdc\ufe0f",
                   "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ut67tdxisulkzco74cpxuisv/bafkreidkpkkohzxqdgpdcr4dexczoypuj36eanlrrtvms24mabwoqkv3yu",
                   "associated": {
                     "chat": {
@@ -16641,7 +16681,7 @@
                     {
                       "src": "did:plc:ut67tdxisulkzco74cpxuisv",
                       "uri": "at://did:plc:ut67tdxisulkzco74cpxuisv/app.bsky.actor.profile/self",
-                      "cid": "bafyreiaf2jn6ernvxrojyorm7ouxt223yb5zmmulesfswhmbh7bofgmgsa",
+                      "cid": "bafyreif5onyd5y4kvaakmbampxaopcdtr5xt2kg77doft2arvlb7wy2ij4",
                       "val": "!no-unauthenticated",
                       "cts": "2024-09-07T06:19:16.970Z"
                     }
@@ -17017,7 +17057,7 @@
                   "did": "did:plc:qou2n4ulyh7uectydbjiszkt",
                   "handle": "postgarf.bsky.bark.wolp.chat",
                   "displayName": "mark \"posts garf\" postgarf",
-                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qou2n4ulyh7uectydbjiszkt/bafkreie5k27ymeidox53w47cokhs3fboj62jrlkcg6o37cro2e67hwp7ae",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qou2n4ulyh7uectydbjiszkt/bafkreicyqyi5wgdkqp4cv7szb5n3yunl372qmj4yks7cgxwj5luzxmmvhy",
                   "associated": {
                     "chat": {
                       "allowIncoming": "following"
@@ -17535,7 +17575,7 @@
                     {
                       "src": "did:plc:bxqwvry6njcgmhkvubecmzaz",
                       "uri": "at://did:plc:bxqwvry6njcgmhkvubecmzaz/app.bsky.actor.profile/self",
-                      "cid": "bafyreibkv6sv3k2uxahvklodzggj5olbkezam56znn6dskv5k253u25xiq",
+                      "cid": "bafyreic6zcbjba2u73yt25xredjdibmd72rirtwpawdhp5zxuja6tyrxxi",
                       "val": "!no-unauthenticated",
                       "cts": "1970-01-01T00:00:00.000Z"
                     }
@@ -17665,7 +17705,7 @@
                     {
                       "src": "did:plc:gyu37737cldtehocmchkyold",
                       "uri": "at://did:plc:gyu37737cldtehocmchkyold/app.bsky.actor.profile/self",
-                      "cid": "bafyreibkkwht5o7pjcazxjlgfhv42bay6srb3t2di3dakfozs3fkhohqla",
+                      "cid": "bafyreifflfri2dkvhmafpci3mme2ej2iz4j3pi3dvsw57e2xle2edvfhwa",
                       "val": "!no-unauthenticated",
                       "cts": "1970-01-01T00:00:00.000Z"
                     }
@@ -17901,7 +17941,7 @@
             "author": {
               "did": "did:plc:zgvsjugwr2sxzjwripyhx52q",
               "handle": "maxkriegervg.bsky.social",
-              "displayName": "\u303d\ufe0fax krieger @ PAX West",
+              "displayName": "\u303d\ufe0fax krieger enters phase 2",
               "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:zgvsjugwr2sxzjwripyhx52q/bafkreiexjwxaknyi3sgvlwkm4476qucftct6g2bawwdibqj4iloswf4jmm",
               "associated": {
                 "chat": {
@@ -17922,23 +17962,23 @@
               "createdAt": "2023-04-27T20:34:03.003Z",
               "status": {
                 "uri": "at://did:plc:zgvsjugwr2sxzjwripyhx52q/app.bsky.actor.status/self",
-                "cid": "bafyreiaezlhpq7fj236tegld3n5ykmr4dtvbk36x4pb3rgfz3ge2npfyre",
+                "cid": "bafyreibmf3su536kfbq2kccqmmgzje63o2swqxmb3qguwltm3ej55g4eya",
                 "record": {
                   "$type": "app.bsky.actor.status",
-                  "createdAt": "2026-07-26T23:11:28.949Z",
-                  "durationMinutes": 240,
+                  "createdAt": "2026-09-13T23:42:30.170Z",
+                  "durationMinutes": 180,
                   "embed": {
                     "$type": "app.bsky.embed.external",
                     "external": {
                       "$type": "app.bsky.embed.external#external",
-                      "description": "JULY INDIE WAVE! games + animation ft. DENSHATTACK!, JENNY THE WITCH, NOPHENIA, ANGEL ESSENCE | Streaming games + demos.",
+                      "description": "BEST OF PAX WEST! the freshest indie games! | Streaming games + demos.",
                       "thumb": {
                         "$type": "blob",
                         "ref": {
-                          "$link": "bafkreieollyuididd3aavn2rxaozstkz5gaiqtf4zppz6y4cxxia4de5w4"
+                          "$link": "bafkreicoef4lewoapk22za2ssgksaqwzwwxs64c6opwlumiujbst2kwxwq"
                         },
                         "mimeType": "image/jpeg",
-                        "size": 86225
+                        "size": 165541
                       },
                       "title": "aqualounge_tv - Live on Twitch",
                       "uri": "https://www.twitch.tv/aqualounge_tv"
@@ -17951,13 +17991,13 @@
                   "external": {
                     "uri": "https://www.twitch.tv/aqualounge_tv",
                     "title": "aqualounge_tv - Live on Twitch",
-                    "description": "JULY INDIE WAVE! games + animation ft. DENSHATTACK!, JENNY THE WITCH, NOPHENIA, ANGEL ESSENCE | Streaming games + demos.",
-                    "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zgvsjugwr2sxzjwripyhx52q/bafkreieollyuididd3aavn2rxaozstkz5gaiqtf4zppz6y4cxxia4de5w4"
+                    "description": "BEST OF PAX WEST! the freshest indie games! | Streaming games + demos.",
+                    "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zgvsjugwr2sxzjwripyhx52q/bafkreicoef4lewoapk22za2ssgksaqwzwwxs64c6opwlumiujbst2kwxwq"
                   },
                   "$type": "app.bsky.embed.external#view"
                 },
                 "labels": [],
-                "expiresAt": "2026-07-27T03:11:28.949Z",
+                "expiresAt": "2026-09-14T02:42:30.170Z",
                 "isActive": false
               }
             },
@@ -20142,7 +20182,7 @@
                   "did": "did:plc:yszw5d4xdtc7m5m7eqwgqtrz",
                   "handle": "publiusmaximus.bsky.social",
                   "displayName": "Publius Maximus",
-                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:yszw5d4xdtc7m5m7eqwgqtrz/bafkreieszbu2oslw7v3c26oa2k7wyiacn7rgdbpooqrzqhh2sbvbrt55ty",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:yszw5d4xdtc7m5m7eqwgqtrz/bafkreigjpszjxct7msn3phzqa7sgcyltzbgnab4pdmi5iv6mn2val36ngq",
                   "associated": {
                     "chat": {
                       "allowIncoming": "none",
@@ -20162,7 +20202,7 @@
                     {
                       "src": "did:plc:yszw5d4xdtc7m5m7eqwgqtrz",
                       "uri": "at://did:plc:yszw5d4xdtc7m5m7eqwgqtrz/app.bsky.actor.profile/self",
-                      "cid": "bafyreifrcm5l2gtiqa4zbpgph3gm5rlscrz7gzoj7pc4fsjrx43cdh6v5m",
+                      "cid": "bafyreidyrzsueo6b3hglcvu3o6g36jy3mgod7ns4l4frzwcqdwoxqzelem",
                       "val": "!no-unauthenticated",
                       "cts": "1970-01-01T00:00:00.000Z"
                     }
@@ -21051,10 +21091,10 @@
               "createdAt": "2023-08-18T22:50:19.182Z",
               "status": {
                 "uri": "at://did:plc:yvuqkl666js33zeil3imf4vt/app.bsky.actor.status/self",
-                "cid": "bafyreiclhyesaump3xutmqhh3wlaad3nh53nb4ysf7yhwragludhxbhpyy",
+                "cid": "bafyreiaqxnnbxwyrvvvnyczfnaao3qk2moxe6baxkh7gqmszokh5vollpy",
                 "record": {
                   "$type": "app.bsky.actor.status",
-                  "createdAt": "2026-09-08T18:56:07.001Z",
+                  "createdAt": "2026-09-12T19:06:33.721Z",
                   "durationMinutes": 240,
                   "embed": {
                     "$type": "app.bsky.embed.external",
@@ -21086,7 +21126,7 @@
                   "$type": "app.bsky.embed.external#view"
                 },
                 "labels": [],
-                "expiresAt": "2026-09-08T22:56:07.001Z",
+                "expiresAt": "2026-09-12T23:06:33.721Z",
                 "isActive": false
               }
             },
@@ -21643,16 +21683,16 @@
               "createdAt": "2023-09-28T21:15:43.380Z",
               "status": {
                 "uri": "at://did:plc:yub5525qtomhck3jvfnsobr3/app.bsky.actor.status/self",
-                "cid": "bafyreicxocyks4nrrnegwydckusmkwhwsy3jm5wxkotbbf7rncxqdbpf5y",
+                "cid": "bafyreigap5klr3reyvo5bewkowfpbsklr3qwkhf3zmr7vubr5xfnpzuqsu",
                 "record": {
                   "$type": "app.bsky.actor.status",
-                  "createdAt": "2026-09-08T17:56:40.463Z",
+                  "createdAt": "2026-09-10T17:55:48.960Z",
                   "durationMinutes": 210,
                   "embed": {
                     "$type": "app.bsky.embed.external",
                     "external": {
                       "$type": "app.bsky.embed.external#external",
-                      "description": "[18+] Saint Denis' Next Top Cowboy !gg !lurk | Streaming red dead redemption ii.",
+                      "description": "[18+] 0 Days Since Pinkertons have Forced Me to Move !gg !lurk | Streaming red dead redemption ii.",
                       "thumb": {
                         "$type": "blob",
                         "ref": {
@@ -21672,13 +21712,13 @@
                   "external": {
                     "uri": "https://twitch.tv/madebyjacjack",
                     "title": "madebyjacjack - Live on Twitch",
-                    "description": "[18+] Saint Denis' Next Top Cowboy !gg !lurk | Streaming red dead redemption ii.",
+                    "description": "[18+] 0 Days Since Pinkertons have Forced Me to Move !gg !lurk | Streaming red dead redemption ii.",
                     "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:yub5525qtomhck3jvfnsobr3/bafkreigidma4hfjv5vwbgyawfnv4zjqhdpda5ati35dtft2sd3vx224bae"
                   },
                   "$type": "app.bsky.embed.external#view"
                 },
                 "labels": [],
-                "expiresAt": "2026-09-08T21:26:40.463Z",
+                "expiresAt": "2026-09-10T21:25:48.960Z",
                 "isActive": false
               }
             },
@@ -22609,7 +22649,7 @@
             "author": {
               "did": "did:plc:yncclzcxfz7ey5yyriklasgg",
               "handle": "aureyal.bsky.social",
-              "displayName": "\u2736 \u2e3b \ud835\udd92\ud835\udd94\ud835\udd94\ud835\udd8c\ud835\udd91\ud835\udd8a !",
+              "displayName": "MOVED ACCOUNTS!",
               "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:yncclzcxfz7ey5yyriklasgg/bafkreifra5wg7qtjzvx7c3rzf6hmnfppbrfjrtvhfe6uw6wynego2w4noq",
               "associated": {
                 "chat": {
@@ -22629,7 +22669,7 @@
                 {
                   "src": "did:plc:yncclzcxfz7ey5yyriklasgg",
                   "uri": "at://did:plc:yncclzcxfz7ey5yyriklasgg/app.bsky.actor.profile/self",
-                  "cid": "bafyreifkrpxgt3if4lt4qtkb3b2ksguaanwdi26q7brqx73ynqvigfpvoq",
+                  "cid": "bafyreiadlkpvqjlqp4wuslinicke6rrs54dddwaqz7piu64c3mblup335m",
                   "val": "!no-unauthenticated",
                   "cts": "1970-01-01T00:00:00.000Z"
                 }
@@ -22906,8 +22946,8 @@
                 "author": {
                   "did": "did:plc:2qlbivzvdt6hp6dwrd2sx4sf",
                   "handle": "mayawest.online",
-                  "displayName": "Maya, her sails unfurled \u26f5",
-                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2qlbivzvdt6hp6dwrd2sx4sf/bafkreignz635k6ojfna2cudhmflme65nny47gh54tcvhggeraf2zirox3m",
+                  "displayName": "Big Dracula Energy",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2qlbivzvdt6hp6dwrd2sx4sf/bafkreier5jvfgsgwpfkz6x2fyj764gzewncyfle6tz4ttbgn2rmeownsdm",
                   "associated": {
                     "chat": {
                       "allowIncoming": "all",
@@ -24008,7 +24048,7 @@
                 {
                   "src": "did:plc:yf3cgf6t4uuf4fsst46dzflr",
                   "uri": "at://did:plc:yf3cgf6t4uuf4fsst46dzflr/app.bsky.actor.profile/self",
-                  "cid": "bafyreibfzggxuhdzgwcw63f2tijjlal5li3tu6diaq53vro3hvsoba6xga",
+                  "cid": "bafyreie6git2hf3ezlsvxsp5q72d53b7y7brudeum76k54vv6lzl2lyxmm",
                   "val": "!no-unauthenticated",
                   "cts": "2024-11-11T19:26:07.564Z"
                 }
@@ -26396,8 +26436,8 @@
                       "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:mfmak3wlgviv6zoj4uandsr5/bafkreibq3lmclwphfiidatqr3jkvwrrxpcj3k27kb2zyx4gd4wngevqmta",
                       "associated": {
                         "chat": {
-                          "allowIncoming": "following",
-                          "allowGroupInvites": "following"
+                          "allowIncoming": "none",
+                          "allowGroupInvites": "none"
                         },
                         "activitySubscription": {
                           "allowSubscriptions": "followers"
@@ -27544,7 +27584,7 @@
               "did": "did:plc:xts2ui2jxnfpijz2o6oixska",
               "handle": "kylie.hater.club",
               "displayName": "kylie, themeny of the state,,,",
-              "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:xts2ui2jxnfpijz2o6oixska/bafkreiggigloaaqqmsz57lnwkc6ggvaet2qhogzmipjf7yj7uig3vxaurq",
+              "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:xts2ui2jxnfpijz2o6oixska/bafkreibbr52bzvng4mzx4sfovdooh2pdq2tj2ykh4xhdvf2dvaa4schm5q",
               "associated": {
                 "chat": {
                   "allowIncoming": "following"
@@ -27563,7 +27603,7 @@
                 {
                   "src": "did:plc:xts2ui2jxnfpijz2o6oixska",
                   "uri": "at://did:plc:xts2ui2jxnfpijz2o6oixska/app.bsky.actor.profile/self",
-                  "cid": "bafyreigyok47lbuwcssw5ua7eucyczgtzn56cpjljkgsb7noez7qrbit6m",
+                  "cid": "bafyreif76bmwp4bshlc4tfmelpnmkdk6wpdwelpmwhalzrh762o6a54yo4",
                   "val": "!no-unauthenticated",
                   "cts": "1970-01-01T00:00:00.000Z"
                 }
@@ -29044,7 +29084,7 @@
                 {
                   "src": "did:plc:xpulqldfv6npz3rzabfko326",
                   "uri": "at://did:plc:xpulqldfv6npz3rzabfko326/app.bsky.actor.profile/self",
-                  "cid": "bafyreiamljcerg5xwulpywllplxhntvrq4munfez3gbjz5buvgrndlf3ii",
+                  "cid": "bafyreiagija2tsnyfqe5by5srfm7toy5eo7s5vnhxfb4ygilwexzkbzvqu",
                   "val": "!no-unauthenticated",
                   "cts": "1970-01-01T00:00:00.000Z"
                 }
@@ -30496,7 +30536,7 @@
               "did": "did:plc:xi5mmb4b2gcf545rgdpipywu",
               "handle": "livault.bsky.social",
               "displayName": "Livault \ud83d\udc32",
-              "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:xi5mmb4b2gcf545rgdpipywu/bafkreia2wvslzjhsrtcapcy72amk33ckrfbxpvplosonwpsv6m6sbofqxe",
+              "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:xi5mmb4b2gcf545rgdpipywu/bafkreibfnncjxrfhu77inl2a67w7ty7tfgzpbzlxuu4dyduiixzg6ho6ba",
               "associated": {
                 "activitySubscription": {
                   "allowSubscriptions": "followers"
@@ -30956,7 +30996,7 @@
                   "did": "did:plc:dtuuv7eqqhdovs272rd56kre",
                   "handle": "crossdog367.bsky.social",
                   "displayName": "Crossdog367 (Comms Open)",
-                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:dtuuv7eqqhdovs272rd56kre/bafkreienlaq2pnwwnrqtru6j2uuodhnhbr2vy76vpknkccufces5goi3ci",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:dtuuv7eqqhdovs272rd56kre/bafkreihkuycguv7eevvl5z3xy2hf4wanega666vqkjl23bjimc43tl56ka",
                   "associated": {
                     "chat": {
                       "allowIncoming": "all"
@@ -30975,7 +31015,7 @@
                     {
                       "src": "did:plc:dtuuv7eqqhdovs272rd56kre",
                       "uri": "at://did:plc:dtuuv7eqqhdovs272rd56kre/app.bsky.actor.profile/self",
-                      "cid": "bafyreigd4443kuippo3lly5tp6xtfzgsyudk3bqr3kj6hpmjei3vay24qi",
+                      "cid": "bafyreib62dmc4pi2udcfm6lmp7h22besxf5mjbuy53cy23xf7d2frqjc2e",
                       "val": "!no-unauthenticated",
                       "cts": "1970-01-01T00:00:00.000Z"
                     }
@@ -31377,7 +31417,7 @@
             "bookmarkCount": 3,
             "replyCount": 5,
             "repostCount": 10,
-            "likeCount": 742,
+            "likeCount": 741,
             "quoteCount": 0,
             "indexedAt": "2026-04-23T00:43:46.453Z",
             "viewer": {
@@ -31475,7 +31515,7 @@
                     {
                       "src": "did:plc:andwv2cyxcslihuzflw5cidv",
                       "uri": "at://did:plc:andwv2cyxcslihuzflw5cidv/app.bsky.actor.profile/self",
-                      "cid": "bafyreibo3lo2mgqqaybwt2dntpmtgunjgytn765rulnxwtwdvhifc7u5sm",
+                      "cid": "bafyreiafargglbyxf5atferdujb57gtmfkpooicy4uqej4dhjv5xil4wji",
                       "val": "!no-unauthenticated",
                       "cts": "1970-01-01T00:00:00.000Z"
                     }
@@ -31605,7 +31645,7 @@
                     {
                       "src": "did:plc:3ajqqhhm4cvzabgewt4edix6",
                       "uri": "at://did:plc:3ajqqhhm4cvzabgewt4edix6/app.bsky.actor.profile/self",
-                      "cid": "bafyreiatnkxdpwtxsxetrf7oku2w5owynhggvgc6v43hscw7ocqch3dasi",
+                      "cid": "bafyreidooognvjnmxf26aiwueshs4zg3z3olme2x7f2pt7gbwmi3sycyky",
                       "val": "!no-unauthenticated",
                       "cts": "2024-11-07T06:21:40.450Z"
                     }
@@ -32405,7 +32445,7 @@
                 {
                   "src": "did:plc:x67hs4lhwtnrjyuulrjnmsv4",
                   "uri": "at://did:plc:x67hs4lhwtnrjyuulrjnmsv4/app.bsky.actor.profile/self",
-                  "cid": "bafyreicibwoffnkgn75qdilvgjwndzwrwzew23p5dgw3frdu2yrktqoj4q",
+                  "cid": "bafyreig5gjs7rwinlt4hviavh7456vr7yhys3bxagr3fccew6r4m4sw4ri",
                   "val": "!no-unauthenticated",
                   "cts": "2025-12-17T01:48:16.367Z"
                 }

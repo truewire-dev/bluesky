@@ -74,10 +74,15 @@ const root = fs.realpathSync('node_modules/@truewire/core');
 if (root !== process.cwd() + '/node_modules/@truewire/core') throw Error('local override');
 const pkg = JSON.parse(fs.readFileSync(root + '/package.json', 'utf8'));
 if (pkg.name !== '@truewire/core' || pkg.version !== '0.2.0') throw Error('wrong package');
+const integrity = JSON.parse(fs.readFileSync('node_modules/.yarn-integrity', 'utf8'));
+const origins = Object.entries(integrity.lockfileEntries)
+  .filter(([name]) => name.startsWith('@truewire/core@')).map(([, url]) => url);
+if (origins.length !== 1 || !/^https:\/\/registry\.(yarnpkg\.com|npmjs\.org)\/@truewire\/core\/-\/core-0\.2\.0\.tgz#[a-f0-9]+$/.test(origins[0]))
+  throw Error('non-registry runtime origin: ' + origins);
 const entry = fileURLToPath(import.meta.resolve('@truewire/core'));
 if (!entry.startsWith(root + '/')) throw Error('foreign entry');
 await import('@truewire/core');
-console.log(JSON.stringify({name: pkg.name, version: pkg.version, entry}));
+console.log(JSON.stringify({name: pkg.name, version: pkg.version, entry, origin: origins[0]}));
 """], cwd=ts_dir, capture=True))
     metadata = json.loads(run(["cargo", "metadata", "--locked", "--format-version", "1"],
                               cwd=source / "packages/rust", capture=True))

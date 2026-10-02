@@ -21,7 +21,7 @@ path = "src/bluesky/lib.rs"
 [dependencies]
 async-trait = "0.1"
 serde = { version = "1", features = ["derive"] }
-truewire-core = { version = "0.1", features = ["rustls-tls"] }
+truewire-core = { version = "0.2.0", features = ["rustls-tls"] }
 
 [dev-dependencies]
 futures = "0.3"

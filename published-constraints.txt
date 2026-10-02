@@ -1,0 +1,3 @@
+# Registry identities exercised by the 0.11 showcase validation.
+truewire==0.11.0
+truewire-core==0.3.0

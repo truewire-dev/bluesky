@@ -5,7 +5,7 @@ description = "Typed, validated Python client for Bluesky's public API and the J
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11"
-dependencies = ["truewire-core>=0.2.1,<0.3"]
+dependencies = ["truewire-core>=0.3.0,<0.4"]
 keywords = ["bluesky", "atproto", "at-protocol", "jetstream", "api-client", "truewire"]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -23,7 +23,7 @@ Truewire = "https://truewire.dev"
 
 [project.optional-dependencies]
 dev = [
-  "truewire==0.10.0",
+  "truewire==0.11.0",
   "pytest>=8",
   "pytest-asyncio>=0.24",
   "pyright>=1.1.390",

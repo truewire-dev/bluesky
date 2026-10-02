@@ -67,7 +67,7 @@ print(json.dumps(result))
     ts_dir = source / "packages/typescript"
     run(["yarn", "--no-default-rc", "install", "--frozen-lockfile", "--non-interactive",
          "--ignore-scripts", "--registry", "https://registry.npmjs.org"], cwd=ts_dir)
-    ts = json.loads(run(["node", "--input-type=module", "-e", """
+    ts = json.loads(run(["node", "--input-type=module", "-e", r"""
 import fs from 'node:fs';
 import {fileURLToPath} from 'node:url';
 const root = fs.realpathSync('node_modules/@truewire/core');

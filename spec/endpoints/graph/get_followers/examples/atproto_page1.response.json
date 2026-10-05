@@ -32,10 +32,10 @@
         "indexedAt": "2026-09-03T00:15:32.501Z"
       },
       {
-        "did": "did:plc:eo5qah2eba55unbgdhwsucfj",
-        "handle": "muhannd.bsky.social",
-        "displayName": "",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:eo5qah2eba55unbgdhwsucfj/bafkreibawz2zl7vmykgoswzhztvi65iz6qnretp4chtbk65lut5iqgtxg4",
+        "did": "did:plc:kkklcaznd4zcev5d6qja45px",
+        "handle": "manfredimarrocco.bsky.social",
+        "displayName": "Manfredi Marrocco",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kkklcaznd4zcev5d6qja45px/bafkreigx2ek2dnht4n6osffu4an2lvt2qxriuxk5dwywcfa2vwo52wdlwy",
         "associated": {
           "activitySubscription": {
             "allowSubscriptions": "followers"
@@ -48,18 +48,16 @@
           "blockedBy": false
         },
         "labels": [],
-        "createdAt": "2026-09-09T15:46:59.953Z",
-        "indexedAt": "2026-09-09T15:49:46.666Z"
+        "createdAt": "2026-10-05T13:17:31.055Z",
+        "description": "GRC & Cybersecurity | IT Governance, Risk Management, NIS2 & ISO | Cybersecurity explained through gaming, TV & pop culture.\n\nhttps://manfredimarrocco.blog",
+        "indexedAt": "2026-10-05T13:22:13.354Z"
       },
       {
-        "did": "did:plc:tbxtbxp62s7fc7n5stc5dgvy",
-        "handle": "evolvingyourman.com",
-        "displayName": "EvolvingYourMan",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tbxtbxp62s7fc7n5stc5dgvy/bafkreigfsv42zftcivvaibmw5xds3nzv7kr26tw4ulrlwq47dqrd6smexq",
+        "did": "did:plc:nokjx6r3n2fgyjm6cvtr4aif",
+        "handle": "dextrose0.bsky.social",
+        "displayName": "",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:nokjx6r3n2fgyjm6cvtr4aif/bafkreibfq4fszse6qfocq6l5ucuvtccxt2w42jjma6q5oam5gohjhnrtpa",
         "associated": {
-          "chat": {
-            "allowIncoming": "none"
-          },
           "activitySubscription": {
             "allowSubscriptions": "followers"
           }
@@ -71,9 +69,8 @@
           "blockedBy": false
         },
         "labels": [],
-        "createdAt": "2024-11-19T00:30:44.805Z",
-        "description": "Hi. I'm Emma. Visit me at http://EvolvingYourMan.com for my thoughts on strong women and loving female authority in a modern marriage. Self proclaimed sex geek!",
-        "indexedAt": "2026-04-20T23:24:55.648Z"
+        "createdAt": "2026-10-05T00:02:41.759Z",
+        "indexedAt": "2026-10-05T00:04:38.464Z"
       }
     ],
     "subject": {
@@ -114,6 +111,6 @@
       "description": "Social networking technology created by Bluesky. \n\nDeveloper-focused account. Follow @bsky.app for general announcements!\n\nBluesky API docs: docs.bsky.app\nAT Protocol specs: atproto.com",
       "indexedAt": "2026-03-03T20:08:17.348Z"
     },
-    "cursor": "3mv3todgk2625"
+    "cursor": "3mx4w7t7bkz24"
   }
 }

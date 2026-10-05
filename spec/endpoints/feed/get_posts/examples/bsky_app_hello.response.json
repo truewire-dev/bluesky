@@ -69,10 +69,10 @@
           "$type": "app.bsky.embed.video#view"
         },
         "bookmarkCount": 260,
-        "replyCount": 2111,
-        "repostCount": 1080,
-        "likeCount": 7214,
-        "quoteCount": 2083,
+        "replyCount": 2106,
+        "repostCount": 1075,
+        "likeCount": 7198,
+        "quoteCount": 2076,
         "indexedAt": "2026-04-22T23:00:22.348Z",
         "viewer": {
           "bookmarked": false,

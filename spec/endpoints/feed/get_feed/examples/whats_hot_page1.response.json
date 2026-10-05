@@ -4,17 +4,14 @@
     "feed": [
       {
         "post": {
-          "uri": "at://did:plc:47wd5axccq346ss3vlis5ru2/app.bsky.feed.post/3mv3nas44hc2d",
-          "cid": "bafyreia624zlfyaua2rnx6mp6wnup6aii24ysl5ou34ov4rhkah57ejf4i",
+          "uri": "at://did:plc:ilmbc32kos5zwmkqh2nxamwc/app.bsky.feed.post/3mx4mperemk26",
+          "cid": "bafyreihfrcmwrepq2v64puvebdlnmtqhq64eawndx45gs5goxbhtitwuw4",
           "author": {
-            "did": "did:plc:47wd5axccq346ss3vlis5ru2",
-            "handle": "vermilionpearlgirl.bsky.social",
-            "displayName": "Alison Veneto",
-            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:47wd5axccq346ss3vlis5ru2/bafkreiggkvf4hovxxzmyiwyzat4xjjtosi5qnd4tmdxy6j3nyql7nxfb34",
+            "did": "did:plc:ilmbc32kos5zwmkqh2nxamwc",
+            "handle": "nobelprize.org",
+            "displayName": "Nobel Prize",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ilmbc32kos5zwmkqh2nxamwc/bafkreiazg3gt4cxp3ym5sxczr3fnjvxfzk5fkjns4zswqriqhrel6zlym4",
             "associated": {
-              "chat": {
-                "allowIncoming": "following"
-              },
               "activitySubscription": {
                 "allowSubscriptions": "followers"
               }
@@ -26,142 +23,110 @@
               "blockedBy": false
             },
             "labels": [],
-            "createdAt": "2023-07-14T00:42:49.007Z"
+            "createdAt": "2024-11-14T07:35:01.775Z",
+            "verification": {
+              "verifications": [
+                {
+                  "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+                  "issuerDisplayName": "Bluesky",
+                  "issuerHandle": "bsky.app",
+                  "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mtvo3rh2a62f",
+                  "isValid": true,
+                  "createdAt": "2026-08-25T11:00:40.747Z"
+                }
+              ],
+              "verifiedStatus": "valid",
+              "trustedVerifierStatus": "none"
+            },
+            "status": {
+              "uri": "at://did:plc:ilmbc32kos5zwmkqh2nxamwc/app.bsky.actor.status/self",
+              "cid": "bafyreih7izbv2bqnznyevm3v2ikvtt5mswjozj2cqsncaw5schdkwztide",
+              "record": {
+                "$type": "app.bsky.actor.status",
+                "createdAt": "2026-10-05T09:17:58.759Z",
+                "durationMinutes": 60,
+                "embed": {
+                  "$type": "app.bsky.embed.external",
+                  "external": {
+                    "$type": "app.bsky.embed.external#external",
+                    "description": "YouTube video by Nobel Prize",
+                    "thumb": {
+                      "$type": "blob",
+                      "ref": {
+                        "$link": "bafkreigt2lszqwpfoeicjr46cw5wrsnlbe3zrdrikiscwrhvqrjkgpzvym"
+                      },
+                      "mimeType": "image/jpeg",
+                      "size": 111320
+                    },
+                    "title": "Announcement of the 2026 Nobel Prize in Physiology or Medicine",
+                    "uri": "https://youtube.com/live/qGPpW0hAaaY"
+                  }
+                },
+                "status": "app.bsky.actor.status#live"
+              },
+              "status": "app.bsky.actor.status#live",
+              "embed": {
+                "external": {
+                  "uri": "https://youtube.com/live/qGPpW0hAaaY",
+                  "title": "Announcement of the 2026 Nobel Prize in Physiology or Medicine",
+                  "description": "YouTube video by Nobel Prize",
+                  "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ilmbc32kos5zwmkqh2nxamwc/bafkreigt2lszqwpfoeicjr46cw5wrsnlbe3zrdrikiscwrhvqrjkgpzvym"
+                },
+                "$type": "app.bsky.embed.external#view"
+              },
+              "labels": [],
+              "expiresAt": "2026-10-05T10:17:58.759Z",
+              "isActive": false
+            }
           },
           "record": {
             "$type": "app.bsky.feed.post",
-            "createdAt": "2026-09-09T13:26:45.782Z",
+            "createdAt": "2026-10-05T09:40:04.368Z",
             "embed": {
-              "$type": "app.bsky.embed.record",
-              "record": {
-                "cid": "bafyreibkl2pif37h7dtg6lgbwjnhhlbhdbjz5upmynah3i4f3uysja3364",
-                "uri": "at://did:plc:66c5dzsjoocyuwls45m4is7x/app.bsky.feed.post/3mv3lrwmzzh2q"
-              }
+              "$type": "app.bsky.embed.images",
+              "images": [
+                {
+                  "alt": "",
+                  "aspectRatio": {
+                    "height": 1630,
+                    "width": 1630
+                  },
+                  "image": {
+                    "$type": "blob",
+                    "ref": {
+                      "$link": "bafkreieinvpigdzgydq2rcgeiytiyovhp4ljhcr3qhhha2llbv2kjlva64"
+                    },
+                    "mimeType": "image/jpeg",
+                    "size": 1427623
+                  }
+                }
+              ]
             },
             "langs": [
-              "en"
+              "sv"
             ],
-            "text": "We did it y'all \ud83d\ude2d So proud of how hard everyone worked on this \u270a\ufe0f"
+            "text": "BREAKING NEWS \nThe 2026 Nobel Prize in Physiology or Medicine has been awarded to Karl Deisseroth, Peter Hegemann and Georg Nagel \u201cfor their discoveries concerning light-gated ion channels and optogenetics.\u201d"
           },
           "embed": {
-            "record": {
-              "uri": "at://did:plc:66c5dzsjoocyuwls45m4is7x/app.bsky.feed.post/3mv3lrwmzzh2q",
-              "cid": "bafyreibkl2pif37h7dtg6lgbwjnhhlbhdbjz5upmynah3i4f3uysja3364",
-              "author": {
-                "did": "did:plc:66c5dzsjoocyuwls45m4is7x",
-                "handle": "aftermath.site",
-                "displayName": "Aftermath",
-                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:66c5dzsjoocyuwls45m4is7x/bafkreifarayffzrn7z6sbxdrlt5rl4q32epokxhlrspe2msvmzepk2ngee",
-                "associated": {
-                  "chat": {
-                    "allowIncoming": "none",
-                    "allowGroupInvites": "none"
-                  },
-                  "activitySubscription": {
-                    "allowSubscriptions": "followers"
-                  }
-                },
-                "viewer": {
-                  "muted": false,
-                  "mutedOnlyReposts": false,
-                  "mutedOnlyQuoteposts": false,
-                  "blockedBy": false
-                },
-                "labels": [],
-                "createdAt": "2023-09-14T23:43:29.144Z",
-                "verification": {
-                  "verifications": [
-                    {
-                      "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
-                      "issuerDisplayName": "Bluesky",
-                      "issuerHandle": "bsky.app",
-                      "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lslrozjgqn25",
-                      "isValid": true,
-                      "createdAt": "2025-06-27T13:47:06.879Z"
-                    }
-                  ],
-                  "verifiedStatus": "valid",
-                  "trustedVerifierStatus": "none"
+            "images": [
+              {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ilmbc32kos5zwmkqh2nxamwc/bafkreieinvpigdzgydq2rcgeiytiyovhp4ljhcr3qhhha2llbv2kjlva64",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ilmbc32kos5zwmkqh2nxamwc/bafkreieinvpigdzgydq2rcgeiytiyovhp4ljhcr3qhhha2llbv2kjlva64",
+                "alt": "",
+                "aspectRatio": {
+                  "height": 1630,
+                  "width": 1630
                 }
-              },
-              "value": {
-                "$type": "app.bsky.feed.post",
-                "createdAt": "2026-09-09T13:00:33.403648+00:00",
-                "embed": {
-                  "$type": "app.bsky.embed.images",
-                  "images": [
-                    {
-                      "$type": "app.bsky.embed.images#image",
-                      "alt": "the famous orc statue outside blizzard's HQ in irvine, california",
-                      "aspectRatio": {
-                        "$type": "app.bsky.embed.defs#aspectRatio",
-                        "height": 616,
-                        "width": 1000
-                      },
-                      "image": {
-                        "$type": "blob",
-                        "ref": {
-                          "$link": "bafkreic3pafxhdf2pbcrcolmi3kcmgjhqy3weuxpihjeyxpziemdi2inky"
-                        },
-                        "mimeType": "image/jpeg",
-                        "size": 143814
-                      }
-                    }
-                  ]
-                },
-                "facets": [
-                  {
-                    "$type": "app.bsky.richtext.facet",
-                    "features": [
-                      {
-                        "$type": "app.bsky.richtext.facet#link",
-                        "uri": "https://aftermath.site/blizzard-union-contract-warcraft-overwatch-diablo/"
-                      }
-                    ],
-                    "index": {
-                      "$type": "app.bsky.richtext.facet#byteSlice",
-                      "byteEnd": 137,
-                      "byteStart": 105
-                    }
-                  }
-                ],
-                "langs": [],
-                "tags": [],
-                "text": "After years of company stalling, Blizzard workers win mega-contract that applies to all unionized teams\n\naftermath.site/blizzard-union..."
-              },
-              "labels": [],
-              "likeCount": 1853,
-              "replyCount": 12,
-              "repostCount": 545,
-              "quoteCount": 96,
-              "indexedAt": "2026-09-09T13:00:34.060Z",
-              "embeds": [
-                {
-                  "images": [
-                    {
-                      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:66c5dzsjoocyuwls45m4is7x/bafkreic3pafxhdf2pbcrcolmi3kcmgjhqy3weuxpihjeyxpziemdi2inky",
-                      "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:66c5dzsjoocyuwls45m4is7x/bafkreic3pafxhdf2pbcrcolmi3kcmgjhqy3weuxpihjeyxpziemdi2inky",
-                      "alt": "the famous orc statue outside blizzard's HQ in irvine, california",
-                      "aspectRatio": {
-                        "$type": "app.bsky.embed.defs#aspectRatio",
-                        "height": 616,
-                        "width": 1000
-                      }
-                    }
-                  ],
-                  "$type": "app.bsky.embed.images#view"
-                }
-              ],
-              "$type": "app.bsky.embed.record#viewRecord"
-            },
-            "$type": "app.bsky.embed.record#view"
+              }
+            ],
+            "$type": "app.bsky.embed.images#view"
           },
-          "bookmarkCount": 0,
-          "replyCount": 0,
-          "repostCount": 50,
-          "likeCount": 242,
-          "quoteCount": 0,
-          "indexedAt": "2026-09-09T13:26:46.362Z",
+          "bookmarkCount": 9,
+          "replyCount": 9,
+          "repostCount": 297,
+          "likeCount": 567,
+          "quoteCount": 100,
+          "indexedAt": "2026-10-05T09:40:11.556Z",
           "viewer": {
             "bookmarked": false,
             "threadMuted": false,
@@ -170,17 +135,22 @@
           "labels": []
         },
         "feedContext": "nettop",
-        "reqId": "223479424887033858"
+        "reqId": "232855032184180736"
       },
       {
         "post": {
-          "uri": "at://did:plc:u2zs2typsklaohqmfyxiunvy/app.bsky.feed.post/3mv2sig6zw22n",
-          "cid": "bafyreif2ofzkowubivq4xopsg7dpov3zlcfawzxopbyf6pmixxwoysvmfq",
+          "uri": "at://did:plc:cjhaqjthldlstiawty6qfifq/app.bsky.feed.post/3mx3b2sqlns2d",
+          "cid": "bafyreiajn3bky5lu4ypeq2xanvxwifbaalp54x4fecdb5qvzxpxk3hzknu",
           "author": {
-            "did": "did:plc:u2zs2typsklaohqmfyxiunvy",
-            "handle": "womensartbluesky.bsky.social",
-            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:u2zs2typsklaohqmfyxiunvy/bafkreibjaljsx6h2jl264yss2bp3ji4zamzrvkskfhkz6hjni2ydietjvy",
+            "did": "did:plc:cjhaqjthldlstiawty6qfifq",
+            "handle": "mumermao.eurosky.social",
+            "displayName": "M\u00famer",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:cjhaqjthldlstiawty6qfifq/bafkreif5755tokj4a76topzcixrncagvej42w7xx5dhvco67nhhm7ui6ve",
             "associated": {
+              "chat": {
+                "allowIncoming": "none",
+                "allowGroupInvites": "none"
+              },
               "activitySubscription": {
                 "allowSubscriptions": "followers"
               }
@@ -191,123 +161,85 @@
               "mutedOnlyQuoteposts": false,
               "blockedBy": false
             },
-            "labels": [],
-            "createdAt": "2024-11-12T10:01:39.805Z"
+            "labels": [
+              {
+                "src": "did:plc:cjhaqjthldlstiawty6qfifq",
+                "uri": "at://did:plc:cjhaqjthldlstiawty6qfifq/app.bsky.actor.profile/self",
+                "cid": "bafyreic7c6zzmjgo7urssx72u3of52qjmrpmfjf6jcroj4vebev5bcybee",
+                "val": "!no-unauthenticated",
+                "cts": "1970-01-01T00:00:00.000Z"
+              }
+            ],
+            "createdAt": "2023-08-14T22:38:25.422Z"
           },
           "record": {
             "$type": "app.bsky.feed.post",
-            "createdAt": "2026-09-09T05:27:50.679Z",
+            "createdAt": "2026-10-04T20:39:03.473Z",
             "embed": {
               "$type": "app.bsky.embed.images",
               "images": [
                 {
-                  "alt": "Stained glass artwork featuring a green hilly landscape with fields and a house, with a hare in the foreground and swallows flying in the sky ",
+                  "alt": "",
                   "aspectRatio": {
-                    "height": 900,
-                    "width": 675
+                    "height": 1059,
+                    "width": 1080
                   },
                   "image": {
                     "$type": "blob",
                     "ref": {
-                      "$link": "bafkreibfzasg6ccuuktydt4xut2exd6ukve52eozwys2vy3qk5wzxljywy"
+                      "$link": "bafkreievvgm33rc4giaobfzeyye662iyxgqbokmepmp2kgfjjvusomfiti"
                     },
                     "mimeType": "image/jpeg",
-                    "size": 390523
+                    "size": 132486
                   }
                 }
               ]
             },
-            "facets": [
-              {
-                "features": [
-                  {
-                    "$type": "app.bsky.richtext.facet#tag",
-                    "tag": "WomensArt"
-                  }
-                ],
-                "index": {
-                  "byteEnd": 93,
-                  "byteStart": 83
-                }
-              },
-              {
-                "features": [
-                  {
-                    "$type": "app.bsky.richtext.facet#tag",
-                    "tag": "#September"
-                  }
-                ],
-                "index": {
-                  "byteEnd": 105,
-                  "byteStart": 94
-                }
-              }
-            ],
             "langs": [
-              "en"
+              "es"
             ],
-            "text": "English stained glass artist Tamsin Abbott, who is inspired by folklore and nature #WomensArt ##September"
+            "text": ""
           },
           "embed": {
             "images": [
               {
-                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:u2zs2typsklaohqmfyxiunvy/bafkreibfzasg6ccuuktydt4xut2exd6ukve52eozwys2vy3qk5wzxljywy",
-                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:u2zs2typsklaohqmfyxiunvy/bafkreibfzasg6ccuuktydt4xut2exd6ukve52eozwys2vy3qk5wzxljywy",
-                "alt": "Stained glass artwork featuring a green hilly landscape with fields and a house, with a hare in the foreground and swallows flying in the sky ",
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:cjhaqjthldlstiawty6qfifq/bafkreievvgm33rc4giaobfzeyye662iyxgqbokmepmp2kgfjjvusomfiti",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:cjhaqjthldlstiawty6qfifq/bafkreievvgm33rc4giaobfzeyye662iyxgqbokmepmp2kgfjjvusomfiti",
+                "alt": "",
                 "aspectRatio": {
-                  "height": 900,
-                  "width": 675
+                  "height": 1059,
+                  "width": 1080
                 }
               }
             ],
             "$type": "app.bsky.embed.images#view"
           },
-          "bookmarkCount": 18,
-          "replyCount": 4,
-          "repostCount": 198,
-          "likeCount": 1004,
-          "quoteCount": 6,
-          "indexedAt": "2026-09-09T05:27:52.957Z",
+          "bookmarkCount": 60,
+          "replyCount": 9,
+          "repostCount": 636,
+          "likeCount": 2180,
+          "quoteCount": 0,
+          "indexedAt": "2026-10-04T20:39:06.165Z",
           "viewer": {
             "bookmarked": false,
             "threadMuted": false,
-            "replyDisabled": true,
-            "embeddingDisabled": false
+            "embeddingDisabled": true
           },
-          "labels": [],
-          "threadgate": {
-            "uri": "at://did:plc:u2zs2typsklaohqmfyxiunvy/app.bsky.feed.threadgate/3mv2sig6zw22n",
-            "cid": "bafyreigjcryptcujj37yplp6o6egqt73x477c4d6orkbv72o2t6zcndrtq",
-            "record": {
-              "$type": "app.bsky.feed.threadgate",
-              "allow": [
-                {
-                  "$type": "app.bsky.feed.threadgate#followerRule"
-                }
-              ],
-              "createdAt": "2026-09-09T05:27:52.229Z",
-              "hiddenReplies": [],
-              "post": "at://did:plc:u2zs2typsklaohqmfyxiunvy/app.bsky.feed.post/3mv2sig6zw22n"
-            },
-            "lists": []
-          }
+          "labels": []
         },
-        "feedContext": "th-visual_arts_design",
-        "reqId": "223479424887033858"
+        "feedContext": "nettop",
+        "reqId": "232855032184180736"
       },
       {
         "post": {
-          "uri": "at://did:plc:3hqecasjh2m7eitqawpmjvgq/app.bsky.feed.post/3mv3ngoyu3s2h",
-          "cid": "bafyreic2kimy6wz7taywp22d7bwktgg4fkk2oa7bimqttsc53bejn2szz4",
+          "uri": "at://did:plc:u6mkbcgviwlbhuwqirmhcgu3/app.bsky.feed.post/3mx4faiwnnc22",
+          "cid": "bafyreihlze7fzfruxy6ody22dpfxvim2xigb5e6rd4utetl2f6bvwzmpiy",
           "author": {
-            "did": "did:plc:3hqecasjh2m7eitqawpmjvgq",
-            "handle": "lamari.bsky.social",
-            "displayName": "La Mari",
-            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3hqecasjh2m7eitqawpmjvgq/bafkreiedtdty3c3zrexutydjog3iyrfkxckyl3svr34ia5ncj4wrp4coqa",
+            "did": "did:plc:u6mkbcgviwlbhuwqirmhcgu3",
+            "handle": "elpais.com",
+            "displayName": "EL PA\u00cdS",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:u6mkbcgviwlbhuwqirmhcgu3/bafkreic2bx7n2nii352qlbosnsniq7o6ubc2xmqscy77px2qg7gh6lhf6a",
             "associated": {
-              "chat": {
-                "allowIncoming": "none"
-              },
               "activitySubscription": {
                 "allowSubscriptions": "followers"
               }
@@ -319,49 +251,62 @@
               "blockedBy": false
             },
             "labels": [],
-            "createdAt": "2023-11-28T18:41:25.281Z"
+            "createdAt": "2023-09-21T14:39:53.438Z",
+            "verification": {
+              "verifications": [
+                {
+                  "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+                  "issuerDisplayName": "Bluesky",
+                  "issuerHandle": "bsky.app",
+                  "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lndpvqbygg2z",
+                  "isValid": true,
+                  "createdAt": "2025-04-21T10:47:48.572Z"
+                }
+              ],
+              "verifiedStatus": "valid",
+              "trustedVerifierStatus": "none"
+            }
           },
           "record": {
             "$type": "app.bsky.feed.post",
-            "createdAt": "2026-09-09T13:30:03.852Z",
+            "createdAt": "2026-10-05T07:26:29+00:00",
             "embed": {
-              "$type": "app.bsky.embed.video",
-              "aspectRatio": {
-                "height": 1280,
-                "width": 720
-              },
-              "presentation": "default",
-              "video": {
-                "$type": "blob",
-                "ref": {
-                  "$link": "bafkreib67km4ntl67ej5jit4dugst66hdalsysno65el4g3577d7bfabty"
+              "$type": "app.bsky.embed.external",
+              "external": {
+                "description": "La reportera publica \u2018Cuanta m\u00e1s gente me jode, m\u00e1s buenos momentos tengo\u2019, un atlas de sus viajes por el mundo: del Par\u00eds del 68 al Beirut del 87, pasando por el Hollywood de los noventa. \u201cTengo una pl\u00e1cida vejez de ira\u201d, afirma a sus 83 a\u00f1os",
+                "thumb": {
+                  "$type": "blob",
+                  "ref": {
+                    "$link": "bafkreidwbvqheqnztky6br2ecujz2ribrgypnlioc4unhp4mwscr5ci524"
+                  },
+                  "mimeType": "image/jpeg",
+                  "size": 45525
                 },
-                "mimeType": "video/mp4",
-                "size": 16362030
+                "title": "Maruja Torres: \u201cNo tengo el co\u00f1o para equidistancias en este momento\u201d",
+                "uri": "https://social.elpais.com/14zv1a"
               }
             },
+            "facets": [],
             "langs": [
               "es"
             ],
-            "text": "Pen\u00e9lope Cruz y Javier Bardem triunfaron ayer en el Festival de Venecia con su nueva pel\u00edcula: B\u00fanker.\nY adem\u00e1s Pen\u00e9lope le dio a este ni\u00f1o el mejor recuerdo de su vida."
+            "text": "\"No tengo el co\u00f1o para equidistancias en este momento. Hay que empezar a asomar la nariz para que te la rompan. Si no lo hacemos, no s\u00e9 si pasaremos a la historia, pero pasaremos a la tumba como una mierda\", dice Maruja Torres"
           },
           "embed": {
-            "cid": "bafkreib67km4ntl67ej5jit4dugst66hdalsysno65el4g3577d7bfabty",
-            "playlist": "https://video.bsky.app/watch/did%3Aplc%3A3hqecasjh2m7eitqawpmjvgq/bafkreib67km4ntl67ej5jit4dugst66hdalsysno65el4g3577d7bfabty/playlist.m3u8",
-            "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3A3hqecasjh2m7eitqawpmjvgq/bafkreib67km4ntl67ej5jit4dugst66hdalsysno65el4g3577d7bfabty/thumbnail.jpg",
-            "aspectRatio": {
-              "height": 1280,
-              "width": 720
+            "external": {
+              "uri": "https://social.elpais.com/14zv1a",
+              "title": "Maruja Torres: \u201cNo tengo el co\u00f1o para equidistancias en este momento\u201d",
+              "description": "La reportera publica \u2018Cuanta m\u00e1s gente me jode, m\u00e1s buenos momentos tengo\u2019, un atlas de sus viajes por el mundo: del Par\u00eds del 68 al Beirut del 87, pasando por el Hollywood de los noventa. \u201cTengo una pl\u00e1cida vejez de ira\u201d, afirma a sus 83 a\u00f1os",
+              "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:u6mkbcgviwlbhuwqirmhcgu3/bafkreidwbvqheqnztky6br2ecujz2ribrgypnlioc4unhp4mwscr5ci524"
             },
-            "presentation": "default",
-            "$type": "app.bsky.embed.video#view"
+            "$type": "app.bsky.embed.external#view"
           },
-          "bookmarkCount": 3,
-          "replyCount": 11,
-          "repostCount": 44,
-          "likeCount": 209,
-          "quoteCount": 4,
-          "indexedAt": "2026-09-09T13:30:07.159Z",
+          "bookmarkCount": 13,
+          "replyCount": 31,
+          "repostCount": 425,
+          "likeCount": 963,
+          "quoteCount": 48,
+          "indexedAt": "2026-10-05T07:26:29.764Z",
           "viewer": {
             "bookmarked": false,
             "threadMuted": false,
@@ -370,9 +315,9 @@
           "labels": []
         },
         "feedContext": "th-entertainment",
-        "reqId": "223479424887033858"
+        "reqId": "232855032184180736"
       }
     ],
-    "cursor": "eyJvIjoiMjAyNi0wOS0wOVQwNDoyNzoyNi45MjU4ODU1NTVaIiwibiI6IjIwMjYtMDktMDlUMTY6Mjc6MjYuOTI1ODg1NTU1WiIsInNzIjoiMjAyNi0wOS0wOVQxNjoyNzoyNi45MjU4ODU1NTVaIiwibHUiOiIyMDI2LTA5LTA5VDE2OjI3OjI2Ljk0MDY4MjQ0MVoiLCJwZyI6MSwibSI6IkFRQUFBQUFBQUFBSkFBQUFPakFBQUFNQUFBRDJTd0FBaVUwQUFJeE5BQUFnQUFBQUlnQUFBQ1FBQUFBM0QwQWRBa0E9In0="
+    "cursor": "eyJvIjoiMjAyNi0xMC0wNVQwMToyMjo0NS44OTMyMjE0NThaIiwibiI6IjIwMjYtMTAtMDVUMTM6MjI6NDUuODkzMjIxNDU4WiIsInNzIjoiMjAyNi0xMC0wNVQxMzoyMjo0NS44OTMyMjE0NThaIiwibHUiOiIyMDI2LTEwLTA1VDEzOjIyOjQ1LjkxMDU1NzU5OFoiLCJwZyI6MSwibSI6IkFRQUFBQUFBQUFBSkFBQUFPakFBQUFNQUFBQnl1UUFBNnJvQUFETzdBQUFnQUFBQUlnQUFBQ1FBQUFDL3dVc0ZnblU9In0="
   }
 }

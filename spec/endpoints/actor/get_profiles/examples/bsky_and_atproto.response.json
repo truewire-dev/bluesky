@@ -36,9 +36,9 @@
         "description": "official Bluesky account (check username\ud83d\udc46)\n\nBugs, feature requests, feedback: support@bsky.app",
         "indexedAt": "2025-10-27T21:05:26.152Z",
         "banner": "https://cdn.bsky.app/img/banner/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreichzyovokfzmymz36p5jibbjrhsur6n7hjnzxrpbt5jaydp2szvna",
-        "followersCount": 34840653,
-        "followsCount": 14,
-        "postsCount": 829,
+        "followersCount": 35154731,
+        "followsCount": 15,
+        "postsCount": 865,
         "pinnedPost": {
           "cid": "bafyreicnt42y6vo6pfpvyro234ac4o6ijug6adwwrh7awflgrqlt4zibxq",
           "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3l6oveex3ii2l"
@@ -119,9 +119,9 @@
         "description": "Social networking technology created by Bluesky. \n\nDeveloper-focused account. Follow @bsky.app for general announcements!\n\nBluesky API docs: docs.bsky.app\nAT Protocol specs: atproto.com",
         "indexedAt": "2026-03-03T20:08:17.348Z",
         "banner": "https://cdn.bsky.app/img/banner/plain/did:plc:ewvi7nxzyoun6zhxrhs64oiz/bafkreidhox3lr7tld2oj2uy7swefvhsgcmeufurclzllwloceyhwjg6rg4",
-        "followersCount": 120854,
+        "followersCount": 121303,
         "followsCount": 21,
-        "postsCount": 255
+        "postsCount": 265
       }
     ]
   }

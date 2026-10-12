@@ -4,8 +4,12 @@
 # `truewire` and the package on the path (`pip install -e '.[dev]'`).
 #
 # Almost no credentials: the public AppView at public.api.bsky.app answers every endpoint
-# here but search, and Jetstream is open to anyone. An access JWT would otherwise only add
-# the viewer's own state to a profile or a post, which is not what these examples record.
+# here but search, and Jetstream is open to anyone. A public read is recorded without a
+# session even when this script holds one: a session sends the call to bsky.social, which
+# adds the viewer's own state (`viewer` on every profile and post, follow-record URIs) to
+# the body. That is not what a caller without credentials gets, and the nightly drift
+# monitor calls without credentials, so a recording made with a session reads as every
+# `viewer` key removed, every night.
 # An endpoint that declares `unverified.reason: "missing_credentials"` is skipped rather
 # than attempted, so a documented gap does not read as a failure every run.
 #
@@ -44,6 +48,12 @@ if ! "$PYTHON" packages/python/test/refresh_post_examples.py; then
   failed="$failed packages/python/test/refresh_post_examples.py"
 fi
 
+is_public() {
+  "$PYTHON" -c 'import json, sys
+doc = json.load(open(sys.argv[1]))
+sys.exit(0 if (doc.get("meta") or {}).get("public") is True else 1)' "$1"
+}
+
 needs_credentials() {
   "$PYTHON" -c 'import json, sys
 doc = json.load(open(sys.argv[1]))
@@ -68,12 +78,13 @@ SCRUB="--scrub accessJwt --scrub refreshJwt --scrub email"
 
 capture_example() {
   request=$1
+  credentials=$2
   function=$(echo "$request" | awk -F/ '{print $3 "." $4}')
   id=$(basename "$request" .request.json)
   description=$("$PYTHON" -c 'import json, sys; print(json.load(open(sys.argv[1])).get("description", ""))' "$request")
   parameters=$("$PYTHON" -c 'import json, sys; print(json.dumps(json.load(open(sys.argv[1]))["request"]))' "$request")
-  # shellcheck disable=SC2086  # CREDENTIALS and SCRUB are argument lists, deliberately split
-  truewire capture "$function" --id "$id" -d "$description" --request "$parameters" $CREDENTIALS $SCRUB
+  # shellcheck disable=SC2086  # credentials and SCRUB are argument lists, deliberately split
+  truewire capture "$function" --id "$id" -d "$description" --request "$parameters" $credentials $SCRUB
 }
 
 skipped=''
@@ -83,7 +94,11 @@ for request in spec/endpoints/*/*/examples/*.request.json; do
     skipped="$skipped $request"
     continue
   fi
-  if capture_example "$request"; then
+  credentials=$CREDENTIALS
+  if is_public "$endpoint"; then
+    credentials=''
+  fi
+  if capture_example "$request" "$credentials"; then
     recorded=$((recorded + 1))
     continue
   fi

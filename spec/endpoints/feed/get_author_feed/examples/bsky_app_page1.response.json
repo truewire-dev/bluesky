@@ -4,123 +4,17 @@
     "feed": [
       {
         "post": {
-          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mv3shqdfuc2e",
-          "cid": "bafyreicctz5gxccl6ql35ae7a6wdk3zl2ry6o5ioltme52yezp7s6l42ji",
+          "uri": "at://did:plc:beqpqpce3wnzazg5vc3mezhr/app.bsky.feed.post/3mxk7gsrfxs2w",
+          "cid": "bafyreih5ipvlba2xxw7ydrwlttaws2wb2dvnmabt2abll3jd3nv7acsdjy",
           "author": {
-            "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
-            "handle": "bsky.app",
-            "displayName": "Bluesky",
-            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
+            "did": "did:plc:beqpqpce3wnzazg5vc3mezhr",
+            "handle": "nsousanis.bsky.social",
+            "displayName": "Nick Sousanis",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:beqpqpce3wnzazg5vc3mezhr/bafkreifdafm6pzx3wbad6g2w6gvvqmoxwvyiwbi2sufrb5u2j6xyogwnhe",
             "associated": {
               "chat": {
-                "allowIncoming": "none"
+                "allowIncoming": "following"
               },
-              "activitySubscription": {
-                "allowSubscriptions": "followers"
-              }
-            },
-            "viewer": {
-              "muted": false,
-              "mutedOnlyReposts": false,
-              "mutedOnlyQuoteposts": false,
-              "blockedBy": false,
-              "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
-            },
-            "labels": [],
-            "createdAt": "2023-04-12T04:53:57.057Z",
-            "verification": {
-              "verifications": [],
-              "verifiedStatus": "none",
-              "trustedVerifierStatus": "valid"
-            }
-          },
-          "record": {
-            "$type": "app.bsky.feed.post",
-            "createdAt": "2026-09-09T15:00:07.513Z",
-            "embed": {
-              "$type": "app.bsky.embed.images",
-              "images": [
-                {
-                  "alt": "An enormous pile of red apples and green apples\u2014sweet, tart, delicious, and coming soon to an Apple Store near you! Keep your eye on this thread (and maybe put on a sturdy hat) to learn more about today's big drops.",
-                  "aspectRatio": {
-                    "height": 3000,
-                    "width": 4000
-                  },
-                  "image": {
-                    "$type": "blob",
-                    "ref": {
-                      "$link": "bafkreih3mb3cwnbc5kv5b2qyy24q6banms25i5ut3cbty4ej2x7vjvd6y4"
-                    },
-                    "mimeType": "image/jpeg",
-                    "size": 1985909
-                  }
-                }
-              ]
-            },
-            "langs": [
-              "en"
-            ],
-            "text": "Not to brag, but ... we snagged a couple of passes to today\u2019s Apple event. Stay tuned for our take on all the latest and greatest Apple products."
-          },
-          "embed": {
-            "images": [
-              {
-                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreih3mb3cwnbc5kv5b2qyy24q6banms25i5ut3cbty4ej2x7vjvd6y4",
-                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreih3mb3cwnbc5kv5b2qyy24q6banms25i5ut3cbty4ej2x7vjvd6y4",
-                "alt": "An enormous pile of red apples and green apples\u2014sweet, tart, delicious, and coming soon to an Apple Store near you! Keep your eye on this thread (and maybe put on a sturdy hat) to learn more about today's big drops.",
-                "aspectRatio": {
-                  "height": 3000,
-                  "width": 4000
-                }
-              }
-            ],
-            "$type": "app.bsky.embed.images#view"
-          },
-          "bookmarkCount": 17,
-          "replyCount": 69,
-          "repostCount": 78,
-          "likeCount": 947,
-          "quoteCount": 26,
-          "indexedAt": "2026-09-09T15:00:45.669Z",
-          "viewer": {
-            "bookmarked": false,
-            "threadMuted": false,
-            "replyDisabled": false,
-            "embeddingDisabled": false
-          },
-          "labels": [],
-          "threadgate": {
-            "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.threadgate/3mv3shqdfuc2e",
-            "cid": "bafyreieti6j2inkfq5t6zbv3e2cv35cws7bieqf6hngnhkawnthuwtnq2u",
-            "record": {
-              "$type": "app.bsky.feed.threadgate",
-              "createdAt": "2026-09-09T16:08:57.587Z",
-              "hiddenReplies": [
-                "at://did:plc:bzoeanuisqpleh5b5ywrycro/app.bsky.feed.post/3mv3smgyhcc25",
-                "at://did:plc:fzczh5skw2ivqbpitgceokfq/app.bsky.feed.post/3mv3snnxsdk2e",
-                "at://did:plc:gktdd4zus32lcihrm4hugcps/app.bsky.feed.post/3mv3w552mlc22",
-                "at://did:plc:c5bqflfsbn7g46aipm6ayyob/app.bsky.feed.post/3mv3thzdtjk2c",
-                "at://did:plc:6irylomud4saesa5cgv3qnd4/app.bsky.feed.post/3mv3syfaf6c2i",
-                "at://did:plc:us3bkeij77l3fz4v5uwugqvd/app.bsky.feed.post/3mv3uuqmwc22z"
-              ],
-              "post": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mv3shqdfuc2e"
-            },
-            "lists": []
-          }
-        },
-        "opThreadPostIndex": 1,
-        "opThreadPostCount": 2
-      },
-      {
-        "post": {
-          "uri": "at://did:plc:xb2urvqt5f4zzccjs46hysbf/app.bsky.feed.post/3muplmkx56s2k",
-          "cid": "bafyreidu2rxt55wzm3wmadbp6fzfrik6idvmh34qk23gwsssx6fqdgxbqm",
-          "author": {
-            "did": "did:plc:xb2urvqt5f4zzccjs46hysbf",
-            "handle": "cee.wtf",
-            "displayName": "cee",
-            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:xb2urvqt5f4zzccjs46hysbf/bafkreigyfwcdlgfoo73jsjas2mtmcwzugmg37gdobl6psgfmz47lwuvncu",
-            "associated": {
               "activitySubscription": {
                 "allowSubscriptions": "followers"
               }
@@ -132,67 +26,88 @@
               "blockedBy": false
             },
             "labels": [],
-            "createdAt": "2024-11-14T02:19:10.084Z"
+            "createdAt": "2023-05-05T21:41:36.513Z"
           },
           "record": {
             "$type": "app.bsky.feed.post",
-            "createdAt": "2026-09-04T18:25:36.591Z",
+            "createdAt": "2026-10-10T19:19:54.753Z",
             "embed": {
               "$type": "app.bsky.embed.video",
+              "alt": "A video of a paper sort of popup/minicomic where the panels are turned by a lever mechanism to flip and reveal a new image as you turn it. ",
               "aspectRatio": {
-                "height": 1298,
-                "width": 1874
+                "height": 1078,
+                "width": 1826
               },
               "presentation": "default",
               "video": {
                 "$type": "blob",
                 "ref": {
-                  "$link": "bafkreidxa3lbz3ubsprahwue2psjtxqes5r2susclpncjjef6ekwkn26ua"
+                  "$link": "bafkreiebgxc6clgeolngvrboj7hrardt5pfzapfr3ocy6iglcpvsv6dklu"
                 },
                 "mimeType": "video/mp4",
-                "size": 16831693
+                "size": 4433061
               }
             },
-            "facets": [
-              {
-                "features": [
-                  {
-                    "$type": "app.bsky.richtext.facet#link",
-                    "uri": "https://throng.cee.wtf"
-                  }
-                ],
-                "index": {
-                  "byteEnd": 14,
-                  "byteStart": 0
-                }
-              }
-            ],
             "langs": [
               "en"
             ],
-            "text": "throng.cee.wtf i've invented a new way to browse bluesky"
+            "text": "Students made their first minicomics in my intro making course - mostly standard format but this student, a first time maker(!), did something so off the charts I\u2019m still reeling from it! & he made like 12 of them for his classmates! A paper engineering feat of flipbookery as well as killer drawing!"
           },
           "embed": {
-            "cid": "bafkreidxa3lbz3ubsprahwue2psjtxqes5r2susclpncjjef6ekwkn26ua",
-            "playlist": "https://video.bsky.app/watch/did%3Aplc%3Axb2urvqt5f4zzccjs46hysbf/bafkreidxa3lbz3ubsprahwue2psjtxqes5r2susclpncjjef6ekwkn26ua/playlist.m3u8",
-            "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Axb2urvqt5f4zzccjs46hysbf/bafkreidxa3lbz3ubsprahwue2psjtxqes5r2susclpncjjef6ekwkn26ua/thumbnail.jpg",
+            "cid": "bafkreiebgxc6clgeolngvrboj7hrardt5pfzapfr3ocy6iglcpvsv6dklu",
+            "playlist": "https://video.bsky.app/watch/did%3Aplc%3Abeqpqpce3wnzazg5vc3mezhr/bafkreiebgxc6clgeolngvrboj7hrardt5pfzapfr3ocy6iglcpvsv6dklu/playlist.m3u8",
+            "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Abeqpqpce3wnzazg5vc3mezhr/bafkreiebgxc6clgeolngvrboj7hrardt5pfzapfr3ocy6iglcpvsv6dklu/thumbnail.jpg",
+            "alt": "A video of a paper sort of popup/minicomic where the panels are turned by a lever mechanism to flip and reveal a new image as you turn it. ",
             "aspectRatio": {
-              "height": 1298,
-              "width": 1874
+              "height": 1078,
+              "width": 1826
             },
             "presentation": "default",
             "$type": "app.bsky.embed.video#view"
           },
-          "bookmarkCount": 1517,
-          "replyCount": 342,
-          "repostCount": 1884,
-          "likeCount": 8005,
-          "quoteCount": 625,
-          "indexedAt": "2026-09-04T18:26:09.958Z",
+          "bookmarkCount": 620,
+          "replyCount": 72,
+          "repostCount": 991,
+          "likeCount": 4815,
+          "quoteCount": 66,
+          "indexedAt": "2026-10-10T19:19:55.953Z",
           "viewer": {
             "bookmarked": false,
             "threadMuted": false,
-            "embeddingDisabled": false
+            "embeddingDisabled": false,
+            "knownLikers": {
+              "count": 1,
+              "actors": [
+                {
+                  "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
+                  "handle": "bsky.app",
+                  "displayName": "Bluesky",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
+                  "associated": {
+                    "chat": {
+                      "allowIncoming": "none"
+                    },
+                    "activitySubscription": {
+                      "allowSubscriptions": "followers"
+                    }
+                  },
+                  "viewer": {
+                    "muted": false,
+                    "mutedOnlyReposts": false,
+                    "mutedOnlyQuoteposts": false,
+                    "blockedBy": false,
+                    "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
+                  },
+                  "labels": [],
+                  "createdAt": "2023-04-12T04:53:57.057Z",
+                  "verification": {
+                    "verifications": [],
+                    "verifiedStatus": "none",
+                    "trustedVerifierStatus": "valid"
+                  }
+                }
+              ]
+            }
           },
           "labels": []
         },
@@ -225,19 +140,147 @@
               "trustedVerifierStatus": "valid"
             }
           },
-          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.repost/3muppv5g3h627",
-          "cid": "bafyreigcdrtiyaftnlqib2sbcybx4vfpunzraqyiip4r4oqyrdh2wf4i5q",
-          "indexedAt": "2026-09-04T19:41:59.668Z",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.repost/3mxmi2llsjq2h",
+          "cid": "bafyreibbwwyfzucbvz5xjqhkhl5jqpy22jh5g7qxoili5r54odymtzmqmm",
+          "indexedAt": "2026-10-11T16:59:27.855Z",
           "$type": "app.bsky.feed.defs#reasonRepost"
         },
         "opThreadPostIndex": 1,
-        "opThreadPostCount": 2
+        "opThreadPostCount": 8
       },
       {
         "post": {
-          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mupeqslogc2k",
-          "cid": "bafyreihwlheqkbd52brir22s26qyjcklurh725aam3u5mtwffjey6xoaqm",
+          "uri": "at://did:plc:mjh257xyug2mpodoyy3he5ih/app.bsky.feed.post/3mxlespeluk2w",
+          "cid": "bafyreighdej2uq77cmxgo57nrc32b4xbmuf7k5cny4y5ct6wpfr3ovfsyi",
           "author": {
+            "did": "did:plc:mjh257xyug2mpodoyy3he5ih",
+            "handle": "pixelatedboat.bsky.social",
+            "displayName": "pixelatedboat aka \u201cmr bluesky\u201d",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:mjh257xyug2mpodoyy3he5ih/bafkreihcujumd3oermmuyc2domfddpkn46t2sprqyvhv5swbauogsryn4a",
+            "associated": {
+              "chat": {
+                "allowIncoming": "following"
+              },
+              "activitySubscription": {
+                "allowSubscriptions": "followers"
+              }
+            },
+            "viewer": {
+              "muted": false,
+              "mutedOnlyReposts": false,
+              "mutedOnlyQuoteposts": false,
+              "blockedBy": false
+            },
+            "labels": [],
+            "createdAt": "2023-04-28T03:29:23.837Z"
+          },
+          "record": {
+            "$type": "app.bsky.feed.post",
+            "createdAt": "2026-10-11T06:28:42.288Z",
+            "embed": {
+              "$type": "app.bsky.embed.record",
+              "record": {
+                "cid": "bafyreicufj6tkj57r7kuczfsmkneayfnazzwz2eqfxt3ee3c54a5z7dfjm",
+                "uri": "at://did:plc:ohc5zgkfxja4yesktx6hsbgz/app.bsky.feed.post/3mxlck4ccoc2s"
+              }
+            },
+            "langs": [
+              "en"
+            ],
+            "text": " Australopithecus 3 million years ago:"
+          },
+          "embed": {
+            "record": {
+              "uri": "at://did:plc:ohc5zgkfxja4yesktx6hsbgz/app.bsky.feed.post/3mxlck4ccoc2s",
+              "cid": "bafyreicufj6tkj57r7kuczfsmkneayfnazzwz2eqfxt3ee3c54a5z7dfjm",
+              "author": {
+                "did": "did:plc:ohc5zgkfxja4yesktx6hsbgz",
+                "handle": "oldfriend99.bsky.social",
+                "displayName": "josh (oldfriend99)",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ohc5zgkfxja4yesktx6hsbgz/bafkreig3mq65ebxvsztk2prsm2l2xe4aagaksgm5btz2owhm5ut6iw5cxy",
+                "associated": {
+                  "activitySubscription": {
+                    "allowSubscriptions": "followers"
+                  }
+                },
+                "viewer": {
+                  "muted": false,
+                  "mutedOnlyReposts": false,
+                  "mutedOnlyQuoteposts": false,
+                  "blockedBy": false
+                },
+                "labels": [],
+                "createdAt": "2025-05-15T01:53:59.541Z"
+              },
+              "value": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2026-10-11T05:48:06.374Z",
+                "langs": [
+                  "en"
+                ],
+                "text": "You guys should check out Tool"
+              },
+              "labels": [],
+              "likeCount": 581,
+              "replyCount": 44,
+              "repostCount": 28,
+              "quoteCount": 56,
+              "opThreadPostIndex": 1,
+              "opThreadPostCount": 2,
+              "indexedAt": "2026-10-11T05:48:05.253Z",
+              "embeds": [],
+              "$type": "app.bsky.embed.record#viewRecord"
+            },
+            "$type": "app.bsky.embed.record#view"
+          },
+          "bookmarkCount": 118,
+          "replyCount": 45,
+          "repostCount": 1670,
+          "likeCount": 8658,
+          "quoteCount": 7,
+          "indexedAt": "2026-10-11T06:28:43.357Z",
+          "viewer": {
+            "bookmarked": false,
+            "threadMuted": false,
+            "embeddingDisabled": false,
+            "knownLikers": {
+              "count": 1,
+              "actors": [
+                {
+                  "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
+                  "handle": "bsky.app",
+                  "displayName": "Bluesky",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
+                  "associated": {
+                    "chat": {
+                      "allowIncoming": "none"
+                    },
+                    "activitySubscription": {
+                      "allowSubscriptions": "followers"
+                    }
+                  },
+                  "viewer": {
+                    "muted": false,
+                    "mutedOnlyReposts": false,
+                    "mutedOnlyQuoteposts": false,
+                    "blockedBy": false,
+                    "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
+                  },
+                  "labels": [],
+                  "createdAt": "2023-04-12T04:53:57.057Z",
+                  "verification": {
+                    "verifications": [],
+                    "verifiedStatus": "none",
+                    "trustedVerifierStatus": "valid"
+                  }
+                }
+              ]
+            }
+          },
+          "labels": []
+        },
+        "reason": {
+          "by": {
             "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
             "handle": "bsky.app",
             "displayName": "Bluesky",
@@ -265,124 +308,324 @@
               "trustedVerifierStatus": "valid"
             }
           },
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.repost/3mxm7rmkvps23",
+          "cid": "bafyreic6ot6gqjne3ubdbbm4wx7mzdcwozymhbu57cn6kijiqblw4d624q",
+          "indexedAt": "2026-10-11T14:31:17.062Z",
+          "$type": "app.bsky.feed.defs#reasonRepost"
+        }
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:j54ofwzkxbeyjs6m2jwvwuro/app.bsky.feed.post/3mxkb3qz4cs27",
+          "cid": "bafyreifu6vbbbt67erc2dacxzkhzwcxmqqcxrs4bzttsvu347liiwktzdy",
+          "author": {
+            "did": "did:plc:j54ofwzkxbeyjs6m2jwvwuro",
+            "handle": "peloriemate.net",
+            "displayName": "maud",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:j54ofwzkxbeyjs6m2jwvwuro/bafkreic2uneip2pi3gbnuctef54pmm6v42avpouggd537fkwrme4qrok4y",
+            "associated": {
+              "chat": {
+                "allowIncoming": "all"
+              },
+              "activitySubscription": {
+                "allowSubscriptions": "followers"
+              }
+            },
+            "viewer": {
+              "muted": false,
+              "mutedOnlyReposts": false,
+              "mutedOnlyQuoteposts": false,
+              "blockedBy": false
+            },
+            "labels": [],
+            "createdAt": "2023-08-26T21:11:53.219Z"
+          },
           "record": {
             "$type": "app.bsky.feed.post",
-            "createdAt": "2026-09-04T16:22:42.630Z",
+            "createdAt": "2026-10-10T19:49:31.289Z",
             "embed": {
-              "$type": "app.bsky.embed.record",
+              "$type": "app.bsky.embed.recordWithMedia",
+              "media": {
+                "$type": "app.bsky.embed.images",
+                "images": [
+                  {
+                    "alt": "",
+                    "aspectRatio": {
+                      "height": 1440,
+                      "width": 1080
+                    },
+                    "image": {
+                      "$type": "blob",
+                      "ref": {
+                        "$link": "bafkreih4c2dmipplscpctkaqwdw5f66dnx7jg4zbvrw2w3livwxgkndx5i"
+                      },
+                      "mimeType": "image/jpeg",
+                      "size": 656371
+                    }
+                  }
+                ]
+              },
               "record": {
-                "cid": "bafyreiascok2wbvkm2yjpb4xxuoo5zadjwvgkgfuytlpvn73b5cmvmgyie",
-                "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mupeo3so622k"
+                "$type": "app.bsky.embed.record",
+                "record": {
+                  "cid": "bafyreigfvjyctcxjxhxq2dnfzkhxymto5ldh24euk6raewaeg7ln37n7ei",
+                  "uri": "at://did:plc:5dha4eux2jvil7raud3rlbed/app.bsky.feed.post/3mxk4ubvur22l"
+                }
               }
             },
             "langs": [
               "en"
             ],
-            "text": "Thread numbering is out of beta! Threaded posts are now automatically numbered, to help you follow along. Check out the automatic numbering on this thread to see it in action."
+            "text": "i got so many people calling this tweet fakeposting back when i made it but since this is bluesky and things have less reach on here im just going to post the photo"
           },
           "embed": {
-            "record": {
-              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mupeo3so622k",
-              "cid": "bafyreiascok2wbvkm2yjpb4xxuoo5zadjwvgkgfuytlpvn73b5cmvmgyie",
-              "author": {
-                "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
-                "handle": "bsky.app",
-                "displayName": "Bluesky",
-                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
-                "associated": {
-                  "chat": {
-                    "allowIncoming": "none"
-                  },
-                  "activitySubscription": {
-                    "allowSubscriptions": "followers"
-                  }
-                },
-                "viewer": {
-                  "muted": false,
-                  "mutedOnlyReposts": false,
-                  "mutedOnlyQuoteposts": false,
-                  "blockedBy": false,
-                  "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
-                },
-                "labels": [],
-                "createdAt": "2023-04-12T04:53:57.057Z",
-                "verification": {
-                  "verifications": [],
-                  "verifiedStatus": "none",
-                  "trustedVerifierStatus": "valid"
-                }
-              },
-              "value": {
-                "$type": "app.bsky.feed.post",
-                "createdAt": "2026-09-04T16:21:11.628Z",
-                "embed": {
-                  "$type": "app.bsky.embed.images",
-                  "images": [
-                    {
-                      "alt": "Screenshot of the Bluesky app showing someone searching for Starter Packs whose names include the keyword \"art.\" We see results that include \"Bluesky for Art History,\" \"Design and Art Folk,\" and \"Coven Caf\u00e9 Art Club.\"",
-                      "aspectRatio": {
-                        "height": 1968,
-                        "width": 3300
-                      },
-                      "image": {
-                        "$type": "blob",
-                        "ref": {
-                          "$link": "bafkreif244xt3eu5pqms74ql3uqmlzisyqarfowlpjxko4xqty5hcm3whi"
-                        },
-                        "mimeType": "image/jpeg",
-                        "size": 1363535
-                      }
-                    }
-                  ]
-                },
-                "langs": [
-                  "en"
-                ],
-                "text": "v1.132 is live!\n\nStarter Packs are one of the best ways to find new people to follow\u2014but how do you find the Starter Packs?\n\nAs of today, look for them right in the main search box. You'll see the results under the Starter Packs tab."
-              },
-              "labels": [],
-              "likeCount": 1389,
-              "replyCount": 60,
-              "repostCount": 259,
-              "quoteCount": 49,
-              "indexedAt": "2026-09-04T16:21:37.959Z",
-              "embeds": [
+            "media": {
+              "images": [
                 {
-                  "images": [
-                    {
-                      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreif244xt3eu5pqms74ql3uqmlzisyqarfowlpjxko4xqty5hcm3whi",
-                      "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreif244xt3eu5pqms74ql3uqmlzisyqarfowlpjxko4xqty5hcm3whi",
-                      "alt": "Screenshot of the Bluesky app showing someone searching for Starter Packs whose names include the keyword \"art.\" We see results that include \"Bluesky for Art History,\" \"Design and Art Folk,\" and \"Coven Caf\u00e9 Art Club.\"",
-                      "aspectRatio": {
-                        "height": 1968,
-                        "width": 3300
-                      }
-                    }
-                  ],
-                  "$type": "app.bsky.embed.images#view"
+                  "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:j54ofwzkxbeyjs6m2jwvwuro/bafkreih4c2dmipplscpctkaqwdw5f66dnx7jg4zbvrw2w3livwxgkndx5i",
+                  "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:j54ofwzkxbeyjs6m2jwvwuro/bafkreih4c2dmipplscpctkaqwdw5f66dnx7jg4zbvrw2w3livwxgkndx5i",
+                  "alt": "",
+                  "aspectRatio": {
+                    "height": 1440,
+                    "width": 1080
+                  }
                 }
               ],
-              "$type": "app.bsky.embed.record#viewRecord"
+              "$type": "app.bsky.embed.images#view"
             },
-            "$type": "app.bsky.embed.record#view"
+            "record": {
+              "record": {
+                "uri": "at://did:plc:5dha4eux2jvil7raud3rlbed/app.bsky.feed.post/3mxk4ubvur22l",
+                "cid": "bafyreigfvjyctcxjxhxq2dnfzkhxymto5ldh24euk6raewaeg7ln37n7ei",
+                "author": {
+                  "did": "did:plc:5dha4eux2jvil7raud3rlbed",
+                  "handle": "robdogdraws.bsky.social",
+                  "displayName": "robdog \ud83d\udc7e",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5dha4eux2jvil7raud3rlbed/bafkreieddgeptzgxgeygaasiiwqoo2kycumerlhfmuezkhejltuj6aglc4",
+                  "associated": {
+                    "chat": {
+                      "allowIncoming": "none"
+                    },
+                    "activitySubscription": {
+                      "allowSubscriptions": "followers"
+                    }
+                  },
+                  "viewer": {
+                    "muted": false,
+                    "mutedOnlyReposts": false,
+                    "mutedOnlyQuoteposts": false,
+                    "blockedBy": false
+                  },
+                  "labels": [],
+                  "createdAt": "2023-07-28T03:07:01.809Z"
+                },
+                "value": {
+                  "$type": "app.bsky.feed.post",
+                  "createdAt": "2026-10-10T18:33:45.612Z",
+                  "embed": {
+                    "$type": "app.bsky.embed.recordWithMedia",
+                    "media": {
+                      "$type": "app.bsky.embed.images",
+                      "images": [
+                        {
+                          "alt": "",
+                          "aspectRatio": {
+                            "height": 522,
+                            "width": 1198
+                          },
+                          "image": {
+                            "$type": "blob",
+                            "ref": {
+                              "$link": "bafkreieqoxqls622scqbg3asgrrwnvizdlypfe5pmnpavdsrmyzajgldna"
+                            },
+                            "mimeType": "image/jpeg",
+                            "size": 210027
+                          }
+                        }
+                      ]
+                    },
+                    "record": {
+                      "$type": "app.bsky.embed.record",
+                      "record": {
+                        "cid": "bafyreigby5xmwnvtjtwtlric5zqe5ayol44gfbx56ail4s2dv5b3vzejcu",
+                        "uri": "at://did:plc:4ozddcprwfzg6ryvzvhyx3il/app.bsky.feed.post/3mxk4nng6w22s"
+                      }
+                    }
+                  },
+                  "langs": [
+                    "en"
+                  ],
+                  "text": "Probably the coolest thing he's done next to being a potential Bomberman fan"
+                },
+                "labels": [],
+                "likeCount": 4670,
+                "replyCount": 42,
+                "repostCount": 912,
+                "quoteCount": 37,
+                "indexedAt": "2026-10-10T18:33:48.960Z",
+                "embeds": [
+                  {
+                    "media": {
+                      "images": [
+                        {
+                          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5dha4eux2jvil7raud3rlbed/bafkreieqoxqls622scqbg3asgrrwnvizdlypfe5pmnpavdsrmyzajgldna",
+                          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:5dha4eux2jvil7raud3rlbed/bafkreieqoxqls622scqbg3asgrrwnvizdlypfe5pmnpavdsrmyzajgldna",
+                          "alt": "",
+                          "aspectRatio": {
+                            "height": 522,
+                            "width": 1198
+                          }
+                        }
+                      ],
+                      "$type": "app.bsky.embed.images#view"
+                    },
+                    "record": {
+                      "record": {
+                        "uri": "at://did:plc:4ozddcprwfzg6ryvzvhyx3il/app.bsky.feed.post/3mxk4nng6w22s",
+                        "cid": "bafyreigby5xmwnvtjtwtlric5zqe5ayol44gfbx56ail4s2dv5b3vzejcu",
+                        "author": {
+                          "did": "did:plc:4ozddcprwfzg6ryvzvhyx3il",
+                          "handle": "vordio.net",
+                          "displayName": "Vordio",
+                          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:4ozddcprwfzg6ryvzvhyx3il/bafkreigdsxeaslj5h532yakeeu7mpj5ofn23hmiaycbepgmat357wnul7i",
+                          "associated": {
+                            "chat": {
+                              "allowIncoming": "none",
+                              "allowGroupInvites": "none"
+                            },
+                            "activitySubscription": {
+                              "allowSubscriptions": "followers"
+                            }
+                          },
+                          "viewer": {
+                            "muted": false,
+                            "mutedOnlyReposts": false,
+                            "mutedOnlyQuoteposts": false,
+                            "blockedBy": false
+                          },
+                          "labels": [],
+                          "createdAt": "2023-08-18T18:43:40.120Z"
+                        },
+                        "value": {
+                          "$type": "app.bsky.feed.post",
+                          "createdAt": "2026-10-10T18:30:02.801Z",
+                          "embed": {
+                            "$type": "app.bsky.embed.external",
+                            "external": {
+                              "description": "Nicolas Cage says he 'probably won't be working' with Amazon again after refusing to sign an AI waiver for 'Spider-Noir.'",
+                              "thumb": {
+                                "$type": "blob",
+                                "ref": {
+                                  "$link": "bafkreicklaenmdki6culjsdm4oeb7dhhyatgqxf4bqvxvoloa2quyzowim"
+                                },
+                                "mimeType": "image/jpeg",
+                                "size": 333287
+                              },
+                              "title": "Nicolas Cage Says He\u2019s \u2018Probably Not\u2019 Working With Amazon Again After Refusing to Sign AI Waiver for \u2018Spider-Noir,\u2019 Teases Joining \u2018True Detective\u2019",
+                              "uri": "https://variety.com/2026/tv/news/nicolas-cage-ai-waiver-amazon-spider-noir-1236907564/"
+                            }
+                          },
+                          "facets": [
+                            {
+                              "features": [
+                                {
+                                  "$type": "app.bsky.richtext.facet#link",
+                                  "uri": "https://variety.com/2026/tv/news/nicolas-cage-ai-waiver-amazon-spider-noir-1236907564/"
+                                }
+                              ],
+                              "index": {
+                                "byteEnd": 204,
+                                "byteStart": 177
+                              }
+                            }
+                          ],
+                          "langs": [
+                            "en"
+                          ],
+                          "text": "Good on him. \"Nicolas Cage Says He\u2019s \u2018Probably Not\u2019 Working With Amazon Again After Refusing to Sign AI Waiver for \u2018Spider-Noir,\u2019 Teases Joining \u2018True Detective\u2019\" variety.com/2026/tv/news..."
+                        },
+                        "labels": [],
+                        "likeCount": 944,
+                        "replyCount": 10,
+                        "repostCount": 176,
+                        "quoteCount": 47,
+                        "indexedAt": "2026-10-10T18:30:05.456Z",
+                        "$type": "app.bsky.embed.record#viewRecord"
+                      }
+                    },
+                    "$type": "app.bsky.embed.recordWithMedia#view"
+                  }
+                ],
+                "$type": "app.bsky.embed.record#viewRecord"
+              }
+            },
+            "$type": "app.bsky.embed.recordWithMedia#view"
           },
-          "bookmarkCount": 70,
-          "replyCount": 107,
-          "repostCount": 386,
-          "likeCount": 2130,
-          "quoteCount": 134,
-          "indexedAt": "2026-09-04T16:22:42.864Z",
+          "bookmarkCount": 1163,
+          "replyCount": 251,
+          "repostCount": 5141,
+          "likeCount": 20404,
+          "quoteCount": 159,
+          "indexedAt": "2026-10-10T19:49:35.854Z",
           "viewer": {
             "bookmarked": false,
             "threadMuted": false,
+            "replyDisabled": false,
             "embeddingDisabled": false
           },
-          "labels": []
+          "labels": [],
+          "threadgate": {
+            "uri": "at://did:plc:j54ofwzkxbeyjs6m2jwvwuro/app.bsky.feed.threadgate/3mxkb3qz4cs27",
+            "cid": "bafyreiehy5hrqvgjxgvccopuhjks4oigpwefcg3vyt3vcjkybv5eeznxwm",
+            "record": {
+              "$type": "app.bsky.feed.threadgate",
+              "createdAt": "2026-10-11T00:55:56.128Z",
+              "hiddenReplies": [
+                "at://did:plc:b6cwqec7rhwwi6hnaufgo2mq/app.bsky.feed.post/3mxkrizri6s2b"
+              ],
+              "post": "at://did:plc:j54ofwzkxbeyjs6m2jwvwuro/app.bsky.feed.post/3mxkb3qz4cs27"
+            },
+            "lists": []
+          }
+        },
+        "reason": {
+          "by": {
+            "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
+            "handle": "bsky.app",
+            "displayName": "Bluesky",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
+            "associated": {
+              "chat": {
+                "allowIncoming": "none"
+              },
+              "activitySubscription": {
+                "allowSubscriptions": "followers"
+              }
+            },
+            "viewer": {
+              "muted": false,
+              "mutedOnlyReposts": false,
+              "mutedOnlyQuoteposts": false,
+              "blockedBy": false,
+              "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
+            },
+            "labels": [],
+            "createdAt": "2023-04-12T04:53:57.057Z",
+            "verification": {
+              "verifications": [],
+              "verifiedStatus": "none",
+              "trustedVerifierStatus": "valid"
+            }
+          },
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.repost/3mxkszxasyy2f",
+          "cid": "bafyreiflgqqgpsq4723ynb2vflsrp3jddqy5mymb4fagiosimoa3qbyh5q",
+          "indexedAt": "2026-10-11T01:10:38.264Z",
+          "$type": "app.bsky.feed.defs#reasonRepost"
         },
         "opThreadPostIndex": 1,
-        "opThreadPostCount": 2
+        "opThreadPostCount": 3
       }
     ],
-    "cursor": "2026-09-04T16:22:42.63Z"
+    "cursor": "2026-10-11T01:10:37.88Z"
   }
 }

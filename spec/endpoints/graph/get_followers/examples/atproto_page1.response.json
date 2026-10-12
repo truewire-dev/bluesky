@@ -12,12 +12,6 @@
             "allowSubscriptions": "followers"
           }
         },
-        "viewer": {
-          "muted": false,
-          "mutedOnlyReposts": false,
-          "mutedOnlyQuoteposts": false,
-          "blockedBy": false
-        },
         "labels": [
           {
             "src": "did:plc:fmtj42jmivqv5ffhhniuflov",
@@ -32,48 +26,18 @@
         "indexedAt": "2026-09-03T00:15:32.501Z"
       },
       {
-        "did": "did:plc:eo5qah2eba55unbgdhwsucfj",
-        "handle": "muhannd.bsky.social",
+        "did": "did:plc:sgz666cad7u7njl7vpu3mrrr",
+        "handle": "vakaii.bsky.social",
         "displayName": "",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:eo5qah2eba55unbgdhwsucfj/bafkreibawz2zl7vmykgoswzhztvi65iz6qnretp4chtbk65lut5iqgtxg4",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:sgz666cad7u7njl7vpu3mrrr/bafkreigosb74y33ogjx3wujzxdgusqs2czb3ig4jmvowitig3j2yrbfa3m",
         "associated": {
           "activitySubscription": {
             "allowSubscriptions": "followers"
           }
         },
-        "viewer": {
-          "muted": false,
-          "mutedOnlyReposts": false,
-          "mutedOnlyQuoteposts": false,
-          "blockedBy": false
-        },
         "labels": [],
-        "createdAt": "2026-09-09T15:46:59.953Z",
-        "indexedAt": "2026-09-09T15:49:46.666Z"
-      },
-      {
-        "did": "did:plc:tbxtbxp62s7fc7n5stc5dgvy",
-        "handle": "evolvingyourman.com",
-        "displayName": "EvolvingYourMan",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tbxtbxp62s7fc7n5stc5dgvy/bafkreigfsv42zftcivvaibmw5xds3nzv7kr26tw4ulrlwq47dqrd6smexq",
-        "associated": {
-          "chat": {
-            "allowIncoming": "none"
-          },
-          "activitySubscription": {
-            "allowSubscriptions": "followers"
-          }
-        },
-        "viewer": {
-          "muted": false,
-          "mutedOnlyReposts": false,
-          "mutedOnlyQuoteposts": false,
-          "blockedBy": false
-        },
-        "labels": [],
-        "createdAt": "2024-11-19T00:30:44.805Z",
-        "description": "Hi. I'm Emma. Visit me at http://EvolvingYourMan.com for my thoughts on strong women and loving female authority in a modern marriage. Self proclaimed sex geek!",
-        "indexedAt": "2026-04-20T23:24:55.648Z"
+        "createdAt": "2026-10-12T19:40:43.154Z",
+        "indexedAt": "2026-10-12T19:42:43.246Z"
       }
     ],
     "subject": {
@@ -88,12 +52,6 @@
         "activitySubscription": {
           "allowSubscriptions": "followers"
         }
-      },
-      "viewer": {
-        "muted": false,
-        "mutedOnlyReposts": false,
-        "mutedOnlyQuoteposts": false,
-        "blockedBy": false
       },
       "labels": [],
       "createdAt": "2023-04-26T06:19:25.508Z",
@@ -114,6 +72,6 @@
       "description": "Social networking technology created by Bluesky. \n\nDeveloper-focused account. Follow @bsky.app for general announcements!\n\nBluesky API docs: docs.bsky.app\nAT Protocol specs: atproto.com",
       "indexedAt": "2026-03-03T20:08:17.348Z"
     },
-    "cursor": "3mv3todgk2625"
+    "cursor": "3mxpbiddcx52v"
   }
 }

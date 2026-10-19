@@ -4,8 +4,8 @@
     "feed": [
       {
         "post": {
-          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mv3shqdfuc2e",
-          "cid": "bafyreicctz5gxccl6ql35ae7a6wdk3zl2ry6o5ioltme52yezp7s6l42ji",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3my43eyfzs225",
+          "cid": "bafyreicumqqq5pqzxcimayqcxz3o2gl6dhl7yjjxlnkzkigbsl4gpixppe",
           "author": {
             "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
             "handle": "bsky.app",
@@ -36,52 +36,146 @@
           },
           "record": {
             "$type": "app.bsky.feed.post",
-            "createdAt": "2026-09-09T15:00:07.513Z",
+            "createdAt": "2026-10-17T21:55:13.889Z",
             "embed": {
-              "$type": "app.bsky.embed.images",
-              "images": [
-                {
-                  "alt": "An enormous pile of red apples and green apples\u2014sweet, tart, delicious, and coming soon to an Apple Store near you! Keep your eye on this thread (and maybe put on a sturdy hat) to learn more about today's big drops.",
-                  "aspectRatio": {
-                    "height": 3000,
-                    "width": 4000
-                  },
-                  "image": {
-                    "$type": "blob",
-                    "ref": {
-                      "$link": "bafkreih3mb3cwnbc5kv5b2qyy24q6banms25i5ut3cbty4ej2x7vjvd6y4"
-                    },
-                    "mimeType": "image/jpeg",
-                    "size": 1985909
-                  }
-                }
-              ]
+              "$type": "app.bsky.embed.record",
+              "record": {
+                "cid": "bafyreibgsjbesw7kf3l6o7r5uixnntoa2em3tmtaisjtl2aa6jfg66x4jq",
+                "uri": "at://did:plc:2eq3273yo4eq7xi7wxz2wqav/app.bsky.feed.post/3my3smgpxik2m"
+              }
             },
             "langs": [
               "en"
             ],
-            "text": "Not to brag, but ... we snagged a couple of passes to today\u2019s Apple event. Stay tuned for our take on all the latest and greatest Apple products."
+            "text": "no kings includes billionaires who think they\u2019re kings"
           },
           "embed": {
-            "images": [
-              {
-                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreih3mb3cwnbc5kv5b2qyy24q6banms25i5ut3cbty4ej2x7vjvd6y4",
-                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreih3mb3cwnbc5kv5b2qyy24q6banms25i5ut3cbty4ej2x7vjvd6y4",
-                "alt": "An enormous pile of red apples and green apples\u2014sweet, tart, delicious, and coming soon to an Apple Store near you! Keep your eye on this thread (and maybe put on a sturdy hat) to learn more about today's big drops.",
-                "aspectRatio": {
-                  "height": 3000,
-                  "width": 4000
+            "record": {
+              "uri": "at://did:plc:2eq3273yo4eq7xi7wxz2wqav/app.bsky.feed.post/3my3smgpxik2m",
+              "cid": "bafyreibgsjbesw7kf3l6o7r5uixnntoa2em3tmtaisjtl2aa6jfg66x4jq",
+              "author": {
+                "did": "did:plc:2eq3273yo4eq7xi7wxz2wqav",
+                "handle": "joshsternberg.com",
+                "displayName": "Josh Sternberg",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2eq3273yo4eq7xi7wxz2wqav/bafkreihnvl4eib7g2aihqyaqqfb5wwhg3c2bscpoqjr6ztfd6lkbnrdn6m",
+                "associated": {
+                  "chat": {
+                    "allowIncoming": "all",
+                    "allowGroupInvites": "all"
+                  },
+                  "activitySubscription": {
+                    "allowSubscriptions": "followers"
+                  }
+                },
+                "viewer": {
+                  "muted": false,
+                  "mutedOnlyReposts": false,
+                  "mutedOnlyQuoteposts": false,
+                  "blockedBy": false
+                },
+                "labels": [],
+                "createdAt": "2023-05-03T12:19:13.866Z",
+                "verification": {
+                  "verifications": [
+                    {
+                      "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+                      "issuerDisplayName": "Bluesky",
+                      "issuerHandle": "bsky.app",
+                      "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lsa3pvzqeb2e",
+                      "isValid": true,
+                      "createdAt": "2025-06-22T22:14:37.328Z"
+                    }
+                  ],
+                  "verifiedStatus": "valid",
+                  "trustedVerifierStatus": "none"
                 }
-              }
-            ],
-            "$type": "app.bsky.embed.images#view"
+              },
+              "value": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2026-10-17T19:18:20.097Z",
+                "embed": {
+                  "$type": "app.bsky.embed.images",
+                  "images": [
+                    {
+                      "alt": "Post from Ezra Levin:\n\n\u2757\u2757\u2757Mark Zuckerberg's meta just suspended the No Kings Instagram account. I just rushed back from my local No Kings to jump on this.\n\nBottom line, would be helpful for all pro-No Kings folks to elevate the issue and help us get the word out about No Kings today. The Nerd Reich strikes again.\n3:02 PM \u00b7 Oct 17, 2026\n\n",
+                      "aspectRatio": {
+                        "height": 522,
+                        "width": 1202
+                      },
+                      "image": {
+                        "$type": "blob",
+                        "ref": {
+                          "$link": "bafkreigxlv3brh2xyhr7vhem2iuwsvs6p5vaedcdrc3oz2oemkofml7cju"
+                        },
+                        "mimeType": "image/jpeg",
+                        "size": 269096
+                      }
+                    },
+                    {
+                      "alt": "TikTok has banned the entire Musk film account, citing political content that violates its policies. The move, which comes just as the Alex Gibney\u2019s investigation into Elon Musk expands to more than 470 screens across North America, raises concerns about Big Tech suppression that the very film seeks to expose.\n\nhttps://www.hollywoodreporter.com/news/politics-news/musk-movie-tiktok-banned-theaters-showtimes-1236734308/",
+                      "aspectRatio": {
+                        "height": 318,
+                        "width": 1278
+                      },
+                      "image": {
+                        "$type": "blob",
+                        "ref": {
+                          "$link": "bafkreicigpazb5x5dc3jcrg3nf5x2japr32f37ago527ntijmezjegbzve"
+                        },
+                        "mimeType": "image/jpeg",
+                        "size": 173499
+                      }
+                    }
+                  ]
+                },
+                "langs": [
+                  "en"
+                ],
+                "text": "Meta took down the No Kings instagram; TikTok banned the Musk documentary account for supposedly violating its political posting policies.\n\nA reminder that platforms are owned by the wealthiest of people, control the means of media distribution, & put their thumbs on the democracy scale as they wish"
+              },
+              "labels": [],
+              "likeCount": 7146,
+              "replyCount": 20,
+              "repostCount": 3016,
+              "quoteCount": 218,
+              "opThreadPostIndex": 1,
+              "opThreadPostCount": 2,
+              "indexedAt": "2026-10-17T19:18:23.156Z",
+              "embeds": [
+                {
+                  "images": [
+                    {
+                      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2eq3273yo4eq7xi7wxz2wqav/bafkreigxlv3brh2xyhr7vhem2iuwsvs6p5vaedcdrc3oz2oemkofml7cju",
+                      "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:2eq3273yo4eq7xi7wxz2wqav/bafkreigxlv3brh2xyhr7vhem2iuwsvs6p5vaedcdrc3oz2oemkofml7cju",
+                      "alt": "Post from Ezra Levin:\n\n\u2757\u2757\u2757Mark Zuckerberg's meta just suspended the No Kings Instagram account. I just rushed back from my local No Kings to jump on this.\n\nBottom line, would be helpful for all pro-No Kings folks to elevate the issue and help us get the word out about No Kings today. The Nerd Reich strikes again.\n3:02 PM \u00b7 Oct 17, 2026\n\n",
+                      "aspectRatio": {
+                        "height": 522,
+                        "width": 1202
+                      }
+                    },
+                    {
+                      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2eq3273yo4eq7xi7wxz2wqav/bafkreicigpazb5x5dc3jcrg3nf5x2japr32f37ago527ntijmezjegbzve",
+                      "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:2eq3273yo4eq7xi7wxz2wqav/bafkreicigpazb5x5dc3jcrg3nf5x2japr32f37ago527ntijmezjegbzve",
+                      "alt": "TikTok has banned the entire Musk film account, citing political content that violates its policies. The move, which comes just as the Alex Gibney\u2019s investigation into Elon Musk expands to more than 470 screens across North America, raises concerns about Big Tech suppression that the very film seeks to expose.\n\nhttps://www.hollywoodreporter.com/news/politics-news/musk-movie-tiktok-banned-theaters-showtimes-1236734308/",
+                      "aspectRatio": {
+                        "height": 318,
+                        "width": 1278
+                      }
+                    }
+                  ],
+                  "$type": "app.bsky.embed.images#view"
+                }
+              ],
+              "$type": "app.bsky.embed.record#viewRecord"
+            },
+            "$type": "app.bsky.embed.record#view"
           },
-          "bookmarkCount": 17,
-          "replyCount": 69,
-          "repostCount": 78,
-          "likeCount": 947,
-          "quoteCount": 26,
-          "indexedAt": "2026-09-09T15:00:45.669Z",
+          "bookmarkCount": 200,
+          "replyCount": 553,
+          "repostCount": 1679,
+          "likeCount": 8551,
+          "quoteCount": 343,
+          "indexedAt": "2026-10-17T21:55:14.064Z",
           "viewer": {
             "bookmarked": false,
             "threadMuted": false,
@@ -90,37 +184,477 @@
           },
           "labels": [],
           "threadgate": {
-            "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.threadgate/3mv3shqdfuc2e",
-            "cid": "bafyreieti6j2inkfq5t6zbv3e2cv35cws7bieqf6hngnhkawnthuwtnq2u",
+            "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.threadgate/3my43eyfzs225",
+            "cid": "bafyreiecqfhb6skzzmgca3wss723tbzzypnkp5ju5pbapjdhdaommypubm",
             "record": {
               "$type": "app.bsky.feed.threadgate",
-              "createdAt": "2026-09-09T16:08:57.587Z",
+              "createdAt": "2026-10-19T06:10:28.433Z",
               "hiddenReplies": [
-                "at://did:plc:bzoeanuisqpleh5b5ywrycro/app.bsky.feed.post/3mv3smgyhcc25",
-                "at://did:plc:fzczh5skw2ivqbpitgceokfq/app.bsky.feed.post/3mv3snnxsdk2e",
-                "at://did:plc:gktdd4zus32lcihrm4hugcps/app.bsky.feed.post/3mv3w552mlc22",
-                "at://did:plc:c5bqflfsbn7g46aipm6ayyob/app.bsky.feed.post/3mv3thzdtjk2c",
-                "at://did:plc:6irylomud4saesa5cgv3qnd4/app.bsky.feed.post/3mv3syfaf6c2i",
-                "at://did:plc:us3bkeij77l3fz4v5uwugqvd/app.bsky.feed.post/3mv3uuqmwc22z"
+                "at://did:plc:7cavdjqk2nmt3b26kn56fxma/app.bsky.feed.post/3my43nrlols2x",
+                "at://did:plc:ij3nfzayy2huwdiilfxkjq5h/app.bsky.feed.post/3my43rdpd522m",
+                "at://did:plc:5nf3c7ktd7qd6wbo7gai7iqv/app.bsky.feed.post/3my43ube7jk2q",
+                "at://did:plc:5nfbqzlz7wmbewoky32nqsx7/app.bsky.feed.post/3my43xgnl5s24",
+                "at://did:plc:pc2a37cgijwztazo64y47kxb/app.bsky.feed.post/3my43zlqn2s2k",
+                "at://did:plc:r2dad4gueixzmn63apq3ekjb/app.bsky.feed.post/3my446v7o6c22",
+                "at://did:plc:ppzpj4ywnz3bkeozthlbhzov/app.bsky.feed.post/3my44bvvwrk23",
+                "at://did:plc:hm5xklbo77pygypsfottjnn5/app.bsky.feed.post/3my44n4ojok2w",
+                "at://did:plc:pimdrsqb3o4dyvrzhhlygpz4/app.bsky.feed.post/3my44pwkprc2r",
+                "at://did:plc:627gbuht3alle4pppn6atsf7/app.bsky.feed.post/3my44sxopt22x",
+                "at://did:plc:rrjgaoeocfhkbub5iam6c6nu/app.bsky.feed.post/3my44qnru222z",
+                "at://did:plc:zb3j4ljvprz4eshe3yquc6co/app.bsky.feed.post/3my44srpxdc2i",
+                "at://did:plc:7wbcd3iduublmymho7iiicso/app.bsky.feed.post/3my44wfchuk25",
+                "at://did:plc:zhc4w4yyzlup5kjh3q7gr5ku/app.bsky.feed.post/3my453vsh7s2f",
+                "at://did:plc:zhc4w4yyzlup5kjh3q7gr5ku/app.bsky.feed.post/3my44ut5oe22f",
+                "at://did:plc:fy33mgjzegid56spk6wk7bma/app.bsky.feed.post/3my456viz6c2w",
+                "at://did:plc:oh7p6butxfg3shqf5qala3lm/app.bsky.feed.post/3my455fk6w225",
+                "at://did:plc:6shhd4fucyvwrup2hlvqnajl/app.bsky.feed.post/3my45ixkltc24",
+                "at://did:plc:7rzqegxm3jcafj56vcxkugm7/app.bsky.feed.post/3my45d57fa22a",
+                "at://did:plc:l6hl42sa54j3ppnxmzhxlaop/app.bsky.feed.post/3my44s5olvc2r",
+                "at://did:plc:6csjwmzqvdjvpzds2lkl3pdb/app.bsky.feed.post/3my44jpvacs2s",
+                "at://did:plc:2xqj5rao3rppdjanahifhvjl/app.bsky.feed.post/3my45vsgeyc2f",
+                "at://did:plc:rrbzsofjaun7etxwrjwwuoxm/app.bsky.feed.post/3my45o3npms2w",
+                "at://did:plc:qsllkcuektaoegm2g5xkpkvq/app.bsky.feed.post/3my46t6xxzs2o",
+                "at://did:plc:mj72f5hwv3ujbcg2gnsvwvsk/app.bsky.feed.post/3my46tnksj22h",
+                "at://did:plc:aexi5ez25ed6vhbtzpldx6p5/app.bsky.feed.post/3my47frn2p22y",
+                "at://did:plc:k2wvczxwpk6pwaislhcdghum/app.bsky.feed.post/3my46abb43c2z",
+                "at://did:plc:azo45zcvwfk6ab7uxne3kxuy/app.bsky.feed.post/3my46mjchas2c",
+                "at://did:plc:uvinmggblpkkqzktucgje7sj/app.bsky.feed.post/3my47xnv42c2c",
+                "at://did:plc:icgvsb6q4pegupliyxlchmke/app.bsky.feed.post/3my4ausvwyk2w",
+                "at://did:plc:eg57vg7oc2sgy6cl4rih62rx/app.bsky.feed.post/3my4auwjm622c",
+                "at://did:plc:q5gqr4mvfpylbabxcaa3kfu5/app.bsky.feed.post/3my4ba7euuc2b",
+                "at://did:plc:vdne6j7le23xj2vntzepyyjf/app.bsky.feed.post/3my4as6yejc23",
+                "at://did:plc:lzpm6nzfwt3ib4qaei27sjmf/app.bsky.feed.post/3my4aidw7mc2g",
+                "at://did:plc:zhc4w4yyzlup5kjh3q7gr5ku/app.bsky.feed.post/3my4a23aa5k2g",
+                "at://did:plc:6ogghufwupltwuyijzgypjew/app.bsky.feed.post/3my4cfgnrys2y",
+                "at://did:plc:cvn2gkd3rbeuudslzy4vvlpd/app.bsky.feed.post/3my4cfbsp4c2t",
+                "at://did:plc:2cx5dbanj6k2e4bld3oacbgx/app.bsky.feed.post/3my4bhxuxns2w",
+                "at://did:plc:rwgvi7nyn4owghapyj5viqh4/app.bsky.feed.post/3my4b5fnowk26",
+                "at://did:plc:hatpkgbjecea4nyzidbor4da/app.bsky.feed.post/3my4axkjgvs2k",
+                "at://did:plc:3u2cs5tnjxjjc4gwv7qtuu7m/app.bsky.feed.post/3my4adjq3z22t",
+                "at://did:plc:gkj5obmnu6itrwackku5tmgy/app.bsky.feed.post/3my46l6qq2k2n",
+                "at://did:plc:sdyqu7cybkzsk5he6qbmpbqd/app.bsky.feed.post/3my46cinkmk2k",
+                "at://did:plc:geql5zqjlpyllqyeuyqi6qsi/app.bsky.feed.post/3my4ea27als2d",
+                "at://did:plc:5zpfbv6bahpac6xgbp3uj657/app.bsky.feed.post/3my4eequhvc2v",
+                "at://did:plc:3wlqttgkbesgele5w26uqtfp/app.bsky.feed.post/3my4eex632s2d",
+                "at://did:plc:3nlq3vl22pytobyldizcz323/app.bsky.feed.post/3my4fhsy4ss2q",
+                "at://did:plc:2ycfblocj4xjv4aaistn57rx/app.bsky.feed.post/3my4evqalss2o",
+                "at://did:plc:mgoib4s7jseiiylcatahvo7m/app.bsky.feed.post/3my4eprx6ic2h",
+                "at://did:plc:mgoib4s7jseiiylcatahvo7m/app.bsky.feed.post/3my4eu424qc2h",
+                "at://did:plc:mgoib4s7jseiiylcatahvo7m/app.bsky.feed.post/3my4eutpyos2h",
+                "at://did:plc:gmzgh336pcbcdwpgzh4tq6g3/app.bsky.feed.post/3my4efmxqb22i",
+                "at://did:plc:opmtfh4njefhvha4r6kckfw6/app.bsky.feed.post/3my4fcv5ric2v",
+                "at://did:plc:sddydfc6cx7mylicumg76d5o/app.bsky.feed.post/3my4ed4mot22y",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my4gn5pyqc2d",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my4ggxth522d",
+                "at://did:plc:zs47thjwgfoj636s5aclwyzp/app.bsky.feed.post/3my4edj6o4227",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my4grmud2c2d",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my4gqfcry22d",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my4gpadom22d",
+                "at://did:plc:3kmqd22tsc63vx5ajct2yq2a/app.bsky.feed.post/3my4gp4mi5k2m",
+                "at://did:plc:adpi7v7qmooqrmmjl7x22p3x/app.bsky.feed.post/3my4fyllqys2n",
+                "at://did:plc:unxvzwsprflvbybvhxvlldbg/app.bsky.feed.post/3my4g4njhus25",
+                "at://did:plc:jdwyfpv5r6pzzyp6vyeizefo/app.bsky.feed.post/3my4fsnoids2d",
+                "at://did:plc:wknnk4h7rdluxzgpzygfjwrd/app.bsky.feed.post/3my4h33cvvc2n",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my4guogwus2d",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my4gvrpvtc2d",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my4guzqo322d",
+                "at://did:plc:v5iwsefvznpydnw64ymwg4zp/app.bsky.feed.post/3my4hjnwdkk27",
+                "at://did:plc:2oane6jiyy6ldo4mhfwe4gum/app.bsky.feed.post/3my4glfzpjs2z",
+                "at://did:plc:ebypcnkoiqaivygm3b47ezji/app.bsky.feed.post/3my4idardnk2x",
+                "at://did:plc:imvxfszubp6cnz4diesr7ymu/app.bsky.feed.post/3my4hzrfwwk2x",
+                "at://did:plc:lutrknzfyxczgioye5ylr6q2/app.bsky.feed.post/3my4gwsdfgk25",
+                "at://did:plc:dsarz2j3if4kxjbew23sp2oj/app.bsky.feed.post/3my4jdkrluk2g",
+                "at://did:plc:bn6ymp53xjnwx52lnmf4by5a/app.bsky.feed.post/3my4jcmwjek25",
+                "at://did:plc:ukiufurkn6ks4blepwtokswz/app.bsky.feed.post/3my4j6osb7k2q",
+                "at://did:plc:flztnp4jahyb467phvez6fna/app.bsky.feed.post/3my4jsjuvgk2w",
+                "at://did:plc:ao2vyokzaegtw37bh72kjk62/app.bsky.feed.post/3my4mhbovw22z",
+                "at://did:plc:rnrla32ny3gl4qdz5nrvzoms/app.bsky.feed.post/3my4mgwndhk2s",
+                "at://did:plc:flztnp4jahyb467phvez6fna/app.bsky.feed.post/3my4jpjsdos2w",
+                "at://did:plc:arwh3g7emx5ps5mcwlhyez4i/app.bsky.feed.post/3my4imtcryk2q",
+                "at://did:plc:b5jg3xhopcq6z6gypnymcl36/app.bsky.feed.post/3my4noolyss2d",
+                "at://did:plc:p3bt3e2odarykznio7davq3u/app.bsky.feed.post/3my4na3mt6c2q",
+                "at://did:plc:bij36h55pfjbtawh3xwasfc7/app.bsky.feed.post/3my4k7tdejc2s",
+                "at://did:plc:rgiyj4j5kscbwvuugn5o2lsz/app.bsky.feed.post/3my4od43tjk25",
+                "at://did:plc:h4vp2frsybse2ttveh7qjbed/app.bsky.feed.post/3my4r52k3ts2e",
+                "at://did:plc:a4gbmm6we4lyqf4g2yi2nphr/app.bsky.feed.post/3my4kb722dc2d",
+                "at://did:plc:5jqz6za7vlsouxknz6swjlxw/app.bsky.feed.post/3my4k2b7zmc2v",
+                "at://did:plc:7ex7jt6hu5qcl33qcjhbsuu3/app.bsky.feed.post/3my4iit7uxc2e",
+                "at://did:plc:iorld26xvghrfg7mnnzioeyi/app.bsky.feed.post/3my4v7qgrks2u",
+                "at://did:plc:5mwl3vtv7u4bfc2zn3qrr4ym/app.bsky.feed.post/3my4ui4urbk2e",
+                "at://did:plc:6zxydgq4xuxiam4ydoklgmlz/app.bsky.feed.post/3my4obwecwg2v",
+                "at://did:plc:pyzyfip7sfea2zdee7nxipvf/app.bsky.feed.post/3my4l63xnes2w",
+                "at://did:plc:nbiawgijlssgamgff2o5ulfa/app.bsky.feed.post/3my4k4hfvrk2t",
+                "at://did:plc:boavl7z3aaybslw5gvssi3a2/app.bsky.feed.post/3my4uuqz7622q",
+                "at://did:plc:qokbxxrozboz4264lgmjc6fr/app.bsky.feed.post/3my4hdmefis2q",
+                "at://did:plc:ygprjyphkmoefvtbrhtfr44a/app.bsky.feed.post/3my5cs5cyik2z",
+                "at://did:plc:zx5pph532cbx36bc4rjnpwwj/app.bsky.feed.post/3my54b32ihk2w",
+                "at://did:plc:kemndjwzvoo3khq3vp2jmmcs/app.bsky.feed.post/3my4yy63dh22i",
+                "at://did:plc:xh4chqw6k5rhcjzb572yoaye/app.bsky.feed.post/3my5gsccokk2s",
+                "at://did:plc:juhijhn6kmd4nh64ulnm45ji/app.bsky.feed.post/3my5nmwk45s2f",
+                "at://did:plc:h63rjxhq524pzv3req57u5u7/app.bsky.feed.post/3my5q3ebiys2g",
+                "at://did:plc:vjnmymvndjtrwd7kwcahrbor/app.bsky.feed.post/3my5iviwfys2z",
+                "at://did:plc:t6ecwvugdzcf2y4yiht5q2g3/app.bsky.feed.post/3my5nin2jzk2s",
+                "at://did:plc:jmftaiq6tocbivxcf4btpghg/app.bsky.feed.post/3my5dtvx6vk24",
+                "at://did:plc:rn34xqk4jlmtqj2uxrbt7m6d/app.bsky.feed.post/3my5d7yzlxk27",
+                "at://did:plc:2xllbirw3re6dxdn35stzdez/app.bsky.feed.post/3my5k4kcch22f",
+                "at://did:plc:w7xoqo4hqlksn4filfpunwnr/app.bsky.feed.post/3my5dd7ibwk2y",
+                "at://did:plc:tnkil5umhz5k3qd5qgnkszg2/app.bsky.feed.post/3my5ljc6glk23",
+                "at://did:plc:im4wobumssotsesuoxz6jlvw/app.bsky.feed.post/3my5slkiyak2d",
+                "at://did:plc:ewmxij46za6qjvpstm77pznl/app.bsky.feed.post/3my5mgsshhk25",
+                "at://did:plc:p6nqzgxs4todtzvxhd5rx3jw/app.bsky.feed.post/3my5n24lzgs2d",
+                "at://did:plc:wnw3ryurrr7nt3t6nmse2fsc/app.bsky.feed.post/3my54pmdth22b",
+                "at://did:plc:feuxob54fxi7eul4q25ek42l/app.bsky.feed.post/3my5r56vnck2d",
+                "at://did:plc:oxb42bj35l3dqh3p2p5zwitb/app.bsky.feed.post/3my5nlnkmf227",
+                "at://did:plc:wbcudwitx6da673hkkyjgyvt/app.bsky.feed.post/3my5sydnysk2y",
+                "at://did:plc:xkmzc767yq7s5vjatn5vg3wa/app.bsky.feed.post/3my5rkwilv22v",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my5pqk44gs2v",
+                "at://did:plc:knlbjnn2yo6hqv7n6ykbxky5/app.bsky.feed.post/3my5qznuhck22",
+                "at://did:plc:peekq4v2rncqp4w5uu3icde4/app.bsky.feed.post/3my5p2qcnhs2e",
+                "at://did:plc:tmpbvioios3xgzglfzqbqajk/app.bsky.feed.post/3my5rgzddw222",
+                "at://did:plc:jtl6fplze2tg2no3pnxyjoyr/app.bsky.feed.post/3my5qma5xok2u",
+                "at://did:plc:i5tndyvcx6rkldyd2dkr6m7c/app.bsky.feed.post/3my5qktigks2d",
+                "at://did:plc:pukom5zn2xsls5mazrf7vvgt/app.bsky.feed.post/3my5mm5annc2q",
+                "at://did:plc:x72sz3daxvheioeaymt7kpxw/app.bsky.feed.post/3my5fvfgmdk2j",
+                "at://did:plc:flztnp4jahyb467phvez6fna/app.bsky.feed.post/3my4jnaaw4k2w",
+                "at://did:plc:psnjo4sajhs3aojsmbmizuch/app.bsky.feed.post/3my4r2uj5v22m",
+                "at://did:plc:rn2fqwrbnnzuvtq47m3u733z/app.bsky.feed.post/3my5tgqbjts2v",
+                "at://did:plc:qm6fioizwxa6474i57a77g73/app.bsky.feed.post/3my5rvrdxl22i",
+                "at://did:plc:pczgu4o3ien7vebke2ldwgsq/app.bsky.feed.post/3my5qgqfdfk2r",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my5prvd3d22v",
+                "at://did:plc:hjqbgq6bkmzibcqemgt2rgfj/app.bsky.feed.post/3my5snyqmhc22",
+                "at://did:plc:yzpnuhaug4noo6llm24vplff/app.bsky.feed.post/3my5ocovpe22k",
+                "at://did:plc:pzhpoxryrremqii3lfh4nob5/app.bsky.feed.post/3my5g45zghs2y",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my5psidyoc2v",
+                "at://did:plc:pz2oke4vnbgcz3wvjh76f65u/app.bsky.feed.post/3my5ujy4zlc2f",
+                "at://did:plc:lj2svvbvbanfdtdypkz57erv/app.bsky.feed.post/3my5qvexxjk2r",
+                "at://did:plc:vcouek4bs2f64rkrhbdr6sf2/app.bsky.feed.post/3my5qltvj3k2v",
+                "at://did:plc:z2w5kftc6zwztcbw6qkpmgvk/app.bsky.feed.post/3my5ftxzn7s2x",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my5px62bqc2v",
+                "at://did:plc:26l5foyejtomzvnlsmvmzrvu/app.bsky.feed.post/3my5vwsroq22c",
+                "at://did:plc:m7n6pp362pv47tvl7y7j2lzr/app.bsky.feed.post/3my5u4dxwms2e",
+                "at://did:plc:wq7dubwpgh3bkjfb26f3f3gj/app.bsky.feed.post/3my5s4vwjy223",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my5pzktrf22v",
+                "at://did:plc:rwly6wlnncnfnbsixowf3flf/app.bsky.feed.post/3my55lt4tos2f",
+                "at://did:plc:phmyima7xyhnohrvufklgvas/app.bsky.feed.post/3my55goigt223",
+                "at://did:plc:yqijfegimx3dzxtdjwrenh4u/app.bsky.feed.post/3my5wn37mvs2p",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my5pylc5rc2v",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my5pnepm7s2v",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my5pj6awoc2v",
+                "at://did:plc:nh4scumdo4ghlf2bppyc5z35/app.bsky.feed.post/3my5wsdmahc2n",
+                "at://did:plc:zgubbkjvc4rcslkxhhvezwma/app.bsky.feed.post/3my5w5zv3322c",
+                "at://did:plc:x6oebprnmlgj67jou3wdu4bd/app.bsky.feed.post/3my5x2puduc27",
+                "at://did:plc:3wih4iqcoi6vj44g3x73vgex/app.bsky.feed.post/3my5yuvs4322o",
+                "at://did:plc:mt6r2mgmssnvykqhsgznb5kh/app.bsky.feed.post/3my47v5fut22u",
+                "at://did:plc:zp653ebnfbvhmxfsvx5bdemx/app.bsky.feed.post/3my5xu2lof22y",
+                "at://did:plc:xrfpog2twojrznvjdtcdgj54/app.bsky.feed.post/3my5yzvnw4s2n",
+                "at://did:plc:owrjpmuuy3fmib6isuwldawn/app.bsky.feed.post/3my5ywmhqe22y",
+                "at://did:plc:omm4fo2gz3lgyrg56jmbkcxm/app.bsky.feed.post/3my5yl3d6fk2r",
+                "at://did:plc:mpqvaxtxoykp3rf7ccenxm24/app.bsky.feed.post/3my5ykqffzc2e",
+                "at://did:plc:w7qvabfx4vyhn2molikaenpi/app.bsky.feed.post/3my5yilv6nk23",
+                "at://did:plc:lpyt3wokg533gbyqopugs5fr/app.bsky.feed.post/3my5yaten7c2z",
+                "at://did:plc:u3stk6pvc3e6fgvreruynkk7/app.bsky.feed.post/3my62jsz4jc2y",
+                "at://did:plc:ojl62eiciiqwuulfspybsjj4/app.bsky.feed.post/3my5zx3kqlc25",
+                "at://did:plc:x2xzh2qjwjnb5a7ku6wrtosk/app.bsky.feed.post/3my5zwi2kx22z",
+                "at://did:plc:on2mo4v4fmw2owy7u5jvjanu/app.bsky.feed.post/3my5zrviez22w",
+                "at://did:plc:vy3i7app5xdokj67bobtzqfu/app.bsky.feed.post/3my5zirojic2i",
+                "at://did:plc:ipgy3ntw3f3tjzxt7k5ablf4/app.bsky.feed.post/3my5zf2hyzs2p",
+                "at://did:plc:t7nykzvc2rowauarqxb6nntd/app.bsky.feed.post/3my5qtek23c2j",
+                "at://did:plc:zvbjauorxxvokg4hxts6lvu2/app.bsky.feed.post/3my5k3hdbu226",
+                "at://did:plc:yjgfz5ezxhbqhgd6mupb5kbr/app.bsky.feed.post/3my636uxaklx2",
+                "at://did:plc:udywi35s24jawkiom5e7q6nl/app.bsky.feed.post/3my633mbdhk2l",
+                "at://did:plc:za4ur62jhbbke5gzrdggizs2/app.bsky.feed.post/3my62r4e6sk2f",
+                "at://did:plc:oc63rhx4glje2et4ugbjpcl2/app.bsky.feed.post/3my65jakqhc2l",
+                "at://did:plc:kmvibzrqvqblf2yqnovyx5tm/app.bsky.feed.post/3my656ztg5c27",
+                "at://did:plc:yierznz7kqoslqdj7aql7d5l/app.bsky.feed.post/3my64s2nkok2u",
+                "at://did:plc:my2yycfjw367rfuszpufesta/app.bsky.feed.post/3my64culp2c2h",
+                "at://did:plc:y47ecvi6stru5yaxy274h6dh/app.bsky.feed.post/3my64arrqyc2e",
+                "at://did:plc:vhmsgtdnzllemlzzw4mze2mv/app.bsky.feed.post/3my642zeoys2x",
+                "at://did:plc:zt735wakttud7q35mly4fdr2/app.bsky.feed.post/3my64bqqf6k2t",
+                "at://did:plc:z4lwuvzf3242dub44d4qyton/app.bsky.feed.post/3my63sz7ekc22",
+                "at://did:plc:v7y2yndevz4eaneupy2qaoiz/app.bsky.feed.post/3my63oi4szk2v",
+                "at://did:plc:kxknsgybzfeabqsuq7wira2l/app.bsky.feed.post/3my5uxeboi22i",
+                "at://did:plc:pamkj2xyyh4iioycbnlz3ous/app.bsky.feed.post/3my6ang4bvk2m",
+                "at://did:plc:xvk5mewissid7l2yrfo25hwe/app.bsky.feed.post/3my6anacark27",
+                "at://did:plc:w2ywmcah6irhice6i4yvibj7/app.bsky.feed.post/3my6a7giz6c2d",
+                "at://did:plc:tqzqf7rrtvz7yuofdohic2eo/app.bsky.feed.post/3my67yui7qk2r",
+                "at://did:plc:oznf7zeohkffzfoparhcblyc/app.bsky.feed.post/3my67djkjf22f",
+                "at://did:plc:q7v7mqyy2jydwz35l6qmygz2/app.bsky.feed.post/3my6covwvqc2y",
+                "at://did:plc:zo3x427ezjnf7qej6sdi6pvd/app.bsky.feed.post/3my6cdklmik2n",
+                "at://did:plc:n4up4f3ws6qdyepvgqwwrwfe/app.bsky.feed.post/3my6ggg2vzs2w",
+                "at://did:plc:yvkv7rzhdrelwq5b7waqvyn5/app.bsky.feed.post/3my6g5je4522o",
+                "at://did:plc:tyapn6ikopyp3gtmfjpc3jnk/app.bsky.feed.post/3my6fdf5kp22m",
+                "at://did:plc:xlgrtvrssgdf26dtyvkoe4vp/app.bsky.feed.post/3my6ezdehuc2j",
+                "at://did:plc:w2gaquyycdvwelhmgxo262lo/app.bsky.feed.post/3my6es2lhp22z",
+                "at://did:plc:vgrkac7vnp4ikttrbs2ojldq/app.bsky.feed.post/3my6emf3uwc2h",
+                "at://did:plc:q3rlndgqzvmg4gzhfmm44odz/app.bsky.feed.post/3my6dx4iw622r",
+                "at://did:plc:rdrfjcj2wsxaaxjani3wopqz/app.bsky.feed.post/3my6hfxfrj222",
+                "at://did:plc:ttnsclr4clpx7vh5jpwu6ffi/app.bsky.feed.post/3my6h2zw6j22o",
+                "at://did:plc:wuanb76oh7rbgrj4c4onvnt5/app.bsky.feed.post/3my6hpls4mk25",
+                "at://did:plc:xykfeb7ieeo335g3aly6vev4/app.bsky.feed.post/3my6hwt2m2c2c",
+                "at://did:plc:va46zabrhkw6obbz23nmltf6/app.bsky.feed.post/3my6lmuy2uk2v",
+                "at://did:plc:ry25uqgqi6gt6mlcre2z2jrj/app.bsky.feed.post/3my6ljhc5ic25",
+                "at://did:plc:zixsra2nspnuradmfx4utxn4/app.bsky.feed.post/3my6ld6eekk2h",
+                "at://did:plc:q75sfnprgu2fqckhm74w5qhr/app.bsky.feed.post/3my6kdxqtfs26",
+                "at://did:plc:v6kylm7wrcupxsbbyesmwup7/app.bsky.feed.post/3my6jwq6tuk2r",
+                "at://did:plc:znjmea5b4jw6wkmn7hp2h62f/app.bsky.feed.post/3my6jj5pzak2b",
+                "at://did:plc:ssbgi3be2gzphrn5dftiqykt/app.bsky.feed.post/3my6n7iu7pc2a",
+                "at://did:plc:xrqnup5vqdcslrobf3xkgrgs/app.bsky.feed.post/3my6sem37dc2e",
+                "at://did:plc:twwoubq5rzjm3vvp26bsz4db/app.bsky.feed.post/3my6s54bbvk2g",
+                "at://did:plc:x5eszfwja73t6igfmsucrmb6/app.bsky.feed.post/3my6vvtru3k2h",
+                "at://did:plc:sv3mq4q5kpboiszuerosc756/app.bsky.feed.post/3my724uylz22x",
+                "at://did:plc:k7tqnohoj76oyyfolyszsunw/app.bsky.feed.post/3my6wmmq3k22o",
+                "at://did:plc:5vg4j26oqz66zmomvpygmyli/app.bsky.feed.post/3my5pr2p5m22v",
+                "at://did:plc:altifbmmvpgrtzbrhdyzqjkt/app.bsky.feed.post/3my6oncand22k",
+                "at://did:plc:zsmweestegqfu6sixhzpuapw/app.bsky.feed.post/3my5r2n5tas2u",
+                "at://did:plc:xjerf73xxwizrejnron6kpdz/app.bsky.feed.post/3my767pdtas2y",
+                "at://did:plc:k7r3cihw66sw7azv3asean2n/app.bsky.feed.post/3my645m22ek2n",
+                "at://did:plc:tfaezkecxsu3t7cfzr5abfhs/app.bsky.feed.post/3my76teey2s2c",
+                "at://did:plc:pjoxajfuscqjelxgt6tm4nyf/app.bsky.feed.post/3my76qu6xr22p",
+                "at://did:plc:w7ilbizntw3md6pgv4b6m57e/app.bsky.feed.post/3my6egd6ve22k",
+                "at://did:plc:yzpnuhaug4noo6llm24vplff/app.bsky.feed.post/3my5ou5scxs2k",
+                "at://did:plc:v7dl3hoxfq4h5tvta3wbppgn/app.bsky.feed.post/3my5r4sp4ac2w",
+                "at://did:plc:yaom5ph64tyze6v3id22e4up/app.bsky.feed.post/3my4h5qsylc2y",
+                "at://did:plc:xjwaj3uu3ufs5w4om5lvuevv/app.bsky.feed.post/3my6ichs4pk2u",
+                "at://did:plc:slp3y3yapocvyqzafr7owidv/app.bsky.feed.post/3my7c4z6cq22l",
+                "at://did:plc:7klftymrbdbcrn3eioxfbpsp/app.bsky.feed.post/3my7bqjscrc2w",
+                "at://did:plc:sqimxf5fjuc5vdzgh2kvcejb/app.bsky.feed.post/3my76rfn3522z",
+                "at://did:plc:w4bmjxnxfrxxpifkq5lhdvx4/app.bsky.feed.post/3my7fnkg6j22f",
+                "at://did:plc:steosrikb74fsze5u6vcddx6/app.bsky.feed.post/3my7drbytc22f",
+                "at://did:plc:ofh3tnw5od3ic52suraazszy/app.bsky.feed.post/3my7gw5n2yk2t"
               ],
-              "post": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mv3shqdfuc2e"
+              "post": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3my43eyfzs225"
             },
             "lists": []
           }
-        },
-        "opThreadPostIndex": 1,
-        "opThreadPostCount": 2
+        }
       },
       {
         "post": {
-          "uri": "at://did:plc:xb2urvqt5f4zzccjs46hysbf/app.bsky.feed.post/3muplmkx56s2k",
-          "cid": "bafyreidu2rxt55wzm3wmadbp6fzfrik6idvmh34qk23gwsssx6fqdgxbqm",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mxzez2m7wk2r",
+          "cid": "bafyreican5kuhfukvxsfoieywn2inxfz6eeq2odzaijf5iteljffrvuvze",
           "author": {
-            "did": "did:plc:xb2urvqt5f4zzccjs46hysbf",
-            "handle": "cee.wtf",
-            "displayName": "cee",
-            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:xb2urvqt5f4zzccjs46hysbf/bafkreigyfwcdlgfoo73jsjas2mtmcwzugmg37gdobl6psgfmz47lwuvncu",
+            "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
+            "handle": "bsky.app",
+            "displayName": "Bluesky",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
             "associated": {
+              "chat": {
+                "allowIncoming": "none"
+              },
+              "activitySubscription": {
+                "allowSubscriptions": "followers"
+              }
+            },
+            "viewer": {
+              "muted": false,
+              "mutedOnlyReposts": false,
+              "mutedOnlyQuoteposts": false,
+              "blockedBy": false,
+              "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
+            },
+            "labels": [],
+            "createdAt": "2023-04-12T04:53:57.057Z",
+            "verification": {
+              "verifications": [],
+              "verifiedStatus": "none",
+              "trustedVerifierStatus": "valid"
+            }
+          },
+          "record": {
+            "$type": "app.bsky.feed.post",
+            "createdAt": "2026-10-16T20:09:31.738Z",
+            "embed": {
+              "$type": "app.bsky.embed.record",
+              "record": {
+                "cid": "bafyreigqq7ji6rqxtiwfvn2qhgn2bzp36sbiqtxpyxs4u3mr5ghufsivjy",
+                "uri": "at://did:plc:4dhxbcivqmkruzpbhnxhprm6/app.bsky.feed.post/3mxynvdq5g22g"
+              }
+            },
+            "facets": [
+              {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                  {
+                    "$type": "app.bsky.richtext.facet#mention",
+                    "did": "did:plc:my4ujjzrbmcikzuddeg55u77"
+                  }
+                ],
+                "index": {
+                  "byteEnd": 293,
+                  "byteStart": 277
+                }
+              }
+            ],
+            "langs": [
+              "en"
+            ],
+            "text": "\u201cPro wrestling conversations, like sports on Bluesky across the board, rarely engagement-farm\u2014posts are celebratory and much more real. The lesson is to invest in product features that serve people who care more about the community than they care about going viral.\u201d \u2014 @harry.bsky.team"
+          },
+          "embed": {
+            "record": {
+              "uri": "at://did:plc:4dhxbcivqmkruzpbhnxhprm6/app.bsky.feed.post/3mxynvdq5g22g",
+              "cid": "bafyreigqq7ji6rqxtiwfvn2qhgn2bzp36sbiqtxpyxs4u3mr5ghufsivjy",
+              "author": {
+                "did": "did:plc:4dhxbcivqmkruzpbhnxhprm6",
+                "handle": "newsofprowrestling.bsky.social",
+                "displayName": "NPW (The News of Pro Wrestling)",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:4dhxbcivqmkruzpbhnxhprm6/bafkreiepww4scy2vl3mp2xzdbftftyfjpptq26ortjyegt2ual6hdmlosa",
+                "associated": {
+                  "activitySubscription": {
+                    "allowSubscriptions": "followers"
+                  }
+                },
+                "viewer": {
+                  "muted": false,
+                  "mutedOnlyReposts": false,
+                  "mutedOnlyQuoteposts": false,
+                  "blockedBy": false
+                },
+                "labels": [],
+                "createdAt": "2026-06-10T16:36:06.264Z"
+              },
+              "value": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2026-10-16T13:15:51.019Z",
+                "embed": {
+                  "$type": "app.bsky.embed.external",
+                  "external": {
+                    "description": "\"You want a place to go when the big moments are happening, and an evergreen community to shoot the shit with during the quieter days.\u201d",
+                    "thumb": {
+                      "$type": "blob",
+                      "ref": {
+                        "$link": "bafkreiflje7wlwnbji6ua3b4mm6kqvr4gi6ry2knzmr3ymfozjqlvp7djq"
+                      },
+                      "mimeType": "image/jpeg",
+                      "size": 45197
+                    },
+                    "title": "Bluesky Loves The Sickos: Why They Want Even More Pro Wrestling Fans",
+                    "uri": "https://thenpw.ghost.io/bluesky-wants-more-pro-wrestling-fans/"
+                  }
+                },
+                "facets": [
+                  {
+                    "$type": "app.bsky.richtext.facet",
+                    "features": [
+                      {
+                        "$type": "app.bsky.richtext.facet#mention",
+                        "did": "did:plc:ofdhjyg573sn2v2dd3vgsciv"
+                      }
+                    ],
+                    "index": {
+                      "byteEnd": 234,
+                      "byteStart": 212
+                    }
+                  }
+                ],
+                "langs": [
+                  "en"
+                ],
+                "text": "\"The experience of a wrestling fan is very similar to other sports fans. You want a place to go when the big moments are happening, and an evergreen community to shoot the shit with during the quieter days.\u201d \n\n@stholeary.bsky.social interviewed Bluesky's Harry Packer about pro wrestling."
+              },
+              "labels": [],
+              "likeCount": 110,
+              "replyCount": 2,
+              "repostCount": 26,
+              "quoteCount": 12,
+              "indexedAt": "2026-10-16T13:15:51.452Z",
+              "embeds": [
+                {
+                  "external": {
+                    "uri": "https://thenpw.ghost.io/bluesky-wants-more-pro-wrestling-fans/",
+                    "title": "Bluesky Loves The Sickos: Why They Want Even More Pro Wrestling Fans",
+                    "description": "\"You want a place to go when the big moments are happening, and an evergreen community to shoot the shit with during the quieter days.\u201d",
+                    "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:4dhxbcivqmkruzpbhnxhprm6/bafkreiflje7wlwnbji6ua3b4mm6kqvr4gi6ry2knzmr3ymfozjqlvp7djq"
+                  },
+                  "$type": "app.bsky.embed.external#view"
+                }
+              ],
+              "$type": "app.bsky.embed.record#viewRecord"
+            },
+            "$type": "app.bsky.embed.record#view"
+          },
+          "bookmarkCount": 36,
+          "replyCount": 111,
+          "repostCount": 115,
+          "likeCount": 946,
+          "quoteCount": 75,
+          "indexedAt": "2026-10-16T20:09:32.260Z",
+          "viewer": {
+            "bookmarked": false,
+            "threadMuted": false,
+            "replyDisabled": false,
+            "embeddingDisabled": false
+          },
+          "labels": [],
+          "threadgate": {
+            "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.threadgate/3mxzez2m7wk2r",
+            "cid": "bafyreiadl5qc4s2o4sqxpxt7ocl6wr5jw22zxp5ra5opo3gg5iddrduo7m",
+            "record": {
+              "$type": "app.bsky.feed.threadgate",
+              "createdAt": "2026-10-19T02:04:20.931Z",
+              "hiddenReplies": [
+                "at://did:plc:fggv6gfmjok2jy7ue63vn6jq/app.bsky.feed.post/3mxzf3idangol",
+                "at://did:plc:ue5p7t3rnb4ntiogspagv75u/app.bsky.feed.post/3mxzf3g7c3k2q",
+                "at://did:plc:fzczh5skw2ivqbpitgceokfq/app.bsky.feed.post/3mxzf7afxos25",
+                "at://did:plc:figrqlsxrcxcwutjx7pmi7w5/app.bsky.feed.post/3mxzf4uzz322z",
+                "at://did:plc:d6fx2oo326aa22a6gccevrfd/app.bsky.feed.post/3mxzfaoykvs25",
+                "at://did:plc:dyut3ee7ujz4w4yr4ua35meu/app.bsky.feed.post/3mxzfecxb3s2t",
+                "at://did:plc:lovkxmjpbgtnuijspjzpvmrk/app.bsky.feed.post/3mxzfzljmd22z",
+                "at://did:plc:cewv3xtgagei7nm3t3djimm4/app.bsky.feed.post/3mxzfzdh2v22b",
+                "at://did:plc:tpv3xy7lrukp5gotze4dtdxh/app.bsky.feed.post/3mxzfx7bzmeow",
+                "at://did:plc:eujachnerh3jafj2v5z4majv/app.bsky.feed.post/3mxzg6p66n22c",
+                "at://did:plc:gcpbgx23atzlevo466h45x64/app.bsky.feed.post/3mxzg53dboc2f",
+                "at://did:plc:3wrsyglbslbf44pqmymlbto6/app.bsky.feed.post/3mxzdc3gmgc2k",
+                "at://did:plc:uhhep6c7oywfxbzzoma3slu3/app.bsky.feed.post/3mxzgh2b2n22b",
+                "at://did:plc:agtooduacd4knbky6zdyksbi/app.bsky.feed.post/3mxzgp27wzs2w",
+                "at://did:plc:l4lr73twqlsebnpm4ftd7fci/app.bsky.feed.post/3mxzicbjbsc2x",
+                "at://did:plc:ujmxqcpmdr2u53qnlc4aofgv/app.bsky.feed.post/3mxzi27ov422q",
+                "at://did:plc:7r6jn5n3pq725spshksvrwnw/app.bsky.feed.post/3mxzhw72pdc2m",
+                "at://did:plc:coowzosozqy4p3g7f3b3j7nu/app.bsky.feed.post/3mxzhc3fkwk2n",
+                "at://did:plc:rom6a7y5ryj6h3yxaebekyzt/app.bsky.feed.post/3mxzh2rwydk2a",
+                "at://did:plc:romc4onb2plr4air44m2yvzf/app.bsky.feed.post/3mxzgmkmel227",
+                "at://did:plc:57ksprlkzyvwztefkh6vboov/app.bsky.feed.post/3mxzgln6dse2d",
+                "at://did:plc:k7bzwvfjbnzvu6i27wyz2mxd/app.bsky.feed.post/3mxzgitsej22p",
+                "at://did:plc:swxt5uomfk2etkos5pi5eshr/app.bsky.feed.post/3mxzgdt5buc2y",
+                "at://did:plc:cj3ybzvef4muctklqlagnz6w/app.bsky.feed.post/3mxzituk6ss2j",
+                "at://did:plc:36g65w7tqk24u7pztpazmp5t/app.bsky.feed.post/3mxzifgckrs2c",
+                "at://did:plc:tm27degtfdoorajvzqdhkzfc/app.bsky.feed.post/3mxzg5srsbk2r",
+                "at://did:plc:2fdcuxawqb6cysqh6d7smdn3/app.bsky.feed.post/3mxzhvwinsc2q",
+                "at://did:plc:cktknjkvjbnsxyiwbj6d6kda/app.bsky.feed.post/3mxzizg2cic2w",
+                "at://did:plc:h47xhrbc4m5yql5nkmr6u25x/app.bsky.feed.post/3mxzkge2j222h",
+                "at://did:plc:sgrmitbidbg5botjblcin2pk/app.bsky.feed.post/3mxzh7cs44w2q",
+                "at://did:plc:35544fpixyckyfdwcpzfh26y/app.bsky.feed.post/3mxzkncwbtk2l",
+                "at://did:plc:xb4ddwlgfmbckuje56vpciun/app.bsky.feed.post/3mxzj3rev5s2k",
+                "at://did:plc:uy7bo33yywxttjnfnqeaxyv6/app.bsky.feed.post/3mxzlqcejec2v",
+                "at://did:plc:d7be4klrzz77e6a2b3dsrpmn/app.bsky.feed.post/3mxzlhbxty22h",
+                "at://did:plc:mnezdxubymhe57pufwm2k6dj/app.bsky.feed.post/3mxzjyy2cf6pn",
+                "at://did:plc:ptzflttudpqcrf44hctiiylw/app.bsky.feed.post/3mxzknf3kn223",
+                "at://did:plc:ao2vyokzaegtw37bh72kjk62/app.bsky.feed.post/3mxzfehfksk2n",
+                "at://did:plc:rnrla32ny3gl4qdz5nrvzoms/app.bsky.feed.post/3my4mi5a73k2s",
+                "at://did:plc:rvqgc7lk567y67sjpx7vfazf/app.bsky.feed.post/3mxzhtg5ndk25",
+                "at://did:plc:mvor5vbp4et6khwvc2mqexya/app.bsky.feed.post/3my4grsgtws2a",
+                "at://did:plc:hisqswiqf2t7oygtzzftjtzv/app.bsky.feed.post/3my3ei6feis2a",
+                "at://did:plc:ozdnusiiijqqu364ekg277tr/app.bsky.feed.post/3my3dz6wrmc22"
+              ],
+              "post": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mxzez2m7wk2r"
+            },
+            "lists": []
+          }
+        }
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:pbvdchux22p3dblf47xgtq3m/app.bsky.feed.post/3mxu23gu4yc2f",
+          "cid": "bafyreiabutis5l2hwhzywb4qhjcaoi36qtmk3lnqddiqelpbuwohnmrrae",
+          "author": {
+            "did": "did:plc:pbvdchux22p3dblf47xgtq3m",
+            "handle": "stephenjudkins.bsky.social",
+            "displayName": "Stephen Judkins",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:pbvdchux22p3dblf47xgtq3m/bafkreid4i3xs5llhbr2bgnv2uzrucvjwhtpyykkrb5v2dfauhsnonfha2y",
+            "associated": {
+              "chat": {
+                "allowIncoming": "all"
+              },
               "activitySubscription": {
                 "allowSubscriptions": "followers"
               }
@@ -132,67 +666,165 @@
               "blockedBy": false
             },
             "labels": [],
-            "createdAt": "2024-11-14T02:19:10.084Z"
+            "createdAt": "2023-04-27T18:13:50.290Z"
           },
           "record": {
             "$type": "app.bsky.feed.post",
-            "createdAt": "2026-09-04T18:25:36.591Z",
+            "createdAt": "2026-10-14T17:10:41.835Z",
             "embed": {
-              "$type": "app.bsky.embed.video",
-              "aspectRatio": {
-                "height": 1298,
-                "width": 1874
-              },
-              "presentation": "default",
-              "video": {
-                "$type": "blob",
-                "ref": {
-                  "$link": "bafkreidxa3lbz3ubsprahwue2psjtxqes5r2susclpncjjef6ekwkn26ua"
-                },
-                "mimeType": "video/mp4",
-                "size": 16831693
-              }
-            },
-            "facets": [
-              {
-                "features": [
-                  {
-                    "$type": "app.bsky.richtext.facet#link",
-                    "uri": "https://throng.cee.wtf"
+              "$type": "app.bsky.embed.images",
+              "images": [
+                {
+                  "alt": "",
+                  "aspectRatio": {
+                    "height": 414,
+                    "width": 736
+                  },
+                  "image": {
+                    "$type": "blob",
+                    "ref": {
+                      "$link": "bafkreidusfmhiek5cgq54pjvhnw7zqqp2mwgxhldnd6o6dylyr2wxzwmrq"
+                    },
+                    "mimeType": "image/jpeg",
+                    "size": 161103
                   }
-                ],
-                "index": {
-                  "byteEnd": 14,
-                  "byteStart": 0
+                },
+                {
+                  "alt": "",
+                  "aspectRatio": {
+                    "height": 1508,
+                    "width": 2731
+                  },
+                  "image": {
+                    "$type": "blob",
+                    "ref": {
+                      "$link": "bafkreidaiqyssttdpbicn3facfocml4h7qav4yvq5yp3ndmjpks5x23ni4"
+                    },
+                    "mimeType": "image/jpeg",
+                    "size": 1731562
+                  }
+                },
+                {
+                  "alt": "",
+                  "aspectRatio": {
+                    "height": 360,
+                    "width": 642
+                  },
+                  "image": {
+                    "$type": "blob",
+                    "ref": {
+                      "$link": "bafkreigxslhhc62pjurjy67n3th2ssa5bp7nn22klzjfff4ebvkqy5i264"
+                    },
+                    "mimeType": "image/jpeg",
+                    "size": 185759
+                  }
+                },
+                {
+                  "alt": "",
+                  "aspectRatio": {
+                    "height": 720,
+                    "width": 1280
+                  },
+                  "image": {
+                    "$type": "blob",
+                    "ref": {
+                      "$link": "bafkreigggjubodzks66lxeywuiqim4bpwsvksigap23n72nfegvw6ezoli"
+                    },
+                    "mimeType": "image/jpeg",
+                    "size": 255421
+                  }
                 }
-              }
-            ],
+              ]
+            },
             "langs": [
               "en"
             ],
-            "text": "throng.cee.wtf i've invented a new way to browse bluesky"
+            "text": "The Bob's Burgers illustrators love accurate buildings and infrastructure, down to the framing, plumbing, wiring. The boiler has an expansion tank. The power poles have transformers wired up just like they should be. There's a gas meter in the alley. The under-sink plumbing is detailed and correct"
           },
           "embed": {
-            "cid": "bafkreidxa3lbz3ubsprahwue2psjtxqes5r2susclpncjjef6ekwkn26ua",
-            "playlist": "https://video.bsky.app/watch/did%3Aplc%3Axb2urvqt5f4zzccjs46hysbf/bafkreidxa3lbz3ubsprahwue2psjtxqes5r2susclpncjjef6ekwkn26ua/playlist.m3u8",
-            "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Axb2urvqt5f4zzccjs46hysbf/bafkreidxa3lbz3ubsprahwue2psjtxqes5r2susclpncjjef6ekwkn26ua/thumbnail.jpg",
-            "aspectRatio": {
-              "height": 1298,
-              "width": 1874
-            },
-            "presentation": "default",
-            "$type": "app.bsky.embed.video#view"
+            "images": [
+              {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pbvdchux22p3dblf47xgtq3m/bafkreidusfmhiek5cgq54pjvhnw7zqqp2mwgxhldnd6o6dylyr2wxzwmrq",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:pbvdchux22p3dblf47xgtq3m/bafkreidusfmhiek5cgq54pjvhnw7zqqp2mwgxhldnd6o6dylyr2wxzwmrq",
+                "alt": "",
+                "aspectRatio": {
+                  "height": 414,
+                  "width": 736
+                }
+              },
+              {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pbvdchux22p3dblf47xgtq3m/bafkreidaiqyssttdpbicn3facfocml4h7qav4yvq5yp3ndmjpks5x23ni4",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:pbvdchux22p3dblf47xgtq3m/bafkreidaiqyssttdpbicn3facfocml4h7qav4yvq5yp3ndmjpks5x23ni4",
+                "alt": "",
+                "aspectRatio": {
+                  "height": 1508,
+                  "width": 2731
+                }
+              },
+              {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pbvdchux22p3dblf47xgtq3m/bafkreigxslhhc62pjurjy67n3th2ssa5bp7nn22klzjfff4ebvkqy5i264",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:pbvdchux22p3dblf47xgtq3m/bafkreigxslhhc62pjurjy67n3th2ssa5bp7nn22klzjfff4ebvkqy5i264",
+                "alt": "",
+                "aspectRatio": {
+                  "height": 360,
+                  "width": 642
+                }
+              },
+              {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pbvdchux22p3dblf47xgtq3m/bafkreigggjubodzks66lxeywuiqim4bpwsvksigap23n72nfegvw6ezoli",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:pbvdchux22p3dblf47xgtq3m/bafkreigggjubodzks66lxeywuiqim4bpwsvksigap23n72nfegvw6ezoli",
+                "alt": "",
+                "aspectRatio": {
+                  "height": 720,
+                  "width": 1280
+                }
+              }
+            ],
+            "$type": "app.bsky.embed.images#view"
           },
-          "bookmarkCount": 1517,
-          "replyCount": 342,
-          "repostCount": 1884,
-          "likeCount": 8005,
-          "quoteCount": 625,
-          "indexedAt": "2026-09-04T18:26:09.958Z",
+          "bookmarkCount": 214,
+          "replyCount": 48,
+          "repostCount": 368,
+          "likeCount": 3364,
+          "quoteCount": 24,
+          "indexedAt": "2026-10-14T17:10:53.863Z",
           "viewer": {
             "bookmarked": false,
             "threadMuted": false,
-            "embeddingDisabled": false
+            "embeddingDisabled": false,
+            "knownLikers": {
+              "count": 1,
+              "actors": [
+                {
+                  "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
+                  "handle": "bsky.app",
+                  "displayName": "Bluesky",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
+                  "associated": {
+                    "chat": {
+                      "allowIncoming": "none"
+                    },
+                    "activitySubscription": {
+                      "allowSubscriptions": "followers"
+                    }
+                  },
+                  "viewer": {
+                    "muted": false,
+                    "mutedOnlyReposts": false,
+                    "mutedOnlyQuoteposts": false,
+                    "blockedBy": false,
+                    "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
+                  },
+                  "labels": [],
+                  "createdAt": "2023-04-12T04:53:57.057Z",
+                  "verification": {
+                    "verifications": [],
+                    "verifiedStatus": "none",
+                    "trustedVerifierStatus": "valid"
+                  }
+                }
+              ]
+            }
           },
           "labels": []
         },
@@ -225,164 +857,15 @@
               "trustedVerifierStatus": "valid"
             }
           },
-          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.repost/3muppv5g3h627",
-          "cid": "bafyreigcdrtiyaftnlqib2sbcybx4vfpunzraqyiip4r4oqyrdh2wf4i5q",
-          "indexedAt": "2026-09-04T19:41:59.668Z",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.repost/3mxz3quj24c23",
+          "cid": "bafyreidjxoqwuneqhrvqswn4kgtbczto46l77mto4a4xzwk6ml5gmz2coe",
+          "indexedAt": "2026-10-16T17:23:53.466Z",
           "$type": "app.bsky.feed.defs#reasonRepost"
-        },
-        "opThreadPostIndex": 1,
-        "opThreadPostCount": 2
-      },
-      {
-        "post": {
-          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mupeqslogc2k",
-          "cid": "bafyreihwlheqkbd52brir22s26qyjcklurh725aam3u5mtwffjey6xoaqm",
-          "author": {
-            "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
-            "handle": "bsky.app",
-            "displayName": "Bluesky",
-            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
-            "associated": {
-              "chat": {
-                "allowIncoming": "none"
-              },
-              "activitySubscription": {
-                "allowSubscriptions": "followers"
-              }
-            },
-            "viewer": {
-              "muted": false,
-              "mutedOnlyReposts": false,
-              "mutedOnlyQuoteposts": false,
-              "blockedBy": false,
-              "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
-            },
-            "labels": [],
-            "createdAt": "2023-04-12T04:53:57.057Z",
-            "verification": {
-              "verifications": [],
-              "verifiedStatus": "none",
-              "trustedVerifierStatus": "valid"
-            }
-          },
-          "record": {
-            "$type": "app.bsky.feed.post",
-            "createdAt": "2026-09-04T16:22:42.630Z",
-            "embed": {
-              "$type": "app.bsky.embed.record",
-              "record": {
-                "cid": "bafyreiascok2wbvkm2yjpb4xxuoo5zadjwvgkgfuytlpvn73b5cmvmgyie",
-                "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mupeo3so622k"
-              }
-            },
-            "langs": [
-              "en"
-            ],
-            "text": "Thread numbering is out of beta! Threaded posts are now automatically numbered, to help you follow along. Check out the automatic numbering on this thread to see it in action."
-          },
-          "embed": {
-            "record": {
-              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mupeo3so622k",
-              "cid": "bafyreiascok2wbvkm2yjpb4xxuoo5zadjwvgkgfuytlpvn73b5cmvmgyie",
-              "author": {
-                "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
-                "handle": "bsky.app",
-                "displayName": "Bluesky",
-                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
-                "associated": {
-                  "chat": {
-                    "allowIncoming": "none"
-                  },
-                  "activitySubscription": {
-                    "allowSubscriptions": "followers"
-                  }
-                },
-                "viewer": {
-                  "muted": false,
-                  "mutedOnlyReposts": false,
-                  "mutedOnlyQuoteposts": false,
-                  "blockedBy": false,
-                  "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
-                },
-                "labels": [],
-                "createdAt": "2023-04-12T04:53:57.057Z",
-                "verification": {
-                  "verifications": [],
-                  "verifiedStatus": "none",
-                  "trustedVerifierStatus": "valid"
-                }
-              },
-              "value": {
-                "$type": "app.bsky.feed.post",
-                "createdAt": "2026-09-04T16:21:11.628Z",
-                "embed": {
-                  "$type": "app.bsky.embed.images",
-                  "images": [
-                    {
-                      "alt": "Screenshot of the Bluesky app showing someone searching for Starter Packs whose names include the keyword \"art.\" We see results that include \"Bluesky for Art History,\" \"Design and Art Folk,\" and \"Coven Caf\u00e9 Art Club.\"",
-                      "aspectRatio": {
-                        "height": 1968,
-                        "width": 3300
-                      },
-                      "image": {
-                        "$type": "blob",
-                        "ref": {
-                          "$link": "bafkreif244xt3eu5pqms74ql3uqmlzisyqarfowlpjxko4xqty5hcm3whi"
-                        },
-                        "mimeType": "image/jpeg",
-                        "size": 1363535
-                      }
-                    }
-                  ]
-                },
-                "langs": [
-                  "en"
-                ],
-                "text": "v1.132 is live!\n\nStarter Packs are one of the best ways to find new people to follow\u2014but how do you find the Starter Packs?\n\nAs of today, look for them right in the main search box. You'll see the results under the Starter Packs tab."
-              },
-              "labels": [],
-              "likeCount": 1389,
-              "replyCount": 60,
-              "repostCount": 259,
-              "quoteCount": 49,
-              "indexedAt": "2026-09-04T16:21:37.959Z",
-              "embeds": [
-                {
-                  "images": [
-                    {
-                      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreif244xt3eu5pqms74ql3uqmlzisyqarfowlpjxko4xqty5hcm3whi",
-                      "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreif244xt3eu5pqms74ql3uqmlzisyqarfowlpjxko4xqty5hcm3whi",
-                      "alt": "Screenshot of the Bluesky app showing someone searching for Starter Packs whose names include the keyword \"art.\" We see results that include \"Bluesky for Art History,\" \"Design and Art Folk,\" and \"Coven Caf\u00e9 Art Club.\"",
-                      "aspectRatio": {
-                        "height": 1968,
-                        "width": 3300
-                      }
-                    }
-                  ],
-                  "$type": "app.bsky.embed.images#view"
-                }
-              ],
-              "$type": "app.bsky.embed.record#viewRecord"
-            },
-            "$type": "app.bsky.embed.record#view"
-          },
-          "bookmarkCount": 70,
-          "replyCount": 107,
-          "repostCount": 386,
-          "likeCount": 2130,
-          "quoteCount": 134,
-          "indexedAt": "2026-09-04T16:22:42.864Z",
-          "viewer": {
-            "bookmarked": false,
-            "threadMuted": false,
-            "embeddingDisabled": false
-          },
-          "labels": []
         },
         "opThreadPostIndex": 1,
         "opThreadPostCount": 2
       }
     ],
-    "cursor": "2026-09-04T16:22:42.63Z"
+    "cursor": "2026-10-16T17:23:53.027Z"
   }
 }

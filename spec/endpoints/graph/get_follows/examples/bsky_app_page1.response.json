@@ -3,48 +3,14 @@
   "payload": {
     "follows": [
       {
-        "did": "did:plc:rcbtnmlk2la67bm4po65oe23",
-        "handle": "mapquest.com",
-        "displayName": "MapQuest",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:rcbtnmlk2la67bm4po65oe23/bafkreif4gnpczz35lb6abj3e3yi245hsb6wb4verg6pn66mpo2ovvy73j4",
-        "associated": {
-          "activitySubscription": {
-            "allowSubscriptions": "followers"
-          }
-        },
-        "viewer": {
-          "muted": false,
-          "mutedOnlyReposts": false,
-          "mutedOnlyQuoteposts": false,
-          "blockedBy": false
-        },
-        "labels": [],
-        "createdAt": "2024-11-21T21:11:36.371Z",
-        "verification": {
-          "verifications": [
-            {
-              "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
-              "issuerDisplayName": "Bluesky",
-              "issuerHandle": "bsky.app",
-              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mu3nzi3w3m2k",
-              "isValid": true,
-              "createdAt": "2026-08-27T20:15:22.264Z"
-            }
-          ],
-          "verifiedStatus": "valid",
-          "trustedVerifierStatus": "none"
-        },
-        "description": "The OG of online mapping.\n\nGet the app on Android and iOS: lnk.bio/MapQuest",
-        "indexedAt": "2026-08-27T20:23:38.364Z"
-      },
-      {
-        "did": "did:plc:ragtjsm2j2vknwkz3zp4oxrd",
-        "handle": "pfrazee.com",
-        "displayName": "Paul Frazee",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ragtjsm2j2vknwkz3zp4oxrd/bafkreihhpqdyntku66himwor5wlhtdo44hllmngj2ofmbqnm25bdm454wq",
+        "did": "did:plc:3eqxlmdbtyj6bd337y3mjkso",
+        "handle": "aerialembroidery.bsky.social",
+        "displayName": "Victoria Rose Richards",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3eqxlmdbtyj6bd337y3mjkso/bafkreigx7teujts6xaihq5yklesnf7po4d3oji457c6khmzexzf4yzi5va",
         "associated": {
           "chat": {
-            "allowIncoming": "following"
+            "allowIncoming": "none",
+            "allowGroupInvites": "none"
           },
           "activitySubscription": {
             "allowSubscriptions": "followers"
@@ -57,32 +23,18 @@
           "blockedBy": false
         },
         "labels": [],
-        "createdAt": "2022-11-17T00:35:16.391Z",
-        "verification": {
-          "verifications": [
-            {
-              "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
-              "issuerDisplayName": "Bluesky",
-              "issuerHandle": "bsky.app",
-              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3ltkwktj2hc2n",
-              "isValid": true,
-              "createdAt": "2025-07-09T23:06:46.951Z"
-            }
-          ],
-          "verifiedStatus": "valid",
-          "trustedVerifierStatus": "none"
-        },
-        "description": "CTO at Bluesky. Not a nerd.",
-        "indexedAt": "2026-02-09T17:34:52.546Z"
+        "createdAt": "2024-11-08T23:16:31.480Z",
+        "description": "I make aerial embroidery landscapes \ud83e\uddf5\u2708 Queer, autistic and obsessed with green! They/them or other neutral pronouns are preferred. All my current and previous work is on my site: https://linktr.ee/aerialembroidery",
+        "indexedAt": "2026-10-16T19:36:19.666Z"
       },
       {
-        "did": "did:plc:t5pur7eruxfgxy7ynpfrmg2w",
-        "handle": "chiitan.love",
-        "displayName": "Chiitan\ud83c\udf08\u3061\u3043\u305f\u3093\u2606",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:t5pur7eruxfgxy7ynpfrmg2w/bafkreihtj5bb6lvdlrcyun7fsdmw5e5je6qdvcfznetsitmkq4lx2slvky",
+        "did": "did:plc:ywdrhkssnvgtfyujsz45jnlb",
+        "handle": "publicdomainrev.bsky.social",
+        "displayName": "The Public Domain Review",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ywdrhkssnvgtfyujsz45jnlb/bafkreigtz7lbvhqvih62hxp2syig7aov6wowgjh3tg2dfswm3dwcizitvq",
         "associated": {
           "chat": {
-            "allowIncoming": "all"
+            "allowIncoming": "none"
           },
           "activitySubscription": {
             "allowSubscriptions": "followers"
@@ -95,23 +47,70 @@
           "blockedBy": false
         },
         "labels": [],
-        "createdAt": "2024-02-07T14:03:04.704Z",
+        "createdAt": "2023-11-14T10:34:21.743Z",
         "verification": {
           "verifications": [
             {
               "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
               "issuerDisplayName": "Bluesky",
               "issuerHandle": "bsky.app",
-              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lw6ixnv72o2u",
+              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mrs4qzpdfo2b",
               "isValid": true,
-              "createdAt": "2025-08-12T04:47:02.909Z"
+              "createdAt": "2026-07-29T14:22:04.134Z"
             }
           ],
           "verifiedStatus": "valid",
           "trustedVerifierStatus": "none"
         },
-        "description": "I'm chiitan Japanese crazy mascot\n\ud83c\udff3\ufe0f\u200d\u26a7\ufe0fChiitan is a transgender ally\ud83c\udff3\ufe0f\u200d\ud83c\udf08\nBL,furry,YURI,Yume LOVE\ud83e\udd0d\n\nX https://x.com/chiitan7407/\nIG http://instagram.com/chiitan7407/\nYouTube https://www.youtube.com/@chiitan\nTIKTOK https://www.tiktok.com/@love2chiitan",
-        "indexedAt": "2026-09-09T01:56:00.765Z"
+        "description": "Online journal and not-for-profit project dedicated to curious and compelling works from the history of art, literature, and ideas. Featuring 300+ essays \u2014 \u270d\ufe0f submissions welcome. We also have a mighty fine prints shop. \n\nhttps://publicdomainreview.org",
+        "indexedAt": "2026-10-14T14:21:58.853Z"
+      },
+      {
+        "did": "did:plc:v7lt2fu7igydcjszoexxrvl2",
+        "handle": "attie.ai",
+        "displayName": "Attie",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:v7lt2fu7igydcjszoexxrvl2/bafkreieae2nwwt2y32mmqo3svtvetyzfdqy4a4zvulj7ayzbmoqzi4tfgy",
+        "associated": {
+          "chat": {
+            "allowIncoming": "all",
+            "allowGroupInvites": "all"
+          },
+          "activitySubscription": {
+            "allowSubscriptions": "followers"
+          }
+        },
+        "viewer": {
+          "muted": false,
+          "mutedOnlyReposts": false,
+          "mutedOnlyQuoteposts": false,
+          "blockedBy": false
+        },
+        "labels": [
+          {
+            "src": "did:plc:v7lt2fu7igydcjszoexxrvl2",
+            "uri": "at://did:plc:v7lt2fu7igydcjszoexxrvl2/app.bsky.actor.profile/self",
+            "cid": "bafyreiavittg5adcznk5v6pog7r3z22667pkq2ixch6h5wfydrldpwkaqe",
+            "val": "bot",
+            "cts": "2026-03-21T01:21:39.235Z"
+          }
+        ],
+        "createdAt": "2026-03-21T01:21:39.846Z",
+        "verification": {
+          "verifications": [
+            {
+              "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
+              "issuerDisplayName": "Bluesky",
+              "issuerHandle": "bsky.app",
+              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mi5q3e4zsf2z",
+              "isValid": true,
+              "createdAt": "2026-03-28T22:55:12.586Z"
+            }
+          ],
+          "verifiedStatus": "valid",
+          "trustedVerifierStatus": "none"
+        },
+        "description": "Make your own corner of the open social web.\n\nSites, feeds, and reports, built by describing what you want.\n\nhttps://attie.ai/",
+        "indexedAt": "2026-10-15T17:15:42.255Z"
       }
     ],
     "subject": {
@@ -144,6 +143,6 @@
       "description": "official Bluesky account (check username\ud83d\udc46)\n\nBugs, feature requests, feedback: support@bsky.app",
       "indexedAt": "2025-10-27T21:05:26.152Z"
     },
-    "cursor": "3mtwn3g7wvf2k"
+    "cursor": "3mxwo7ihzka27"
   }
 }

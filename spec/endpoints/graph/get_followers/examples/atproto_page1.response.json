@@ -32,10 +32,10 @@
         "indexedAt": "2026-09-03T00:15:32.501Z"
       },
       {
-        "did": "did:plc:eo5qah2eba55unbgdhwsucfj",
-        "handle": "muhannd.bsky.social",
-        "displayName": "",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:eo5qah2eba55unbgdhwsucfj/bafkreibawz2zl7vmykgoswzhztvi65iz6qnretp4chtbk65lut5iqgtxg4",
+        "did": "did:plc:raezgezvfouksyzbwbsgb5q6",
+        "handle": "nelluminated.bsky.social",
+        "displayName": "Chinasaokwu Nelson",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:raezgezvfouksyzbwbsgb5q6/bafkreiampxhjvc6muz54j5fdvuc2js4grdrm6yg3jkmrgood2okdolbg2u",
         "associated": {
           "activitySubscription": {
             "allowSubscriptions": "followers"
@@ -48,18 +48,16 @@
           "blockedBy": false
         },
         "labels": [],
-        "createdAt": "2026-09-09T15:46:59.953Z",
-        "indexedAt": "2026-09-09T15:49:46.666Z"
+        "createdAt": "2024-05-15T18:24:27.775Z",
+        "description": "\n\nInstagram - https://www.instagram.com/nelluminated?igsh=MXVsaHhmcGpic3Mxcw==\nSubstack - https://substack.com/@nelluminated?utm_source=share&utm_medium=android&r=32evfa",
+        "indexedAt": "2026-10-18T06:02:22.961Z"
       },
       {
-        "did": "did:plc:tbxtbxp62s7fc7n5stc5dgvy",
-        "handle": "evolvingyourman.com",
-        "displayName": "EvolvingYourMan",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tbxtbxp62s7fc7n5stc5dgvy/bafkreigfsv42zftcivvaibmw5xds3nzv7kr26tw4ulrlwq47dqrd6smexq",
+        "did": "did:plc:ouhgo6ie64za5rxxydscdacp",
+        "handle": "ihebch288.bsky.social",
+        "displayName": "",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ouhgo6ie64za5rxxydscdacp/bafkreiegzt4arxm3k5lr5baqcncxs7wt5qr6ic5qdhrofbwjjbjtioxr7y",
         "associated": {
-          "chat": {
-            "allowIncoming": "none"
-          },
           "activitySubscription": {
             "allowSubscriptions": "followers"
           }
@@ -71,9 +69,8 @@
           "blockedBy": false
         },
         "labels": [],
-        "createdAt": "2024-11-19T00:30:44.805Z",
-        "description": "Hi. I'm Emma. Visit me at http://EvolvingYourMan.com for my thoughts on strong women and loving female authority in a modern marriage. Self proclaimed sex geek!",
-        "indexedAt": "2026-04-20T23:24:55.648Z"
+        "createdAt": "2026-10-26T11:56:15.436Z",
+        "indexedAt": "2026-10-26T11:58:18.340Z"
       }
     ],
     "subject": {
@@ -114,6 +111,6 @@
       "description": "Social networking technology created by Bluesky. \n\nDeveloper-focused account. Follow @bsky.app for general announcements!\n\nBluesky API docs: docs.bsky.app\nAT Protocol specs: atproto.com",
       "indexedAt": "2026-03-03T20:08:17.348Z"
     },
-    "cursor": "3mv3todgk2625"
+    "cursor": "3myroawo4462j"
   }
 }

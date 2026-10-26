@@ -1,451 +1,683 @@
 [
   {
-    "did": "did:plc:v2hj3xiqip5c6dzes6vyq6pu",
-    "time_us": 1788971264793600,
+    "did": "did:plc:7zugmfaflju5mipdafdivdhe",
+    "time_us": 1793016422966232,
+    "cursor": 26456362627,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xeetru42x",
+      "rev": "3myropjeygz24",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xkxli7k2s",
+      "rkey": "3myropjermb24",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:31:24.495Z",
-        "langs": [
-          "en"
-        ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreidewdyetiiw2sqrlxogr7phqfvhc4ysefzgfvobacu2hddg4m46ti",
-            "uri": "at://did:plc:daixvyhfhkw3hwaepdcf5745/app.bsky.feed.post/3mv3wx5h4qk2f"
-          },
-          "root": {
-            "cid": "bafyreihlp6uw7exg46ps2sduxbdho6fqd25ql6lc7nvefw3jpcbl5ayekq",
-            "uri": "at://did:plc:omwy5o45srwqlgj65adjoooz/app.bsky.feed.post/3mv3wi7cmjs2n"
+        "createdAt": "2026-10-26T12:07:02+00:00",
+        "text": "🎵 Now on Phoenix FM: Space Cowboy (Remastered 2006) by Jamiroquai\n\n#NowPlaying #PhoenixFM"
+      },
+      "cid": "bafyreiftftrwmdbpwboppmflpy55buyoh4ia7vazf4npnskj22nsxojuum"
+    }
+  },
+  {
+    "did": "did:plc:prjmfxhd3woqr4d3sqt6m5to",
+    "time_us": 1793016423000378,
+    "cursor": 26456362637,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myropjdoak26",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myropjdif226",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:07:02Z",
+        "embed": {
+          "$type": "app.bsky.embed.record",
+          "record": {
+            "cid": "bafyreihthziitrb6vnjjnftateatxmpr5uj7tnkgbkzciehgdoknewzb4a",
+            "uri": "at://did:plc:qomkdnxrqw3gkbytdxea5z65/app.bsky.feed.post/3myipfuv4dj2h"
           }
         },
-        "text": "\"mir der scheinheiligkeit von jack the ripper\"\n\n\"Asyltourismus\"\n\n\"Bis zur letzten Patrone\""
-      },
-      "cid": "bafyreiawhwe3ijsgsxg4a7gbxyiphbwyjhiryjw2eorii3zed4ikeoq5le"
-    }
-  },
-  {
-    "did": "did:plc:u7gnh2exqxgfem5rcq27p3bp",
-    "time_us": 1788971264805772,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xefulxd2t",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeflqxk2l",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.302Z",
-        "langs": [
-          "de"
-        ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreia3lszhie6pmh3ewddqp2mwnzb4i4laiq63qyw3icpsa5hwfpjb4y",
-            "uri": "at://did:plc:34yzvxvcluoeegw2tde5jubz/app.bsky.feed.post/3mv3pfzy44k2g"
-          },
-          "root": {
-            "cid": "bafyreia3lszhie6pmh3ewddqp2mwnzb4i4laiq63qyw3icpsa5hwfpjb4y",
-            "uri": "at://did:plc:34yzvxvcluoeegw2tde5jubz/app.bsky.feed.post/3mv3pfzy44k2g"
-          }
-        },
-        "text": "Kühlschrank"
-      },
-      "cid": "bafyreih5l5g4i3mwmdcw6wqapp7cofxanreigh4jttoeducg2elhhm7iwe"
-    }
-  },
-  {
-    "did": "did:plc:7bhy3yf5z2of3c4qblu4icps",
-    "time_us": 1788971264809338,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xefuazs2t",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeeexqs2e",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.031Z",
-        "langs": [
-          "ja"
-        ],
-        "text": "Eu tava pensando em levar minha irmã para o judô para ela emagrecer"
-      },
-      "cid": "bafyreiatwf3odhnkgjvditd36alr2hrkqok6yxytd5bgauvjwhegnjyuya"
-    }
-  },
-  {
-    "did": "did:plc:i4vghehjfnj46354zswfally",
-    "time_us": 1788971264823546,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xefq2qe25",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefcpvk2n",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.007Z",
-        "langs": [
-          "it"
-        ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreigjhkrzruvnigdbv6igxcumbi7anbl4quk2li7gpxfjtyo6qnkokm",
-            "uri": "at://did:plc:zr5krruo7ypqn5ygnjsg6ugm/app.bsky.feed.post/3mq2k2rfj4s2n"
-          },
-          "root": {
-            "cid": "bafyreigjhkrzruvnigdbv6igxcumbi7anbl4quk2li7gpxfjtyo6qnkokm",
-            "uri": "at://did:plc:zr5krruo7ypqn5ygnjsg6ugm/app.bsky.feed.post/3mq2k2rfj4s2n"
-          }
-        },
-        "text": "Da ciucciarle per ore"
-      },
-      "cid": "bafyreiedytdss4lc3uxd3s6rx3z3mdffeghofzrhczv7b5lbrnvgmlg2g4"
-    }
-  },
-  {
-    "did": "did:plc:hqsglb3tfognjouamxja3fzf",
-    "time_us": 1788971264834393,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xefwh6h2r",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xedy3nc2l",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:42.610Z",
-        "langs": [
-          "de"
-        ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreialqejp64rlmv5ccyw3whgmm4e5tdnp3dce7bqxpno4s7bgbdjb7i",
-            "uri": "at://did:plc:2y4fpd7ppnz2lkmg76i2lse5/app.bsky.feed.post/3mv3vkhyzoc2n"
-          },
-          "root": {
-            "cid": "bafyreialqejp64rlmv5ccyw3whgmm4e5tdnp3dce7bqxpno4s7bgbdjb7i",
-            "uri": "at://did:plc:2y4fpd7ppnz2lkmg76i2lse5/app.bsky.feed.post/3mv3vkhyzoc2n"
-          }
-        },
-        "text": "Sehr ehrlose Damen und Herren, ..."
-      },
-      "cid": "bafyreidn2z3a2iybkryeavxw5ckbfkgsy4dblgtqk3r4w4ggia4guzqpja"
-    }
-  },
-  {
-    "did": "did:plc:hk5kx3doddx2i257vt6cnwoq",
-    "time_us": 1788971264844973,
-    "kind": "account",
-    "account": {
-      "active": false,
-      "did": "did:plc:hk5kx3doddx2i257vt6cnwoq",
-      "seq": 33472073575,
-      "status": "takendown",
-      "time": "2026-09-09T16:27:44.292Z"
-    }
-  },
-  {
-    "did": "did:plc:4nt6nwx353a3xxo5mzjiy4ha",
-    "time_us": 1788971264865916,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeexrvt2v",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeexmzl2v",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.627Z",
         "facets": [
           {
             "features": [
               {
                 "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://bsky.app/profile/caoyaosan.bsky.social/post/3mv3xe65iws2t"
+                "uri": "http://www.techmeme.com/261026/h0805#a261025p15"
               }
             ],
             "index": {
-              "byteEnd": 106,
-              "byteStart": 84
+              "byteEnd": 47,
+              "byteStart": 25
+            }
+          }
+        ],
+        "text": "This post appeared under this Techmeme headline:"
+      },
+      "cid": "bafyreigahaq2tfepc4npk4pyy7xm62pu3stmsxv33sgiaqexrahw2hdbce"
+    }
+  },
+  {
+    "did": "did:plc:r4qc6rrhrrj76zlcvl66k5wd",
+    "time_us": 1793016423066666,
+    "cursor": 26456362644,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myropj447b2n",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myropfrnoc2i",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:06:59.044Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 2622,
+                "width": 1206
+              },
+              "image": {
+                "$type": "blob",
+                "mimeType": "image/jpeg",
+                "ref": {
+                  "$link": "bafkreidy4dzps56t7fvj2iv7pavb5njcj3e3pl4kvw77f7zbytbsomz2ym"
+                },
+                "size": 813157
+              }
+            }
+          ]
+        },
+        "langs": [
+          "ja"
+        ],
+        "text": "そういえばさっきラボに行ったらこれが流れておりまして"
+      },
+      "cid": "bafyreia7a3yw6wrcbtebykhf5qc5x72xfu5u2mdvkxbs7twwrbbmvjh3tm"
+    }
+  },
+  {
+    "did": "did:plc:zqq3543ym2kfu4ewr3m3aehq",
+    "time_us": 1793016423067135,
+    "cursor": 26456362655,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myrophz4m42g",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myrophba522x",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:07:00.601Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 720,
+                "width": 960
+              },
+              "image": {
+                "$type": "blob",
+                "mimeType": "image/jpeg",
+                "ref": {
+                  "$link": "bafkreifc2azyb4wdt2aku4cyswm5ixozux4mnxti6grsthejoiyvisn3ry"
+                },
+                "size": 314811
+              }
+            }
+          ]
+        },
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "parent": {
+            "cid": "bafyreih7vlisqlorhk2irvgp4mdxdlwigfu7l4baux277i56jr3uummlki",
+            "uri": "at://did:plc:vyqq25ka6c6ffqvg6bbjubsr/app.bsky.feed.post/3myqo7dtzc22g"
+          },
+          "root": {
+            "cid": "bafyreiev55vyydcriytbhwe5lohly4jhxg4x7xsiqkrumbr5b6wtb5aj5e",
+            "uri": "at://did:plc:sk6jryjhuavqchpa53jlcsyu/app.bsky.feed.post/3myqkzvmlos24"
+          }
+        },
+        "text": "😂"
+      },
+      "cid": "bafyreieruphc46turzz2nbhsxniivjvbd52fy7c6dt55ilcpdk5lbwjsxy"
+    }
+  },
+  {
+    "did": "did:plc:agcqudpf7hamxornkiw7ij4s",
+    "time_us": 1793016423067369,
+    "cursor": 26456362665,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myropj5b7u2p",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myropj4zfu2p",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:07:00.779Z",
+        "embed": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "description": "It happened at 9:40 p.m. Sunday in the 7000 block of South Eberhart Avenue, Chicago police said.",
+            "thumb": {
+              "$type": "blob",
+              "mimeType": "image/jpeg",
+              "ref": {
+                "$link": "bafkreihprh7tqclbuc4bcqfscculovujgmaruen2ealmfpkybo7owiif7i"
+              },
+              "size": 140301
+            },
+            "title": "Man, 26, gunned down in Greater Grand Crossing",
+            "uri": "https://chicago.suntimes.com/crime/2026/10/26/man-26-gunned-down-in-greater-grand-crossing"
+          }
+        },
+        "text": "Man, 26, gunned down in Greater Grand Crossing"
+      },
+      "cid": "bafyreieb2yhyk7xvdpqzrfrpxy5vehbm6a4iel2rmmcwa35utlnj2tlzwa"
+    }
+  },
+  {
+    "did": "did:plc:vdc5qdbhasntiyufs3j7eoow",
+    "time_us": 1793016423067375,
+    "cursor": 26456362666,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myropjgmdg2t",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myropitx6k2o",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:07:02.264Z",
+        "facets": [
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "booksky"
+              }
+            ],
+            "index": {
+              "byteEnd": 259,
+              "byteStart": 251
             }
           },
           {
             "features": [
               {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/1"
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "fantasybook"
               }
             ],
             "index": {
-              "byteEnd": 157,
+              "byteEnd": 272,
+              "byteStart": 260
+            }
+          }
+        ],
+        "langs": [
+          "en"
+        ],
+        "text": "A wizard offers you one spell, but you can only ever use it once.\n\nWould you choose:\n✨ The power to heal anyone\n🔥 The power to destroy anything\n🔮 The ability to see the future\n🕰️ The power to turn back time\n\nWhat's your choice, and why?\n\n#booksky\n#fantasybook"
+      },
+      "cid": "bafyreih7me2hyelm5zhfa6qpdn7s2pzkgp7adu36jlbg63lw6uvp2j5t7m"
+    }
+  },
+  {
+    "did": "did:plc:l5lc3wwvvpen32ufd4drsdcg",
+    "time_us": 1793016423098504,
+    "cursor": 26456362668,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myropiyjyi27",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myropiye4y27",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:07:02Z",
+        "embed": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "description": "Artikel von Servicedapartment.de",
+            "thumb": {
+              "$type": "blob",
+              "mimeType": "image/jpeg",
+              "ref": {
+                "$link": "bafkreibobwboxe4pjjlu4vqbpogt7cpckqio3v2bqdb4p5hm4lzy3uznyq"
+              },
+              "size": 93266
+            },
+            "title": "ServicedApartment.de: Fünf Punkte für Geschäftsreisen",
+            "uri": "http://dlvr.it/TW3sLW"
+          }
+        },
+        "facets": [
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "Immobilien"
+              }
+            ],
+            "index": {
+              "byteEnd": 68,
+              "byteStart": 57
+            }
+          }
+        ],
+        "text": "ServicedApartment.de: Fünf Punkte für Geschäftsreisen #Immobilien"
+      },
+      "cid": "bafyreigd22hsuacla5ozcskjfyzs5ovy72jpzbt2whhsukvo7ht3gtyevi"
+    }
+  },
+  {
+    "did": "did:plc:nx2akq6um7oo2sgf532bpwnx",
+    "time_us": 1793016423101729,
+    "cursor": 26456362670,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myropifiub2d",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myropifbzj2d",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:07:01Z",
+        "embed": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "description": "FC Twente won zondagavond van AZ met 0-2. Het is een knappe overwinning van de Tukkers, die voor het eerst in meer dan vier jaar tijd de volle drie punten vanuit Alkmaar meenemen naar Enschede. Ongeveer een maand geleden won FC Twente van landskampioen PSV, maar speelde daarna in de competitie gelij...",
+            "thumb": {
+              "$type": "blob",
+              "mimeType": "image/jpeg",
+              "ref": {
+                "$link": "bafkreiejnlfttidbc4my5bwssme5t54dbcayuhwrrifrsmnzxpmhgqpctu"
+              },
+              "size": 177064
+            },
+            "title": "Pröpper gelooft in topklassering FC Twente, maar waarschuwt: \"Zo onnodig\"",
+            "uri": "http://dlvr.it/TW3sLX"
+          }
+        },
+        "facets": [
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "fctwente"
+              }
+            ],
+            "index": {
+              "byteEnd": 84,
+              "byteStart": 75
+            }
+          },
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "cote"
+              }
+            ],
+            "index": {
+              "byteEnd": 90,
+              "byteStart": 85
+            }
+          },
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "enschede"
+              }
+            ],
+            "index": {
+              "byteEnd": 100,
+              "byteStart": 91
+            }
+          }
+        ],
+        "text": "Pröpper gelooft in topklassering FC Twente, maar waarschuwt: \"Zo onnodig\" #fctwente #cote #enschede"
+      },
+      "cid": "bafyreidvmmi66uiabtmc4crwpzv4b2dlxw2utrtwpcp3uo4d533x5t4u5m"
+    }
+  },
+  {
+    "did": "did:plc:csdet2zqxfdviknogbp4ctzd",
+    "time_us": 1793016423102386,
+    "cursor": 26456362671,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myropio3wg2m",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myropfovrs2u",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:06:58.946Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 1314,
+                "width": 828
+              },
+              "image": {
+                "$type": "blob",
+                "mimeType": "image/jpeg",
+                "ref": {
+                  "$link": "bafkreigkdkrf6nddcyatslcabdc6g7zbgu6r3efvyh7gvyrdnjkfmbvq7a"
+                },
+                "size": 501628
+              }
+            }
+          ]
+        },
+        "langs": [
+          "en"
+        ],
+        "text": "As is Trump and the GOP"
+      },
+      "cid": "bafyreia46yrzl5onczo4vy6ybi5cogvun6r6b7gp775kb2t4t4yoc4kvcu"
+    }
+  },
+  {
+    "did": "did:plc:ckb3s7dztsi7zxacne4rwaur",
+    "time_us": 1793016423115066,
+    "cursor": 26456362672,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myropi35dx25",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myropf3dsk2r",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:06:58.311Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 849,
+                "width": 1280
+              },
+              "image": {
+                "$type": "blob",
+                "mimeType": "image/jpeg",
+                "ref": {
+                  "$link": "bafkreifpbvu5i2bqpsxk3aeefqu3d2aesgblaflqgo5w6wgukfywizw5s4"
+                },
+                "size": 775903
+              }
+            },
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 720,
+                "width": 1280
+              },
+              "image": {
+                "$type": "blob",
+                "mimeType": "image/jpeg",
+                "ref": {
+                  "$link": "bafkreiekwxfb76iyvaiwnk525mmqdwuix4fq25hnzliw7hk4izbf6jg6wa"
+                },
+                "size": 461361
+              }
+            }
+          ]
+        },
+        "facets": [
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "ClimateInAction"
+              }
+            ],
+            "index": {
+              "byteEnd": 109,
+              "byteStart": 93
+            }
+          },
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "ClimateLawsuit"
+              }
+            ],
+            "index": {
+              "byteEnd": 125,
+              "byteStart": 110
+            }
+          },
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "VancouverGovernment"
+              }
+            ],
+            "index": {
+              "byteEnd": 146,
               "byteStart": 126
             }
           },
           {
             "features": [
               {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/2"
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "CharterRights"
               }
             ],
             "index": {
-              "byteEnd": 203,
-              "byteStart": 163
+              "byteEnd": 161,
+              "byteStart": 147
             }
           },
           {
             "features": [
               {
                 "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/3"
+                "uri": "https://www.cbc.ca/news/science/climate-lawsuit-charter-emissions-9.7394269"
               }
             ],
             "index": {
-              "byteEnd": 231,
-              "byteStart": 209
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/4"
-              }
-            ],
-            "index": {
-              "byteEnd": 293,
-              "byteStart": 237
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/0"
-              }
-            ],
-            "index": {
-              "byteEnd": 312,
-              "byteStart": 295
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#question"
-              }
-            ],
-            "index": {
-              "byteEnd": 74,
-              "byteStart": 0
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#option",
-                "number": 1
-              }
-            ],
-            "index": {
-              "byteEnd": 157,
-              "byteStart": 126
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#option",
-                "number": 2
-              }
-            ],
-            "index": {
-              "byteEnd": 203,
-              "byteStart": 163
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#option",
-                "number": 3
-              }
-            ],
-            "index": {
-              "byteEnd": 231,
-              "byteStart": 209
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#option",
-                "number": 4
-              }
-            ],
-            "index": {
-              "byteEnd": 293,
-              "byteStart": 237
+              "byteEnd": 188,
+              "byteStart": 162
             }
           }
         ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreicrag7om3sn2z2dzy22mycvwzvlcs2uwf6ialq2qrjzgl2b542bh4",
-            "uri": "at://did:plc:gf5nkh7cw4tumkrhmo3hye6t/app.bsky.feed.post/3mv3xe65iws2t"
-          },
-          "root": {
-            "cid": "bafyreicrag7om3sn2z2dzy22mycvwzvlcs2uwf6ialq2qrjzgl2b542bh4",
-            "uri": "at://did:plc:gf5nkh7cw4tumkrhmo3hye6t/app.bsky.feed.post/3mv3xe65iws2t"
+        "langs": [
+          "nl"
+        ],
+        "text": "Historic lawsuit challenging government over climate inaction begins trial hearings 🇨🇦 #ClimateInAction #ClimateLawsuit #VancouverGovernment #CharterRights www.cbc.ca/news/science..."
+      },
+      "cid": "bafyreifr6wdsijl2vuh3xib7qrdxb3v3lz5kny26gjkx7kh4wf6jqivxe4"
+    }
+  },
+  {
+    "did": "did:plc:xa3m7k3o3x6c6sjb6ae7hmd7",
+    "time_us": 1793016423166289,
+    "cursor": 26456362675,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myropiufhp2p",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myropiq63k27",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:07:02.142Z",
+        "embed": {
+          "$type": "app.bsky.embed.record",
+          "record": {
+            "cid": "bafyreiet5txaqvgp7kejvv2auver6sxasdh4pgmebtwth4lyxtqxszoude",
+            "uri": "at://did:plc:udlm3lozfe2suyuttvsrevgm/app.bsky.feed.post/3myrjsbfcc22m"
           }
         },
-        "text": "\"李晟さんの上陸ドラマで一番お気に入りのキャラは？\" asked by @caoyaosan.bsky.social. Vote below!\n\n🅰 恋心は玉の如き 秦姨娘\n🅱 メモリーズ・オブ・ラブ 辛迪\n🅲 ハンシュク 鄧綏\n🅳 上記以外(よければリプで教えてください)\n\n📊 Show results"
-      },
-      "cid": "bafyreib2tqzmzyv2ifeflfaj3sethlykklthpfioc3biun4x5fuq2hfboe"
-    }
-  },
-  {
-    "did": "did:plc:sfa3vnvpxpygwqv3gyn5l3bg",
-    "time_us": 1788971264884498,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xefjogq2h",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xedamo22a",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:41.840Z",
-        "langs": [
-          "ja"
-        ],
-        "text": "フロイドはエビを踊り食いしない……？じゃねーよどういうことなの。"
-      },
-      "cid": "bafyreibt4jxhtx6cia6s6xsh7mabzd3dimlv6uy66dojvex7p3h75mvcd4"
-    }
-  },
-  {
-    "did": "did:plc:zvzrhrq3fhuuq6podxhi5tyz",
-    "time_us": 1788971264895420,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xef62gu2l",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefli6c2g",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.292Z",
         "langs": [
           "en"
         ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreifjsydzoqcrcbobwnzhijwdvzflch726w7vdf73wxv3gnbdtcq53m",
-            "uri": "at://did:plc:6hit5rjdbmlnscmuk4bbtmuc/app.bsky.feed.post/3mv3x3um3x22c"
-          },
-          "root": {
-            "cid": "bafyreifjsydzoqcrcbobwnzhijwdvzflch726w7vdf73wxv3gnbdtcq53m",
-            "uri": "at://did:plc:6hit5rjdbmlnscmuk4bbtmuc/app.bsky.feed.post/3mv3x3um3x22c"
-          }
-        },
-        "text": "Doing my yearly insider threat training right now and yeah what's the point?"
+        "text": "Me:"
       },
-      "cid": "bafyreiaz43hvkkmi4en2cktljtwt3cgkrrndfmhzayq7ph65ynp4keh3tm"
+      "cid": "bafyreic2o2z6iszbumigp7fip6v4sg6wkeeep6kn5ersrzef6tkkt75hi4"
     }
   },
   {
-    "did": "did:plc:u4wrevnt3lps7sn5zfrulhso",
-    "time_us": 1788971264937179,
+    "did": "did:plc:nii74sbeec5jp6uck4bxqzgq",
+    "time_us": 1793016423166769,
+    "cursor": 26456362680,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xefjkvi2k",
+      "rev": "3myropjbubp2n",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeghbt227",
+      "rkey": "3myropjbsd72n",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:45.202Z",
+        "createdAt": "2026-10-26T12:07:02Z",
+        "embed": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "description": "Banca Mediolanum consente di acquistare iPhone 18 Pro e Pro Max tramite SelfyShop con finanziamento a TAN e TAEG zero, senza anticipo e con rate da 6 a 48 mesi. L'approvazione resta subordinata alla valutazione del merito creditizio\n\n\nL'articolo SelfyShop di Banca Mediolanum: iPhone 18 Pro e iPhone 18 Pro Max a rate a TAN 0 e TAEG 0 per correntisti SelfyConto proviene da CorCom.",
+            "thumb": {
+              "$type": "blob",
+              "mimeType": "image/jpeg",
+              "ref": {
+                "$link": "bafkreiayo7ccdjv3peob5ulgavfcsfkujkokf7qijcmckyhx3eej2mc4fi"
+              },
+              "size": 68155
+            },
+            "title": "SelfyShop di Banca Mediolanum: iPhone 18 Pro e iPhone 18 Pro Max a rate a TAN 0 e TAEG 0 per correntisti SelfyConto",
+            "uri": "http://dlvr.it/TW3sMB"
+          }
+        },
+        "text": ""
+      },
+      "cid": "bafyreiepflzcy3c42xgrhfqtcjqcjuqrkxiefazca445ralmocwkgy2624"
+    }
+  },
+  {
+    "did": "did:plc:nex3m33ljbp7casi4wx3tqja",
+    "time_us": 1793016423167297,
+    "cursor": 26456362697,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myropjn2we2m",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myropjm5ls2j",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:07:03.059Z",
         "langs": [
-          "en"
+          "de"
         ],
         "reply": {
           "parent": {
-            "cid": "bafyreib2i2j7txp37ag5ewvm6t6m54ahw3ouljwk2gl2g2rh4s2u2wegka",
-            "uri": "at://did:plc:wba3smotebrgouszvj5innh4/app.bsky.feed.post/3mv3udoeeec2r"
+            "cid": "bafyreifae7e4oibi6uv2d6uquydrct63mgxdrdqtjn6fskfauf3zd3kbpy",
+            "uri": "at://did:plc:g2crtreb47ym2t4spv3sln27/app.bsky.feed.post/3myr66paxbc2w"
           },
           "root": {
-            "cid": "bafyreidysx5q5mnyo77kelhcj7puegr5qxfwgpxes5af6maw77yj3n2voe",
-            "uri": "at://did:plc:wba3smotebrgouszvj5innh4/app.bsky.feed.post/3mv3ub5v27c2r"
+            "cid": "bafyreicmkivxvjtjhukdsnzsm356sabpkjixgz2gr24iqtatvy3fw5qvue",
+            "uri": "at://did:plc:3cqyyjjd65ac4x2vouidycez/app.bsky.feed.post/3myqac2q4myv6"
           }
         },
-        "text": "I mean the 51st is the alternative model, but it's fairly narrow in what it can do. \n\nBig journalism has always been a business, but the old model is broken because people no longer want to pay. Thus we are subjected to the whims of those who will pay."
+        "text": "Vielleicht sollten wir mal bei Google nachfragen, ob sie ihre Streetview Auto verkaufen … ☺️ geht mir genauso. Sehe traumhafte Wolkenformationen, finde aber keinen Platz zum anhalten und fotografieren 🙄"
       },
-      "cid": "bafyreifs54v7a6dzwvqm3ewwqav4z5e2ymehuidmnbcy6dlxy5ti5ivyom"
+      "cid": "bafyreiemcyjp5twqhwptrpedqhwmbnt4rycgzvplfqsr5wh2jwbhxqjmma"
     }
   },
   {
-    "did": "did:plc:zljtwykya7uopxvhizwdn52o",
-    "time_us": 1788971264987856,
+    "did": "did:plc:toxp47zpvx5pffrek7d5ydxy",
+    "time_us": 1793016423199213,
+    "cursor": 26456362702,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xefhb2v2p",
+      "rev": "3myropixwud2y",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefh37f2p",
+      "rkey": "3myropixo332y",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44Z",
+        "createdAt": "2026-10-26T12:07:02.370Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 788,
+                "width": 1400
+              },
+              "image": {
+                "$type": "blob",
+                "mimeType": "image/jpeg",
+                "ref": {
+                  "$link": "bafkreidfwq7zqa56pkd5roqsuvjsi45nddvbywd6dym6uo4ioibcianvxe"
+                },
+                "size": 214188
+              }
+            }
+          ]
+        },
         "facets": [
           {
             "features": [
               {
                 "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://whale-alert.io/transaction/bitcoin/7b776a1a368a49b5de3773eea8ac886f87617c9ca35b9547a5bf9cd8697329a7"
+                "uri": "https://www.866ourvote.org"
               }
             ],
             "index": {
-              "byteEnd": 215,
-              "byteStart": 108
+              "byteEnd": 85,
+              "byteStart": 67
             }
           }
         ],
-        "text": "🚨 🚨 🚨 🚨  1,167 $BTC (91,678,273 USD) transferred from unknown wallet to Coinbase Institutional\n\nhttps://whale-alert.io/transaction/bitcoin/7b776a1a368a49b5de3773eea8ac886f87617c9ca35b9547a5bf9cd8697329a7"
+        "text": "Ensuring all voters have an equal opportunity to participate\n\n🔗 www.866ourvote.org\n☎️ CALL HOTLINE 866-OUR-VOTE (866-687-8683) for HELP"
       },
-      "cid": "bafyreiayoxs4obiwpcbwmhwn5uwkhlhjidch5g4zbdpf4qzxyt37oel4ry"
+      "cid": "bafyreidv5yklwuji3fwfewuf4wfsuwmpg2uookn4dnwlbwgvlxueo3gmvm"
     }
   },
   {
-    "did": "did:plc:lyr2nmjy7wmxadcfqdewmh7j",
-    "time_us": 1788971265005254,
+    "did": "did:plc:jz5ft6rqczyfntjfgqep2ugh",
+    "time_us": 1793016423202591,
+    "cursor": 26456362703,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xefzqwo2c",
+      "rev": "3myropjawts2r",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xef4hpc2d",
+      "rkey": "3myropipqg22v",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.802Z",
+        "createdAt": "2026-10-26T12:07:02.105Z",
         "facets": [
           {
             "$type": "app.bsky.richtext.facet",
             "features": [
               {
                 "$type": "app.bsky.richtext.facet#mention",
-                "did": "did:plc:x7dbyx3g63gf57iofycl6n5u"
+                "did": "did:plc:lajpfdhhbepfct2777yndekc"
               }
             ],
             "index": {
-              "byteEnd": 22,
-              "byteStart": 0
+              "byteEnd": 115,
+              "byteStart": 89
             }
           }
         ],
@@ -454,185 +686,175 @@
         ],
         "reply": {
           "parent": {
-            "cid": "bafyreihdaaikrsv4qkmfq6iis5hemw4jd64ponb7nlqpgjjijsq7sigswi",
-            "uri": "at://did:plc:lyr2nmjy7wmxadcfqdewmh7j/app.bsky.feed.post/3muwvbldlks26"
+            "cid": "bafyreidrfcjr4iqgdhqub56a5w5zezmldliae4bmkjie5uawblahmr72ee",
+            "uri": "at://did:plc:lajpfdhhbepfct2777yndekc/app.bsky.feed.post/3myrnw7ypj22y"
           },
           "root": {
-            "cid": "bafyreihdaaikrsv4qkmfq6iis5hemw4jd64ponb7nlqpgjjijsq7sigswi",
-            "uri": "at://did:plc:lyr2nmjy7wmxadcfqdewmh7j/app.bsky.feed.post/3muwvbldlks26"
+            "cid": "bafyreihnvho5445zzlzsa3f3mvhcicvkzrxqlqyblgonhlvgdob67z6dg4",
+            "uri": "at://did:plc:zsnrodedo3d2n63dacw6xfk5/app.bsky.feed.post/3myqodfny2c2k"
           }
         },
-        "text": "@chicmojo.blacksky.app In a perfect world, we'd be cool neighbors and I'd gift you mad weed while we wax about our Carribean heritages over good food. I hope all your goals get met this week."
+        "text": "The states with the most people have the most cheesecake factories. Thats because of you @shepherdaaron.bsky.social"
       },
-      "cid": "bafyreidzs5sxfkxiiheaseqp2qze4tu75jsgweu2neu3uv6aidochklu2u"
+      "cid": "bafyreicqqqdkenvtq727itqwntglbii4whehxvwsqtbzthlub4fk3u4ddy"
     }
   },
   {
-    "did": "did:plc:z7aastbi2fnbhh4ahcublmdo",
-    "time_us": 1788971265011026,
-    "kind": "identity",
-    "identity": {
-      "did": "did:plc:z7aastbi2fnbhh4ahcublmdo",
-      "seq": 33472073652,
-      "time": "2026-09-09T16:27:44.652Z"
-    }
-  },
-  {
-    "did": "did:plc:z7aastbi2fnbhh4ahcublmdo",
-    "time_us": 1788971265015132,
-    "kind": "account",
-    "account": {
-      "active": true,
-      "did": "did:plc:z7aastbi2fnbhh4ahcublmdo",
-      "seq": 33472073653,
-      "time": "2026-09-09T16:27:44.652Z"
-    }
-  },
-  {
-    "did": "did:plc:jv4kkqscl3ze3co4tguivexy",
-    "time_us": 1788971265035721,
+    "did": "did:plc:dufjwyniaqokjroaii34ean2",
+    "time_us": 1793016423265912,
+    "cursor": 26456362707,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xeg2heu2f",
-      "operation": "delete",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3muudjbbaan2y"
-    }
-  },
-  {
-    "did": "did:plc:akbqqhei3mpbsgh5k7xz7zcf",
-    "time_us": 1788971265058436,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeg2h4o2c",
+      "rev": "3myropjopge2k",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xef7kdk2i",
+      "rkey": "3myropiuvhc2f",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.903Z",
-        "langs": [
-          "en"
-        ],
-        "text": "Honestly, pissing off Samus sounds like a surefire way to waltz into a horribly painful death.\n\nThese guys just don't learn."
-      },
-      "cid": "bafyreicntxsmishuzbhryggbud3dn2dhoozat5kebqv5bbui42gfyphoii"
-    }
-  },
-  {
-    "did": "did:plc:uzq5k6tx6sdtdu2dmt5xx563",
-    "time_us": 1788971265102238,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeg5fa62m",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeg3rns2j",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.827Z",
-        "facets": [
-          {
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#tag",
-                "tag": "haikuhorrorprompt"
-              }
-            ],
-            "index": {
-              "byteEnd": 114,
-              "byteStart": 96
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#tag",
-                "tag": "juice"
-              }
-            ],
-            "index": {
-              "byteEnd": 121,
-              "byteStart": 115
-            }
-          }
-        ],
-        "langs": [
-          "en"
-        ],
-        "text": "A new juice bar opened\neveryone wanted to try their drinks, but\nonly they knew what was inside.\n#haikuhorrorprompt\n#juice"
-      },
-      "cid": "bafyreiej5o76fbbtxyvdrlerznlx2b3fc6ll436mkhijyhufabspy3qkfu"
-    }
-  },
-  {
-    "did": "did:plc:5adp5teay5dvbmut4xlsuvbf",
-    "time_us": 1788971265110520,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeg5pmc2i",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefyl4k2i",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.722Z",
-        "langs": [
-          "en"
-        ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreicwpiznbaf7usjepw6kq63d4bek3i6nfgvifprw3emojef6qidxc4",
-            "uri": "at://did:plc:iiofy6mupgapoiz2b3lgfyr7/app.bsky.feed.post/3mv3utylj722o"
-          },
-          "root": {
-            "cid": "bafyreihz4r7i2j24z5a7ujnylj55a3rastm46xiusbaojxmj4hd3wi4axu",
-            "uri": "at://did:plc:iiofy6mupgapoiz2b3lgfyr7/app.bsky.feed.post/3mv3sitxtys2o"
-          }
-        },
-        "text": "I would watch this movie"
-      },
-      "cid": "bafyreicmgke54u6wbfg5t66iq2tajr4sf7byzoifyd52lbw2klfzvscrwm"
-    }
-  },
-  {
-    "did": "did:plc:airyg6rpamdhuzup5atwpvgt",
-    "time_us": 1788971265122543,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeftwq222",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeeziy22f",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.705Z",
-        "langs": [
-          "en"
-        ],
-        "text": "Oh age of calamity gets a new version"
-      },
-      "cid": "bafyreiaecchq326ujyzqhjupazrof4fyv5qfbmt5iki7ocxd673kpfqfvy"
-    }
-  },
-  {
-    "did": "did:plc:vhfyufn46mxactly4jg4lo3e",
-    "time_us": 1788971265126226,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeg2agx2i",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefqidc2c",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.458Z",
+        "createdAt": "2026-10-26T12:07:02.297Z",
         "langs": [
           "ja"
         ],
-        "text": "🐱：博士，您明明知道我的感情\n🐰：“卢西恩，你该不会是想告诉我……喜欢我吧？”\n🐱：“嗯。”（喝茶）\n🐰内心（开始错乱）:内心：我怎么问出来了？ 他怎么还承认了？ 等等，我现在是不是必须回答？ 喜欢究竟应该如何界定？亲密关系是否必须—— 糟糕糟糕糟糕糟糕 异常信息需要处理 卢西恩这家伙是不是好久没体检了 脑子是不是坏了 医疗部都在做什么啊啊啊啊 不对不对 说不定是...? 对 一定是因为酒神权能改变了他 一定是这个\n🐰：......或许是我们相处太久了，长期共同作战共同办公产生了依赖心理，所以你这个一定是可以治疗的问题，需要医疗部的人来疏导！我们找个心理医生"
+        "reply": {
+          "parent": {
+            "cid": "bafyreihapetkikj6bakzs3fsgsdihxmgd2phivkesxfl455i3htpb6cro4",
+            "uri": "at://did:plc:koprkjwbzbzsyogbwml4gl2j/app.bsky.feed.post/3myrlv6h3p22e"
+          },
+          "root": {
+            "cid": "bafyreic5qwqxbv75cjapmm6wbpttnz6stwaccpf3isf6akfiysmiegafpm",
+            "uri": "at://did:plc:koprkjwbzbzsyogbwml4gl2j/app.bsky.feed.post/3myqiqtbtn22l"
+          }
+        },
+        "text": "🍃🍉の旨味の一つですね…( ˘ω˘)\nどんだけ愛してるか分からせる🍃✕無自覚🍉(後に100000％分からせられる)…\n美味しいです…( ˘ω˘)"
       },
-      "cid": "bafyreihm5nizzizkexn6y7nrrawbtdgkdcajvfmkid6oxmwp5c2j2lh24a"
+      "cid": "bafyreigvdtmjstclqewqncas5iregugw2jqozbijorjgkykearv33b6scm"
+    }
+  },
+  {
+    "did": "did:plc:u643fzrtvcje4r3o7yssmfoh",
+    "time_us": 1793016423266448,
+    "cursor": 26456362717,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myropjmbzr2k",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myropjhj5s2i",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:07:02.908Z",
+        "langs": [
+          "ja"
+        ],
+        "text": "大好き過ぎる"
+      },
+      "cid": "bafyreics5b27reb2ueblcocwlhucfcimctilj2mmedvzyec5csbkheyitu"
+    }
+  },
+  {
+    "did": "did:plc:ewyszwfxscvtn4ohjwd6csrt",
+    "time_us": 1793016423266560,
+    "cursor": 26456362719,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myropjosfm2f",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myropjd2lc2m",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:07:02.762Z",
+        "langs": [
+          "fr"
+        ],
+        "reply": {
+          "parent": {
+            "cid": "bafyreic7ontbqr7ty3a5f3onwzwe2w74nvbyqkvhhrizbp6s4ca2pekak4",
+            "uri": "at://did:plc:a7b4uf3gtb4ua7xcdkpp3bbn/app.bsky.feed.post/3myrobp4wuk2d"
+          },
+          "root": {
+            "cid": "bafyreigsd7o44m2tibp7skdsg42rfyifausyp7p2oltltznt7stesxdmiq",
+            "uri": "at://did:plc:dku6ckeg7cso4d37igrx2iv7/app.bsky.feed.post/3myicxatktc2v"
+          }
+        },
+        "text": "Simplifions la question: parcoursup a-t-il amélioré quoi que ce soit?"
+      },
+      "cid": "bafyreid3dmctfmqkrpjd2vagurbfc53nigomjczwzqvwrz3lofst7m3laq"
+    }
+  },
+  {
+    "did": "did:plc:vmyikfx3nkxnnkzdjhtspmgp",
+    "time_us": 1793016423266873,
+    "cursor": 26456362723,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myropi4qv62f",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myropgzpvk2p",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:07:00.357Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 809,
+                "width": 841
+              },
+              "image": {
+                "$type": "blob",
+                "mimeType": "image/jpeg",
+                "ref": {
+                  "$link": "bafkreifdtvrs3fhubf2n2gdywdazrsg4p4tck25f2xhpcbm33kovdnbiyq"
+                },
+                "size": 248371
+              }
+            }
+          ]
+        },
+        "langs": [
+          "en"
+        ],
+        "text": ""
+      },
+      "cid": "bafyreia5x5safoslkj67j6ofkkaewycta2eh4osf76fujeygbtwgd2od7q"
+    }
+  },
+  {
+    "did": "did:plc:eteutzzpvsznmuh2uirgi7c5",
+    "time_us": 1793016423299072,
+    "cursor": 26456362732,
+    "kind": "commit",
+    "commit": {
+      "rev": "3myropirpir2s",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3myropirllr2s",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-26T12:07:00.956Z",
+        "embed": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "description": "Left-wing President Luiz Inácio Lula da Silva defeated right-wing rival Flávio Bolsonaro in a closely fought election. Find out more here...",
+            "thumb": {
+              "$type": "blob",
+              "mimeType": "image/jpeg",
+              "ref": {
+                "$link": "bafkreicnl5nnrvz3qvngy3aexxzwxjad42wbjlw5trquzntj4sjnual74a"
+              },
+              "size": 98163
+            },
+            "title": "Brazil election: President Lula da Silva beats Flavio Bolsonaro",
+            "uri": "https://www.bbc.co.uk/newsround/articles/c9e8lr50x7pno"
+          }
+        },
+        "text": "Congratulations to Lula Da Silva on a historic comeback to secure a fourth presidential term in Brazil, soundly defeating the far right candidate.\n\nA huge victory for democracy, equality, worker's rights and the Amazon rainforest. Parabéns, Lula! 🇧🇷"
+      },
+      "cid": "bafyreicykohkpg25pthob7dz3fqjntbvi5tmzgm5epidy3ycz7klyijbn4"
     }
   }
 ]

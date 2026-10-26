@@ -31,6 +31,46 @@
             "verifications": [],
             "verifiedStatus": "none",
             "trustedVerifierStatus": "valid"
+          },
+          "status": {
+            "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.actor.status/self",
+            "cid": "bafyreihkojqw7p22odgjcbzjh5sh4vrntow24sd4nvntpqnddrd5pqma44",
+            "record": {
+              "$type": "app.bsky.actor.status",
+              "createdAt": "2026-10-20T16:00:37.680Z",
+              "durationMinutes": 60,
+              "embed": {
+                "$type": "app.bsky.embed.external",
+                "external": {
+                  "$type": "app.bsky.embed.external#external",
+                  "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+                  "thumb": {
+                    "$type": "blob",
+                    "ref": {
+                      "$link": "bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+                    },
+                    "mimeType": "image/jpeg",
+                    "size": 195438
+                  },
+                  "title": "e.w. niedermeyer is live on Streamplace",
+                  "uri": "https://stream.place/niedermeyer.online"
+                }
+              },
+              "status": "app.bsky.actor.status#live"
+            },
+            "status": "app.bsky.actor.status#live",
+            "embed": {
+              "external": {
+                "uri": "https://stream.place/niedermeyer.online",
+                "title": "e.w. niedermeyer is live on Streamplace",
+                "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+              },
+              "$type": "app.bsky.embed.external#view"
+            },
+            "labels": [],
+            "expiresAt": "2026-10-20T17:00:37.680Z",
+            "isActive": false
           }
         },
         "record": {
@@ -69,10 +109,10 @@
           "$type": "app.bsky.embed.video#view"
         },
         "bookmarkCount": 260,
-        "replyCount": 2111,
-        "repostCount": 1080,
-        "likeCount": 7214,
-        "quoteCount": 2083,
+        "replyCount": 2102,
+        "repostCount": 1074,
+        "likeCount": 7187,
+        "quoteCount": 2076,
         "indexedAt": "2026-04-22T23:00:22.348Z",
         "viewer": {
           "bookmarked": false,

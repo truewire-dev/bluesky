@@ -4,123 +4,17 @@
     "feed": [
       {
         "post": {
-          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mv3shqdfuc2e",
-          "cid": "bafyreicctz5gxccl6ql35ae7a6wdk3zl2ry6o5ioltme52yezp7s6l42ji",
+          "uri": "at://did:plc:p2dcugajbtsn44h5n2kgt7ox/app.bsky.feed.post/3mztj24pp222r",
+          "cid": "bafyreidmlxx6y5vkcmfjucqct5ifnmrrlecuolbvfs3jy2e7i756wlyvqy",
           "author": {
-            "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
-            "handle": "bsky.app",
-            "displayName": "Bluesky",
-            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
+            "did": "did:plc:p2dcugajbtsn44h5n2kgt7ox",
+            "handle": "mauraquint.bsky.social",
+            "displayName": "maura quint",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:p2dcugajbtsn44h5n2kgt7ox/bafkreib7zksza7rgrxw7vklqobx4fomm4zqupxuhleo57frderpguutgku",
             "associated": {
               "chat": {
-                "allowIncoming": "none"
+                "allowIncoming": "all"
               },
-              "activitySubscription": {
-                "allowSubscriptions": "followers"
-              }
-            },
-            "viewer": {
-              "muted": false,
-              "mutedOnlyReposts": false,
-              "mutedOnlyQuoteposts": false,
-              "blockedBy": false,
-              "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
-            },
-            "labels": [],
-            "createdAt": "2023-04-12T04:53:57.057Z",
-            "verification": {
-              "verifications": [],
-              "verifiedStatus": "none",
-              "trustedVerifierStatus": "valid"
-            }
-          },
-          "record": {
-            "$type": "app.bsky.feed.post",
-            "createdAt": "2026-09-09T15:00:07.513Z",
-            "embed": {
-              "$type": "app.bsky.embed.images",
-              "images": [
-                {
-                  "alt": "An enormous pile of red apples and green apples\u2014sweet, tart, delicious, and coming soon to an Apple Store near you! Keep your eye on this thread (and maybe put on a sturdy hat) to learn more about today's big drops.",
-                  "aspectRatio": {
-                    "height": 3000,
-                    "width": 4000
-                  },
-                  "image": {
-                    "$type": "blob",
-                    "ref": {
-                      "$link": "bafkreih3mb3cwnbc5kv5b2qyy24q6banms25i5ut3cbty4ej2x7vjvd6y4"
-                    },
-                    "mimeType": "image/jpeg",
-                    "size": 1985909
-                  }
-                }
-              ]
-            },
-            "langs": [
-              "en"
-            ],
-            "text": "Not to brag, but ... we snagged a couple of passes to today\u2019s Apple event. Stay tuned for our take on all the latest and greatest Apple products."
-          },
-          "embed": {
-            "images": [
-              {
-                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreih3mb3cwnbc5kv5b2qyy24q6banms25i5ut3cbty4ej2x7vjvd6y4",
-                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreih3mb3cwnbc5kv5b2qyy24q6banms25i5ut3cbty4ej2x7vjvd6y4",
-                "alt": "An enormous pile of red apples and green apples\u2014sweet, tart, delicious, and coming soon to an Apple Store near you! Keep your eye on this thread (and maybe put on a sturdy hat) to learn more about today's big drops.",
-                "aspectRatio": {
-                  "height": 3000,
-                  "width": 4000
-                }
-              }
-            ],
-            "$type": "app.bsky.embed.images#view"
-          },
-          "bookmarkCount": 17,
-          "replyCount": 69,
-          "repostCount": 78,
-          "likeCount": 947,
-          "quoteCount": 26,
-          "indexedAt": "2026-09-09T15:00:45.669Z",
-          "viewer": {
-            "bookmarked": false,
-            "threadMuted": false,
-            "replyDisabled": false,
-            "embeddingDisabled": false
-          },
-          "labels": [],
-          "threadgate": {
-            "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.threadgate/3mv3shqdfuc2e",
-            "cid": "bafyreieti6j2inkfq5t6zbv3e2cv35cws7bieqf6hngnhkawnthuwtnq2u",
-            "record": {
-              "$type": "app.bsky.feed.threadgate",
-              "createdAt": "2026-09-09T16:08:57.587Z",
-              "hiddenReplies": [
-                "at://did:plc:bzoeanuisqpleh5b5ywrycro/app.bsky.feed.post/3mv3smgyhcc25",
-                "at://did:plc:fzczh5skw2ivqbpitgceokfq/app.bsky.feed.post/3mv3snnxsdk2e",
-                "at://did:plc:gktdd4zus32lcihrm4hugcps/app.bsky.feed.post/3mv3w552mlc22",
-                "at://did:plc:c5bqflfsbn7g46aipm6ayyob/app.bsky.feed.post/3mv3thzdtjk2c",
-                "at://did:plc:6irylomud4saesa5cgv3qnd4/app.bsky.feed.post/3mv3syfaf6c2i",
-                "at://did:plc:us3bkeij77l3fz4v5uwugqvd/app.bsky.feed.post/3mv3uuqmwc22z"
-              ],
-              "post": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mv3shqdfuc2e"
-            },
-            "lists": []
-          }
-        },
-        "opThreadPostIndex": 1,
-        "opThreadPostCount": 2
-      },
-      {
-        "post": {
-          "uri": "at://did:plc:xb2urvqt5f4zzccjs46hysbf/app.bsky.feed.post/3muplmkx56s2k",
-          "cid": "bafyreidu2rxt55wzm3wmadbp6fzfrik6idvmh34qk23gwsssx6fqdgxbqm",
-          "author": {
-            "did": "did:plc:xb2urvqt5f4zzccjs46hysbf",
-            "handle": "cee.wtf",
-            "displayName": "cee",
-            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:xb2urvqt5f4zzccjs46hysbf/bafkreigyfwcdlgfoo73jsjas2mtmcwzugmg37gdobl6psgfmz47lwuvncu",
-            "associated": {
               "activitySubscription": {
                 "allowSubscriptions": "followers"
               }
@@ -132,67 +26,99 @@
               "blockedBy": false
             },
             "labels": [],
-            "createdAt": "2024-11-14T02:19:10.084Z"
+            "createdAt": "2023-05-01T20:58:13.832Z"
           },
           "record": {
             "$type": "app.bsky.feed.post",
-            "createdAt": "2026-09-04T18:25:36.591Z",
-            "embed": {
-              "$type": "app.bsky.embed.video",
-              "aspectRatio": {
-                "height": 1298,
-                "width": 1874
-              },
-              "presentation": "default",
-              "video": {
-                "$type": "blob",
-                "ref": {
-                  "$link": "bafkreidxa3lbz3ubsprahwue2psjtxqes5r2susclpncjjef6ekwkn26ua"
-                },
-                "mimeType": "video/mp4",
-                "size": 16831693
-              }
-            },
-            "facets": [
-              {
-                "features": [
-                  {
-                    "$type": "app.bsky.richtext.facet#link",
-                    "uri": "https://throng.cee.wtf"
-                  }
-                ],
-                "index": {
-                  "byteEnd": 14,
-                  "byteStart": 0
-                }
-              }
-            ],
+            "createdAt": "2026-11-08T22:56:07.294Z",
             "langs": [
               "en"
             ],
-            "text": "throng.cee.wtf i've invented a new way to browse bluesky"
+            "text": "It's my favorite time of year!  Time to do your holiday shopping by supporting independent artists!\n\nIf you're an artist or craftsperson of any kind, please reply to this with what you make and a link to your store and I'll share it!\n\nLet\u2019s boost, support and buy cool stuff from artists!!"
           },
-          "embed": {
-            "cid": "bafkreidxa3lbz3ubsprahwue2psjtxqes5r2susclpncjjef6ekwkn26ua",
-            "playlist": "https://video.bsky.app/watch/did%3Aplc%3Axb2urvqt5f4zzccjs46hysbf/bafkreidxa3lbz3ubsprahwue2psjtxqes5r2susclpncjjef6ekwkn26ua/playlist.m3u8",
-            "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Axb2urvqt5f4zzccjs46hysbf/bafkreidxa3lbz3ubsprahwue2psjtxqes5r2susclpncjjef6ekwkn26ua/thumbnail.jpg",
-            "aspectRatio": {
-              "height": 1298,
-              "width": 1874
-            },
-            "presentation": "default",
-            "$type": "app.bsky.embed.video#view"
-          },
-          "bookmarkCount": 1517,
-          "replyCount": 342,
-          "repostCount": 1884,
-          "likeCount": 8005,
-          "quoteCount": 625,
-          "indexedAt": "2026-09-04T18:26:09.958Z",
+          "bookmarkCount": 398,
+          "replyCount": 209,
+          "repostCount": 532,
+          "likeCount": 2129,
+          "quoteCount": 35,
+          "indexedAt": "2026-11-08T22:56:07.544Z",
           "viewer": {
             "bookmarked": false,
             "threadMuted": false,
-            "embeddingDisabled": false
+            "embeddingDisabled": false,
+            "knownLikers": {
+              "count": 1,
+              "actors": [
+                {
+                  "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
+                  "handle": "bsky.app",
+                  "displayName": "Bluesky",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
+                  "associated": {
+                    "chat": {
+                      "allowIncoming": "none"
+                    },
+                    "activitySubscription": {
+                      "allowSubscriptions": "followers"
+                    }
+                  },
+                  "viewer": {
+                    "muted": false,
+                    "mutedOnlyReposts": false,
+                    "mutedOnlyQuoteposts": false,
+                    "blockedBy": false,
+                    "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
+                  },
+                  "labels": [],
+                  "createdAt": "2023-04-12T04:53:57.057Z",
+                  "verification": {
+                    "verifications": [],
+                    "verifiedStatus": "none",
+                    "trustedVerifierStatus": "valid"
+                  },
+                  "status": {
+                    "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.actor.status/self",
+                    "cid": "bafyreihkojqw7p22odgjcbzjh5sh4vrntow24sd4nvntpqnddrd5pqma44",
+                    "record": {
+                      "$type": "app.bsky.actor.status",
+                      "createdAt": "2026-10-20T16:00:37.680Z",
+                      "durationMinutes": 60,
+                      "embed": {
+                        "$type": "app.bsky.embed.external",
+                        "external": {
+                          "$type": "app.bsky.embed.external#external",
+                          "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+                          "thumb": {
+                            "$type": "blob",
+                            "ref": {
+                              "$link": "bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+                            },
+                            "mimeType": "image/jpeg",
+                            "size": 195438
+                          },
+                          "title": "e.w. niedermeyer is live on Streamplace",
+                          "uri": "https://stream.place/niedermeyer.online"
+                        }
+                      },
+                      "status": "app.bsky.actor.status#live"
+                    },
+                    "status": "app.bsky.actor.status#live",
+                    "embed": {
+                      "external": {
+                        "uri": "https://stream.place/niedermeyer.online",
+                        "title": "e.w. niedermeyer is live on Streamplace",
+                        "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+                        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+                      },
+                      "$type": "app.bsky.embed.external#view"
+                    },
+                    "labels": [],
+                    "expiresAt": "2026-10-20T17:00:37.680Z",
+                    "isActive": false
+                  }
+                }
+              ]
+            }
           },
           "labels": []
         },
@@ -223,11 +149,51 @@
               "verifications": [],
               "verifiedStatus": "none",
               "trustedVerifierStatus": "valid"
+            },
+            "status": {
+              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.actor.status/self",
+              "cid": "bafyreihkojqw7p22odgjcbzjh5sh4vrntow24sd4nvntpqnddrd5pqma44",
+              "record": {
+                "$type": "app.bsky.actor.status",
+                "createdAt": "2026-10-20T16:00:37.680Z",
+                "durationMinutes": 60,
+                "embed": {
+                  "$type": "app.bsky.embed.external",
+                  "external": {
+                    "$type": "app.bsky.embed.external#external",
+                    "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+                    "thumb": {
+                      "$type": "blob",
+                      "ref": {
+                        "$link": "bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+                      },
+                      "mimeType": "image/jpeg",
+                      "size": 195438
+                    },
+                    "title": "e.w. niedermeyer is live on Streamplace",
+                    "uri": "https://stream.place/niedermeyer.online"
+                  }
+                },
+                "status": "app.bsky.actor.status#live"
+              },
+              "status": "app.bsky.actor.status#live",
+              "embed": {
+                "external": {
+                  "uri": "https://stream.place/niedermeyer.online",
+                  "title": "e.w. niedermeyer is live on Streamplace",
+                  "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+                  "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+                },
+                "$type": "app.bsky.embed.external#view"
+              },
+              "labels": [],
+              "expiresAt": "2026-10-20T17:00:37.680Z",
+              "isActive": false
             }
           },
-          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.repost/3muppv5g3h627",
-          "cid": "bafyreigcdrtiyaftnlqib2sbcybx4vfpunzraqyiip4r4oqyrdh2wf4i5q",
-          "indexedAt": "2026-09-04T19:41:59.668Z",
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.repost/3mztnlkza7j23",
+          "cid": "bafyreias6kguqflj3jspbja5w3437zsibbtvrklppm53vs3nu6ijb6iwfi",
+          "indexedAt": "2026-11-09T00:17:27.782Z",
           "$type": "app.bsky.feed.defs#reasonRepost"
         },
         "opThreadPostIndex": 1,
@@ -235,9 +201,165 @@
       },
       {
         "post": {
-          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mupeqslogc2k",
-          "cid": "bafyreihwlheqkbd52brir22s26qyjcklurh725aam3u5mtwffjey6xoaqm",
+          "uri": "at://did:plc:djuj57armcsoyzmdfeg7i4qf/app.bsky.feed.post/3mzod4qisq22c",
+          "cid": "bafyreiavd7biulo2qvyhub3yamebqmfbje5oqvydhsx6yocpyj2hkwmlq4",
           "author": {
+            "did": "did:plc:djuj57armcsoyzmdfeg7i4qf",
+            "handle": "rfksbrainworm.bsky.social",
+            "displayName": "worm",
+            "pronouns": "he/him",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:djuj57armcsoyzmdfeg7i4qf/bafkreifjiw6hl5yotq43yhyj2aoaj27iibjoezywqcwe7jxrijrks76aai",
+            "associated": {
+              "chat": {
+                "allowIncoming": "all",
+                "allowGroupInvites": "all"
+              },
+              "activitySubscription": {
+                "allowSubscriptions": "mutuals"
+              }
+            },
+            "viewer": {
+              "muted": false,
+              "mutedOnlyReposts": false,
+              "mutedOnlyQuoteposts": false,
+              "blockedBy": false
+            },
+            "labels": [
+              {
+                "src": "did:plc:djuj57armcsoyzmdfeg7i4qf",
+                "uri": "at://did:plc:djuj57armcsoyzmdfeg7i4qf/app.bsky.actor.profile/self",
+                "cid": "bafyreidmw33npypvo6l6dxt7pkojk4eubuts4sz774f7eym2d2fix4js4e",
+                "val": "!no-unauthenticated",
+                "cts": "2024-07-02T23:05:01.137Z"
+              }
+            ],
+            "createdAt": "2024-07-02T23:05:02.177Z"
+          },
+          "record": {
+            "$type": "app.bsky.feed.post",
+            "createdAt": "2026-11-06T21:26:54.007Z",
+            "embed": {
+              "$type": "app.bsky.embed.video",
+              "alt": "[from wikipedia]\nThe capuchinbird is a large thick-set suboscine passerine with a relatively heavy bill. Adults weigh between 340 and 420 grams (12 and 15 oz) and are typically around 40 centimetres (16 in) long, making it the largest suboscine passerine, apart from the Amazonian and long-wattled umbrellabirds \u2013 indeed, females average larger than any female umbrellabird. Its plumage is overall rich brown, approaching orange on the belly and undertail coverts, and the remiges and short tail are black. The most distinctive feature is its bare, almost vulture-like head covered in dull blue skin. Juveniles resemble adults, with the exception of some downy feathers on the head.",
+              "aspectRatio": {
+                "height": 1280,
+                "width": 720
+              },
+              "presentation": "default",
+              "video": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreiaeat7ek4wdpduqoouglxsehvizeyflf2aj2xw4kzhfo7rni27hy4"
+                },
+                "mimeType": "video/mp4",
+                "size": 6565612
+              }
+            },
+            "langs": [
+              "en"
+            ],
+            "text": "if you've never seen a Capuchinbird (Perissocephalus tricolor), here you go"
+          },
+          "embed": {
+            "cid": "bafkreiaeat7ek4wdpduqoouglxsehvizeyflf2aj2xw4kzhfo7rni27hy4",
+            "playlist": "https://video.bsky.app/watch/did%3Aplc%3Adjuj57armcsoyzmdfeg7i4qf/bafkreiaeat7ek4wdpduqoouglxsehvizeyflf2aj2xw4kzhfo7rni27hy4/playlist.m3u8",
+            "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Adjuj57armcsoyzmdfeg7i4qf/bafkreiaeat7ek4wdpduqoouglxsehvizeyflf2aj2xw4kzhfo7rni27hy4/thumbnail.jpg",
+            "alt": "[from wikipedia]\nThe capuchinbird is a large thick-set suboscine passerine with a relatively heavy bill. Adults weigh between 340 and 420 grams (12 and 15 oz) and are typically around 40 centimetres (16 in) long, making it the largest suboscine passerine, apart from the Amazonian and long-wattled umbrellabirds \u2013 indeed, females average larger than any female umbrellabird. Its plumage is overall rich brown, approaching orange on the belly and undertail coverts, and the remiges and short tail are black. The most distinctive feature is its bare, almost vulture-like head covered in dull blue skin. Juveniles resemble adults, with the exception of some downy feathers on the head.",
+            "aspectRatio": {
+              "height": 1280,
+              "width": 720
+            },
+            "presentation": "default",
+            "$type": "app.bsky.embed.video#view"
+          },
+          "bookmarkCount": 1408,
+          "replyCount": 256,
+          "repostCount": 2570,
+          "likeCount": 12027,
+          "quoteCount": 388,
+          "indexedAt": "2026-11-06T21:26:55.481Z",
+          "viewer": {
+            "bookmarked": false,
+            "threadMuted": false,
+            "embeddingDisabled": false,
+            "knownLikers": {
+              "count": 1,
+              "actors": [
+                {
+                  "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
+                  "handle": "bsky.app",
+                  "displayName": "Bluesky",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
+                  "associated": {
+                    "chat": {
+                      "allowIncoming": "none"
+                    },
+                    "activitySubscription": {
+                      "allowSubscriptions": "followers"
+                    }
+                  },
+                  "viewer": {
+                    "muted": false,
+                    "mutedOnlyReposts": false,
+                    "mutedOnlyQuoteposts": false,
+                    "blockedBy": false,
+                    "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
+                  },
+                  "labels": [],
+                  "createdAt": "2023-04-12T04:53:57.057Z",
+                  "verification": {
+                    "verifications": [],
+                    "verifiedStatus": "none",
+                    "trustedVerifierStatus": "valid"
+                  },
+                  "status": {
+                    "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.actor.status/self",
+                    "cid": "bafyreihkojqw7p22odgjcbzjh5sh4vrntow24sd4nvntpqnddrd5pqma44",
+                    "record": {
+                      "$type": "app.bsky.actor.status",
+                      "createdAt": "2026-10-20T16:00:37.680Z",
+                      "durationMinutes": 60,
+                      "embed": {
+                        "$type": "app.bsky.embed.external",
+                        "external": {
+                          "$type": "app.bsky.embed.external#external",
+                          "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+                          "thumb": {
+                            "$type": "blob",
+                            "ref": {
+                              "$link": "bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+                            },
+                            "mimeType": "image/jpeg",
+                            "size": 195438
+                          },
+                          "title": "e.w. niedermeyer is live on Streamplace",
+                          "uri": "https://stream.place/niedermeyer.online"
+                        }
+                      },
+                      "status": "app.bsky.actor.status#live"
+                    },
+                    "status": "app.bsky.actor.status#live",
+                    "embed": {
+                      "external": {
+                        "uri": "https://stream.place/niedermeyer.online",
+                        "title": "e.w. niedermeyer is live on Streamplace",
+                        "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+                        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+                      },
+                      "$type": "app.bsky.embed.external#view"
+                    },
+                    "labels": [],
+                    "expiresAt": "2026-10-20T17:00:37.680Z",
+                    "isActive": false
+                  }
+                }
+              ]
+            }
+          },
+          "labels": []
+        },
+        "reason": {
+          "by": {
             "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
             "handle": "bsky.app",
             "displayName": "Bluesky",
@@ -263,126 +385,268 @@
               "verifications": [],
               "verifiedStatus": "none",
               "trustedVerifierStatus": "valid"
+            },
+            "status": {
+              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.actor.status/self",
+              "cid": "bafyreihkojqw7p22odgjcbzjh5sh4vrntow24sd4nvntpqnddrd5pqma44",
+              "record": {
+                "$type": "app.bsky.actor.status",
+                "createdAt": "2026-10-20T16:00:37.680Z",
+                "durationMinutes": 60,
+                "embed": {
+                  "$type": "app.bsky.embed.external",
+                  "external": {
+                    "$type": "app.bsky.embed.external#external",
+                    "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+                    "thumb": {
+                      "$type": "blob",
+                      "ref": {
+                        "$link": "bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+                      },
+                      "mimeType": "image/jpeg",
+                      "size": 195438
+                    },
+                    "title": "e.w. niedermeyer is live on Streamplace",
+                    "uri": "https://stream.place/niedermeyer.online"
+                  }
+                },
+                "status": "app.bsky.actor.status#live"
+              },
+              "status": "app.bsky.actor.status#live",
+              "embed": {
+                "external": {
+                  "uri": "https://stream.place/niedermeyer.online",
+                  "title": "e.w. niedermeyer is live on Streamplace",
+                  "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+                  "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+                },
+                "$type": "app.bsky.embed.external#view"
+              },
+              "labels": [],
+              "expiresAt": "2026-10-20T17:00:37.680Z",
+              "isActive": false
             }
+          },
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.repost/3mzofolqk3z2z",
+          "cid": "bafyreic245ppbzemfummmocga546peteunvhqsgbmbldef4itng6y5lfzq",
+          "indexedAt": "2026-11-06T22:12:40.587Z",
+          "$type": "app.bsky.feed.defs#reasonRepost"
+        },
+        "opThreadPostIndex": 1,
+        "opThreadPostCount": 5
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:bzy5rjjduvvkxno5xe3evl3f/app.bsky.feed.post/3mzm5wat4i22b",
+          "cid": "bafyreihuhctkreg4h6qq5yevcdr7ymnxxmboeejxoklttkcfag74cpepgy",
+          "author": {
+            "did": "did:plc:bzy5rjjduvvkxno5xe3evl3f",
+            "handle": "lollardfish.bsky.social",
+            "displayName": "David M. Perry",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:bzy5rjjduvvkxno5xe3evl3f/bafkreihbbywfxcbydyzzmwd4yfmulzlfriu2vwhgtj4cu5lnnt3byxq2yu",
+            "associated": {
+              "chat": {
+                "allowIncoming": "following"
+              },
+              "activitySubscription": {
+                "allowSubscriptions": "mutuals"
+              }
+            },
+            "viewer": {
+              "muted": false,
+              "mutedOnlyReposts": false,
+              "mutedOnlyQuoteposts": false,
+              "blockedBy": false
+            },
+            "labels": [],
+            "createdAt": "2023-06-02T15:26:51.321Z"
           },
           "record": {
             "$type": "app.bsky.feed.post",
-            "createdAt": "2026-09-04T16:22:42.630Z",
-            "embed": {
-              "$type": "app.bsky.embed.record",
-              "record": {
-                "cid": "bafyreiascok2wbvkm2yjpb4xxuoo5zadjwvgkgfuytlpvn73b5cmvmgyie",
-                "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mupeo3so622k"
-              }
-            },
+            "createdAt": "2026-11-06T00:48:28.056Z",
             "langs": [
               "en"
             ],
-            "text": "Thread numbering is out of beta! Threaded posts are now automatically numbered, to help you follow along. Check out the automatic numbering on this thread to see it in action."
+            "text": "You should welcome all the new people to Bluesky by TELLING US ALL ABOUT YOUR BOOK AND DONT FORGET A LINK SO WE CAN BUY IT. \n\nBluesky, the app for books."
           },
-          "embed": {
-            "record": {
-              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.post/3mupeo3so622k",
-              "cid": "bafyreiascok2wbvkm2yjpb4xxuoo5zadjwvgkgfuytlpvn73b5cmvmgyie",
-              "author": {
-                "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
-                "handle": "bsky.app",
-                "displayName": "Bluesky",
-                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
-                "associated": {
-                  "chat": {
-                    "allowIncoming": "none"
-                  },
-                  "activitySubscription": {
-                    "allowSubscriptions": "followers"
-                  }
-                },
-                "viewer": {
-                  "muted": false,
-                  "mutedOnlyReposts": false,
-                  "mutedOnlyQuoteposts": false,
-                  "blockedBy": false,
-                  "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
-                },
-                "labels": [],
-                "createdAt": "2023-04-12T04:53:57.057Z",
-                "verification": {
-                  "verifications": [],
-                  "verifiedStatus": "none",
-                  "trustedVerifierStatus": "valid"
-                }
-              },
-              "value": {
-                "$type": "app.bsky.feed.post",
-                "createdAt": "2026-09-04T16:21:11.628Z",
-                "embed": {
-                  "$type": "app.bsky.embed.images",
-                  "images": [
-                    {
-                      "alt": "Screenshot of the Bluesky app showing someone searching for Starter Packs whose names include the keyword \"art.\" We see results that include \"Bluesky for Art History,\" \"Design and Art Folk,\" and \"Coven Caf\u00e9 Art Club.\"",
-                      "aspectRatio": {
-                        "height": 1968,
-                        "width": 3300
-                      },
-                      "image": {
-                        "$type": "blob",
-                        "ref": {
-                          "$link": "bafkreif244xt3eu5pqms74ql3uqmlzisyqarfowlpjxko4xqty5hcm3whi"
-                        },
-                        "mimeType": "image/jpeg",
-                        "size": 1363535
-                      }
-                    }
-                  ]
-                },
-                "langs": [
-                  "en"
-                ],
-                "text": "v1.132 is live!\n\nStarter Packs are one of the best ways to find new people to follow\u2014but how do you find the Starter Packs?\n\nAs of today, look for them right in the main search box. You'll see the results under the Starter Packs tab."
-              },
-              "labels": [],
-              "likeCount": 1389,
-              "replyCount": 60,
-              "repostCount": 259,
-              "quoteCount": 49,
-              "indexedAt": "2026-09-04T16:21:37.959Z",
-              "embeds": [
-                {
-                  "images": [
-                    {
-                      "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreif244xt3eu5pqms74ql3uqmlzisyqarfowlpjxko4xqty5hcm3whi",
-                      "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreif244xt3eu5pqms74ql3uqmlzisyqarfowlpjxko4xqty5hcm3whi",
-                      "alt": "Screenshot of the Bluesky app showing someone searching for Starter Packs whose names include the keyword \"art.\" We see results that include \"Bluesky for Art History,\" \"Design and Art Folk,\" and \"Coven Caf\u00e9 Art Club.\"",
-                      "aspectRatio": {
-                        "height": 1968,
-                        "width": 3300
-                      }
-                    }
-                  ],
-                  "$type": "app.bsky.embed.images#view"
-                }
-              ],
-              "$type": "app.bsky.embed.record#viewRecord"
-            },
-            "$type": "app.bsky.embed.record#view"
-          },
-          "bookmarkCount": 70,
-          "replyCount": 107,
-          "repostCount": 386,
-          "likeCount": 2130,
-          "quoteCount": 134,
-          "indexedAt": "2026-09-04T16:22:42.864Z",
+          "bookmarkCount": 347,
+          "replyCount": 565,
+          "repostCount": 715,
+          "likeCount": 3620,
+          "quoteCount": 1342,
+          "indexedAt": "2026-11-06T00:48:28.371Z",
           "viewer": {
             "bookmarked": false,
             "threadMuted": false,
-            "embeddingDisabled": false
+            "replyDisabled": false,
+            "embeddingDisabled": false,
+            "knownLikers": {
+              "count": 1,
+              "actors": [
+                {
+                  "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
+                  "handle": "bsky.app",
+                  "displayName": "Bluesky",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
+                  "associated": {
+                    "chat": {
+                      "allowIncoming": "none"
+                    },
+                    "activitySubscription": {
+                      "allowSubscriptions": "followers"
+                    }
+                  },
+                  "viewer": {
+                    "muted": false,
+                    "mutedOnlyReposts": false,
+                    "mutedOnlyQuoteposts": false,
+                    "blockedBy": false,
+                    "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
+                  },
+                  "labels": [],
+                  "createdAt": "2023-04-12T04:53:57.057Z",
+                  "verification": {
+                    "verifications": [],
+                    "verifiedStatus": "none",
+                    "trustedVerifierStatus": "valid"
+                  },
+                  "status": {
+                    "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.actor.status/self",
+                    "cid": "bafyreihkojqw7p22odgjcbzjh5sh4vrntow24sd4nvntpqnddrd5pqma44",
+                    "record": {
+                      "$type": "app.bsky.actor.status",
+                      "createdAt": "2026-10-20T16:00:37.680Z",
+                      "durationMinutes": 60,
+                      "embed": {
+                        "$type": "app.bsky.embed.external",
+                        "external": {
+                          "$type": "app.bsky.embed.external#external",
+                          "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+                          "thumb": {
+                            "$type": "blob",
+                            "ref": {
+                              "$link": "bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+                            },
+                            "mimeType": "image/jpeg",
+                            "size": 195438
+                          },
+                          "title": "e.w. niedermeyer is live on Streamplace",
+                          "uri": "https://stream.place/niedermeyer.online"
+                        }
+                      },
+                      "status": "app.bsky.actor.status#live"
+                    },
+                    "status": "app.bsky.actor.status#live",
+                    "embed": {
+                      "external": {
+                        "uri": "https://stream.place/niedermeyer.online",
+                        "title": "e.w. niedermeyer is live on Streamplace",
+                        "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+                        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+                      },
+                      "$type": "app.bsky.embed.external#view"
+                    },
+                    "labels": [],
+                    "expiresAt": "2026-10-20T17:00:37.680Z",
+                    "isActive": false
+                  }
+                }
+              ]
+            }
           },
-          "labels": []
+          "labels": [],
+          "threadgate": {
+            "uri": "at://did:plc:bzy5rjjduvvkxno5xe3evl3f/app.bsky.feed.threadgate/3mzm5wat4i22b",
+            "cid": "bafyreifi4hk3rqei4wa4mraqu7seleczyd2ah664ztqm33nenaxz4fcvqe",
+            "record": {
+              "$type": "app.bsky.feed.threadgate",
+              "createdAt": "2026-11-07T00:28:18.837Z",
+              "hiddenReplies": [
+                "at://did:plc:r5psah5uee763xojzymggjih/app.bsky.feed.post/3mzon74n2hc27"
+              ],
+              "post": "at://did:plc:bzy5rjjduvvkxno5xe3evl3f/app.bsky.feed.post/3mzm5wat4i22b"
+            },
+            "lists": []
+          }
+        },
+        "reason": {
+          "by": {
+            "did": "did:plc:z72i7hdynmk6r22z27h6tvur",
+            "handle": "bsky.app",
+            "displayName": "Bluesky",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreihwihm6kpd6zuwhhlro75p5qks5qtrcu55jp3gddbfjsieiv7wuka",
+            "associated": {
+              "chat": {
+                "allowIncoming": "none"
+              },
+              "activitySubscription": {
+                "allowSubscriptions": "followers"
+              }
+            },
+            "viewer": {
+              "muted": false,
+              "mutedOnlyReposts": false,
+              "mutedOnlyQuoteposts": false,
+              "blockedBy": false,
+              "following": "at://did:plc:wvyqir3vnepwss2z3m4s6hgp/app.bsky.graph.follow/3mv3vnn64ll2t"
+            },
+            "labels": [],
+            "createdAt": "2023-04-12T04:53:57.057Z",
+            "verification": {
+              "verifications": [],
+              "verifiedStatus": "none",
+              "trustedVerifierStatus": "valid"
+            },
+            "status": {
+              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.actor.status/self",
+              "cid": "bafyreihkojqw7p22odgjcbzjh5sh4vrntow24sd4nvntpqnddrd5pqma44",
+              "record": {
+                "$type": "app.bsky.actor.status",
+                "createdAt": "2026-10-20T16:00:37.680Z",
+                "durationMinutes": 60,
+                "embed": {
+                  "$type": "app.bsky.embed.external",
+                  "external": {
+                    "$type": "app.bsky.embed.external#external",
+                    "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+                    "thumb": {
+                      "$type": "blob",
+                      "ref": {
+                        "$link": "bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+                      },
+                      "mimeType": "image/jpeg",
+                      "size": 195438
+                    },
+                    "title": "e.w. niedermeyer is live on Streamplace",
+                    "uri": "https://stream.place/niedermeyer.online"
+                  }
+                },
+                "status": "app.bsky.actor.status#live"
+              },
+              "status": "app.bsky.actor.status#live",
+              "embed": {
+                "external": {
+                  "uri": "https://stream.place/niedermeyer.online",
+                  "title": "e.w. niedermeyer is live on Streamplace",
+                  "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+                  "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+                },
+                "$type": "app.bsky.embed.external#view"
+              },
+              "labels": [],
+              "expiresAt": "2026-10-20T17:00:37.680Z",
+              "isActive": false
+            }
+          },
+          "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.repost/3mznp7tgy4v2a",
+          "cid": "bafyreibx2pilzbdpojgfksierrjtcqwxf5vmndv6hqlu2ufrujucyxeyty",
+          "indexedAt": "2026-11-06T15:30:43.073Z",
+          "$type": "app.bsky.feed.defs#reasonRepost"
         },
         "opThreadPostIndex": 1,
-        "opThreadPostCount": 2
+        "opThreadPostCount": 3
       }
     ],
-    "cursor": "2026-09-04T16:22:42.63Z"
+    "cursor": "2026-11-06T15:30:42.873Z"
   }
 }

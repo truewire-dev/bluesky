@@ -3,10 +3,9 @@
   "payload": {
     "follows": [
       {
-        "did": "did:plc:rcbtnmlk2la67bm4po65oe23",
-        "handle": "mapquest.com",
-        "displayName": "MapQuest",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:rcbtnmlk2la67bm4po65oe23/bafkreif4gnpczz35lb6abj3e3yi245hsb6wb4verg6pn66mpo2ovvy73j4",
+        "did": "did:plc:gmous2wboxwezubumfgvaiox",
+        "handle": "dcbsky.com",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:gmous2wboxwezubumfgvaiox/bafkreihhgt3xiony2b5hzydyq6wimlhfvjw3nnzxbaskse2acv4wpcgvdu",
         "associated": {
           "activitySubscription": {
             "allowSubscriptions": "followers"
@@ -18,33 +17,27 @@
           "mutedOnlyQuoteposts": false,
           "blockedBy": false
         },
-        "labels": [],
-        "createdAt": "2024-11-21T21:11:36.371Z",
-        "verification": {
-          "verifications": [
-            {
-              "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
-              "issuerDisplayName": "Bluesky",
-              "issuerHandle": "bsky.app",
-              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mu3nzi3w3m2k",
-              "isValid": true,
-              "createdAt": "2026-08-27T20:15:22.264Z"
-            }
-          ],
-          "verifiedStatus": "valid",
-          "trustedVerifierStatus": "none"
-        },
-        "description": "The OG of online mapping.\n\nGet the app on Android and iOS: lnk.bio/MapQuest",
-        "indexedAt": "2026-08-27T20:23:38.364Z"
+        "labels": [
+          {
+            "src": "did:plc:gmous2wboxwezubumfgvaiox",
+            "uri": "at://did:plc:gmous2wboxwezubumfgvaiox/app.bsky.actor.profile/self",
+            "cid": "bafyreigkzsmzdfh5n43d6ukwotodpxkzkkobsxjvi2lt7flu26dg5d42gu",
+            "val": "bot",
+            "cts": "1970-01-01T00:00:00.000Z"
+          }
+        ],
+        "createdAt": "2026-10-25T23:55:48.241Z",
+        "indexedAt": "2026-10-25T23:59:08.943Z"
       },
       {
-        "did": "did:plc:ragtjsm2j2vknwkz3zp4oxrd",
-        "handle": "pfrazee.com",
-        "displayName": "Paul Frazee",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ragtjsm2j2vknwkz3zp4oxrd/bafkreihhpqdyntku66himwor5wlhtdo44hllmngj2ofmbqnm25bdm454wq",
+        "did": "did:plc:denuvqodvvnzxtuitumle4vs",
+        "handle": "themerl.bsky.social",
+        "displayName": "The Museum of English Rural Life (MERL)",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:denuvqodvvnzxtuitumle4vs/bafkreihj6fcjrug746lsmnqa6sfwgxy2fxm223xt5fedarlvsyalb33giq",
         "associated": {
           "chat": {
-            "allowIncoming": "following"
+            "allowIncoming": "none",
+            "allowGroupInvites": "none"
           },
           "activitySubscription": {
             "allowSubscriptions": "followers"
@@ -57,35 +50,39 @@
           "blockedBy": false
         },
         "labels": [],
-        "createdAt": "2022-11-17T00:35:16.391Z",
+        "createdAt": "2023-08-04T10:45:14.741Z",
         "verification": {
           "verifications": [
             {
               "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
               "issuerDisplayName": "Bluesky",
               "issuerHandle": "bsky.app",
-              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3ltkwktj2hc2n",
+              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3mzktnkzk4d2w",
               "isValid": true,
-              "createdAt": "2025-07-09T23:06:46.951Z"
+              "createdAt": "2026-11-05T12:11:59.413Z"
             }
           ],
           "verifiedStatus": "valid",
           "trustedVerifierStatus": "none"
         },
-        "description": "CTO at Bluesky. Not a nerd.",
-        "indexedAt": "2026-02-09T17:34:52.546Z"
+        "description": "We explore the history of the English countryside and its people. Chaotic Good.",
+        "indexedAt": "2026-11-05T11:38:31.571Z"
       },
       {
-        "did": "did:plc:t5pur7eruxfgxy7ynpfrmg2w",
-        "handle": "chiitan.love",
-        "displayName": "Chiitan\ud83c\udf08\u3061\u3043\u305f\u3093\u2606",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:t5pur7eruxfgxy7ynpfrmg2w/bafkreihtj5bb6lvdlrcyun7fsdmw5e5je6qdvcfznetsitmkq4lx2slvky",
+        "did": "did:plc:qjeavhlw222ppsre4rscd3n2",
+        "handle": "rose.bsky.team",
+        "displayName": "Rose \ud83c\udf39",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qjeavhlw222ppsre4rscd3n2/bafkreiegdbepxyjj5mvqqtyqsocyafpiwol7eabcvxqfuiu7ai4bsgmzeu",
         "associated": {
           "chat": {
             "allowIncoming": "all"
           },
           "activitySubscription": {
             "allowSubscriptions": "followers"
+          },
+          "germ": {
+            "showButtonTo": "usersIFollow",
+            "messageMeUrl": "https://landing.ger.mx/newUser"
           }
         },
         "viewer": {
@@ -95,23 +92,23 @@
           "blockedBy": false
         },
         "labels": [],
-        "createdAt": "2024-02-07T14:03:04.704Z",
+        "createdAt": "2022-11-22T05:02:21.193Z",
         "verification": {
           "verifications": [
             {
               "issuer": "did:plc:z72i7hdynmk6r22z27h6tvur",
               "issuerDisplayName": "Bluesky",
               "issuerHandle": "bsky.app",
-              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3lw6ixnv72o2u",
+              "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.graph.verification/3ltkzoygsib2f",
               "isValid": true,
-              "createdAt": "2025-08-12T04:47:02.909Z"
+              "createdAt": "2025-07-10T00:02:47.546Z"
             }
           ],
           "verifiedStatus": "valid",
           "trustedVerifierStatus": "none"
         },
-        "description": "I'm chiitan Japanese crazy mascot\n\ud83c\udff3\ufe0f\u200d\u26a7\ufe0fChiitan is a transgender ally\ud83c\udff3\ufe0f\u200d\ud83c\udf08\nBL,furry,YURI,Yume LOVE\ud83e\udd0d\n\nX https://x.com/chiitan7407/\nIG http://instagram.com/chiitan7407/\nYouTube https://www.youtube.com/@chiitan\nTIKTOK https://www.tiktok.com/@love2chiitan",
-        "indexedAt": "2026-09-09T01:56:00.765Z"
+        "description": "COO of Bluesky \ud83e\udd8b - hiring https://bsky.social/about/join!",
+        "indexedAt": "2026-08-21T20:59:53.363Z"
       }
     ],
     "subject": {
@@ -141,9 +138,49 @@
         "verifiedStatus": "none",
         "trustedVerifierStatus": "valid"
       },
+      "status": {
+        "uri": "at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.actor.status/self",
+        "cid": "bafyreihkojqw7p22odgjcbzjh5sh4vrntow24sd4nvntpqnddrd5pqma44",
+        "record": {
+          "$type": "app.bsky.actor.status",
+          "createdAt": "2026-10-20T16:00:37.680Z",
+          "durationMinutes": 60,
+          "embed": {
+            "$type": "app.bsky.embed.external",
+            "external": {
+              "$type": "app.bsky.embed.external#external",
+              "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+              "thumb": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+                },
+                "mimeType": "image/jpeg",
+                "size": 195438
+              },
+              "title": "e.w. niedermeyer is live on Streamplace",
+              "uri": "https://stream.place/niedermeyer.online"
+            }
+          },
+          "status": "app.bsky.actor.status#live"
+        },
+        "status": "app.bsky.actor.status#live",
+        "embed": {
+          "external": {
+            "uri": "https://stream.place/niedermeyer.online",
+            "title": "e.w. niedermeyer is live on Streamplace",
+            "description": "Elon Take The Wheel Livestream: Alex Gibney, Director of \"MUSK\"",
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z72i7hdynmk6r22z27h6tvur/bafkreifbiu2m3dnnhmzq4dk6u4227p3xuq3zzqhhzvibhuojnz6unengny"
+          },
+          "$type": "app.bsky.embed.external#view"
+        },
+        "labels": [],
+        "expiresAt": "2026-10-20T17:00:37.680Z",
+        "isActive": false
+      },
       "description": "official Bluesky account (check username\ud83d\udc46)\n\nBugs, feature requests, feedback: support@bsky.app",
-      "indexedAt": "2025-10-27T21:05:26.152Z"
+      "indexedAt": "2026-11-04T15:41:10.973Z"
     },
-    "cursor": "3mtwn3g7wvf2k"
+    "cursor": "3mzldnajnnk2g"
   }
 }

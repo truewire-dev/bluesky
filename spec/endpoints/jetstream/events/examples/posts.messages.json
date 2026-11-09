@@ -1,638 +1,617 @@
 [
   {
-    "did": "did:plc:v2hj3xiqip5c6dzes6vyq6pu",
-    "time_us": 1788971264793600,
+    "did": "did:plc:kxddzpqolphjvjrsjwzco2rv",
+    "time_us": 1794236224462263,
+    "cursor": 26993381123,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xeetru42x",
+      "rev": "3mzv6qgrjzn22",
+      "operation": "delete",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mzv6mrvaak2y"
+    }
+  },
+  {
+    "did": "did:plc:vw4szsihex6vlbshyfj2seoq",
+    "time_us": 1794236224462869,
+    "cursor": 26993381137,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mzv6qgdvam2n",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xkxli7k2s",
+      "rkey": "3mzv6qfwpcc2a",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:31:24.495Z",
+        "createdAt": "2026-11-09T14:57:03.476Z",
         "langs": [
           "en"
         ],
         "reply": {
           "parent": {
-            "cid": "bafyreidewdyetiiw2sqrlxogr7phqfvhc4ysefzgfvobacu2hddg4m46ti",
-            "uri": "at://did:plc:daixvyhfhkw3hwaepdcf5745/app.bsky.feed.post/3mv3wx5h4qk2f"
+            "cid": "bafyreig322p6co5tsxtde5ej2abzyxrfmqpxfxfu4avjyqzxroxm3lby5i",
+            "uri": "at://did:plc:eosckbjcl3nwr3w35elwr6s4/app.bsky.feed.post/3mzv67llbxc2q"
           },
           "root": {
-            "cid": "bafyreihlp6uw7exg46ps2sduxbdho6fqd25ql6lc7nvefw3jpcbl5ayekq",
-            "uri": "at://did:plc:omwy5o45srwqlgj65adjoooz/app.bsky.feed.post/3mv3wi7cmjs2n"
+            "cid": "bafyreig322p6co5tsxtde5ej2abzyxrfmqpxfxfu4avjyqzxroxm3lby5i",
+            "uri": "at://did:plc:eosckbjcl3nwr3w35elwr6s4/app.bsky.feed.post/3mzv67llbxc2q"
           }
         },
-        "text": "\"mir der scheinheiligkeit von jack the ripper\"\n\n\"Asyltourismus\"\n\n\"Bis zur letzten Patrone\""
+        "text": "3 more days and we will be at the 2 week mark 🫠 🥲"
       },
-      "cid": "bafyreiawhwe3ijsgsxg4a7gbxyiphbwyjhiryjw2eorii3zed4ikeoq5le"
+      "cid": "bafyreiekxcdvyqdjnfsnsoxgtnvihb5a4ngxyauxgmxh3tdqs7wjjznawy"
     }
   },
   {
-    "did": "did:plc:u7gnh2exqxgfem5rcq27p3bp",
-    "time_us": 1788971264805772,
+    "did": "did:plc:om7veqid4jy7blosbssmmx3f",
+    "time_us": 1794236224463155,
+    "cursor": 26993381143,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xefulxd2t",
+      "rev": "3mzv6qgsgnq2f",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeflqxk2l",
+      "rkey": "3mzv6qgngtk2x",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.302Z",
+        "createdAt": "2026-11-09T14:57:04.222Z",
+        "embed": {
+          "$type": "app.bsky.embed.record",
+          "record": {
+            "cid": "bafyreigcjjfxkrzixylyjhavsbibkwoypomjaneuren5pg4hhewoy6cpry",
+            "uri": "at://did:plc:hyn77wx5hh75owdfr36xf6qg/app.bsky.feed.post/3mzv5lwecmk2j"
+          }
+        },
         "langs": [
-          "de"
+          "en"
         ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreia3lszhie6pmh3ewddqp2mwnzb4i4laiq63qyw3icpsa5hwfpjb4y",
-            "uri": "at://did:plc:34yzvxvcluoeegw2tde5jubz/app.bsky.feed.post/3mv3pfzy44k2g"
-          },
-          "root": {
-            "cid": "bafyreia3lszhie6pmh3ewddqp2mwnzb4i4laiq63qyw3icpsa5hwfpjb4y",
-            "uri": "at://did:plc:34yzvxvcluoeegw2tde5jubz/app.bsky.feed.post/3mv3pfzy44k2g"
-          }
-        },
-        "text": "Kühlschrank"
+        "text": "“Do you know how hard it is to find sunscreen rated for a vampire? When only one vampire is left. \n\nWhy am I talking to a tv? Bonnie would laugh at me right now”"
       },
-      "cid": "bafyreih5l5g4i3mwmdcw6wqapp7cofxanreigh4jttoeducg2elhhm7iwe"
+      "cid": "bafyreidua3gag6cxwhjo2d656yqfr3idnroc7k7ojpt4lmmttinum6vhcm"
     }
   },
   {
-    "did": "did:plc:7bhy3yf5z2of3c4qblu4icps",
-    "time_us": 1788971264809338,
+    "did": "did:plc:kiai4czyuo7pfkku3kwm6kkp",
+    "time_us": 1794236224497603,
+    "cursor": 26993381145,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xefuazs2t",
+      "rev": "3mzv6qglu7v2f",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeeexqs2e",
+      "rkey": "3mzv6qf3pzc2j",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.031Z",
+        "createdAt": "2026-11-09T14:57:02.591Z",
         "langs": [
           "ja"
         ],
-        "text": "Eu tava pensando em levar minha irmã para o judô para ela emagrecer"
+        "text": "あと20ページ〜"
       },
-      "cid": "bafyreiatwf3odhnkgjvditd36alr2hrkqok6yxytd5bgauvjwhegnjyuya"
+      "cid": "bafyreifh2276wuxqt3xx4lspkvqtwqmzgcdk5cmai7ekmwtm5hahc4zv64"
     }
   },
   {
-    "did": "did:plc:i4vghehjfnj46354zswfally",
-    "time_us": 1788971264823546,
+    "did": "did:plc:tmsqn6gjukjangbat7q3rcrp",
+    "time_us": 1794236224500633,
+    "cursor": 26993381148,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xefq2qe25",
+      "rev": "3mzv6qgpsze2e",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefcpvk2n",
+      "rkey": "3mzv6qgpl7e2e",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.007Z",
+        "createdAt": "2026-11-09T14:57:04.2563149Z",
+        "embed": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "description": "Seventh Circuit holds that copyright in compilation does not confer rights to individual works included in that compilation, affirming summary...",
+            "thumb": {
+              "$type": "blob",
+              "mimeType": "image/jpeg",
+              "ref": {
+                "$link": "bafkreidgxoareva6qc6ktbwp2rbiw4zuesn6gdknriemq32hcqno23l3gm"
+              },
+              "size": 87682
+            },
+            "title": "Center for Gestalt Development, Inc. v. Bowman",
+            "uri": "https://www.jdsupra.com/legalnews/center-for-gestalt-development-inc-v-7224579/"
+          }
+        },
+        "text": "Center for Gestalt Development, Inc. v. Bowman"
+      },
+      "cid": "bafyreic5hgtaoox7mvxv7m44w7abwc6w2zibjgfz33y55jlrcjms2kimzy"
+    }
+  },
+  {
+    "did": "did:plc:mqqflntw7ezk2hkml4gjmlrt",
+    "time_us": 1794236224503120,
+    "cursor": 26993381152,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mzv6qgq6wt2l",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mzv6qfytns2r",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-09T14:57:03.539Z",
         "langs": [
-          "it"
+          "th"
+        ],
+        "text": "จะหมดวันแล้วยังไม่ได้ปฏิสัมพันธ์กับใครเลย"
+      },
+      "cid": "bafyreie47tkandhdjh3kfc6e5gbot4rtl57r5n6ayjjgxw7vbl6k75uzny"
+    }
+  },
+  {
+    "did": "did:plc:77mzzrobfvnvmn6m2ghdwkou",
+    "time_us": 1794236224562126,
+    "cursor": 26993381153,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mzv6qgoewg2k",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mzv6qghfi22m",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-09T14:57:04.024Z",
+        "langs": [
+          "en"
         ],
         "reply": {
           "parent": {
-            "cid": "bafyreigjhkrzruvnigdbv6igxcumbi7anbl4quk2li7gpxfjtyo6qnkokm",
-            "uri": "at://did:plc:zr5krruo7ypqn5ygnjsg6ugm/app.bsky.feed.post/3mq2k2rfj4s2n"
+            "cid": "bafyreidcrc4uxjaw5gmuixtqhc2waug4vtm7bgq3u47dja7zsayevtvonu",
+            "uri": "at://did:plc:pbtjzjtg4u2qgrwoxrvy5nj5/app.bsky.feed.post/3mzug6yror22n"
           },
           "root": {
-            "cid": "bafyreigjhkrzruvnigdbv6igxcumbi7anbl4quk2li7gpxfjtyo6qnkokm",
-            "uri": "at://did:plc:zr5krruo7ypqn5ygnjsg6ugm/app.bsky.feed.post/3mq2k2rfj4s2n"
+            "cid": "bafyreidcrc4uxjaw5gmuixtqhc2waug4vtm7bgq3u47dja7zsayevtvonu",
+            "uri": "at://did:plc:pbtjzjtg4u2qgrwoxrvy5nj5/app.bsky.feed.post/3mzug6yror22n"
           }
         },
-        "text": "Da ciucciarle per ore"
+        "text": "Doesn’t say much about Petey or the so called ladies he was with 😂😂😂"
       },
-      "cid": "bafyreiedytdss4lc3uxd3s6rx3z3mdffeghofzrhczv7b5lbrnvgmlg2g4"
+      "cid": "bafyreidrvnnzmdh3oktemidoycs3nhg4np2gj35asiflf45svmzcdxc2pa"
     }
   },
   {
-    "did": "did:plc:hqsglb3tfognjouamxja3fzf",
-    "time_us": 1788971264834393,
+    "did": "did:plc:pnl2pqvwjk2xlgoafkwav4ck",
+    "time_us": 1794236224563163,
+    "cursor": 26993381172,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xefwh6h2r",
+      "rev": "3mzv6qgr6yr2w",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xedy3nc2l",
+      "rkey": "3mzv6qgguus2c",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:42.610Z",
+        "createdAt": "2026-11-09T14:57:04.008Z",
         "langs": [
-          "de"
+          "ja"
         ],
         "reply": {
           "parent": {
-            "cid": "bafyreialqejp64rlmv5ccyw3whgmm4e5tdnp3dce7bqxpno4s7bgbdjb7i",
-            "uri": "at://did:plc:2y4fpd7ppnz2lkmg76i2lse5/app.bsky.feed.post/3mv3vkhyzoc2n"
+            "cid": "bafyreibrdpxbflgdui4embolhouwpt4prvvdwifbcouhs4hjs54nianfcm",
+            "uri": "at://did:plc:gfu7ts2ltvqj6st2xmtthihr/app.bsky.feed.post/3mzv5ef52yk2h"
           },
           "root": {
-            "cid": "bafyreialqejp64rlmv5ccyw3whgmm4e5tdnp3dce7bqxpno4s7bgbdjb7i",
-            "uri": "at://did:plc:2y4fpd7ppnz2lkmg76i2lse5/app.bsky.feed.post/3mv3vkhyzoc2n"
+            "cid": "bafyreifeplr4hntbk42gfxgmat26bg6ivvghp3oi3lx2gbt4amswdevr24",
+            "uri": "at://did:plc:pnl2pqvwjk2xlgoafkwav4ck/app.bsky.feed.post/3mzv33s77fk2c"
           }
         },
-        "text": "Sehr ehrlose Damen und Herren, ..."
+        "text": "ありがたやありがたや…😭😭\n待ち遠しいようなまだ来てほしくないような…（まだ終わってない）"
       },
-      "cid": "bafyreidn2z3a2iybkryeavxw5ckbfkgsy4dblgtqk3r4w4ggia4guzqpja"
+      "cid": "bafyreiblzgysfvx3msur3ebud52qid74iq7rwwt24l2fy2g2u6br6cmk24"
     }
   },
   {
-    "did": "did:plc:hk5kx3doddx2i257vt6cnwoq",
-    "time_us": 1788971264844973,
-    "kind": "account",
-    "account": {
-      "active": false,
-      "did": "did:plc:hk5kx3doddx2i257vt6cnwoq",
-      "seq": 33472073575,
-      "status": "takendown",
-      "time": "2026-09-09T16:27:44.292Z"
-    }
-  },
-  {
-    "did": "did:plc:4nt6nwx353a3xxo5mzjiy4ha",
-    "time_us": 1788971264865916,
+    "did": "did:plc:jkz6yvpp32t6ltqmw4tt72ab",
+    "time_us": 1794236224563219,
+    "cursor": 26993381175,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xeexrvt2v",
+      "rev": "3mzv6qgtkux2z",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeexmzl2v",
+      "rkey": "3mzv6qgjyic2b",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.627Z",
+        "createdAt": "2026-11-09T14:57:04.109Z",
+        "langs": [
+          "th"
+        ],
+        "text": "21:52 | โรลเปิด \n ณ หน้ารถไฟฟ้าสถานีพญาไท\n\n/ นั่งเช็ดน้ำตาจ๋องอยู่สักมุม\n/ อีโม ใครเห็นก็ว่าโฮมเลส"
+      },
+      "cid": "bafyreiavr6hlpsyl7zczyxf56hvhwo3ipjqtteaq4kun2ur24gtgtcdv2a"
+    }
+  },
+  {
+    "did": "did:plc:2lgnmatg77obvwxi2o5wy232",
+    "time_us": 1794236224563704,
+    "cursor": 26993381190,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mzv6qgvshb2u",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mzv6qdf7us26",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-09T14:57:00.807Z",
+        "embed": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "description": "",
+            "title": "",
+            "uri": "https://fb.watch/KNCcOrhgVT/"
+          }
+        },
         "facets": [
           {
             "features": [
               {
                 "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://bsky.app/profile/caoyaosan.bsky.social/post/3mv3xe65iws2t"
+                "uri": "https://fb.watch/KNCcOrhgVT/"
               }
             ],
             "index": {
-              "byteEnd": 106,
-              "byteStart": 84
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/1"
-              }
-            ],
-            "index": {
-              "byteEnd": 157,
-              "byteStart": 126
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/2"
-              }
-            ],
-            "index": {
-              "byteEnd": 203,
-              "byteStart": 163
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/3"
-              }
-            ],
-            "index": {
-              "byteEnd": 231,
-              "byteStart": 209
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/4"
-              }
-            ],
-            "index": {
-              "byteEnd": 293,
-              "byteStart": 237
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://poll.blue/p/UxAWrI/0"
-              }
-            ],
-            "index": {
-              "byteEnd": 312,
-              "byteStart": 295
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#question"
-              }
-            ],
-            "index": {
-              "byteEnd": 74,
+              "byteEnd": 20,
               "byteStart": 0
             }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#option",
-                "number": 1
-              }
-            ],
-            "index": {
-              "byteEnd": 157,
-              "byteStart": 126
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#option",
-                "number": 2
-              }
-            ],
-            "index": {
-              "byteEnd": 203,
-              "byteStart": 163
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#option",
-                "number": 3
-              }
-            ],
-            "index": {
-              "byteEnd": 231,
-              "byteStart": 209
-            }
-          },
-          {
-            "features": [
-              {
-                "$type": "blue.poll.post.facet#option",
-                "number": 4
-              }
-            ],
-            "index": {
-              "byteEnd": 293,
-              "byteStart": 237
-            }
           }
         ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreicrag7om3sn2z2dzy22mycvwzvlcs2uwf6ialq2qrjzgl2b542bh4",
-            "uri": "at://did:plc:gf5nkh7cw4tumkrhmo3hye6t/app.bsky.feed.post/3mv3xe65iws2t"
-          },
-          "root": {
-            "cid": "bafyreicrag7om3sn2z2dzy22mycvwzvlcs2uwf6ialq2qrjzgl2b542bh4",
-            "uri": "at://did:plc:gf5nkh7cw4tumkrhmo3hye6t/app.bsky.feed.post/3mv3xe65iws2t"
-          }
-        },
-        "text": "\"李晟さんの上陸ドラマで一番お気に入りのキャラは？\" asked by @caoyaosan.bsky.social. Vote below!\n\n🅰 恋心は玉の如き 秦姨娘\n🅱 メモリーズ・オブ・ラブ 辛迪\n🅲 ハンシュク 鄧綏\n🅳 上記以外(よければリプで教えてください)\n\n📊 Show results"
-      },
-      "cid": "bafyreib2tqzmzyv2ifeflfaj3sethlykklthpfioc3biun4x5fuq2hfboe"
-    }
-  },
-  {
-    "did": "did:plc:sfa3vnvpxpygwqv3gyn5l3bg",
-    "time_us": 1788971264884498,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xefjogq2h",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xedamo22a",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:41.840Z",
-        "langs": [
-          "ja"
-        ],
-        "text": "フロイドはエビを踊り食いしない……？じゃねーよどういうことなの。"
-      },
-      "cid": "bafyreibt4jxhtx6cia6s6xsh7mabzd3dimlv6uy66dojvex7p3h75mvcd4"
-    }
-  },
-  {
-    "did": "did:plc:zvzrhrq3fhuuq6podxhi5tyz",
-    "time_us": 1788971264895420,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xef62gu2l",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefli6c2g",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.292Z",
         "langs": [
           "en"
         ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreifjsydzoqcrcbobwnzhijwdvzflch726w7vdf73wxv3gnbdtcq53m",
-            "uri": "at://did:plc:6hit5rjdbmlnscmuk4bbtmuc/app.bsky.feed.post/3mv3x3um3x22c"
-          },
-          "root": {
-            "cid": "bafyreifjsydzoqcrcbobwnzhijwdvzflch726w7vdf73wxv3gnbdtcq53m",
-            "uri": "at://did:plc:6hit5rjdbmlnscmuk4bbtmuc/app.bsky.feed.post/3mv3x3um3x22c"
-          }
-        },
-        "text": "Doing my yearly insider threat training right now and yeah what's the point?"
+        "text": "fb.watch/KNCcOrhgVT/?"
       },
-      "cid": "bafyreiaz43hvkkmi4en2cktljtwt3cgkrrndfmhzayq7ph65ynp4keh3tm"
+      "cid": "bafyreidcx35gv3xvm6yjbg56ikytqf4hciiadwuqkqvdv2ecxaninokskq"
     }
   },
   {
-    "did": "did:plc:u4wrevnt3lps7sn5zfrulhso",
-    "time_us": 1788971264937179,
+    "did": "did:plc:iirnuaynttawrszv265eer6r",
+    "time_us": 1794236224585613,
+    "cursor": 26993381192,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xefjkvi2k",
+      "rev": "3mzv6qgp5lr2q",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeghbt227",
+      "rkey": "3mzv6qgowqz2q",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:45.202Z",
+        "createdAt": "2026-11-09T14:57:01.26135900Z",
+        "reply": {
+          "parent": {
+            "cid": "bafyreic3p4zukbxxlorlgh4jfsybvlhu5bhywjmvqhps5qkv64wjubcniu",
+            "uri": "at://did:plc:m3p37kww6c4znq6xudhpcpp2/app.bsky.feed.post/3mzv4blppds2x"
+          },
+          "root": {
+            "cid": "bafyreigma7t6d6nu6pb2rplhl6yl4q3wqow5ktqb2f3uo2dycjy4lhruoi",
+            "uri": "at://did:plc:iirnuaynttawrszv265eer6r/app.bsky.feed.post/3mzuj4eeygm2q"
+          }
+        },
+        "text": "What the FUCK. WHAT THE FUCK IS WRONG WITH YOU???? THAT'S NOT FUNNY. LIKE AT ALL. God fucking damnit I need to leave for right now. I can't handle this"
+      },
+      "cid": "bafyreidgqadb4bxuhiq3s2lto74y2frkhq32yxioqw2usjcuipj3ezv4we"
+    }
+  },
+  {
+    "did": "did:plc:6rzwsb342hlpoaru2lu725xx",
+    "time_us": 1794236224595233,
+    "cursor": 26993381193,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mzv6qgt2342l",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mzv6qepmd222",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-09T14:57:02.197Z",
         "langs": [
-          "en"
+          "fr"
         ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreib2i2j7txp37ag5ewvm6t6m54ahw3ouljwk2gl2g2rh4s2u2wegka",
-            "uri": "at://did:plc:wba3smotebrgouszvj5innh4/app.bsky.feed.post/3mv3udoeeec2r"
-          },
-          "root": {
-            "cid": "bafyreidysx5q5mnyo77kelhcj7puegr5qxfwgpxes5af6maw77yj3n2voe",
-            "uri": "at://did:plc:wba3smotebrgouszvj5innh4/app.bsky.feed.post/3mv3ub5v27c2r"
-          }
-        },
-        "text": "I mean the 51st is the alternative model, but it's fairly narrow in what it can do. \n\nBig journalism has always been a business, but the old model is broken because people no longer want to pay. Thus we are subjected to the whims of those who will pay."
+        "text": "People often have a hard time telling the Snirfies apart. I see Snirfies of all sizes in fanart and I do not want to rectify it, It’s beautiful"
       },
-      "cid": "bafyreifs54v7a6dzwvqm3ewwqav4z5e2ymehuidmnbcy6dlxy5ti5ivyom"
+      "cid": "bafyreieuwfmiw6xbnkvccrbnhisxz4rgixo6nnsf72qaeoxcafc3lwjyca"
     }
   },
   {
-    "did": "did:plc:zljtwykya7uopxvhizwdn52o",
-    "time_us": 1788971264987856,
+    "did": "did:plc:unoiuv2x2lyqze4cndawivye",
+    "time_us": 1794236224597661,
+    "cursor": 26993381194,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xefhb2v2p",
+      "rev": "3mzv6qgdztm2z",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefh37f2p",
+      "rkey": "3mzv6qgdty42z",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44Z",
+        "createdAt": "2026-11-09T14:57:02.358Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "Am 9. November vor 92 Jahren geboren: Carl Sagan. Bekannt für Cosmos, Contact und Pale Blue Dot. Foto: NASA/JPL, gemeinfrei (Wikimedia Commons)",
+              "aspectRatio": {
+                "height": 1350,
+                "width": 1080
+              },
+              "image": {
+                "$type": "blob",
+                "mimeType": "image/jpeg",
+                "ref": {
+                  "$link": "bafkreihacnlqr4eflsfhqzjmzi3m3jdk43ey3wka6jm4ict3w3vbpewwea"
+                },
+                "size": 376702
+              }
+            }
+          ]
+        },
         "facets": [
           {
             "features": [
               {
                 "$type": "app.bsky.richtext.facet#link",
-                "uri": "https://whale-alert.io/transaction/bitcoin/7b776a1a368a49b5de3773eea8ac886f87617c9ca35b9547a5bf9cd8697329a7"
+                "uri": "https://digital.phantastisch.net/heft/44"
               }
             ],
             "index": {
-              "byteEnd": 215,
-              "byteStart": 108
+              "byteEnd": 241,
+              "byteStart": 201
             }
           }
         ],
-        "text": "🚨 🚨 🚨 🚨  1,167 $BTC (91,678,273 USD) transferred from unknown wallet to Coinbase Institutional\n\nhttps://whale-alert.io/transaction/bitcoin/7b776a1a368a49b5de3773eea8ac886f87617c9ca35b9547a5bf9cd8697329a7"
+        "langs": [
+          "de"
+        ],
+        "text": "Heute wäre Carl Sagan 92 geworden: Astronom, „Unser Kosmos“, goldene Voyager-Platte, SF-Roman „Contact“ und der „Pale Blue Dot“. In phantastisch! 44 begegnete er uns bei „Contact“.\r\n\r\nhttps://digital.phantastisch.net/heft/44\r\n\r\n#Phantastisch! / Foto: NASA/JPL, gemeinfrei"
       },
-      "cid": "bafyreiayoxs4obiwpcbwmhwn5uwkhlhjidch5g4zbdpf4qzxyt37oel4ry"
+      "cid": "bafyreigguilgaog4yo65wn267r4q26itclq2zhi65cpdi37l7mekv55l3a"
     }
   },
   {
-    "did": "did:plc:lyr2nmjy7wmxadcfqdewmh7j",
-    "time_us": 1788971265005254,
+    "did": "did:plc:hgp7kwo6rjclek3nurru4etu",
+    "time_us": 1794236224601439,
+    "cursor": 26993381196,
     "kind": "commit",
     "commit": {
-      "rev": "3mv3xefzqwo2c",
+      "rev": "3mzv6qfr3nk27",
       "operation": "create",
       "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xef4hpc2d",
+      "rkey": "3mzv6qfqvs227",
       "record": {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.802Z",
+        "createdAt": "2026-11-09T14:57:01+00:00",
+        "embed": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "description": "",
+            "thumb": {
+              "$type": "blob",
+              "mimeType": "image/webp",
+              "ref": {
+                "$link": "bafkreibtfcspnr2bqhxju4wj5qkzjwatjx7jjz5rjezpqlhb4drgttj7ry"
+              },
+              "size": 73604
+            },
+            "title": "Slalom-Ass verpasst Saisonauftakt in Levi",
+            "uri": "https://www.blick.ch/sport/ski/tommaso-sala-verdacht-auf-kreuzbandriss-kein-start-in-levi/3843n6q?utm_source=bluesky&utm_medium=social&utm_campaign=blick-page-post&utm_content=nowmetrix_connector"
+          }
+        },
+        "text": "Hat die Verletzungshexe im italienischen Ski-Team zugeschlagen? Tommaso Sala verpasst den Slalom-Auftakt in Levi. Befürchtet wird eine schwere Verletzung."
+      },
+      "cid": "bafyreiacbpmir7tyvvcmyoy6gekag4g7osf6qsqev4pxkdegc2zuqnomxe"
+    }
+  },
+  {
+    "did": "did:plc:tvykhhrcwuuyggiswnfae7yl",
+    "time_us": 1794236224662019,
+    "cursor": 26993381207,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mzv6qgxnmp2v",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mzv6qglci22l",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-09T14:57:04.153Z",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "parent": {
+            "cid": "bafyreifj7enh6arzvznekjiunwxkdubdlkz43ddrdviprxlf7tpxa5rcj4",
+            "uri": "at://did:plc:ahcborosqrfchi3iiyhoixch/app.bsky.feed.post/3mzv6oqtzus2m"
+          },
+          "root": {
+            "cid": "bafyreifj7enh6arzvznekjiunwxkdubdlkz43ddrdviprxlf7tpxa5rcj4",
+            "uri": "at://did:plc:ahcborosqrfchi3iiyhoixch/app.bsky.feed.post/3mzv6oqtzus2m"
+          }
+        },
+        "text": "It’s part of his folksy charm!"
+      },
+      "cid": "bafyreibuusaysnu7gsxknablbahg4bnx6ptnrsxz377c4qdnbplmsuzmpu"
+    }
+  },
+  {
+    "did": "did:plc:giqs272oddlfxvauwah2apo3",
+    "time_us": 1794236224663412,
+    "cursor": 26993381237,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mzv6qgzczt2o",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mzv6qgtwts2t",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-09T14:57:04.434Z",
+        "embed": {
+          "$type": "app.bsky.embed.record",
+          "record": {
+            "cid": "bafyreib5ymqdap4yjgybs5ufqtb3hnkpl6wndhn6mdvyc72xbgycf5djtq",
+            "uri": "at://did:plc:h5zkfkc35wkb53udnemrica5/app.bsky.feed.post/3mzitn65t7k2b"
+          }
+        },
+        "langs": [
+          "en"
+        ],
+        "text": "It’s interesting how the right-wing “civility” / ‘civic education‘ movement makes precisely the opposite claim: that we should affirmatively include discredited perspectives (concentration camp aficionados) because “viewpoint diversity,” not truth, is the goal of inquiry."
+      },
+      "cid": "bafyreicgwlkri73jjmdrdl7dqd3wxmgsnjikb2hg5bg6rhdvretwm3tf4i"
+    }
+  },
+  {
+    "did": "did:plc:uv7rkzvvix734ndrxvbpru5e",
+    "time_us": 1794236224663502,
+    "cursor": 26993381240,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mzv6qgwrsc2o",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mzv6qh7e3c2d",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-09T14:57:04.809Z",
+        "langs": [
+          "fr"
+        ],
+        "text": "Aujourd'hui, avoir entendu des prof. d'université dire qu'ils voteraient plutôt pour MLP que JLM m'a laissé un goût bizarre.\nLa dédiabolisation de l'un et la diabordélisation de l'autre a bien fonctionné.\n\nGarder JLM comme plus gros candidat à gauche, c'est laisser le chemin libre au RN 😓"
+      },
+      "cid": "bafyreic4znvaocnmyflphz4dczlg3czbtv477zrtbkue367iyxlwzgiksi"
+    }
+  },
+  {
+    "did": "did:plc:un6etcdqjjdvl4bp5i5axv6y",
+    "time_us": 1794236224663643,
+    "cursor": 26993381245,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mzv6qgubtf2b",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mzv6qgrbv22u",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-09T14:57:04.349Z",
+        "langs": [
+          "ja"
+        ],
+        "text": "最推しのかりんとうを押し付けるおばさんするね…お茶（粉）もつけるね💪✨✨"
+      },
+      "cid": "bafyreig6bgotxprit245q2s3xxxadxat6txnhnm2u4c332effmnjb5hlim"
+    }
+  },
+  {
+    "did": "did:plc:2gahntcyq6erf6ee5sosmwd2",
+    "time_us": 1794236224683130,
+    "cursor": 26993381253,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mzv6qgblxf2x",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mzv6qgbe5f2x",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-09T14:57:03.786Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "",
+              "aspectRatio": {
+                "height": 2531,
+                "width": 2025
+              },
+              "image": {
+                "$type": "blob",
+                "mimeType": "image/png",
+                "ref": {
+                  "$link": "bafkreidrkjop4vhyyuum7bnl3cvurxjk25j2rx6mvie2s7olwkjdv2enju"
+                },
+                "size": 379709
+              }
+            }
+          ]
+        },
+        "text": "🏆 🏴󠁧󠁢󠁥󠁮󠁧󠁿 To Win the Premier League:\n\n🏴󠁧󠁢󠁥󠁮󠁧󠁿 Arsenal - 67%\n🏴󠁧󠁢󠁥󠁮󠁧󠁿 Man City - 16%\n🏴󠁧󠁢󠁥󠁮󠁧󠁿 Liverpool - 6%\n🏴󠁧󠁢󠁥󠁮󠁧󠁿 Brighton - 3%\n🏴󠁧󠁢󠁥󠁮󠁧󠁿 Chelsea - 3%\n🏴󠁧󠁢󠁥󠁮󠁧󠁿 Others - 5%\n\n👑 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Arsenal are predicted to win the title by finishing the season with 11 points more than Man City."
+      },
+      "cid": "bafyreiglyyteeoblcpntzqss4rxpo6dr32f44xwdxd54ygywnu52fssv24"
+    }
+  },
+  {
+    "did": "did:plc:wznpxhw4q6ge3fxwdwrhdpj2",
+    "time_us": 1794236224700452,
+    "cursor": 26993381255,
+    "kind": "commit",
+    "commit": {
+      "rev": "3mzv6qfj6px2e",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "3mzv6qf2wms2y",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-09T14:57:02.565Z",
+        "embed": {
+          "$type": "app.bsky.embed.video",
+          "aspectRatio": {
+            "height": 1920,
+            "width": 1080
+          },
+          "presentation": "default",
+          "video": {
+            "$type": "blob",
+            "mimeType": "video/mp4",
+            "ref": {
+              "$link": "bafkreicqwutbkw5vbl5ihuhggbrmvpvezo6coxukbn6yi727fpb5227wju"
+            },
+            "size": 7981523
+          }
+        },
         "facets": [
           {
             "$type": "app.bsky.richtext.facet",
             "features": [
               {
                 "$type": "app.bsky.richtext.facet#mention",
-                "did": "did:plc:x7dbyx3g63gf57iofycl6n5u"
+                "did": "did:plc:a5gthsjfw7kb3hbl66gcx4lw"
               }
             ],
             "index": {
-              "byteEnd": 22,
-              "byteStart": 0
-            }
-          }
-        ],
-        "langs": [
-          "en"
-        ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreihdaaikrsv4qkmfq6iis5hemw4jd64ponb7nlqpgjjijsq7sigswi",
-            "uri": "at://did:plc:lyr2nmjy7wmxadcfqdewmh7j/app.bsky.feed.post/3muwvbldlks26"
-          },
-          "root": {
-            "cid": "bafyreihdaaikrsv4qkmfq6iis5hemw4jd64ponb7nlqpgjjijsq7sigswi",
-            "uri": "at://did:plc:lyr2nmjy7wmxadcfqdewmh7j/app.bsky.feed.post/3muwvbldlks26"
-          }
-        },
-        "text": "@chicmojo.blacksky.app In a perfect world, we'd be cool neighbors and I'd gift you mad weed while we wax about our Carribean heritages over good food. I hope all your goals get met this week."
-      },
-      "cid": "bafyreidzs5sxfkxiiheaseqp2qze4tu75jsgweu2neu3uv6aidochklu2u"
-    }
-  },
-  {
-    "did": "did:plc:z7aastbi2fnbhh4ahcublmdo",
-    "time_us": 1788971265011026,
-    "kind": "identity",
-    "identity": {
-      "did": "did:plc:z7aastbi2fnbhh4ahcublmdo",
-      "seq": 33472073652,
-      "time": "2026-09-09T16:27:44.652Z"
-    }
-  },
-  {
-    "did": "did:plc:z7aastbi2fnbhh4ahcublmdo",
-    "time_us": 1788971265015132,
-    "kind": "account",
-    "account": {
-      "active": true,
-      "did": "did:plc:z7aastbi2fnbhh4ahcublmdo",
-      "seq": 33472073653,
-      "time": "2026-09-09T16:27:44.652Z"
-    }
-  },
-  {
-    "did": "did:plc:jv4kkqscl3ze3co4tguivexy",
-    "time_us": 1788971265035721,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeg2heu2f",
-      "operation": "delete",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3muudjbbaan2y"
-    }
-  },
-  {
-    "did": "did:plc:akbqqhei3mpbsgh5k7xz7zcf",
-    "time_us": 1788971265058436,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeg2h4o2c",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xef7kdk2i",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.903Z",
-        "langs": [
-          "en"
-        ],
-        "text": "Honestly, pissing off Samus sounds like a surefire way to waltz into a horribly painful death.\n\nThese guys just don't learn."
-      },
-      "cid": "bafyreicntxsmishuzbhryggbud3dn2dhoozat5kebqv5bbui42gfyphoii"
-    }
-  },
-  {
-    "did": "did:plc:uzq5k6tx6sdtdu2dmt5xx563",
-    "time_us": 1788971265102238,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeg5fa62m",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeg3rns2j",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.827Z",
-        "facets": [
-          {
-            "features": [
-              {
-                "$type": "app.bsky.richtext.facet#tag",
-                "tag": "haikuhorrorprompt"
-              }
-            ],
-            "index": {
-              "byteEnd": 114,
-              "byteStart": 96
+              "byteEnd": 51,
+              "byteStart": 25
             }
           },
           {
+            "$type": "app.bsky.richtext.facet",
             "features": [
               {
-                "$type": "app.bsky.richtext.facet#tag",
-                "tag": "juice"
+                "$type": "app.bsky.richtext.facet#mention",
+                "did": "did:plc:oz6hlrbunfsavyye23z266mq"
               }
             ],
             "index": {
-              "byteEnd": 121,
-              "byteStart": 115
+              "byteEnd": 80,
+              "byteStart": 52
             }
           }
         ],
         "langs": [
           "en"
         ],
-        "text": "A new juice bar opened\neveryone wanted to try their drinks, but\nonly they knew what was inside.\n#haikuhorrorprompt\n#juice"
+        "text": "Boys just wanna have fun @jarrenshanxxx.bsky.social @jaysonparker801.bsky.social"
       },
-      "cid": "bafyreiej5o76fbbtxyvdrlerznlx2b3fc6ll436mkhijyhufabspy3qkfu"
-    }
-  },
-  {
-    "did": "did:plc:5adp5teay5dvbmut4xlsuvbf",
-    "time_us": 1788971265110520,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeg5pmc2i",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefyl4k2i",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.722Z",
-        "langs": [
-          "en"
-        ],
-        "reply": {
-          "parent": {
-            "cid": "bafyreicwpiznbaf7usjepw6kq63d4bek3i6nfgvifprw3emojef6qidxc4",
-            "uri": "at://did:plc:iiofy6mupgapoiz2b3lgfyr7/app.bsky.feed.post/3mv3utylj722o"
-          },
-          "root": {
-            "cid": "bafyreihz4r7i2j24z5a7ujnylj55a3rastm46xiusbaojxmj4hd3wi4axu",
-            "uri": "at://did:plc:iiofy6mupgapoiz2b3lgfyr7/app.bsky.feed.post/3mv3sitxtys2o"
-          }
-        },
-        "text": "I would watch this movie"
-      },
-      "cid": "bafyreicmgke54u6wbfg5t66iq2tajr4sf7byzoifyd52lbw2klfzvscrwm"
-    }
-  },
-  {
-    "did": "did:plc:airyg6rpamdhuzup5atwpvgt",
-    "time_us": 1788971265122543,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeftwq222",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xeeziy22f",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:43.705Z",
-        "langs": [
-          "en"
-        ],
-        "text": "Oh age of calamity gets a new version"
-      },
-      "cid": "bafyreiaecchq326ujyzqhjupazrof4fyv5qfbmt5iki7ocxd673kpfqfvy"
-    }
-  },
-  {
-    "did": "did:plc:vhfyufn46mxactly4jg4lo3e",
-    "time_us": 1788971265126226,
-    "kind": "commit",
-    "commit": {
-      "rev": "3mv3xeg2agx2i",
-      "operation": "create",
-      "collection": "app.bsky.feed.post",
-      "rkey": "3mv3xefqidc2c",
-      "record": {
-        "$type": "app.bsky.feed.post",
-        "createdAt": "2026-09-09T16:27:44.458Z",
-        "langs": [
-          "ja"
-        ],
-        "text": "🐱：博士，您明明知道我的感情\n🐰：“卢西恩，你该不会是想告诉我……喜欢我吧？”\n🐱：“嗯。”（喝茶）\n🐰内心（开始错乱）:内心：我怎么问出来了？ 他怎么还承认了？ 等等，我现在是不是必须回答？ 喜欢究竟应该如何界定？亲密关系是否必须—— 糟糕糟糕糟糕糟糕 异常信息需要处理 卢西恩这家伙是不是好久没体检了 脑子是不是坏了 医疗部都在做什么啊啊啊啊 不对不对 说不定是...? 对 一定是因为酒神权能改变了他 一定是这个\n🐰：......或许是我们相处太久了，长期共同作战共同办公产生了依赖心理，所以你这个一定是可以治疗的问题，需要医疗部的人来疏导！我们找个心理医生"
-      },
-      "cid": "bafyreihm5nizzizkexn6y7nrrawbtdgkdcajvfmkid6oxmwp5c2j2lh24a"
+      "cid": "bafyreieihnv26pjafj5bve7c6t3hzrn5skyhenxdekorn5uy7zqf2ab62q"
     }
   }
 ]

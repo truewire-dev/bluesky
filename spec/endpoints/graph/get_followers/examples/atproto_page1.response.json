@@ -32,10 +32,9 @@
         "indexedAt": "2026-09-03T00:15:32.501Z"
       },
       {
-        "did": "did:plc:eo5qah2eba55unbgdhwsucfj",
-        "handle": "muhannd.bsky.social",
-        "displayName": "",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:eo5qah2eba55unbgdhwsucfj/bafkreibawz2zl7vmykgoswzhztvi65iz6qnretp4chtbk65lut5iqgtxg4",
+        "did": "did:plc:bqkihnp5rjmbqaxbi27f73gi",
+        "handle": "boternity.bsky.social",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:bqkihnp5rjmbqaxbi27f73gi/bafkreibijrvqphxkdelwr33bo5mjeqazxt2snucqnmajdivz5dlmrjmdnm",
         "associated": {
           "activitySubscription": {
             "allowSubscriptions": "followers"
@@ -48,20 +47,18 @@
           "blockedBy": false
         },
         "labels": [],
-        "createdAt": "2026-09-09T15:46:59.953Z",
-        "indexedAt": "2026-09-09T15:49:46.666Z"
+        "createdAt": "2026-11-22T12:21:37.846Z",
+        "description": "Automated account: daily facts from the BOTERNITY MCP Index. Run by boternity.bsky.social",
+        "indexedAt": "2026-11-22T12:26:18.443Z"
       },
       {
-        "did": "did:plc:tbxtbxp62s7fc7n5stc5dgvy",
-        "handle": "evolvingyourman.com",
-        "displayName": "EvolvingYourMan",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tbxtbxp62s7fc7n5stc5dgvy/bafkreigfsv42zftcivvaibmw5xds3nzv7kr26tw4ulrlwq47dqrd6smexq",
+        "did": "did:plc:kfrl66vf7t3gsodywlaulkx3",
+        "handle": "lighting-gas.bsky.social",
+        "displayName": "lighting gas",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kfrl66vf7t3gsodywlaulkx3/bafkreiauuoipv3zgbwneallc64ppiwhfqrdwwtv5gqbrtt2sstnpq3525m",
         "associated": {
-          "chat": {
-            "allowIncoming": "none"
-          },
           "activitySubscription": {
-            "allowSubscriptions": "followers"
+            "allowSubscriptions": "none"
           }
         },
         "viewer": {
@@ -70,10 +67,18 @@
           "mutedOnlyQuoteposts": false,
           "blockedBy": false
         },
-        "labels": [],
-        "createdAt": "2024-11-19T00:30:44.805Z",
-        "description": "Hi. I'm Emma. Visit me at http://EvolvingYourMan.com for my thoughts on strong women and loving female authority in a modern marriage. Self proclaimed sex geek!",
-        "indexedAt": "2026-04-20T23:24:55.648Z"
+        "labels": [
+          {
+            "src": "did:plc:kfrl66vf7t3gsodywlaulkx3",
+            "uri": "at://did:plc:kfrl66vf7t3gsodywlaulkx3/app.bsky.actor.profile/self",
+            "cid": "bafyreifdk5iy3bi77ilek2lfv3xlkiorxfc5ryleoop5atznwrhfmkquqm",
+            "val": "!no-unauthenticated",
+            "cts": "2026-03-17T17:43:39.339Z"
+          }
+        ],
+        "createdAt": "2026-03-17T17:43:41.150Z",
+        "description": "42+\n\u043a\u043e\u043b\u0438\u0441\u044c \u043a\u043e\u0434\u0438\u0432\n\u0432\u0438\u043a\u0440\u0430\u0434\u0435\u043d\u0438\u0439 \u0434\u043b\u044f \u0441\u0443\u0441\u043f\u0443\u043b\u044c\u043d\u0438\u0445 \u043f\u043e\u0442\u0440\u0435\u0431\n\u0430\u0434\u0435\u043f\u0442 \u043d\u0435\u0437\u0434\u043e\u0440\u043e\u0432\u043e\u0433\u043e \u0433\u043b\u0443\u0437\u0434\u0443 \u0456 \u043c\u0430\u0433\u0456\u0447\u043d\u043e\u0433\u043e \u043c\u0438\u0441\u043b\u0435\u043d\u043d\u044f",
+        "indexedAt": "2026-11-02T18:53:31.380Z"
       }
     ],
     "subject": {
@@ -111,9 +116,9 @@
         "verifiedStatus": "valid",
         "trustedVerifierStatus": "none"
       },
-      "description": "Social networking technology created by Bluesky. \n\nDeveloper-focused account. Follow @bsky.app for general announcements!\n\nBluesky API docs: docs.bsky.app\nAT Protocol specs: atproto.com",
-      "indexedAt": "2026-03-03T20:08:17.348Z"
+      "description": "An open source, decentralized protocol for building high-scale internet applications. \n\nBrought to you by the DevRel team at @bsky.app: @alex.bsky.team and @jimray.bsky.team",
+      "indexedAt": "2026-11-09T21:50:51.477Z"
     },
-    "cursor": "3mv3todgk2625"
+    "cursor": "3n2y65gcgjo27"
   }
 }
